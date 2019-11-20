@@ -1,0 +1,2 @@
+from .nsm import *
+main()
