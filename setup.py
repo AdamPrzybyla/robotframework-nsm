@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
   name = 'robotframework-nsm',
-  packages = ['NSM'],
+  packages = ['nsm'],
   version = '0.1',
   license='MIT',
   description = 'Robotframework library for NSM',
