@@ -210,6 +210,61 @@ Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 """
 	open("japan.robot","w").write(t)
 
+def china():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla
+
+*** Test Cases ***
+测试1
+	现在是这样的：我看到 webpage
+	我在 webpage 上看不到 logged 单词
+	然后我在 webpage 上使用 credentials 单词
+	因此我在 webpage上看到 logged 单词
+	在此之后，我不再看到 webpage
+
+测试2
+	现在是这样的：我看到 webpage
+	我在 webpage 上看不到 logged 单词
+	然后我在 webpage 上使用 bad credentials 单词
+	因此我在 webpage 上看不到 logged 单词
+	在此之后，我不再看到 webpage  
+
+测试3
+	现在是这样的：我看到 webpage
+	我在 webpage 上看不到 logged 单词
+	在此之后，我不再看到 webpage
+"""
+	open("china.robot","w").write(t)
+
+
+def portugese():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+*** Test Cases ***
+Teste 1
+	É assim agora: eu vejo o webpage
+	Não vejo as palavras logged na webpage
+	então eu uso as palavras credentials em webpage
+	por causa disso: vejo as palavras logged na webpage
+	Depois disso, não vejo mais a webpage
+
+Teste 2
+	É assim agora: eu vejo o webpage
+	Não vejo as palavras logged na webpage
+	então eu uso as palavras bad credentials em webpage
+	por causa disso: não vejo as palavras logged na webpage
+	Depois disso, não vejo mais a webpage
+
+Teste 3
+	É assim agora: eu vejo o webpage
+	Não vejo as palavras logged na webpage
+	Depois disso, não vejo mais a webpage
+"""
+	open("portugese.robot","w").write(t)
+
 def nsm():
 	t="""*** Settings ***
 Resource  mykeywords.robot
@@ -456,6 +511,86 @@ ${page:[^ ]+} に ${logged:[^ ]+} という言葉が表示されます
 
 ${page:[^ ]+} を見る
 	Run keyword  ${page} setup
+
+# china
+
+#It is like this now: ${state}
+现在是这样的：${state}
+	Run keyword  ${state}
+
+#I not see words ${logged} on the ${page}
+我在 ${page} 上看不到 ${logged} 单词
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+#I use the words ${cred} on ${page}
+然后我在 ${page} 上使用 ${cred} 单词
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+
+#because of this: ${state}
+因此${state}
+	Run keyword  ${state}
+
+#I see words ${logged} on the ${page}
+我在 ${page}上看到 ${logged} 单词
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+#after this ${state}
+在此之后，${state}
+	Run keyword  ${state}
+
+
+#i see the ${page:[^ ]+} ${no more}
+我${no more:[^ ]+}看到${page}
+	Run keyword  ${page} teardown
+
+#i see the ${page:[^ ]+}
+我看到 ${page:[^ ]+}
+	Run keyword  ${page} setup
+
+# portugese
+
+#It is like this now: ${state}
+É assim agora: ${state}
+	Run keyword  ${state}
+
+#I not see words ${logged} on the ${page}
+Não vejo as palavras ${logged} na ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+#I use the words ${cred} on ${page}
+então eu uso as palavras ${cred} em ${page}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+#because of this: ${state}
+por causa disso: ${state}
+	Run keyword  ${state}
+
+#I see words ${logged} on the ${page}
+vejo as palavras ${logged} na ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+#after this ${state}
+Depois disso, ${state}
+	Run keyword  ${state}
+
+#i see the ${page:[^ ]+} ${no more}
+não vejo mais a ${page}
+	Run keyword  ${page} teardown
+
+#i see the ${page:[^ ]+}
+eu vejo o ${page}
+	Run keyword  ${page} setup
 """
 	open("NSM.robot","w").write(t)
 
@@ -490,7 +625,7 @@ webpage check
 	[Return]  OK"""
 	open("mykeywords.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","mykeywords","nsm"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","nsm"]
 
 def main():
 	if sys.argv[1]=='all':
@@ -502,6 +637,8 @@ def main():
 		french()
 		spanish()
 		japan()
+		china()
+		portugese()
 		nsm()
 		mykeywords()
 	elif sys.argv[1] in la:
