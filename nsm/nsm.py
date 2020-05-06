@@ -265,6 +265,63 @@ Teste 3
 """
 	open("portugese.robot","w").write(t)
 
+def romanian():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+*** Test Cases ***
+Testul 1
+	Acum este așa: eu văd webpage
+	Eu nu văd cuvintele logged pe webpage
+	Apoi eu voi folosi cuvintele credentials pe webpage
+	Din acest motiv eu văd cuvintele logged pe webpage
+	La scurt timp după eu nu mai văd webpage
+
+Testul 2
+	Acum este așa: eu văd webpage
+	Eu nu văd cuvintele logged pe webpage
+	Apoi eu voi folosi cuvintele bad credentials pe webpage
+	Din acest motiv eu nu văd cuvintele logged pe webpage
+	La scurt timp după eu nu mai văd webpage
+
+Testul 3
+	Acum este așa: eu văd webpage
+	Eu nu văd cuvintele logged pe webpage
+	La scurt timp după eu nu mai văd webpage
+"""
+	open("romanian.robot","w").write(t)
+
+def urdu():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+*** test cases ***
+١ٹسیٹ
+	                   ںوہ اتکس ھکید webpage ںیم ۔ےہ اسیا با
+	          ۔ںیہ ےتآ ںیہن رظن ظافلا logged ںیم webpage ےھجم
+	     ںوہ اترک لامعتسا ظافلا credentials رپ webpage ںیم رھپ	
+	ںوہ اتکس ھکید ظافلا logged رپ webpage ںیم - :ےس ہجو یک سا
+	                 اتھکید ںیہن وک webpage با ںیم دعب ےک سا
+
+۲ٹسیٹ
+
+	                  ںوہ اتکس ھکید webpage ںیم ۔ےہ اسیا با
+	         ۔ںیہ ےتآ ںیہن رظن ظافلا logged ںیم webpage ےھجم
+	ںوہ اترک لامعتسا ظافلا bad credentials رپ webpage ںیم رھپ	
+   ۔ںیہ ےتآ ںیہن رظن ظافلا logged ںیم webpage ےھجم :ےس ہجو یک سا
+	                اتھکید ںیہن وک webpage با ںیم دعب ےک سا
+
+۳ٹسیٹ
+
+	                  ںوہ اتکس ھکید webpage ںیم ۔ےہ اسیا با
+	         ۔ںیہ ےتآ ںیہن رظن ظافلا logged ںیم webpage ےھجم
+	                اتھکید ںیہن وک webpage با ںیم دعب ےک سا
+
+"""
+	open("urdu.robot","w").write(t)
+
 def nsm():
 	t="""*** Settings ***
 Resource  mykeywords.robot
@@ -591,6 +648,82 @@ não vejo mais a ${page}
 #i see the ${page:[^ ]+}
 eu vejo o ${page}
 	Run keyword  ${page} setup
+
+# romanian
+#It is like this now: ${state}
+Acum este așa: ${state}
+	Run keyword  ${state}
+
+#I not see words ${logged} on the ${page}
+eu nu văd cuvintele ${logged} pe ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+#I use the words ${cred} on ${page}
+Apoi eu voi folosi cuvintele ${cred} pe ${page}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+#because of this: ${state}
+Din acest motiv ${state}
+	Run keyword  ${state}
+
+#I see words ${logged} on the ${page}
+eu văd cuvintele ${logged} pe ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+#after this ${state}
+La scurt timp după ${state}
+	Run keyword  ${state}
+
+#i see the ${page:[^ ]+} ${no more}
+eu nu mai văd ${page}
+	Run keyword  ${page} teardown
+
+#i see the ${page:[^ ]+}
+eu văd ${page:[^ ]+}
+	Run keyword  ${page} setup
+
+# urdu
+#It is like this now: ${state}
+${state} ںیم ۔ےہ اسیا با
+	run keyword      ${state}
+
+#I not see words ${logged} on the ${page}
+۔ںیہ ےتآ ںیہن رظن ظافلا ${logged} ںیم ${page} ےھجم
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+#I use the words ${cred} on ${page}
+ںوہ اترک لامعتسا ظافلا ${cred} رپ ${page} ںیم رھپ	
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+#because of this: ${state}
+${state} :ےس ہجو یک سا
+	run keyword      ${state}
+
+#I see words ${logged} on the ${page}
+ںوہ اتکس ھکید ظافلا ${logged} رپ ${page} ںیم -
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+#after this ${state}
+${state} ںیم دعب ےک سا
+	Run keyword  ${state}
+
+#i see the ${page:[^ ]+} ${no more}
+اتھکید ںیہن وک ${page:[^ ]+} با 
+	Run keyword  ${page} teardown
+
+#i see the ${page:[^ ]+}
+ںوہ اتکس ھکید ${page:[^ ]+}
+	Run keyword  ${page} setup
 """
 	open("NSM.robot","w").write(t)
 
@@ -622,10 +755,11 @@ Enter Credentials
 webpage check
 	[Arguments]  ${slowo}
 	Log to console  szukalem slowa ${slowo}
-	[Return]  OK"""
+	[Return]  OK
+"""
 	open("mykeywords.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","nsm"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","nsm"]
 
 def main():
 	if sys.argv[1]=='all':
@@ -639,6 +773,8 @@ def main():
 		japan()
 		china()
 		portugese()
+		romanian()
+		urdu()
 		nsm()
 		mykeywords()
 	elif sys.argv[1] in la:
