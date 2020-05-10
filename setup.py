@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'robotframework-nsm',
   packages = ['nsm'],
-  version = '0.4',
+  version = '0.5',
   license='MIT',
   description = 'Robotframework library for NSM',
   author = 'Adam Przybyla',
   author_email = 'adam.przybyla@gmail.com',
   url = 'https://github.com/AdamPrzybyla/robotframework-nsm',
-  download_url = 'https://github.com/AdamPrzybyla/robotframework-nsm/archive/v_04.tar.gz',
+  download_url = 'https://github.com/AdamPrzybyla/robotframework-nsm/archive/v_05.tar.gz',
   keywords = ['robotframework', 'nsm', 'automatisation', 'tests'],
   install_requires=[
           'robotframework',

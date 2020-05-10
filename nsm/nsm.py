@@ -324,6 +324,7 @@ Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 
 def nsm():
 	t="""*** Settings ***
+Metadata  Author  Adam Przybyla
 Resource  mykeywords.robot
 
 *** Keywords ***
@@ -728,7 +729,11 @@ ${state} ںیم دعب ےک سا
 	open("NSM.robot","w").write(t)
 
 def mykeywords():
-	t="""*** Keywords ***
+	t="""*** Settings ***
+Metadata  Author  Adam Przybyla
+Resource  requirements.robot
+
+*** Keywords ***
 ${page} setup
 	Log to console  Wchodze na strone ${page}
 
@@ -759,7 +764,87 @@ webpage check
 """
 	open("mykeywords.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","nsm"]
+def requirements():
+	t="""*** Variables ***
+${ansible_password}  XXXXXXX
+
+*** Settings ***
+Metadata  Author  Adam Przybyla
+Library  Impansible
+library  Collections
+library  OperatingSystem
+library  String
+
+*** Keywords ***
+Requirements
+	No Operation
+	#The Operating System should be Ubuntu
+	#The Firefox browser should be installed if needed
+	#The Geckodriver should be installed if needed
+	#The Chrome should be installed if needed
+	#The Chromedriver should be installed if needed
+
+The Operating System should be Ubuntu
+	${x}=	Setup  localhost
+	${y}=	get from dictionary  ${x}   ansible_facts
+	${z}=	get from dictionary  ${y}   ansible_distribution
+	Should be Equal  ${z}  Ubuntu
+	
+The Firefox browser should be installed if needed
+	[Timeout]    600
+	${x}=  Convert To Lower Case  ${BROWSER}
+	${x}=  Run Keyword and return status  Should Contain  ${x}  firefox
+	Return from keyword if  not ${x}
+	${x}=	apt    localhost   package=firefox   state=present
+        ${x}=	get from dictionary  ${x}   invocation
+        ${y}=	get from dictionary  ${x}   module_args
+        ${s}=	get from dictionary  ${y}   state
+        Should be Equal  ${s}  present
+	${w}=	Run	which firefox
+	Should Contain  ${w}  firefox
+
+The Geckodriver should be installed if needed
+	[Timeout]    600
+	${x}=  Convert To Lower Case  ${BROWSER}
+	${x}=  Run Keyword and return status  Should Contain  ${x}  firefox
+	Return from keyword if  not ${x}
+	${x}=	apt    localhost   package=firefox-geckodriver   state=present
+        ${x}=	get from dictionary  ${x}   invocation
+        ${y}=	get from dictionary  ${x}   module_args
+        ${s}=	get from dictionary  ${y}   state
+        Should be Equal  ${s}  present
+	${w}=	Run	which geckodriver
+	Should Contain  ${w}  geckodriver
+
+The Chrome should be installed if needed
+	[Timeout]    600
+	${x}=  Convert To Lower Case  ${BROWSER}
+	${x}=  Run Keyword and return status  Should Contain  ${x}  chrome
+	Return from keyword if  not ${x}
+	${x}=	apt    localhost   package=google-chrome-stable   state=present
+        ${x}=	get from dictionary  ${x}   invocation
+        ${y}=	get from dictionary  ${x}   module_args
+        ${s}=	get from dictionary  ${y}   state
+        Should be Equal  ${s}  present
+	${w}=	Run	which google-chrome-stable
+	Should Contain  ${w}  google-chrome-stable
+
+The Chromedriver should be installed if needed
+	[Timeout]    600
+	${x}=  Convert To Lower Case  ${BROWSER}
+	${x}=  Run Keyword and return status  Should Contain  ${x}  chrome
+	Return from keyword if  not ${x}
+	${x}=	apt    localhost   package=chromium-chromedriver   state=present
+        ${x}=	get from dictionary  ${x}   invocation
+        ${y}=	get from dictionary  ${x}   module_args
+        ${s}=	get from dictionary  ${y}   state
+        Should be Equal  ${s}  present
+	${w}=	Run	which chromedriver
+	Should Contain  ${w}  chromedriver
+"""
+	open("requirements.robot","w").write(t)
+
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","nsm","requirements"]
 
 def main():
 	if sys.argv[1]=='all':
@@ -777,6 +862,7 @@ def main():
 		urdu()
 		nsm()
 		mykeywords()
+		requirements()
 	elif sys.argv[1] in la:
 		eval(sys.argv[1]+"()")
 
