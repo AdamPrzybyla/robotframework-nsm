@@ -324,7 +324,6 @@ Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 
 def nsm():
 	t="""*** Settings ***
-Metadata  Author  Adam Przybyla
 Resource  mykeywords.robot
 
 *** Keywords ***
