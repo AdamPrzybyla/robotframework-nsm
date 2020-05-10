@@ -730,7 +730,6 @@ ${state} ںیم دعب ےک سا
 
 def mykeywords():
 	t="""*** Settings ***
-Metadata  Author  Adam Przybyla
 Resource  requirements.robot
 
 *** Keywords ***
@@ -769,7 +768,6 @@ def requirements():
 ${ansible_password}  XXXXXXX
 
 *** Settings ***
-Metadata  Author  Adam Przybyla
 Library  Impansible
 library  Collections
 library  OperatingSystem
