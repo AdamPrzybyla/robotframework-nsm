@@ -830,12 +830,21 @@ webpage check
 def requirements():
 	t="""*** Variables ***
 ${ansible_password}  XXXXXXX
+${DBHost}  localhost
+${DBName}  w3schools
+${DBUser}  XXXXXX
+${DBPass}  XXXXXX
+${DBPort}  3306
+${DBFile}  w3schools.sql
+${Furl}    https://raw.githubusercontent.com/AndrejPHP/w3schools-database/master/w3schools.sql
+${gr}      /etc/apt/sources.list.d/google-chrome.list
 
 *** Settings ***
 Library  Impansible
 library  Collections
 library  OperatingSystem
 library  String
+Library  DatabaseLibrary
 
 *** Keywords ***
 Requirements
@@ -843,8 +852,14 @@ Requirements
 	#The Operating System should be Ubuntu
 	#The Firefox browser should be installed if needed
 	#The Geckodriver should be installed if needed
+	#The google repo should be available
 	#The Chrome should be installed if needed
 	#The Chromedriver should be installed if needed
+	#The MySQL server should be installed
+	#Python should have MySQL support
+	#The MySQL user have all privileges
+	#Mysql should have no database imported
+	#Mysql should have database imported
 
 The Operating System should be Ubuntu
 	${x}=	Setup  localhost
@@ -903,6 +918,61 @@ The Chromedriver should be installed if needed
         Should be Equal  ${s}  present
 	${w}=	Run	which chromedriver
 	Should Contain  ${w}  chromedriver
+
+The MySQL server should be installed
+	[Timeout]    600
+	${x}=	apt    localhost   package=mysql-server   state=present
+	${x}=	get from dictionary  ${x}   invocation
+	${y}=	get from dictionary  ${x}   module_args
+	${s}=	get from dictionary  ${y}   state
+		Should be Equal  ${s}  present
+	${w}=	Run	which mysqld
+		Should Contain  ${w}  mysqld
+
+Python should have MySQL support
+	[Timeout]    600
+	${x}=	apt    localhost   package=python-mysqldb   state=present
+	${x}=	get from dictionary  ${x}   invocation
+	${y}=	get from dictionary  ${x}   module_args
+	${s}=	get from dictionary  ${y}   state
+		Should be Equal  ${s}  present
+
+The MySQL user have all privileges
+	[Timeout]    600
+	${x}=	apt    localhost   package=python-mysqldb   state=present
+	${x}=	get from dictionary  ${x}   invocation
+	${y}=	get from dictionary  ${x}   module_args
+	${s}=	get from dictionary  ${y}   state
+		Should be Equal  ${s}  present
+		mysql_user  localhost  name=${DBUser}  password=${DBPass}  priv=*.*:ALL
+
+Mysql should have no database imported
+	[Timeout]    600
+	mysql db  localhost  name=${DBName}  state=absent
+
+Mysql should have database imported
+	[Timeout]    600
+	mysql db  localhost  name=${DBName}  state=present
+	Get url   localhost  url=${Furl}     dest=/tmp/${DBFile}
+	mysql db  localhost  name=${DBName}  state=import  target=/tmp/${DBFile}
+
+Mysql requirements
+	The MySQL server should be installed
+	Python should have MySQL support
+	Mysql should have no database imported
+	Mysql should have database imported
+	The MySQL user have all privileges
+
+The google repo should be available
+	${x}=	Stat  localhost  ${gr}
+        ${x}=   get from dictionary  ${x}   stat
+        ${z}=   get from dictionary  ${y}   exists
+		run keyword if  ${x}  Copy  localhost  content='deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'  ${gr}
+		run keyword if  ${x}  Command  localhost  wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+	${x}=	Stat  localhost  ${gr}
+        ${x}=   get from dictionary  ${x}   stat
+        ${x}=   get from dictionary  ${y}   exists
+	Should be true  ${x}   "The google repo is not available"
 """
 	open("requirements.robot","w").write(t)
 
