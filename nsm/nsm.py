@@ -322,6 +322,33 @@ Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 """
 	open("urdu.robot","w").write(t)
 
+def bengali():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+*** Test Cases ***
+পরীক্ষা 1
+	এটি এখন এই মত: আমি webpage দেখতে পাচ্ছি
+	আমি শব্দগুলি logged webpage তে দেখতে পাচ্ছি না
+	তাহলে আমি শব্দগুলি credentials ব্যবহার করি webpage তে 
+	এর জন্য: আমি webpage - তে logged শব্দগুলি দেখতে পাচ্ছি
+	এর পরে আমি আর ওয়েবসাইট webpage দেখতে পাচ্ছি না
+
+পরীক্ষা 2
+	এটি এখন এই মত: আমি webpage দেখতে পাচ্ছি
+	আমি শব্দগুলি logged webpage তে দেখতে পাচ্ছি না
+	তাহলে আমি শব্দগুলি bad credentials ব্যবহার করি webpage তে
+	এর জন্য: আমি শব্দগুলি logged webpage তে দেখতে পাচ্ছি না
+	এর পরে আমি আর ওয়েবসাইট webpage দেখতে পাচ্ছি না
+
+পরীক্ষা 3
+	এটি এখন এই মত: আমি webpage দেখতে পাচ্ছি
+	আমি শব্দগুলি logged webpage তে দেখতে পাচ্ছি না
+	এর পরে আমি আর ওয়েবসাইট webpage দেখতে পাচ্ছি না
+"""
+	open("bengali.robot","w").write(t)
+
 def nsm():
 	t="""*** Settings ***
 Resource  mykeywords.robot
@@ -724,6 +751,44 @@ ${state} ںیم دعب ےک سا
 #i see the ${page:[^ ]+}
 ںوہ اتکس ھکید ${page:[^ ]+}
 	Run keyword  ${page} setup
+
+# bengali
+এটি এখন এই মত: ${state}
+#It is like this now: ${state}
+	Run keyword  ${state}
+
+আমি শব্দগুলি ${logged:[^ ]+} ${page:[^ ]+} তে দেখতে পাচ্ছি না
+#I not see words ${logged} on the ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+তাহলে আমি শব্দগুলি ${cred} ব্যবহার করি ${page:[^ ]+} তে
+#I use the words ${cred} on ${page}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+এর জন্য: ${state}
+#because of this: ${state}
+	Run keyword  ${state}
+
+আমি ${page} - তে ${logged} শব্দগুলি দেখতে পাচ্ছি
+#I see words ${logged} on the ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+এর পরে ${state}
+#after this ${state}
+	Run keyword  ${state}
+
+আমি আর ওয়েবসাইট ${page:[^ ]+} দেখতে পাচ্ছি না
+#i see the ${page:[^ ]+} ${no more}
+	Run keyword  ${page} teardown
+
+আমি ${page:[^ ]+} দেখতে পাচ্ছি
+#i see the ${page:[^ ]+}
+	Run keyword  ${page} setup
 """
 	open("NSM.robot","w").write(t)
 
@@ -841,7 +906,7 @@ The Chromedriver should be installed if needed
 """
 	open("requirements.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","nsm","requirements"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","nsm","requirements"]
 
 def main():
 	if sys.argv[1]=='all':
@@ -857,6 +922,7 @@ def main():
 		portugese()
 		romanian()
 		urdu()
+		bengali()
 		nsm()
 		mykeywords()
 		requirements()
