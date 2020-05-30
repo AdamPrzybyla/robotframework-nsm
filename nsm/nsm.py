@@ -964,14 +964,14 @@ Mysql requirements
 	The MySQL user have all privileges
 
 The google repo should be available
-	${x}=	Stat  localhost  ${gr}
+	${x}=	Stat  localhost  path="${gr}"
         ${x}=   get from dictionary  ${x}   stat
-        ${z}=   get from dictionary  ${y}   exists
-		run keyword if  ${x}  Copy  localhost  content='deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'  ${gr}
-		run keyword if  ${x}  Command  localhost  wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
-	${x}=	Stat  localhost  ${gr}
+        ${x}=   get from dictionary  ${x}   exists
+		run keyword if  not ${x}  Copy  localhost  content='deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'  dest="${gr}"
+		run keyword if  not ${x}  Command  localhost  wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+	${x}=	Stat  localhost  path="${gr}"
         ${x}=   get from dictionary  ${x}   stat
-        ${x}=   get from dictionary  ${y}   exists
+        ${x}=   get from dictionary  ${x}   exists
 	Should be true  ${x}   "The google repo is not available"
 """
 	open("requirements.robot","w").write(t)
