@@ -838,13 +838,16 @@ ${DBPort}  3306
 ${DBFile}  w3schools.sql
 ${Furl}    https://raw.githubusercontent.com/AndrejPHP/w3schools-database/master/w3schools.sql
 ${gr}      /etc/apt/sources.list.d/google-chrome.list
+${grep}    http://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/
+#${chrome_version}  False
+${chrome_version}  google-chrome-stable_81.0.4044.138-1_amd64.deb
 
 *** Settings ***
 Library  Impansible
 library  Collections
 library  OperatingSystem
 library  String
-Library  DatabaseLibrary
+#Library  DatabaseLibrary
 
 *** Keywords ***
 Requirements
@@ -897,7 +900,11 @@ The Chrome should be installed if needed
 	[Timeout]    600
 	${x}=  Convert To Lower Case  ${BROWSER}
 	${x}=  Run Keyword and return status  Should Contain  ${x}  chrome
-	Return from keyword if  not ${x}
+	       Return from keyword if  not ${x}
+	${w}=	Run	which google-chrome-stable
+	${x}=   run keyword and return status  Should Contain  ${w}  google-chrome-stable
+	        Return from keyword if  ${x}
+		run keyword if  "${chrome_version}"!="False"  apt  localhost  deb="${grep}${chrome_version}"
 	${x}=	apt    localhost   package=google-chrome-stable   state=present
         ${x}=	get from dictionary  ${x}   invocation
         ${y}=	get from dictionary  ${x}   module_args
@@ -964,11 +971,13 @@ Mysql requirements
 	The MySQL user have all privileges
 
 The google repo should be available
+	[Timeout]    600
 	${x}=	Stat  localhost  path="${gr}"
         ${x}=   get from dictionary  ${x}   stat
         ${x}=   get from dictionary  ${x}   exists
 		run keyword if  not ${x}  Copy  localhost  content='deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'  dest="${gr}"
-		run keyword if  not ${x}  Command  localhost  wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+		run keyword if  not ${x}  shell  localhost  wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
+		run keyword if  not ${x}  apt  localhost  update_cache=yes
 	${x}=	Stat  localhost  path="${gr}"
         ${x}=   get from dictionary  ${x}   stat
         ${x}=   get from dictionary  ${x}   exists
