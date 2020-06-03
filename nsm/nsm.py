@@ -841,6 +841,8 @@ ${gr}      /etc/apt/sources.list.d/google-chrome.list
 ${grep}    http://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/
 #${chrome_version}  False
 ${chrome_version}  google-chrome-stable_81.0.4044.138-1_amd64.deb
+${chd81}  http://launchpadlibrarian.net/478575933/chromium-chromedriver_81.0.4044.138-0ubuntu0.18.04.1_amd64.deb
+
 
 *** Settings ***
 Library  Impansible
@@ -918,11 +920,20 @@ The Chromedriver should be installed if needed
 	${x}=  Convert To Lower Case  ${BROWSER}
 	${x}=  Run Keyword and return status  Should Contain  ${x}  chrome
 	Return from keyword if  not ${x}
-	${x}=	apt    localhost   package=chromium-chromedriver   state=present
-        ${x}=	get from dictionary  ${x}   invocation
-        ${y}=	get from dictionary  ${x}   module_args
-        ${s}=	get from dictionary  ${y}   state
-        Should be Equal  ${s}  present
+        ${x}=   package facts  localhost
+        ${x}=   get from dictionary  ${x}   ansible_facts
+        ${x}=   get from dictionary  ${x}   packages
+        ${x}=   get from dictionary  ${x}   google-chrome-stable
+        ${x}=   get from dictionary  ${x}[0]   version
+        ${xs}=  run keyword and return status  should start with  ${x}  81
+        ${x}=   run keyword if  not ${xs}  apt    localhost   package=chromium-chromedriver state=present
+        ${x}=   run keyword if  ${xs}  apt  localhost  deb="${chd81}"
+        #log to console   ${x}
+	#${x}=	apt    localhost   package=chromium-chromedriver   state=present
+        #${x}=	get from dictionary  ${x}   invocation
+        #${y}=	get from dictionary  ${x}   module_args
+        #${s}=	get from dictionary  ${y}   state
+        #Should be Equal  ${s}  present
 	${w}=	Run	which chromedriver
 	Should Contain  ${w}  chromedriver
 
