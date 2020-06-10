@@ -349,6 +349,87 @@ Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 """
 	open("bengali.robot","w").write(t)
 
+def silesian():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+*** Test Cases ***
+Sprowdź 1
+	Teroz je tak: jo widza webpage
+	Jo ni widza słowa logged na webpage
+	Potym jo użyja słów credentials na webpage
+	Z tego powodu jo widza słowa logged na webpage
+	Terozki uż jo ni widza webpage
+
+Sprowdź 2
+	Teroz je tak: jo widza webpage
+	Jo ni widza słowa logged na webpage
+	Potym jo użyja słów bad credentials na webpage
+	Z tego powodu jo ni widza słowa logged na webpage
+	Terozki uż jo ni widza webpage
+
+Sprowdź 3
+	Teroz je tak: jo widza webpage
+	Jo ni widza słowa logged na webpage
+	Terozki uż jo ni widza webpage
+"""
+	open("silesian.robot","w").write(t)
+
+def bielorusian():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+*** Test Cases ***
+Тест 1
+	Зараз гэта так: Я бачу webpage
+	Я не бачу слоў logged на webpage
+	тады я выкарыстаю словы credentials на webpage
+	з-за гэтага я бачу словы logged на webpage
+	пасля гэтага я больш не бачу webpage
+
+Тест 2
+	Зараз гэта так: Я бачу webpage
+	Я не бачу слоў logged на webpage
+	тады я выкарыстаю словы bad credentials на webpage
+	з-за гэтага Я не бачу слоў logged на webpage
+	пасля гэтага я больш не бачу webpage
+
+Тест 3
+	Зараз гэта так: Я бачу webpage
+	Я не бачу слоў logged на webpage
+	пасля гэтага я больш не бачу webpage
+"""
+	open("bielorusian.robot","w").write(t)
+
+def tamil():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+*** Test Cases ***
+சோதனை 1
+	இப்போது இது போன்றது: நான் webpage ஐப் பார்க்கிறேன்
+	webpage இல் logged சொற்களை நான் காணவில்லை
+	நான் webpage இல் credentials என்ற சொற்களைப் பயன்படுத்துகிறேன்
+	இதன் காரணமாக webpage இல் logged சொற்களைக் காண்கிறேன்
+	இதற்கு பிறகு நான் இனி webpage ஐப் பார்க்கவில்லை
+
+சோதனை 2
+	இப்போது இது போன்றது: நான் webpage ஐப் பார்க்கிறேன்
+	webpage இல் logged சொற்களை நான் காணவில்லை
+	நான் webpage இல் bad credentials என்ற சொற்களைப் பயன்படுத்துகிறேன்
+	இதன் காரணமாக webpage இல் logged சொற்களை நான் காணவில்லை
+	இதற்கு பிறகு நான் இனி webpage ஐப் பார்க்கவில்லை
+
+சோதனை 3
+	இப்போது இது போன்றது: நான் webpage ஐப் பார்க்கிறேன்
+	webpage இல் logged சொற்களை நான் காணவில்லை
+	இதற்கு பிறகு நான் இனி webpage ஐப் பார்க்கவில்லை
+"""
+	open("tamil.robot","w").write(t)
+
 def nsm():
 	t="""*** Settings ***
 Resource  mykeywords.robot
@@ -789,6 +870,124 @@ ${state} ںیم دعب ےک سا
 আমি ${page:[^ ]+} দেখতে পাচ্ছি
 #i see the ${page:[^ ]+}
 	Run keyword  ${page} setup
+
+# silesian
+Teroz je tak: ${state}
+#It is like this now: ${state}
+	Run keyword  ${state}
+
+#I not see words ${logged} on the ${page}
+Jo ni widza słowa ${logged} na ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+Potym jo użyja słów ${cred} na ${page}
+#I use the words ${cred} on ${page}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+#Z tego powodu ${state}
+##because of this: ${state}
+#	Run keyword  ${state}
+
+#I see words ${logged} on the ${page}
+jo widza słowa ${logged} na ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+#after this ${state}
+Terozki uż ${state}
+	Run keyword  ${state}
+
+#i see the ${page:[^ ]+} ${no more}
+jo ni widza ${page:[^ ]+}
+	Run keyword  ${page} teardown
+
+#i see the ${page:[^ ]+}
+jo widza ${page:[^ ]+}
+	Run keyword  ${page} setup
+
+# bielorusian
+Зараз гэта так: ${state}
+#It is like this now: ${state}
+	Run keyword  ${state}
+
+Я не бачу слоў ${logged} на ${page}
+#I not see words ${logged} on the ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+тады я выкарыстаю словы ${cred} на ${page}
+#I use the words ${cred} on ${page}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+з-за гэтага ${state}
+#because of this: ${state}
+	Run keyword  ${state}
+
+я бачу словы ${logged} на ${page}
+#I see words ${logged} on the ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+пасля гэтага ${state}
+#after this ${state}
+	Run keyword  ${state}
+
+я больш не бачу ${page:[^ ]+}
+#i see the ${page:[^ ]+} ${no more}
+	Run keyword  ${page} teardown
+
+Я бачу ${page:[^ ]+}
+#i see the ${page:[^ ]+}
+	Run keyword  ${page} setup
+
+# tamil
+இப்போது இது போன்றது: ${state}
+#It is like this now: ${state}
+	Run keyword  ${state}
+
+#I not see words ${logged} on the ${page}
+${page:[^ ]+} இல் ${logged} சொற்களை நான் காணவில்லை
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+நான் ${page:[^ ]+} இல் ${cred} என்ற சொற்களைப் பயன்படுத்துகிறேன்
+#I use the words ${cred} on ${page}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+இதன் காரணமாக ${state}
+#because of this: ${state}
+	Run keyword  ${state}
+
+#I see words ${logged} on the ${page}
+${page:[^ ]+} இல் ${logged} சொற்களைக் காண்கிறேன்
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+#after this ${state}
+இதற்கு பிறகு ${state}
+	Run keyword  ${state}
+
+#i see the ${page:[^ ]+} ${no more}
+நான் இனி ${page:[^ ]+} ஐப் பார்க்கவில்லை
+	Run keyword  ${page} teardown
+
+#i see the ${page:[^ ]+}
+நான் ${page:[^ ]+} ஐப் பார்க்கிறேன்
+	Run keyword  ${page} setup
+
+
+
+
 """
 	open("NSM.robot","w").write(t)
 
@@ -996,7 +1195,7 @@ The google repo should be available
 """
 	open("requirements.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","nsm","requirements"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","nsm","requirements"]
 
 def main():
 	if sys.argv[1]=='all':
@@ -1013,6 +1212,9 @@ def main():
 		romanian()
 		urdu()
 		bengali()
+		silesian()
+		tamil()
+		bielorusian()
 		nsm()
 		mykeywords()
 		requirements()
