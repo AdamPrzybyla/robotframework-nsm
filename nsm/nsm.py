@@ -1126,7 +1126,7 @@ The Chromedriver should be installed if needed
         ${x}=   get from dictionary  ${x}[0]   version
         ${xs}=  run keyword and return status  should start with  ${x}  81
         ${x}=   run keyword if  not ${xs}  apt    localhost   package=chromium-chromedriver state=present
-        ${x}=   run keyword if  ${xs}  apt  localhost  deb="${chd81}"
+        ${x}=   run keyword if  ${xs}  apt  localhost  deb="${chd81}"  force=True
         #log to console   ${x}
 	#${x}=	apt    localhost   package=chromium-chromedriver   state=present
         #${x}=	get from dictionary  ${x}   invocation
