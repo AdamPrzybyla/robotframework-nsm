@@ -7,7 +7,7 @@ setup(
   version = '0.13',
   license='MIT',
   description = 'Robotframework library for NSM',
-  long_description=u'''Robotframework-NSM
+  long_description='''Robotframework-NSM
 ==================
 
 .. contents::
@@ -55,23 +55,23 @@ Sample test cases:
 
 .. code:: robotframework
 	Test 1
-		Teraz jest tak: ja widzę webpage
-		Ja nie widzę słowa logged na webpage
-		Potem ja użyję słów credentials na webpage
-		Z tego powodu ja widzę słowa logged na webpage
-		Niedługo potem ja nie widzę webpage
+		Teraz jest tak: ja widze webpage
+		Ja nie widze slowa logged na webpage
+		Potem ja użyje slow credentials na webpage
+		Z tego powodu ja widze slowa logged na webpage
+		Niedlugo potem ja nie widze webpage
 
 	Test 2
-		Teraz jest tak: ja widzę webpage
-		Ja nie widzę słowa logged na webpage
-		Potem ja użyję słów bad credentials na webpage
-		Z tego powodu ja nie widzę słowa logged na webpage
-		Niedługo potem ja nie widzę webpage
+		Teraz jest tak: ja widze webpage
+		Ja nie widze slowa logged na webpage
+		Potem ja użyje slów bad credentials na webpage
+		Z tego powodu ja nie widze slowa logged na webpage
+		Niedlugo potem ja nie widze webpage
 
 	Test 3
-		Teraz jest tak: ja widzę webpage
-		Ja nie widzę słowa logged na webpage
-		Niedługo potem ja nie widzę webpage
+		Teraz jest tak: ja widze webpage
+		Ja nie widze slowa logged na webpage
+		Niedlugo potem ja nie widze webpage
 
 Support
 -------
