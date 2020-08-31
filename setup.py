@@ -64,7 +64,7 @@ Sample test cases:
 	Test 2
 		Teraz jest tak: ja widze webpage
 		Ja nie widze slowa logged na webpage
-		Potem ja użyje slów bad credentials na webpage
+		Potem ja użyje slow bad credentials na webpage
 		Z tego powodu ja nie widze slowa logged na webpage
 		Niedlugo potem ja nie widze webpage
 
