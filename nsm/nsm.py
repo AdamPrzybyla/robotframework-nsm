@@ -1196,7 +1196,100 @@ The google repo should be available
 """
 	open("requirements.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","nsm","requirements"]
+def appium():
+	t="""*** Settings ***
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+library  Collections
+library  Impansible
+library  OperatingSystem
+library  AppiumLibrary
+library  Process
+
+Suite Setup  Requirements
+Suite Teardown  Terminate Process
+
+*** Variables ***
+${ansible_become_password}  xxxxxxxxxxxx
+${ansible_user}  xxxxxxxxxxxx
+${btool}  https://github.com/google/bundletool/releases/download/1.2.0/bundletool-all-1.2.0.jar
+${demoapp}  https://github.com/appium/appium/raw/master/sample-code/apps/ApiDemos-debug.apk
+
+${ANDROID_AUTOMATION_NAME}    UIAutomator1
+${ANDROID_APP}                ${CURDIR}/ApiDemos-debug.apk
+${ANDROID_PLATFORM_NAME}      Android
+${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=4}
+
+*** Test Cases ***
+Should send keys to search box and then check the value
+  Open Test Application
+  Input Search Query  Hello World!
+  Submit Search
+  Search Query Should Be Matching  Hello World!
+
+*** Keywords ***
+Open Test Application
+  Open Application  http://127.0.0.1:4723/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}
+  ...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}
+  ...  app=${ANDROID_APP}  appPackage=io.appium.android.apis  appActivity=.app.SearchInvoke
+
+Input Search Query
+  [Arguments]  ${query}
+  Input Text  txt_query_prefill  ${query}
+  log  ${ANDROID_PLATFORM_VERSION}
+
+Submit Search
+  Click Element  btn_start_search
+
+Search Query Should Be Matching
+  [Arguments]  ${text}
+  Wait Until Page Contains Element  android:id/search_src_text
+  Element Text Should Be  android:id/search_src_text  ${text}
+  Capture Page Screenshot
+
+Requirements
+	Lemat 1 - appium is installed
+	Lemat 2 - appium works
+	Lemat 3 - appium has been started
+
+Lemat 1 - appium is installed
+	[Timeout]    1800
+        run keyword and ignore error  npm   apt   localhost  update_cache=yes       force_apt_get=yes
+        apt   localhost  upgrade=dist           force_apt_get=yes
+        apt   localhost  package=openjdk-8-jre  state=present
+        apt   localhost  package=openjdk-8-jdk  state=present
+        apt   localhost  package=android-sdk    state=present
+        apt   localhost  package=npm            state=present
+        apt   localhost  package=ffmpeg         state=present
+        run keyword and ignore error  npm   localhost  name=appium            global=yes  state=present
+        npm   localhost  name=appium            global=yes  state=present
+        run keyword and ignore error  npm   localhost  name=appium-doctor     global=yes  state=present
+        npm   localhost  name=appium-doctor     global=yes  state=present
+        run keyword and ignore error  npm   localhost  name=opencv4nodejs     global=yes  state=present
+        npm   localhost  name=opencv4nodejs     global=yes  state=present
+        run keyword and ignore error  npm   localhost  name=mjpeg-consumer    global=yes  state=present
+        npm   localhost  name=mjpeg-consumer    global=yes  state=present
+        alternatives  localhost   name=java     path=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+        Set Environment Variable  ANDROID_HOME  /usr/lib/android-sdk/
+        Set Environment Variable  JAVA_HOME     /usr/lib/jvm/java-8-openjdk-amd64
+        ${P}=   Get Environment Variable   PATH
+        Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
+        Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
+        Get url  LOCAL  url=${btool}  dest=bin/bundletool.jar  mode="0755"
+        Get url  LOCAL  url=${demoapp}  dest=${CURDIR}/ApiDemos-debug.apk
+
+Lemat 2 - appium works
+	${w}=  Shell  local   appium-doctor 2>&1 |grep -v emulator
+	${err}=   get from dictionary  ${w}   stdout
+	Should Not Contain   ${err}   WARN   ${err} 
+
+Lemat 3 - appium has been started
+	Start Process  appium  shell=True  alias=appiumserver  stdout=${CURDIR}/appium_stdout.txt  stderr=${CURDIR}/appium_stderr.txt
+	Sleep  10
+"""
+	open("appium.robot","w").write(t)
+
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","nsm","requirements","appium"]
 
 def main():
 	if sys.argv[1]=='all':
