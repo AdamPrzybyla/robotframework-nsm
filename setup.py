@@ -8,7 +8,7 @@ setup(
   license='MIT',
   description = 'Robotframework library for NSM',
   long_description='''Robotframework-NSM
-===============
+==================
 
 .. contents::
 
