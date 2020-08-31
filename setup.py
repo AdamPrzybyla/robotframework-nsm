@@ -57,14 +57,14 @@ Sample test cases:
 	Test 1
 		Teraz jest tak: ja widze webpage
 		Ja nie widze slowa logged na webpage
-		Potem ja użyje slow credentials na webpage
+		Potem ja uzyje slow credentials na webpage
 		Z tego powodu ja widze slowa logged na webpage
 		Niedlugo potem ja nie widze webpage
 
 	Test 2
 		Teraz jest tak: ja widze webpage
 		Ja nie widze slowa logged na webpage
-		Potem ja użyje slow bad credentials na webpage
+		Potem ja uzyje slow bad credentials na webpage
 		Z tego powodu ja nie widze slowa logged na webpage
 		Niedlugo potem ja nie widze webpage
 
