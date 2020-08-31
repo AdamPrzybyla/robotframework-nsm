@@ -87,7 +87,7 @@ available:
 .. _PyPI: https://pypi.python.org/pypi/robotframework-nsm
 .. _pip: http://pip-installer.org
 .. _robotframework-users: http://groups.google.com/group/robotframework-users
-'''
+''',
   author = 'Adam Przybyla',
   author_email = 'adam.przybyla@gmail.com',
   url = 'https://github.com/AdamPrzybyla/robotframework-nsm',
