@@ -430,7 +430,7 @@ Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 """
 	open("tamil.robot","w").write(t)
 
-def nsm():
+def nsmlib():
 	t="""*** Settings ***
 Resource  mykeywords.robot
 
@@ -469,19 +469,19 @@ i see the ${page:[^ ]+}
 Teraz jest tak: ${state}
 	Run keyword  ${state}
 
-Ja nie widzę słowa ${logged} na ${page}
+Ja nie widzę słowa ${logged} na ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-Potem ja użyję słów ${cred} na ${page}
+Potem ja użyję słów ${cred} na ${page:[^ ]+}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
 Z tego powodu ${state}
 	Run keyword  ${state}
 
-ja widzę słowa ${logged} na ${page}
+ja widzę słowa ${logged} na ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -1309,7 +1309,7 @@ def main():
 		silesian()
 		tamil()
 		bielorusian()
-		nsm()
+		nsmlib()
 		mykeywords()
 		requirements()
 	elif sys.argv[1] in la:
