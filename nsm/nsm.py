@@ -443,19 +443,19 @@ Resource  mykeywords.robot
 It is like this now: ${state}
 	Run keyword  ${state}
 
-I not see words ${logged} on the ${page}
+I not see words ${logged} on the ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-I use the words ${cred} on ${page}
+i use the words ${cred} on ${page:[^ ]+}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
 because of this: ${state}
 	Run keyword  ${state}
 
-I see words ${logged} on the ${page}
+I see words ${logged} on the ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -463,10 +463,10 @@ I see words ${logged} on the ${page}
 after this ${state}
 	Run keyword  ${state}
 
-i see the ${page:[^ ]+} ${no more}
+i see the ${page:[^ ]+} no more
 	Run keyword  ${page} teardown
 
-i see the ${page:[^ ]+}
+I see the ${page:[^ ]+}
 	Run keyword  ${page} setup
 
 # polski
