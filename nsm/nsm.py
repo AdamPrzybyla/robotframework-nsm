@@ -1,6 +1,10 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 import sys
+from robot.running import Keyword
+from robot.running.context import EXECUTION_CONTEXTS
+import re,pprint
+
 def polish():
 	t="""*** Settings ***
 Resource  NSM.robot
@@ -1291,6 +1295,93 @@ Lemat 3 - appium has been started
 
 la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","nsmlib","requirements","appium"]
 
+def NSMfu(data):
+	init={0: "Teraz jest tak: ${state}", 3:"Z tego powodu ${state}",5:"Niedługo potem ${state}"}
+	wyn=init.copy()
+	for nrp,linia in enumerate(data):
+		for v in init.items():
+			v1=v[1].strip().replace("${state}","").strip()
+			if v1 in linia:
+				nl=linia.replace(v1,"").strip()
+				nl1=nl.replace("webpage","${page:[^ ]+}").replace("logged","${logged}")
+				nr={0:7,3:4,5:6}[v[0]]
+				if nr not in wyn.keys():
+					wyn[nr]=nl1
+				break
+		else:
+			nl=linia.strip()
+			nl1=nl.replace("webpage","${page:[^ ]+}").replace("logged","${logged}")
+			nl1=re.sub("(bad )?credentials","${cred}",nl1)
+			if nrp in [6,11,7]: continue
+			wyn[nrp]=nl1
+	#pprint.pprint(wyn)
+	return wyn
+
+class genNSM(type):
+	def __init__(cls, name, bases, nmspc):
+		super(genNSM, cls).__init__(name, bases, nmspc)
+		wyn1=[]
+		for l in re.findall(r"(?mi)^[ \t]+(.*)",file("polish.robot").read()): wyn1.append(l)
+		cls.uses_metaclass = lambda self : True
+		funpar=NSMfu(wyn1)
+		for st,name in funpar.items():
+			n="polish_fun%d" % st
+			if st in [0,3,5]:
+				setattr(cls,n,(lambda k: lambda self,p1: self.call_p1(p1))(n))
+			elif st==7:
+				setattr(cls,n,(lambda k: lambda self,p1: self.call_p2(p1))(n))
+			elif st==6:
+				setattr(cls,n,(lambda k: lambda self,p1: self.call_p6(p1))(n))
+			elif st==1:
+				setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p2p(p1,p2))(n))
+			elif st==2:
+				setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p3p(p1,p2))(n))
+			elif st==4:
+				setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p1,p2))(n))
+			getattr(cls,n).__func__.robot_name=name.decode("utf-8")
+			
+class nsm(object):
+	ROBOT_LIBRARY_VERSION = '0.16'
+	__metaclass__ = genNSM
+
+	def call_p1(self,p1):
+		kw = Keyword(p1, args=[])
+		return kw.run(EXECUTION_CONTEXTS.current)
+
+	def call_p2(self,p1):
+		pw="%s setup" %  p1
+		kw = Keyword(pw, args=[])
+		return kw.run(EXECUTION_CONTEXTS.current)
+
+	def call_p6(self,p1):
+		pw="%s teardown" %  p1
+		kw = Keyword(pw, args=[])
+		return kw.run(EXECUTION_CONTEXTS.current)
+
+	def call_p2p(self,p1,p2):
+		kw = Keyword(p1, args=[])
+		words = kw.run(EXECUTION_CONTEXTS.current)
+		pw="%s check" %  p2
+		kw = Keyword(pw, args=[words])
+		result = kw.run(EXECUTION_CONTEXTS.current)
+		kw = Keyword("Should not be equal", args=["OK",result])
+		return kw.run(EXECUTION_CONTEXTS.current)
+
+	def call_p3p(self,p1,p2):
+		kw = Keyword(p1, args=[])
+		user,passwd = kw.run(EXECUTION_CONTEXTS.current)
+		pw="Enter Credentials"
+		kw = Keyword(pw, args=[user,passwd])
+		return kw.run(EXECUTION_CONTEXTS.current)
+
+	def call_p4p(self,p1,p2):
+		kw = Keyword(p1, args=[])
+		words = kw.run(EXECUTION_CONTEXTS.current)
+		pw="%s check" %  p2
+		kw = Keyword(pw, args=[words])
+		result = kw.run(EXECUTION_CONTEXTS.current)
+		kw = Keyword("Should be equal", args=["OK",result])
+		return kw.run(EXECUTION_CONTEXTS.current)
 def main():
 	if sys.argv[1]=='all':
 		polish()
