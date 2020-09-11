@@ -1295,8 +1295,13 @@ Lemat 3 - appium has been started
 
 la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","nsmlib","requirements","appium"]
 
-def NSMfu(data):
-	init={0: "Teraz jest tak: ${state}", 3:"Z tego powodu ${state}",5:"Niedługo potem ${state}"}
+def NSMfu(data,la1="polish"):
+	if la1=="polish":
+		init={0: "Teraz jest tak: ${state}", 3:"Z tego powodu ${state}",5:"Niedługo potem ${state}"}
+	elif la1=='english':
+		init={0:"It is like this now: ${state}",3:"because of this: ${state}",5:"after this ${state}"}
+	elif la1=='german':
+		init={0:"Es ist jetzt so: ${state}",3:"Aus diesem grund: ${state}",5:"Danach ${state}"}
 	wyn=init.copy()
 	for nrp,linia in enumerate(data):
 		for v in init.items():
@@ -1313,6 +1318,7 @@ def NSMfu(data):
 			nl1=nl.replace("webpage","${page:[^ ]+}").replace("logged","${logged}")
 			nl1=re.sub("(bad )?credentials","${cred}",nl1)
 			if nrp in [6,11,7]: continue
+			if nl1.startswith("then "): nl1=nl1[5:]
 			wyn[nrp]=nl1
 	#pprint.pprint(wyn)
 	return wyn
@@ -1320,25 +1326,26 @@ def NSMfu(data):
 class genNSM(type):
 	def __init__(cls, name, bases, nmspc):
 		super(genNSM, cls).__init__(name, bases, nmspc)
-		wyn1=[]
-		for l in re.findall(r"(?mi)^[ \t]+(.*)",file("polish.robot").read()): wyn1.append(l)
 		cls.uses_metaclass = lambda self : True
-		funpar=NSMfu(wyn1)
-		for st,name in funpar.items():
-			n="polish_fun%d" % st
-			if st in [0,3,5]:
-				setattr(cls,n,(lambda k: lambda self,p1: self.call_p1(p1))(n))
-			elif st==7:
-				setattr(cls,n,(lambda k: lambda self,p1: self.call_p2(p1))(n))
-			elif st==6:
-				setattr(cls,n,(lambda k: lambda self,p1: self.call_p6(p1))(n))
-			elif st==1:
-				setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p2p(p1,p2))(n))
-			elif st==2:
-				setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p3p(p1,p2))(n))
-			elif st==4:
-				setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p1,p2))(n))
-			getattr(cls,n).__func__.robot_name=name.decode("utf-8")
+		for la in ["polish","english"]:
+			wyn1=[]
+			for l in re.findall(r"(?mi)^[ \t]+(.*)",file("%s.robot" % la).read()): wyn1.append(l)
+			funpar=NSMfu(wyn1,la)
+			for st,name in funpar.items():
+				n="%s_fun%d" % (la,st)
+				if st in [0,3,5]:
+					setattr(cls,n,(lambda k: lambda self,p1: self.call_p1(p1))(n))
+				elif st==7:
+					setattr(cls,n,(lambda k: lambda self,p1: self.call_p2(p1))(n))
+				elif st==6:
+					setattr(cls,n,(lambda k: lambda self,p1: self.call_p6(p1))(n))
+				elif st==1:
+					setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p2p(p1,p2))(n))
+				elif st==2:
+					setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p3p(p1,p2))(n))
+				elif st==4:
+					setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p1,p2))(n))
+				getattr(cls,n).__func__.robot_name=name.decode("utf-8")
 			
 class nsm(object):
 	ROBOT_LIBRARY_VERSION = '0.16'
