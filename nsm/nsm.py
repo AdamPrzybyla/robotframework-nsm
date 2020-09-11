@@ -1289,7 +1289,7 @@ Lemat 3 - appium has been started
 """
 	open("appium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","nsm","requirements","appium"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","nsmlib","requirements","appium"]
 
 def main():
 	if sys.argv[1]=='all':
