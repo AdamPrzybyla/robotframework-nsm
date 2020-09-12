@@ -6,7 +6,9 @@ import re
 import pprint
 import nsm
 
-langs={"polish":[8,16],"english":[0,8]}
+langs={"polish":[8,16],"english":[0,8],"german":[16,24],"russian":[24,32],"czech":[32,40],"french":[40,48],"spanish":[48,56],
+"japan":[56,64]}
+
 def nname(s):
 	return reduce(lambda a,b: a.replace(b,""),[s]+list("${}:+^[]")).replace(" ","_").lower()
 
@@ -27,8 +29,11 @@ class nsm_test(type):
 			wyn1=[l for l in re.findall(r"(?mi)^[ \t]+(.*)",file("%s.robot" %la).read())]
 			cls.nsmkw[la]=wyn
 			cls.examples[la]=wyn1
+			cls.nsm=nsm.nsm()
 			for f in [e for e in enumerate(wyn)]: 
-				setattr(cls,"test_%s" % nname(f[1]),(lambda g,lal: lambda self: self.checker(g,lal)) (f,la))
+				setattr(cls,"test_%s" % nname(f[1]),(lambda g,lal: lambda self: self.checker(g,lal))(f,la))
+			for f in [e for e in enumerate(wyn)]: 
+				setattr(cls,"test_member_%s" % nname(f[1]),(lambda g,lal: lambda self: self.member_checker(g,lal))(f,la))
 
 class test_sem_NSM(unittest.TestCase):
 	__metaclass__ = nsm_test
@@ -39,9 +44,13 @@ class test_sem_NSM(unittest.TestCase):
 		else:
 			self.assertIsInstance(self.examples[lang],list)
 			d=nsm.NSMfu(self.examples[lang],lang)
-			self.assertIn(n[1],d.values())
+			self.assertIn(n[1],d.values(),pprint.pformat(d))
 			self.assertIn(n[0],d)
 			self.assertEqual(n[1],d[n[0]])
+
+	def member_checker(self,n,lang="polish"):
+		d=[getattr(self.nsm,"%s_fun%d" % (lang,nr)).__func__.robot_name.encode("utf-8") for nr in range(8)]
+		self.assertIn(n[1],d)
 
 	def test_sem(self):
 		self.assertTrue(True)
