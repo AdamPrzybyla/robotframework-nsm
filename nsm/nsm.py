@@ -1302,6 +1302,16 @@ def NSMfu(data,la1="polish"):
 		init={0:"It is like this now: ${state}",3:"because of this: ${state}",5:"after this ${state}"}
 	elif la1=='german':
 		init={0:"Es ist jetzt so: ${state}",3:"Aus diesem grund: ${state}",5:"Danach ${state}"}
+	elif la1=='russian':
+		init={0:"Теперь это так: ${state}",3:"из-за этого ${state}",5:"после этого ${state}"}
+	elif la1=='czech':
+		init={0:"Teď je to takto: ${state}",3:"z tohoto důvodu: ${state}",5:"po tom už ${state}"}
+	elif la1=='french':
+		init={0:"C'est comme ça maintenant: ${state}",3:"à cause de cela: ${state}",5:"après cela ${state}"}
+	elif la1=='spanish':
+		init={0:"Es así ahora: ${state}",3:"por esto: ${state}",5:"después de esto ya ${state}"}
+	elif la1=='japan':
+		init={0:"次のようになります。 ${state}",3:"このため： ${state}",5:"この後${state}"}
 	wyn=init.copy()
 	for nrp,linia in enumerate(data):
 		for v in init.items():
@@ -1327,7 +1337,7 @@ class genNSM(type):
 	def __init__(cls, name, bases, nmspc):
 		super(genNSM, cls).__init__(name, bases, nmspc)
 		cls.uses_metaclass = lambda self : True
-		for la in ["polish","english"]:
+		for la in ["polish","english","german","russian","czech","french","spanish","japan"]:
 			wyn1=[]
 			for l in re.findall(r"(?mi)^[ \t]+(.*)",file("%s.robot" % la).read()): wyn1.append(l)
 			funpar=NSMfu(wyn1,la)
@@ -1340,11 +1350,20 @@ class genNSM(type):
 				elif st==6:
 					setattr(cls,n,(lambda k: lambda self,p1: self.call_p6(p1))(n))
 				elif st==1:
-					setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p2p(p1,p2))(n))
+					if la=="czech" or la=="japan":
+						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p2p(p2,p1))(n))
+					else:
+						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p2p(p1,p2))(n))
 				elif st==2:
-					setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p3p(p1,p2))(n))
+					if la=="japan":
+						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p3p(p2,p1))(n))
+					else:
+						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p3p(p1,p2))(n))
 				elif st==4:
-					setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p1,p2))(n))
+					if la=="czech" or la=="japan":
+						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p2,p1))(n))
+					else:
+						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p1,p2))(n))
 				getattr(cls,n).__func__.robot_name=name.decode("utf-8")
 			
 class nsm(object):
