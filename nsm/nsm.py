@@ -1285,7 +1285,7 @@ Lemat 1 - appium is installed
 Lemat 2 - appium works
 	${w}=  Shell  local   appium-doctor 2>&1 |grep -v emulator
 	${err}=   get from dictionary  ${w}   stdout
-	Should Not Contain   ${err}   WARN   ${err} 
+	Should Not Contain   ${err}   WARN   ${err}
 
 Lemat 3 - appium has been started
 	Start Process  appium  shell=True  alias=appiumserver  stdout=${CURDIR}/appium_stdout.txt  stderr=${CURDIR}/appium_stderr.txt
