@@ -232,7 +232,7 @@ Metadata  Author  Adam Przybyla
 	我在 webpage 上看不到 logged 单词
 	然后我在 webpage 上使用 bad credentials 单词
 	因此我在 webpage 上看不到 logged 单词
-	在此之后，我不再看到 webpage  
+	在此之后，我不再看到 webpage
 
 测试3
 	现在是这样的：我看到 webpage
@@ -305,7 +305,7 @@ Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 ١ٹسیٹ
 	                   ںوہ اتکس ھکید webpage ںیم ۔ےہ اسیا با
 	          ۔ںیہ ےتآ ںیہن رظن ظافلا logged ںیم webpage ےھجم
-	     ںوہ اترک لامعتسا ظافلا credentials رپ webpage ںیم رھپ	
+	     ںوہ اترک لامعتسا ظافلا credentials رپ webpage ںیم رھپ
 	ںوہ اتکس ھکید ظافلا logged رپ webpage ںیم - :ےس ہجو یک سا
 	                 اتھکید ںیہن وک webpage با ںیم دعب ےک سا
 
@@ -767,13 +767,13 @@ Acum este așa: ${state}
 	Run keyword  ${state}
 
 #I not see words ${logged} on the ${page}
-eu nu văd cuvintele ${logged} pe ${page}
+Eu nu văd cuvintele ${logged} pe ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
 #I use the words ${cred} on ${page}
-Apoi eu voi folosi cuvintele ${cred} pe ${page}
+Apoi eu voi folosi cuvintele ${cred} pe ${page:[^ ]+}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
@@ -782,7 +782,7 @@ Din acest motiv ${state}
 	Run keyword  ${state}
 
 #I see words ${logged} on the ${page}
-eu văd cuvintele ${logged} pe ${page}
+eu văd cuvintele ${logged} pe ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -792,7 +792,7 @@ La scurt timp după ${state}
 	Run keyword  ${state}
 
 #i see the ${page:[^ ]+} ${no more}
-eu nu mai văd ${page}
+eu nu mai văd ${page:[^ ]+}
 	Run keyword  ${page} teardown
 
 #i see the ${page:[^ ]+}
@@ -802,25 +802,25 @@ eu văd ${page:[^ ]+}
 # urdu
 #It is like this now: ${state}
 ${state} ںیم ۔ےہ اسیا با
-	run keyword      ${state}
+	Run keyword      ${state}
 
-#I not see words ${logged} on the ${page}
-۔ںیہ ےتآ ںیہن رظن ظافلا ${logged} ںیم ${page} ےھجم
+#I not see words ${logged} on the ${page:[^ ]+}
+۔ںیہ ےتآ ںیہن رظن ظافلا ${logged} ںیم ${page:[^ ]+} ےھجم
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
 #I use the words ${cred} on ${page}
-ںوہ اترک لامعتسا ظافلا ${cred} رپ ${page} ںیم رھپ	
+ںوہ اترک لامعتسا ظافلا ${cred} رپ ${page:[^ ]+} ںیم رھپ
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
 #because of this: ${state}
 ${state} :ےس ہجو یک سا
-	run keyword      ${state}
+	Run keyword      ${state}
 
 #I see words ${logged} on the ${page}
-ںوہ اتکس ھکید ظافلا ${logged} رپ ${page} ںیم -
+ںوہ اتکس ھکید ظافلا ${logged} رپ ${page:[^ ]+} ںیم -
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -830,7 +830,7 @@ ${state} ںیم دعب ےک سا
 	Run keyword  ${state}
 
 #i see the ${page:[^ ]+} ${no more}
-اتھکید ںیہن وک ${page:[^ ]+} با 
+اتھکید ںیہن وک ${page:[^ ]+} با
 	Run keyword  ${page} teardown
 
 #i see the ${page:[^ ]+}
