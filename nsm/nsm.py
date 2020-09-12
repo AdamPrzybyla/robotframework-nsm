@@ -688,13 +688,13 @@ ${page:[^ ]+} を見る
 	Run keyword  ${state}
 
 #I not see words ${logged} on the ${page}
-我在 ${page} 上看不到 ${logged} 单词
+我在 ${page:[^ ]+} 上看不到 ${logged} 单词
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
 #I use the words ${cred} on ${page}
-然后我在 ${page} 上使用 ${cred} 单词
+然后我在 ${page:[^ ]+} 上使用 ${cred} 单词
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
@@ -704,7 +704,7 @@ ${page:[^ ]+} を見る
 	Run keyword  ${state}
 
 #I see words ${logged} on the ${page}
-我在 ${page}上看到 ${logged} 单词
+我在 ${page:[^ ]+}上看到 ${logged} 单词
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -715,7 +715,7 @@ ${page:[^ ]+} を見る
 
 
 #i see the ${page:[^ ]+} ${no more}
-我${no more:[^ ]+}看到${page}
+我不再看到 ${page:[^ ]+}
 	Run keyword  ${page} teardown
 
 #i see the ${page:[^ ]+}
@@ -729,13 +729,13 @@ ${page:[^ ]+} を見る
 	Run keyword  ${state}
 
 #I not see words ${logged} on the ${page}
-Não vejo as palavras ${logged} na ${page}
+Não vejo as palavras ${logged} na ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
 #I use the words ${cred} on ${page}
-então eu uso as palavras ${cred} em ${page}
+então eu uso as palavras ${cred} em ${page:[^ ]+}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
@@ -744,7 +744,7 @@ por causa disso: ${state}
 	Run keyword  ${state}
 
 #I see words ${logged} on the ${page}
-vejo as palavras ${logged} na ${page}
+vejo as palavras ${logged} na ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -754,11 +754,11 @@ Depois disso, ${state}
 	Run keyword  ${state}
 
 #i see the ${page:[^ ]+} ${no more}
-não vejo mais a ${page}
+não vejo mais a ${page:[^ ]+}
 	Run keyword  ${page} teardown
 
 #i see the ${page:[^ ]+}
-eu vejo o ${page}
+eu vejo o ${page:[^ ]+}
 	Run keyword  ${page} setup
 
 # romanian
