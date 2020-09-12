@@ -1293,7 +1293,7 @@ Lemat 3 - appium has been started
 """
 	open("appium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","nsmlib","requirements","appium"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1312,6 +1312,11 @@ def NSMfu(data,la1="polish"):
 		init={0:"Es así ahora: ${state}",3:"por esto: ${state}",5:"después de esto ya ${state}"}
 	elif la1=='japan':
 		init={0:"次のようになります。 ${state}",3:"このため： ${state}",5:"この後${state}"}
+	elif la1=='china':
+		init={0:"现在是这样的：${state}",3:"因此${state}",5:"在此之后，${state}"}
+	elif la1=='portugese':
+		init={0:"É assim agora: ${state}",3:"por causa disso: ${state}",5:"Depois disso, ${state}"}
+
 	wyn=init.copy()
 	for nrp,linia in enumerate(data):
 		for v in init.items():
@@ -1337,7 +1342,7 @@ class genNSM(type):
 	def __init__(cls, name, bases, nmspc):
 		super(genNSM, cls).__init__(name, bases, nmspc)
 		cls.uses_metaclass = lambda self : True
-		for la in ["polish","english","german","russian","czech","french","spanish","japan"]:
+		for la in ["polish","english","german","russian","czech","french","spanish","japan","china","portugese"]:
 			wyn1=[]
 			if not os.path.exists("%s.robot" % la):
 				continue
@@ -1352,17 +1357,17 @@ class genNSM(type):
 				elif st==6:
 					setattr(cls,n,(lambda k: lambda self,p1: self.call_p6(p1))(n))
 				elif st==1:
-					if la=="czech" or la=="japan":
+					if la=="czech" or la=="japan" or la=="china":
 						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p2p(p2,p1))(n))
 					else:
 						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p2p(p1,p2))(n))
 				elif st==2:
-					if la=="japan":
+					if la=="japan" or la=="china":
 						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p3p(p2,p1))(n))
 					else:
 						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p3p(p1,p2))(n))
 				elif st==4:
-					if la=="czech" or la=="japan":
+					if la=="czech" or la=="japan" or la=="china":
 						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p2,p1))(n))
 					else:
 						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p1,p2))(n))

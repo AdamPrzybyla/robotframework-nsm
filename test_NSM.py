@@ -7,7 +7,7 @@ import pprint
 import nsm
 
 langs={"polish":[8,16],"english":[0,8],"german":[16,24],"russian":[24,32],"czech":[32,40],"french":[40,48],"spanish":[48,56],
-"japan":[56,64]}
+"japan":[56,64],"china":[64,72],"portugese":[72,80]}
 
 def nname(s):
 	return reduce(lambda a,b: a.replace(b,""),[s]+list("${}:+^[]")).replace(" ","_").lower()
