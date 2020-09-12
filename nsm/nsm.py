@@ -3,7 +3,7 @@
 import sys
 from robot.running import Keyword
 from robot.running.context import EXECUTION_CONTEXTS
-import re,pprint
+import re,pprint,os
 
 def polish():
 	t="""*** Settings ***
@@ -1339,6 +1339,8 @@ class genNSM(type):
 		cls.uses_metaclass = lambda self : True
 		for la in ["polish","english","german","russian","czech","french","spanish","japan"]:
 			wyn1=[]
+			if not os.path.exists("%s.robot" % la):
+				continue
 			for l in re.findall(r"(?mi)^[ \t]+(.*)",file("%s.robot" % la).read()): wyn1.append(l)
 			funpar=NSMfu(wyn1,la)
 			for st,name in funpar.items():
