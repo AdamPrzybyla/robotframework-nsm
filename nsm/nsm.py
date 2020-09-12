@@ -1295,6 +1295,9 @@ Lemat 3 - appium has been started
 
 la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium"]
 
+langs={"polish":[8,16],"english":[0,8],"german":[16,24],"russian":[24,32],"czech":[32,40],"french":[40,48],"spanish":[48,56],
+"japan":[56,64],"china":[64,72],"portugese":[72,80],"romanian":[80,88],"urdu":[88,96]}
+
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
 		init={0: "Teraz jest tak: ${state}", 3:"Z tego powodu ${state}",5:"Niedługo potem ${state}"}
@@ -1316,6 +1319,11 @@ def NSMfu(data,la1="polish"):
 		init={0:"现在是这样的：${state}",3:"因此${state}",5:"在此之后，${state}"}
 	elif la1=='portugese':
 		init={0:"É assim agora: ${state}",3:"por causa disso: ${state}",5:"Depois disso, ${state}"}
+
+	elif la1=='romanian':
+		init={0:"Acum este așa: ${state}",3:"Din acest motiv ${state}",5:"La scurt timp după ${state}"}
+	elif la1=='urdu':
+		init={0:"${state} ںیم ۔ےہ اسیا با",3:"${state} :ےس ہجو یک سا",5:"${state} ںیم دعب ےک سا"}
 
 	wyn=init.copy()
 	for nrp,linia in enumerate(data):
@@ -1342,7 +1350,7 @@ class genNSM(type):
 	def __init__(cls, name, bases, nmspc):
 		super(genNSM, cls).__init__(name, bases, nmspc)
 		cls.uses_metaclass = lambda self : True
-		for la in ["polish","english","german","russian","czech","french","spanish","japan","china","portugese"]:
+		for la in langs:
 			wyn1=[]
 			if not os.path.exists("%s.robot" % la):
 				continue
