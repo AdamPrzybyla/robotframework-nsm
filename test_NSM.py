@@ -6,9 +6,6 @@ import re
 import pprint
 import nsm
 
-langs={"polish":[8,16],"english":[0,8],"german":[16,24],"russian":[24,32],"czech":[32,40],"french":[40,48],"spanish":[48,56],
-"japan":[56,64],"china":[64,72],"portugese":[72,80]}
-
 def nname(s):
 	return reduce(lambda a,b: a.replace(b,""),[s]+list("${}:+^[]")).replace(" ","_").lower()
 
@@ -22,9 +19,9 @@ class nsm_test(type):
 		kws=re.findall(r"(?mi)^[^ \t\n#].*",file("NSM.robot").read().split("*** Keywords ***")[1])
 		cls.nsmkw={}
 		cls.examples={}
-		for la in langs:
+		for la in nsm.langs:
 			wyn=[]
-			for l in kws.__getslice__(*langs[la]):
+			for l in kws.__getslice__(*nsm.langs[la]):
 				if l.strip(): wyn.append(l)
 			wyn1=[l for l in re.findall(r"(?mi)^[ \t]+(.*)",file("%s.robot" %la).read())]
 			cls.nsmkw[la]=wyn
