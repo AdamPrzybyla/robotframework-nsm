@@ -875,44 +875,6 @@ ${state} ںیم دعب ےک سا
 #i see the ${page:[^ ]+}
 	Run keyword  ${page} setup
 
-# silesian
-Teroz je tak: ${state}
-#It is like this now: ${state}
-	Run keyword  ${state}
-
-#I not see words ${logged} on the ${page}
-Jo ni widza słowa ${logged} na ${page}
-	${words}=   Run keyword  ${logged}
-	${result}=  Run keyword  ${page} check  ${words}
-	Should not be equal   OK   ${result}
-
-Potym jo użyja słów ${cred} na ${page}
-#I use the words ${cred} on ${page}
-	${user}   ${pass}=   Run Keyword  ${cred}
-	Enter Credentials    ${user}  ${pass}
-
-#Z tego powodu ${state}
-##because of this: ${state}
-#	Run keyword  ${state}
-
-#I see words ${logged} on the ${page}
-jo widza słowa ${logged} na ${page}
-	${words}=   Run keyword  ${logged}
-	${result}=  Run keyword  ${page} check  ${words}
-	Should be equal   OK   ${result}
-
-#after this ${state}
-Terozki uż ${state}
-	Run keyword  ${state}
-
-#i see the ${page:[^ ]+} ${no more}
-jo ni widza ${page:[^ ]+}
-	Run keyword  ${page} teardown
-
-#i see the ${page:[^ ]+}
-jo widza ${page:[^ ]+}
-	Run keyword  ${page} setup
-
 # bielorusian
 Зараз гэта так: ${state}
 #It is like this now: ${state}
@@ -989,9 +951,43 @@ ${page:[^ ]+} இல் ${logged} சொற்களைக் காண்கி
 நான் ${page:[^ ]+} ஐப் பார்க்கிறேன்
 	Run keyword  ${page} setup
 
+# silesian
+Teroz je tak: ${state}
+#It is like this now: ${state}
+	Run keyword  ${state}
 
+#I not see words ${logged} on the ${page}
+Jo ni widza słowa ${logged} na ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
 
+Potym jo użyja słów ${cred} na ${page}
+#I use the words ${cred} on ${page}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
 
+#Z tego powodu ${state}
+##because of this: ${state}
+#	Run keyword  ${state}
+
+#I see words ${logged} on the ${page}
+jo widza słowa ${logged} na ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+#after this ${state}
+Terozki uż ${state}
+	Run keyword  ${state}
+
+#i see the ${page:[^ ]+} ${no more}
+jo ni widza ${page:[^ ]+}
+	Run keyword  ${page} teardown
+
+#i see the ${page:[^ ]+}
+jo widza ${page:[^ ]+}
+	Run keyword  ${page} setup
 """
 	open("NSM.robot","w").write(t)
 
@@ -1438,9 +1434,9 @@ def main():
 		romanian()
 		urdu()
 		bengali()
-		silesian()
-		tamil()
 		bielorusian()
+		tamil()
+		silesian()
 		nsmlib()
 		mykeywords()
 		requirements()
