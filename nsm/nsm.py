@@ -69,13 +69,13 @@ Test 1
 	Es ist jetzt so: Ich sehe die webpage
 	Ich sehe keine wörter logged auf der webpage
 	dann benutze ich die worte credentials auf der webpage
-	Aus diesem Grund: sehe ich wörter logged auf der webpage
+	Aus diesem grund: sehe ich wörter logged auf der webpage
 	Danach sehe ich die webpage nicht mehr
 Test 2
 	Es ist jetzt so: Ich sehe die webpage
 	Ich sehe keine wörter logged auf der webpage
 	dann benutze ich die worte bad credentials auf der webpage
-	Aus diesem Grund: Ich sehe keine wörter logged auf der webpage
+	Aus diesem grund: Ich sehe keine wörter logged auf der webpage
 	Danach sehe ich die webpage nicht mehr
 Test 3
 	Es ist jetzt so: Ich sehe die webpage
@@ -503,19 +503,19 @@ ja widzę ${page:[^ ]+}
 Es ist jetzt so: ${state}
 	Run keyword  ${state}
 
-Ich sehe keine wörter ${logged} auf der ${page}
+Ich sehe keine wörter ${logged} auf der ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-dann benutze ich die worte ${cred} auf der ${page}
+dann benutze ich die worte ${cred} auf der ${page:[^ ]+}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
 Aus diesem grund: ${state}
 	Run keyword  ${state}
 
-sehe ich wörter ${logged} auf der ${page}
+sehe ich wörter ${logged} auf der ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -523,7 +523,7 @@ sehe ich wörter ${logged} auf der ${page}
 Danach ${state}
 	Run keyword  ${state}
 
-sehe ich die ${page:[^ ]+} ${no more}
+sehe ich die ${page:[^ ]+} nicht mehr
 	Run keyword  ${page} teardown
 
 Ich sehe die ${page:[^ ]+}
@@ -533,19 +533,19 @@ Ich sehe die ${page:[^ ]+}
 Теперь это так: ${state}
 	Run keyword  ${state}
 
-Я не вижу слов ${logged} на ${page}
+Я не вижу слов ${logged} на ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-тогда я использую слова ${cred} на ${page}
+тогда я использую слова ${cred} на ${page:[^ ]+}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
 из-за этого ${state}
 	Run keyword  ${state}
 
-я вижу слова ${logged} на ${page}
+я вижу слова ${logged} на ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -563,19 +563,19 @@ Ich sehe die ${page:[^ ]+}
 Teď je to takto: ${state}
 	Run keyword  ${state}
 
-Na ${page} nevidím slova ${logged}
+Na ${page:[^ ]+} nevidím slova ${logged}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-pak používám slova ${cred} na ${page}
+pak používám slova ${cred} na ${page:[^ ]+}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
 z tohoto důvodu: ${state}
 	Run keyword  ${state}
 
-Na ${page} vidím slova ${logged}
+Na ${page:[^ ]+} vidím slova ${logged}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -583,29 +583,29 @@ Na ${page} vidím slova ${logged}
 po tom už ${state}
 	Run keyword  ${state}
 
-nevidím ${page}
+nevidím ${page:[^ ]+}
 	Run keyword  ${page} teardown
 
-Vidím ${page}
+Vidím ${page:[^ ]+}
 	Run keyword  ${page} setup
 
 # french
 C'est comme ça maintenant: ${state}
 	Run keyword  ${state}
 
-Je ne vois pas les mots ${logged} sur le ${page}
+Je ne vois pas les mots ${logged} sur le ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-alors j'utilise les mots ${cred} sur ${page}
+alors j'utilise les mots ${cred} sur ${page:[^ ]+}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
 à cause de cela: ${state}
 	Run keyword  ${state}
 
-je vois les mots ${logged} sur le ${page}
+je vois les mots ${logged} sur le ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -613,10 +613,10 @@ je vois les mots ${logged} sur le ${page}
 après cela ${state}
 	Run keyword  ${state}
 
-je ne vois plus le ${page}
+je ne vois plus le ${page:[^ ]+}
 	Run keyword  ${page} teardown
 
-je vois le ${page}
+je vois le ${page:[^ ]+}
 	Run keyword  ${page} setup
 
 # spanish
@@ -624,19 +624,19 @@ je vois le ${page}
 Es así ahora: ${state}
 	Run keyword  ${state}
 
-No veo palabras ${logged} en el ${page}
+No veo palabras ${logged} en el ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-entonces uso las palabras ${cred} en ${page}
+entonces uso las palabras ${cred} en ${page:[^ ]+}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
 por esto: ${state}
 	Run keyword  ${state}
 
-veo palabras ${logged} en ${page}
+veo palabras ${logged} en ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
@@ -644,10 +644,10 @@ veo palabras ${logged} en ${page}
 después de esto ya ${state}
 	Run keyword  ${state}
 
-no veo el ${page}
+no veo el ${page:[^ ]+}
 	Run keyword  ${page} teardown
 
-veo el ${page}
+veo el ${page:[^ ]+}
 	Run keyword  ${page} setup
 
 # japan
@@ -655,27 +655,27 @@ veo el ${page}
 次のようになります。 ${state}
 	Run keyword  ${state}
 
-${page:[^ ]+} は ${logged:[^ ]+} という単語を表示しません
+${page:[^ ]+} は ${logged} という単語を表示しません
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-次に、 ${page} で ${cred} という言葉を使用します
+次に、 ${page:[^ ]+} で ${cred} という言葉を使用します
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
 
 このため： ${state}
 	Run keyword  ${state}
 
-${page:[^ ]+} に ${logged:[^ ]+} という言葉が表示されます
+${page:[^ ]+} に ${logged} という言葉が表示されます
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
 
-この後 ${state}
+この後${state}
 	Run keyword  ${state}
 
-この後もう ${page} が見えない
+もう ${page:[^ ]+} が見えない
 	Run keyword  ${page} teardown
 
 ${page:[^ ]+} を見る
