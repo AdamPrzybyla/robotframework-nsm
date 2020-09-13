@@ -1292,9 +1292,7 @@ Lemat 3 - appium has been started
 la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium"]
 
 langs={"polish":[8,16],"english":[0,8],"german":[16,24],"russian":[24,32],"czech":[32,40],"french":[40,48],"spanish":[48,56],
-"japan":[56,64],"china":[64,72],"portugese":[72,80],"romanian":[80,88],"urdu":[88,96],
-#"bengali":[96,104],
-"bielorusian":[104,112]}
+"japan":[56,64],"china":[64,72],"portugese":[72,80],"romanian":[80,88],"urdu":[88,96],"bengali":[96,104],"bielorusian":[104,112]}
 #,"tamil":[112,120]}
 
 def NSMfu(data,la1="polish"):
@@ -1381,7 +1379,7 @@ class genNSM(type):
 					else:
 						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p3p(p1,p2))(n))
 				elif st==4:
-					if la=="czech" or la=="japan" or la=="china":
+					if la=="czech" or la=="japan" or la=="china" or la=='bengali':
 						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p2,p1))(n))
 					else:
 						setattr(cls,n,(lambda k: lambda self,p1,p2: self.call_p4p(p1,p2))(n))
