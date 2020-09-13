@@ -1,4 +1,4 @@
-#! /usr/bin/python
+﻿#! /usr/bin/python
 # -*- coding: utf-8 -*-
 import sys
 from robot.running import Keyword
@@ -880,13 +880,13 @@ ${state} ںیم دعب ےک سا
 #It is like this now: ${state}
 	Run keyword  ${state}
 
-Я не бачу слоў ${logged} на ${page}
+Я не бачу слоў ${logged} на ${page:[^ ]+}
 #I not see words ${logged} on the ${page}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-тады я выкарыстаю словы ${cred} на ${page}
+тады я выкарыстаю словы ${cred} на ${page:[^ ]+}
 #I use the words ${cred} on ${page}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
@@ -895,7 +895,7 @@ ${state} ںیم دعب ےک سا
 #because of this: ${state}
 	Run keyword  ${state}
 
-я бачу словы ${logged} на ${page}
+я бачу словы ${logged} на ${page:[^ ]+}
 #I see words ${logged} on the ${page}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
