@@ -1293,7 +1293,7 @@ la=["polish","english","german","russian","czech","french","spanish","japan","ch
 
 langs={"polish":[8,16],"english":[0,8],"german":[16,24],"russian":[24,32],"czech":[32,40],"french":[40,48],"spanish":[48,56],
 "japan":[56,64],"china":[64,72],"portugese":[72,80],"romanian":[80,88],"urdu":[88,96],"bengali":[96,104],"bielorusian":[104,112]
-,"tamil":[112,120]}
+,"tamil":[112,120],"silesian":[112,119]}
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1316,7 +1316,6 @@ def NSMfu(data,la1="polish"):
 		init={0:"现在是这样的：${state}",3:"因此${state}",5:"在此之后，${state}"}
 	elif la1=='portugese':
 		init={0:"É assim agora: ${state}",3:"por causa disso: ${state}",5:"Depois disso, ${state}"}
-
 	elif la1=='romanian':
 		init={0:"Acum este așa: ${state}",3:"Din acest motiv ${state}",5:"La scurt timp după ${state}"}
 	elif la1=='urdu':
@@ -1327,7 +1326,8 @@ def NSMfu(data,la1="polish"):
 		init={0:"Зараз гэта так: ${state}",3:"з-за гэтага ${state}",5:'пасля гэтага ${state}'}
 	elif la1=='tamil':
 		init={0:"இப்போது இது போன்றது: ${state}",3:"இதன் காரணமாக ${state}",5:"இதற்கு பிறகு ${state}"}
-
+	elif la1=='silesian':
+		init={0:"Teroz je tak: ${state}",3:"Z tego powodu ${state}",5:"Terozki uż ${state}"}
 
 	wyn=init.copy()
 	for nrp,linia in enumerate(data):
@@ -1347,6 +1347,8 @@ def NSMfu(data,la1="polish"):
 			if nrp in [6,11,7]: continue
 			if nl1.startswith("then "): nl1=nl1[5:]
 			wyn[nrp]=nl1
+	if la1=='silesian':
+		del wyn[3]
 	#pprint.pprint(wyn)
 	return wyn
 
