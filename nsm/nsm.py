@@ -842,7 +842,7 @@ ${state} ںیم دعب ےک سا
 #It is like this now: ${state}
 	Run keyword  ${state}
 
-আমি শব্দগুলি ${logged:[^ ]+} ${page:[^ ]+} তে দেখতে পাচ্ছি না
+আমি শব্দগুলি ${logged} ${page:[^ ]+} তে দেখতে পাচ্ছি না
 #I not see words ${logged} on the ${page}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
@@ -857,7 +857,7 @@ ${state} ںیم دعب ےک سا
 #because of this: ${state}
 	Run keyword  ${state}
 
-আমি ${page} - তে ${logged} শব্দগুলি দেখতে পাচ্ছি
+আমি ${page:[^ ]+} - তে ${logged} শব্দগুলি দেখতে পাচ্ছি
 #I see words ${logged} on the ${page}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
