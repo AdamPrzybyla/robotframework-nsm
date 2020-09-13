@@ -1292,7 +1292,10 @@ Lemat 3 - appium has been started
 la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium"]
 
 langs={"polish":[8,16],"english":[0,8],"german":[16,24],"russian":[24,32],"czech":[32,40],"french":[40,48],"spanish":[48,56],
-"japan":[56,64],"china":[64,72],"portugese":[72,80],"romanian":[80,88],"urdu":[88,96]}
+"japan":[56,64],"china":[64,72],"portugese":[72,80],"romanian":[80,88],"urdu":[88,96],
+#"bengali":[96,104],
+"bielorusian":[104,112]}
+#,"tamil":[112,120]}
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1320,6 +1323,13 @@ def NSMfu(data,la1="polish"):
 		init={0:"Acum este așa: ${state}",3:"Din acest motiv ${state}",5:"La scurt timp după ${state}"}
 	elif la1=='urdu':
 		init={0:"${state} ںیم ۔ےہ اسیا با",3:"${state} :ےس ہجو یک سا",5:"${state} ںیم دعب ےک سا"}
+	elif la1=='bengali':
+		init={0:'''এটি এখন এই মত: ${state}''',3:'''এর জন্য: ${state}''',5:'''এর পরে ${state}'''}
+	elif la1=='bielorusian':
+		init={0:"Зараз гэта так: ${state}",3:"з-за гэтага ${state}",5:'пасля гэтага ${state}'}
+	elif la1=='tamil':
+		init={0:"இப்போது இது போன்றது: ${state}",3:"இதன் காரணமாக ${state}",5:"இதற்கு பிறகு ${state}"}
+
 
 	wyn=init.copy()
 	for nrp,linia in enumerate(data):
