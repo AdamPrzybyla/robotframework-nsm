@@ -47,7 +47,10 @@ class nsm3_test(type):
 			wyn1=[l for l in re.findall(r"(?mi)^[ \t]+(.*)",open("%s.robot" %la).read())]
 			self.nsmkw[la]=wyn
 			self.examples[la]=wyn1
-			for f in [e for e in enumerate(wyn)]: 
+			ind=list(range(8))
+			if la=='silesian':
+				del ind[3]
+			for f in [e for e in zip(ind,wyn)]: 
 				setattr(self,"test_%s" % nname(f[1]),(lambda g,lal: lambda self: self.checker(g,lal))(f,la))
 			for f in [e for e in enumerate(wyn)]: 
 				setattr(self,"test_member_%s" % nname(f[1]),(lambda g,lal: lambda self: self.member_checker(g,lal))(f,la))
@@ -60,7 +63,6 @@ class test_sem_nsm3(unittest.TestCase,metaclass=nsm3_test):
 		else:
 			self.assertIsInstance(self.examples[lang],list)
 			d=nsm.NSMfu(self.examples[lang],lang)
-			#print ([d],lang,n)
 			self.assertIn(n[1],d.values(),pprint.pformat(d))
 			self.assertIn(n[0],d)
 			self.assertEqual(n[1],d[n[0]])

@@ -31,7 +31,10 @@ else:
 				cls.nsmkw[la]=wyn
 				cls.examples[la]=wyn1
 				cls.nsm=nsm.nsm()
-				for f in [e for e in enumerate(wyn)]: 
+				ind=list(range(8))
+				if la=='silesian':
+					del ind[3]
+				for f in [e for e in zip(ind,wyn)]: 
 					setattr(cls,"test_%s" % nname(f[1]),(lambda g,lal: lambda self: self.checker(g,lal))(f,la))
 				for f in [e for e in enumerate(wyn)]: 
 					setattr(cls,"test_member_%s" % nname(f[1]),(lambda g,lal: lambda self: self.member_checker(g,lal))(f,la))
@@ -50,7 +53,7 @@ else:
 				self.assertEqual(n[1],d[n[0]])
 
 		def member_checker(self,n,lang="polish"):
-			d=[getattr(self.nsm,"%s_fun%d" % (lang,nr)).__func__.robot_name.encode("utf-8") for nr in range(8)]
+			d=[getattr(self.nsm,"%s_fun%d" % (lang,nr)).__func__.robot_name.encode("utf-8") for nr in range(8) if not(lang=="silesian" and nr==3)]
 			self.assertIn(n[1],d)
 
 		def test_sem(self):
