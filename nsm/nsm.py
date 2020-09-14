@@ -955,12 +955,12 @@ Teroz je tak: ${state}
 	Run keyword  ${state}
 
 #I not see words ${logged} on the ${page}
-Jo ni widza słowa ${logged} na ${page}
+Jo ni widza słowa ${logged} na ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should not be equal   OK   ${result}
 
-Potym jo użyja słów ${cred} na ${page}
+Potym jo użyja słów ${cred} na ${page:[^ ]+}
 #I use the words ${cred} on ${page}
 	${user}   ${pass}=   Run Keyword  ${cred}
 	Enter Credentials    ${user}  ${pass}
@@ -970,7 +970,7 @@ Potym jo użyja słów ${cred} na ${page}
 #	Run keyword  ${state}
 
 #I see words ${logged} on the ${page}
-jo widza słowa ${logged} na ${page}
+jo widza słowa ${logged} na ${page:[^ ]+}
 	${words}=   Run keyword  ${logged}
 	${result}=  Run keyword  ${page} check  ${words}
 	Should be equal   OK   ${result}
