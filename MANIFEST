@@ -4,3 +4,5 @@ setup.py
 nsm/__init__.py
 nsm/__main__.py
 nsm/nsm.py
+nsm/nsm2.py
+nsm/nsm3.py
