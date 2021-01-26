@@ -1287,7 +1287,70 @@ Lemat 3 - appium has been started
 """
 	open("appium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium"]
+def selenium():
+	t="""*** Settings ***
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+Resource  requirements.robot
+Library  SeleniumLibrary
+Suite setup  requirements
+Suite teardown  Close All Browsers
+
+*** Variables ***
+${xu}  //*[@id="login"]
+${xp}  //*[@id="password"]
+${xb}  css:.nSubmit
+${BROWSER}   firefox
+${ansible_user}  student
+${ansible_become_password}  tester
+${ansible_password}  ${FALSE}
+
+*** Test Cases ***
+test poczty
+  Open Browser  http://poczta.wp.pl  ${BROWSER}
+  Input Text  ${xu}   testerwsb_t1
+  Input Text  ${xp}   adam1234
+  Click Element  ${xb}
+  Sleep  10
+  Page Should Contain  Odebrane
+  Close All Browsers
+
+** keywords ***
+Requirements
+	lemat 0 - Apt system should work
+	Lemat 1 - Firefox is installed
+	Lemat 2 - Selenium driver is installed
+	Lemat 3 - The Chrome should be installed if needed
+        Lemat 4 - Chrome in the latest version
+	Lemat 5 - The Chromedriver should be installed if needed
+
+lemat 0 - Apt system should work
+	shell  localhost  wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add -
+        apt  localhost  update_cache=yes
+        apt  localhost  autoremove=yes
+
+Lemat 1 - Firefox is installed
+	The Firefox browser should be installed if needed
+
+Lemat 2 - Selenium driver is installed
+	The Geckodriver should be installed if needed
+
+Lemat 3 - The Chrome should be installed if needed
+	The google repo should be available
+	The Chrome should be installed if needed
+
+Lemat 4 - Chrome in the latest version
+        apt  localhost  update_cache=yes
+        apt  localhost  only_upgrade=yes  package=google-chrome-stable  state=latest
+
+Lemat 5 - The Chromedriver should be installed if needed
+	The google repo should be available
+	The Chromedriver should be installed if needed
+
+"""
+	open("selenium.robot","w").write(t)
+
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1368,6 +1431,7 @@ def main():
 		bielorusian()
 		tamil()
 		silesian()
+		selenium()
 		nsmlib()
 		mykeywords()
 		requirements()
