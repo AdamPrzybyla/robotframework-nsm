@@ -1024,9 +1024,54 @@ webpage check
 """
 	open("mykeywords.robot","w").write(t)
 
+def mykeywords0():
+	t="""*** Settings ***
+Resource  requirements.robot
+Library  SeleniumLibrary
+
+*** Variables ***
+${xu}  //*[@id="login"]
+${xp}  //*[@id="password"]
+${xb}  css:.nSubmit
+${BROWSER}   Firefox
+
+*** Keywords ***
+${page} setup
+	Open Browser  about:blank   ${BROWSER}
+	Go To  http://poczta.wp.pl
+
+${page} teardown
+	Capture Page Screenshot
+	Close All Browsers
+
+credentials
+	[Return]  mailtest007  MailTest007
+
+bad credentials
+	[Return]  baduser  badpass
+
+logged
+	[Return]  Odebrane
+
+
+Enter Credentials
+	[Arguments]  ${user}  ${pass}
+	Input Text  ${xu}   ${user}
+	Input Text  ${xp}   ${pass}
+	Click Element  ${xb}
+	Sleep   20
+
+webpage check
+	[Arguments]  ${slowo}
+	${result}=  Run Keyword and return status  Page Should Contain  ${slowo}
+	${result}=  set variable if  ${result}   OK  NOTOK
+	[Return]  ${result}
+"""
+	open("mykeywords.robot","w").write(t)
+
 def requirements():
 	t="""*** Variables ***
-${ansible_password}  XXXXXXX
+${ansible_password}   ${FALSE}
 ${DBHost}  localhost
 ${DBName}  w3schools
 ${DBUser}  XXXXXX
@@ -1301,15 +1346,15 @@ ${xu}  //*[@id="login"]
 ${xp}  //*[@id="password"]
 ${xb}  css:.nSubmit
 ${BROWSER}   firefox
-${ansible_user}  student
-${ansible_become_password}  tester
+${ansible_user}  %{USER}
+${ansible_become_password}   xxxxxxxxxxxxxxx
 ${ansible_password}  ${FALSE}
 
 *** Test Cases ***
 test poczty
   Open Browser  http://poczta.wp.pl  ${BROWSER}
-  Input Text  ${xu}   testerwsb_t1
-  Input Text  ${xp}   adam1234
+  Input Text  ${xu}   mailtest007
+  Input Text  ${xp}   MailTest007
   Click Element  ${xb}
   Sleep  10
   Page Should Contain  Odebrane
@@ -1350,7 +1395,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1406,7 +1451,6 @@ def NSMfu(data,la1="polish"):
 			wyn[nrp]=nl1
 	if la1=='silesian':
 		del wyn[3]
-	#pprint.pprint(wyn)
 	return wyn
 
 langs={"polish":[8,16],"english":[0,8],"german":[16,24],"russian":[24,32],"czech":[32,40],"french":[40,48],"spanish":[48,56],
