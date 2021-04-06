@@ -1254,7 +1254,7 @@ Suite Teardown  Terminate Process
 
 *** Variables ***
 ${ansible_become_password}  xxxxxxxxxxxx
-${ansible_user}  xxxxxxxxxxxx
+${ansible_user}  %{USER}
 ${btool}  https://github.com/google/bundletool/releases/download/1.2.0/bundletool-all-1.2.0.jar
 ${demoapp}  https://github.com/appium/appium/raw/master/sample-code/apps/ApiDemos-debug.apk
 
@@ -1395,7 +1395,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1481,6 +1481,171 @@ def main():
 		requirements()
 	elif sys.argv[1] in la:
 		eval(sys.argv[1]+"()")
+
+
+# -*- coding: utf-8 -*-
+def gameslist():
+	try:
+	    from urllib.request import urlopen
+	except ImportError:
+	    from urllib2 import urlopen
+	import re
+	t1='(?smi)<h2><a href="details.php\?ID=(.*?)">([^<>]*?)</a>'
+	t3='https://www.lemon64.com/games/list.php?title=%s&page=%s'
+	oldies={}
+	w=u"""*** Settings ***
+Library   OperatingSystem
+Library   String
+Library   Collections
+Resource  gameslist.robot
+
+*** Keywords ***
+"""
+	for e in '0ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+		for i in range(1,20):
+			g=urlopen(t3%(e,i)).read().decode("utf-8","ignore")
+			for ty in re.findall(t1,g):
+				nr,nazwa=ty
+				#nazwa=nazwa.decode("utf-8","ignore").replace("&amp;","&")
+				nazwa=nazwa.replace("&amp;","&")
+				nazwas=nazwa.replace(" ","").lower()
+				if nazwas in oldies:
+					nr2=oldies[nazwas]
+					nazwap=nazwa+" (%d)" % nr2
+				else:
+					nr2=0
+					nazwap=nazwa
+				oldies[nazwas]=nr2+1
+				w+=u"""Game %s should be installed
+	doinstallgame  %s
+
+"""  % (nazwap,nr)
+			if not 'Next&nbsp;' in g: break
+	w=w+r"""doinstallgame
+	[Arguments]   ${gamenr}
+	${u}=   Set Variable  http://www.lemon64.com/games/details.php?ID=${gamenr}
+	${name}=    gamename     ${u}
+	Should Not Be Empty  ${name}
+	${zipek}=   getgameurl   ${u}
+	should contain  ${zipek}  8bitfiles
+	${uc}=   getcoverturl   ${u}
+	should contain   ${uc}  lemon64
+	should contain   ${uc}  thumb
+	${m}=   getgame  ${zipek}
+	should contain   ${m}   64
+	${nico}=   creategameicon   ${name}  ${m}  ${uc}
+	Should Contain  ${nico}  Icon
+
+Gamename
+	[Arguments]   ${u}
+	${w}   ${g}=   Should Match Regexp     ${u}   =([0-9]+)
+	${u}=  Catenate    SEPARATOR=   https://www.lemon64.com/games/details.php?ID=  ${g}
+	${w}=  pyigeturl   ${u}
+	${w}   ${g}=   Should Match Regexp     ${w}   (?smi)<meta property="og:title" content="Lemon64 - (.*?)" />
+	${g} = 	Replace String Using Regexp 	${g}   , The$   ${EMPTY}
+	[return]   ${g}
+
+Getgameurl
+	[Arguments]   ${u}
+	${g}=  pyigeturl   ${u}
+		log   ${g}
+	${ug}=    Should Match Regexp     ${g}   (?smi)http://www.gb64.com/game.php[?]id=[0-9]+
+	${g1}=  pyigeturl   ${ug}
+	${s}  ${ftpu}=   Run Keyword And Ignore Error    Should Match Regexp  ${g1}   (?smi)ftp://8bitfiles.net/gamebase_64/[^"]+
+	${ftpu1}=    Run Keyword If  "${s}"=="FAIL"   Should Match Regexp  ${g1}   (?smi)[^<>]+\.zip
+	${ftpu1}=    Run Keyword If  "${s}"=="FAIL"   Catenate    SEPARATOR=   ftp://8bitfiles.net/gamebase_64/Games/  ${ftpu1}
+	${ftpu}=    Set Variable If  "${s}"=="FAIL"   ${ftpu1}  ${ftpu}
+	[return]   ${ftpu}
+
+Getcoverturl
+	[Arguments]   ${u}
+	${g}=  pyigeturl   ${u}
+	${uc}=    Should Match Regexp     ${g}   (?smi)https://www.lemon64.com/covers/thumbs/[^"]+
+	${g}=  pyigeturlb   ${uc}
+	${iconn}=    Should Match Regexp     ${uc}  [^/]*$
+	Create Binary File   .images/${iconn}    ${g}
+	[return]   ${uc}
+
+getgame
+	[Arguments]   ${u}
+	${v}=  Evaluate  sys.version_info.major   modules=sys
+	${us}=  Replace String   ${u}  !  \! 
+	${f}=  Run  curl -sk '${us}' | base64
+	${f2}=  Run Keyword if  ${v}==2  Evaluate  base64.decodestring($f)   modules=base64
+	${f3}=  Run Keyword if  ${v}==3  Evaluate  base64.decodestring($f.encode("utf"))   modules=base64
+	${f}=   Set Variable if  ${v}==2  ${f2}  ${f3}
+	${m2}=  Run Keyword if  ${v}==2  Evaluate  zipfile.ZipFile(StringIO.StringIO($f)).namelist()   modules=zipfile,StringIO
+	${m3}=  Run Keyword if  ${v}==3  Evaluate  zipfile.ZipFile(io.BytesIO($f)).namelist()   modules=zipfile,io
+	${m}=   Set Variable if  ${v}==2  ${m2}  ${m3}
+	${ma}=  Remove Values From List  ${m}   VERSION.NFO
+	${mg}=   Get From List  ${m}  0
+	FOR    ${i}    IN    @{m}
+		Run Keyword if  ${v}==2  Evaluate  zipfile.ZipFile(StringIO.StringIO($f)).extract($i,".data")   modules=zipfile,StringIO
+		Run Keyword if  ${v}==3  Evaluate  zipfile.ZipFile(io.BytesIO($f)).extract($i,".data")   modules=zipfile,io
+	END
+	[return]   ${mg}
+
+CreateGameIcon
+	[Arguments]   ${n}  ${d}  ${i}
+	${nn} =  Replace String Using Regexp 	${n}   !   ${EMPTY}
+	${in}=   Should Match Regexp     ${i}   [^/]*$
+	${iv}=   Set Variable   [Desktop Entry]\nName=${n}\nComment=${n}\nExec=x64 '${OUTPUT DIR}/.data/${d}'\nIcon=${OUTPUT DIR}/.images/${in}\nTerminal=false\nType=Application\nEncoding=UTF-8\nCategories=Game;ArcadeGame;
+	Create File  ${nn}.desktop   ${iv}
+	Evaluate  os.chmod('${nn}.desktop',0o755)  modules=os
+	Run  dbus-launch gio set "${nn}.desktop" metadata::trusted yes
+	[return]  ${iv}
+
+pyigeturl
+	[Arguments]   ${u}
+	${v}=  Evaluate  sys.version_info.major   modules=sys
+	${w2}=  run keyword if  ${v}==2  Evaluate  urllib2.urlopen($u).read()  modules=urllib2
+	${w3}=  run keyword if  ${v}==3  Evaluate  urllib.request.urlopen($u).read().decode("utf-8")  modules=urllib
+	${w}=   set variable if  ${v}==2  ${w2}  ${w3}
+	[return]   ${w}
+
+pyigeturlb
+	[Arguments]   ${u}
+	${v}=  Evaluate  sys.version_info.major   modules=sys
+	${w2}=  run keyword if  ${v}==2  Evaluate  urllib2.urlopen($u).read()  modules=urllib2
+	${w3}=  run keyword if  ${v}==3  Evaluate  urllib.request.urlopen($u).read()  modules=urllib
+	${w}=   set variable if  ${v}==2  ${w2}  ${w3}
+	[return]   ${w}
+"""
+	open("gameslist.robot","w").write(w)
+
+def mygames():
+	w="""*** Settings ***
+Resource  gameslist.robot
+Metadata  Author  Adam Przybyla
+
+*** Test cases ***
+My favorite games
+	Game H.E.R.O. - Helicopter Emergency Rescue Operation should be installed
+	Game Chessmaster 2000, The should be installed
+	Game Rick Dangerous should be installed
+	Game Rick Dangerous II should be installed
+	Game Archon: The Light and the Dark should be installed
+	Game Blagger should be installed
+	Game Wizard of Wor should be installed
+	Game Boulder Dash should be installed
+	Game Cauldron II: The Pumpkin Strikes Back should be installed
+	Game Cauldron should be installed
+	Game Commando should be installed
+	Game Elite should be installed
+	Game Falklands 82 should be installed
+	Game Frantic Freddie should be installed
+	Game Ghostbusters should be installed
+	Game IK+ should be installed
+	Game Loco should be installed
+	Game Monty on the Run should be installed
+	Game Nebulus should be installed
+	Game Paradroid should be installed
+	Game Pirates! should be installed
+	Game River Raid should be installed
+	Game Uridium should be installed
+	Game V - The Computer Game should be installed
+"""
+	open("mygames.robot","w").write(w)
 
 if __name__=='__main__':
 	main()
