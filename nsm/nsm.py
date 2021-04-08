@@ -1395,7 +1395,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1599,7 +1599,7 @@ pyigeturl
 	[Arguments]   ${u}
 	${v}=  Evaluate  sys.version_info.major   modules=sys
 	${w2}=  run keyword if  ${v}==2  Evaluate  urllib2.urlopen($u).read()  modules=urllib2
-	${w3}=  run keyword if  ${v}==3  Evaluate  urllib.request.urlopen($u).read().decode("utf-8")  modules=urllib
+	${w3}=  run keyword if  ${v}==3  Evaluate  urllib.request.urlopen($u).read().decode("utf-8","ignore")  modules=urllib
 	${w}=   set variable if  ${v}==2  ${w2}  ${w3}
 	[return]   ${w}
 
@@ -1646,6 +1646,19 @@ My favorite games
 	Game V - The Computer Game should be installed
 """
 	open("mygames.robot","w").write(w)
+
+def game():
+	w="""*** Settings ***
+Resource  gameslist.robot
+Metadata  Author  Adam Przybyla
+
+*** Variables ***
+${NR}  136
+*** Test cases ***
+Game Installation 
+	doinstallgame  ${NR}
+"""
+	open("game.robot","w").write(w)
 
 if __name__=='__main__':
 	main()
