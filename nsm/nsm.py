@@ -1084,7 +1084,7 @@ ${grep}    http://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome
 #${chrome_version}  False
 ${chrome_version}  google-chrome-stable_81.0.4044.138-1_amd64.deb
 ${chd81}  http://launchpadlibrarian.net/478575933/chromium-chromedriver_81.0.4044.138-0ubuntu0.18.04.1_amd64.deb
-
+${chd89}  https://chromedriver.storage.googleapis.com/89.0.4389.23/chromedriver_linux64.zip
 
 *** Settings ***
 Library  Impansible
@@ -1166,17 +1166,16 @@ The Chromedriver should be installed if needed
         ${x}=   get from dictionary  ${x}   ansible_facts
         ${x}=   get from dictionary  ${x}   packages
         ${x}=   get from dictionary  ${x}   google-chrome-stable
-        ${x}=   get from dictionary  ${x}[0]   version
-        ${xs}=  run keyword and return status  should start with  ${x}  81
-        ${x}=   run keyword if  not ${xs}  apt    localhost   package=chromium-chromedriver state=present
-                run keyword if  ${xs}  apt  localhost  update_cache=yes
-        ${x}=   run keyword if  ${xs}  apt  localhost  deb="${chd81}"  force=True
-        #log to console   ${x}
-	#${x}=	apt    localhost   package=chromium-chromedriver   state=present
-        #${x}=	get from dictionary  ${x}   invocation
-        #${y}=	get from dictionary  ${x}   module_args
-        #${s}=	get from dictionary  ${y}   state
-        #Should be Equal  ${s}  present
+        ${xv}=  get from dictionary  ${x}[0]   version
+        ${dp}=  Evaluate  "%{PATH}".split(":")[0]
+        ${xs}=  Run keyword and return status  should start with  ${xv}  81
+        ${xz}=  Run keyword and return status  should start with  ${xv}  89
+                Run keyword if  not ${xs}  apt    localhost   package=chromium-chromedriver state=present
+                Run keyword if  ${xs}  apt  localhost  update_cache=yes
+                Run keyword if  ${xs}  apt  localhost  deb="${chd81}"  force=True
+                Run keyword if  ${xz}  Get Url  LOCAL  url=${chd89}  dest=.
+                Run keyword if  ${xz}  Evaluate  zipfile.ZipFile("chromedriver_linux64.zip").extract("chromedriver",$dp)   modules=zipfile
+                Run keyword if  ${xz}  Evaluate  os.chmod('${dp}/chromedriver',0o755)  modules=os
 	${w}=	Run	which chromedriver
 	Should Contain  ${w}  chromedriver
 
@@ -1530,7 +1529,7 @@ Resource  gameslist.robot
 	should contain  ${zipek}  8bitfiles
 	${uc}=   getcoverturl   ${u}
 	should contain   ${uc}  lemon64
-	should contain   ${uc}  thumb
+	#should contain   ${uc}  thumb
 	${m}=   getgame  ${zipek}
 	should contain   ${m}   64
 	${nico}=   creategameicon   ${name}  ${m}  ${uc}
@@ -1560,7 +1559,10 @@ Getgameurl
 Getcoverturl
 	[Arguments]   ${u}
 	${g}=  pyigeturl   ${u}
-	${uc}=    Should Match Regexp     ${g}   (?smi)https://www.lemon64.com/covers/thumbs/[^"]+
+	#${uc}=    Should Match Regexp     ${g}   (?smi)https://www.lemon64.com/covers/thumbs/[^"]+
+        ${rc}  ${uc}=    Run Keyword And Ignore Error   Should Match Regexp     ${g}   (?smi)https://www.lemon64.com/covers/thumbs/[^"]+
+        ${rc1}  ${ucs}=    Run Keyword And Ignore Error   Should Match Regexp     ${g}   (?smi)https://www.lemon64.com/games/screenshots/[^"]+
+        ${uc}   set variable if  $rc=="PASS"   ${uc}   ${ucs}
 	${g}=  pyigeturlb   ${uc}
 	${iconn}=    Should Match Regexp     ${uc}  [^/]*$
 	Create Binary File   .images/${iconn}    ${g}
@@ -1592,7 +1594,7 @@ CreateGameIcon
 	${iv}=   Set Variable   [Desktop Entry]\nName=${n}\nComment=${n}\nExec=x64 '${OUTPUT DIR}/.data/${d}'\nIcon=${OUTPUT DIR}/.images/${in}\nTerminal=false\nType=Application\nEncoding=UTF-8\nCategories=Game;ArcadeGame;
 	Create File  ${nn}.desktop   ${iv}
 	Evaluate  os.chmod('${nn}.desktop',0o755)  modules=os
-	Run  dbus-launch gio set "${nn}.desktop" metadata::trusted yes
+	Run  dbus-run-session -- gio set "${nn}.desktop" metadata::trusted yes
 	[return]  ${iv}
 
 pyigeturl
