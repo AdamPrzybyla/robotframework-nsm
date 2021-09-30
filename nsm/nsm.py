@@ -1032,7 +1032,7 @@ Library  SeleniumLibrary
 *** Variables ***
 ${xu}  //*[@id="login"]
 ${xp}  //*[@id="password"]
-${xb}  css:.nSubmit
+${xb}  css:button.sc-bdnxRM
 ${BROWSER}   Firefox
 
 *** Keywords ***
@@ -1343,7 +1343,7 @@ Suite teardown  Close All Browsers
 *** Variables ***
 ${xu}  //*[@id="login"]
 ${xp}  //*[@id="password"]
-${xb}  css:.nSubmit
+${xb}  css:button.sc-bdnxRM
 ${BROWSER}   firefox
 ${ansible_user}  %{USER}
 ${ansible_become_password}   xxxxxxxxxxxxxxx
