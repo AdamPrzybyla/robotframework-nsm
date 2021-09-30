@@ -1574,7 +1574,7 @@ getgame
 	${us}=  Replace String   ${u}  !  \! 
 	${f}=  Run  curl -sk '${us}' | base64
 	${f2}=  Run Keyword if  ${v}==2  Evaluate  base64.decodestring($f)   modules=base64
-	${f3}=  Run Keyword if  ${v}==3  Evaluate  base64.decodestring($f.encode("utf"))   modules=base64
+	${f3}=  Run Keyword if  ${v}==3  Evaluate  base64.decodebytes($f.encode("utf"))   modules=base64
 	${f}=   Set Variable if  ${v}==2  ${f2}  ${f3}
 	${m2}=  Run Keyword if  ${v}==2  Evaluate  zipfile.ZipFile(StringIO.StringIO($f)).namelist()   modules=zipfile,StringIO
 	${m3}=  Run Keyword if  ${v}==3  Evaluate  zipfile.ZipFile(io.BytesIO($f)).namelist()   modules=zipfile,io
