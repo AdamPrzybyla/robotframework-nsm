@@ -1369,7 +1369,8 @@ Requirements
 	Lemat 5 - The Chromedriver should be installed if needed
 
 lemat 0 - Apt system should work
-	shell  localhost  wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add -
+	#shell  localhost  wget -qO - https://pkg.jenkins.io/debian-stable/jenkins.io.key | apt-key add -
+	Run Keyword And Ignore Error   shell  localhost  sed -i 's/deb/#deb/' /etc/apt/sources.list.d/jenkins.list
         apt  localhost  update_cache=yes
         apt  localhost  autoremove=yes
 
