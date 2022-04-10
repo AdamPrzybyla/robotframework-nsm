@@ -1032,7 +1032,8 @@ Library  SeleniumLibrary
 *** Variables ***
 ${xu}  //*[@id="login"]
 ${xp}  //*[@id="password"]
-${xb}  css:button.sc-bdnxRM
+${xb}  //button[@type='submit']
+${RODO}     //button[contains(text(),'PRZECHODZ')]
 ${BROWSER}   Firefox
 
 *** Keywords ***
@@ -1056,6 +1057,9 @@ logged
 
 Enter Credentials
 	[Arguments]  ${user}  ${pass}
+	Sleep  5
+	Click Element  ${RODO}
+	Sleep  5
 	Input Text  ${xu}   ${user}
 	Input Text  ${xp}   ${pass}
 	Click Element  ${xb}
@@ -1252,15 +1256,16 @@ Suite Setup  Requirements
 Suite Teardown  Terminate Process
 
 *** Variables ***
-${ansible_become_password}  xxxxxxxxxxxx
+${ansible_become_password}  xxxxxxxxxxxxxxxxxxxx
 ${ansible_user}  %{USER}
 ${btool}  https://github.com/google/bundletool/releases/download/1.2.0/bundletool-all-1.2.0.jar
 ${demoapp}  https://github.com/appium/appium/raw/master/sample-code/apps/ApiDemos-debug.apk
+${androidtools}  https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip
 
 ${ANDROID_AUTOMATION_NAME}    UIAutomator1
 ${ANDROID_APP}                ${CURDIR}/ApiDemos-debug.apk
 ${ANDROID_PLATFORM_NAME}      Android
-${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=4}
+${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=5.1}
 
 *** Test Cases ***
 Should send keys to search box and then check the value
@@ -1295,22 +1300,18 @@ Requirements
 	Lemat 3 - appium has been started
 
 Lemat 1 - appium is installed
-	[Timeout]    1800
+	[Timeout]    7200
         run keyword and ignore error  npm   apt   localhost  update_cache=yes       force_apt_get=yes
         apt   localhost  upgrade=dist           force_apt_get=yes
         apt   localhost  package=openjdk-8-jre  state=present
         apt   localhost  package=openjdk-8-jdk  state=present
         apt   localhost  package=android-sdk    state=present
-        apt   localhost  package=npm            state=present
-        apt   localhost  package=ffmpeg         state=present
-        run keyword and ignore error  npm   localhost  name=appium            global=yes  state=present
-        npm   localhost  name=appium            global=yes  state=present
-        run keyword and ignore error  npm   localhost  name=appium-doctor     global=yes  state=present
-        npm   localhost  name=appium-doctor     global=yes  state=present
-        run keyword and ignore error  npm   localhost  name=opencv4nodejs     global=yes  state=present
-        npm   localhost  name=opencv4nodejs     global=yes  state=present
-        run keyword and ignore error  npm   localhost  name=mjpeg-consumer    global=yes  state=present
-        npm   localhost  name=mjpeg-consumer    global=yes  state=present
+	${w}=   Run     which npm
+        ${w}=   run keyword and return status  Should Contain  ${w}  npm
+        Run keyword if  not ${w}  apt   localhost  package=npm            state=present
+        apt   localhost  package=cmake          state=present
+        Get url  LOCAL  url=${androidtools}  dest=/tmp/commandlinetools-linux-6200805_latest.zip  mode="0755"
+        Command  localhost  unzip -xn /tmp/commandlinetools-linux-6200805_latest.zip -d /usr/lib/android-sdk/
         alternatives  localhost   name=java     path=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
         Set Environment Variable  ANDROID_HOME  /usr/lib/android-sdk/
         Set Environment Variable  JAVA_HOME     /usr/lib/jvm/java-8-openjdk-amd64
@@ -1318,14 +1319,29 @@ Lemat 1 - appium is installed
         Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
         Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
         Get url  LOCAL  url=${btool}  dest=bin/bundletool.jar  mode="0755"
+        Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk/ "tools" >/dev/null
+        Command  localhost  /usr/lib/android-sdk/tools/bin/sdkmanager --update
+        Shell  localhost  curl -sL https://deb.nodesource.com/setup_14.x | bash -
+        apt   localhost  upgrade=dist           force_apt_get=yes
+        apt   localhost  package=nodejs         state=present
+        apt   localhost  package=ffmpeg         state=present
+        run keyword and ignore error  npm   localhost  name=appium            global=yes  state=present  unsafe_perm=yes
+        npm   localhost  name=appium            global=yes  state=present  unsafe_perm=yes
+        run keyword and ignore error  npm   localhost  name=appium-doctor     global=yes  state=present
+        npm   localhost  name=appium-doctor     global=yes  state=present
+        run keyword and ignore error  npm   localhost  name=opencv4nodejs     global=yes  state=present  unsafe_perm=yes
+        npm   localhost  name=opencv4nodejs     global=yes  state=present  unsafe_perm=yes
+        run keyword and ignore error  npm   localhost  name=mjpeg-consumer    global=yes  state=present
+        npm   localhost  name=mjpeg-consumer    global=yes  state=present
         Get url  LOCAL  url=${demoapp}  dest=${CURDIR}/ApiDemos-debug.apk
 
 Lemat 2 - appium works
-	${w}=  Shell  local   appium-doctor 2>&1 |grep -v emulator
+	${w}=  Shell  local   appium-doctor 2>&1
 	${err}=   get from dictionary  ${w}   stdout
 	Should Not Contain   ${err}   WARN   ${err}
 
 Lemat 3 - appium has been started
+	${w}=  Shell  localhost   adb devices
 	Start Process  appium  shell=True  alias=appiumserver  stdout=${CURDIR}/appium_stdout.txt  stderr=${CURDIR}/appium_stderr.txt
 	Sleep  10
 """
@@ -1343,15 +1359,20 @@ Suite teardown  Close All Browsers
 *** Variables ***
 ${xu}  //*[@id="login"]
 ${xp}  //*[@id="password"]
-${xb}  css:button.sc-bdnxRM
+${xb}  //button[@type='submit']
+${RODO}     //button[contains(text(),'PRZECHODZ')]
+
 ${BROWSER}   firefox
 ${ansible_user}  %{USER}
-${ansible_become_password}   xxxxxxxxxxxxxxx
+${ansible_become_password}   xxxxxxxxxxxxxx
 ${ansible_password}  ${FALSE}
 
 *** Test Cases ***
 test poczty
   Open Browser  http://poczta.wp.pl  ${BROWSER}
+  Sleep  5
+  Click Element  ${RODO}
+  Sleep  5
   Input Text  ${xu}   mailtest007
   Input Text  ${xp}   MailTest007
   Click Element  ${xb}
@@ -1391,7 +1412,6 @@ Lemat 4 - Chrome in the latest version
 Lemat 5 - The Chromedriver should be installed if needed
 	The google repo should be available
 	The Chromedriver should be installed if needed
-
 """
 	open("selenium.robot","w").write(t)
 
