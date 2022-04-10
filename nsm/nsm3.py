@@ -79,4 +79,4 @@ class gennsm3(type):
 		return kw.run(EXECUTION_CONTEXTS.current)
 
 class nsm3(object,metaclass=gennsm3):
-	ROBOT_LIBRARY_VERSION = '0.23'
+	ROBOT_LIBRARY_VERSION = '0.24'
