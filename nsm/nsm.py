@@ -1076,10 +1076,11 @@ webpage check
 def requirements():
 	t="""*** Variables ***
 ${ansible_password}   ${FALSE}
+${ansible_user}  %{USER}
 ${DBHost}  localhost
 ${DBName}  w3schools
-${DBUser}  XXXXXX
-${DBPass}  XXXXXX
+${DBUser}  %{USER}
+${DBPass}  %{USER}
 ${DBPort}  3306
 ${DBFile}  w3schools.sql
 ${Furl}    https://raw.githubusercontent.com/AndrejPHP/w3schools-database/master/w3schools.sql
@@ -1095,7 +1096,6 @@ Library  Impansible
 library  Collections
 library  OperatingSystem
 library  String
-#Library  DatabaseLibrary
 
 *** Keywords ***
 Requirements
@@ -1195,7 +1195,7 @@ The MySQL server should be installed
 
 Python should have MySQL support
 	[Timeout]    600
-	${x}=	apt    localhost   package=python-mysqldb   state=present
+	${x}=	apt    localhost   package=python3-mysqldb   state=present
 	${x}=	get from dictionary  ${x}   invocation
 	${y}=	get from dictionary  ${x}   module_args
 	${s}=	get from dictionary  ${y}   state
@@ -1203,7 +1203,7 @@ Python should have MySQL support
 
 The MySQL user have all privileges
 	[Timeout]    600
-	${x}=	apt    localhost   package=python-mysqldb   state=present
+	${x}=	apt    localhost   package=python3-mysqldb   state=present
 	${x}=	get from dictionary  ${x}   invocation
 	${y}=	get from dictionary  ${x}   module_args
 	${s}=	get from dictionary  ${y}   state
@@ -1220,12 +1220,21 @@ Mysql should have database imported
 	Get url   localhost  url=${Furl}     dest=/tmp/${DBFile}
 	mysql db  localhost  name=${DBName}  state=import  target=/tmp/${DBFile}
 
+We should be connected to database
+        Import Library  DatabaseLibrary
+        Connect To Database   pymysql  ${DBName}  ${DBUser}  ${DBPass}  ${DBHost}  ${DBPort}
+
 Mysql requirements
+	The system should be upgraded
 	The MySQL server should be installed
 	Python should have MySQL support
 	Mysql should have no database imported
 	Mysql should have database imported
 	The MySQL user have all privileges
+	We should be connected to database
+
+The system should be upgraded
+        apt   localhost  upgrade=dist           force_apt_get=yes
 
 The google repo should be available
 	[Timeout]    600
@@ -1241,6 +1250,28 @@ The google repo should be available
 	Should be true  ${x}   "The google repo is not available"
 """
 	open("requirements.robot","w").write(t)
+
+def mymysql():
+	t="""*** Settings ***
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+Documentation  Examples: https://github.com/franz-see/Robotframework-Database-Library/blob/master/test/MySQL_DB_Tests.robot
+Resource  requirements.robot
+Suite Setup   MySQL Requirements
+
+*** Test Cases ***
+Simple SQL test
+        ${wynik}=  Execute SQL String  SELECT * FROM customers
+        log  ${wynik}
+        ${wynik}=  Query   select * from w3schools.customers where City='Berlin'
+        log  ${wynik}
+        ${wynik}=   Get from list  ${wynik}  0
+        log  ${wynik}
+        ${wynik}=   Get from list  ${wynik}  1
+        log  ${wynik}
+        Should be equal   ${wynik}   Alfreds Futterkiste
+"""
+	open("mymysql.robot","w").write(t)
+
 
 def appium():
 	t="""*** Settings ***
@@ -1415,7 +1446,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1498,6 +1529,7 @@ def main():
 		selenium()
 		nsmlib()
 		mykeywords()
+		mymysql()
 		requirements()
 	elif sys.argv[1] in la:
 		eval(sys.argv[1]+"()")
