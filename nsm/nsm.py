@@ -1850,7 +1850,7 @@ Mysql should have database imported
         Execute SQL String  SET GLOBAL local_infile=1;
         Execute SQL String  Drop table if exists users
         Execute SQL String  CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, first_name VARCHAR(255) NOT NULL, last_name VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, transactions INT NOT NULL, account_creation DATE NOT NULL, PRIMARY KEY (id))
-        Shell  localhost   mysql --local-infile=1 app -e "LOAD DATA LOCAL INFILE '/var/lib/mysql-files/mock_data.csv' INTO TABLE users FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS (id, first_name, last_name, email, transactions, @account_creation)SET account_creation  = STR_TO_DATE(@account_creation, '%m/%d/%y');"
+        Shell  localhost   mysql --local-infile=1 app -e "LOAD DATA LOCAL INFILE '/var/lib/mysql-files/mock_data.csv' INTO TABLE users FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS (id, first_name, last_name, email, transactions, @account_creation)SET account_creation = STR_TO_DATE(@account_creation, '%m/%d/%y');"
 """
 	open("mymycsv.robot","w").write(w)
 
