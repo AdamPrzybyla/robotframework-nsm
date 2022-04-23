@@ -1667,7 +1667,7 @@ ${jenkinskey}  https://pkg.jenkins.io/debian-stable/jenkins.io.key
 ${jenkinsrepo}  deb http://pkg.jenkins.io/debian-stable binary
 ${ansible_user}  %{USER}
 ${ansible_become_password}  xxxxxxxxxxxxxxxxxxxx
-${conf}  <?xml version='1.1' encoding='UTF-8'?>{\n}<jenkins.model.JenkinsLocationConfiguration>{\n}  <jenkinsUrl>http://192.168.122.193:8080/</jenkinsUrl>{\n}</jenkins.model.JenkinsLocationConfiguration>
+${jenkinsconf}  <?xml version='1.1' encoding='UTF-8'?>{\n}<jenkins.model.JenkinsLocationConfiguration>{\n}  <jenkinsUrl>http://192.168.122.193:8080/</jenkinsUrl>{\n}</jenkins.model.JenkinsLocationConfiguration>
 
 *** Test Cases ***
 Jenkins Setup
@@ -1676,7 +1676,7 @@ Jenkins Setup
 *** Keywords ***
 Add Jenkins to Your Server
 	Apt Key  localhost  url=${jenkinskey}
-	Apt Repository  localhost  repo="deb http://pkg.jenkins.io/debian-stable binary/"  filename=jenkis
+	Apt Repository  localhost  repo="deb http://pkg.jenkins.io/debian-stable binary/"  filename=jenkins
 	Apt  localhost  package=jenkins  state=present
 	Systemd  localhost  name=jenkins  enabled=yes
 	${password}=   Shell  localhost  cat /var/lib/jenkins/secrets/initialAdminPassword
@@ -1694,7 +1694,7 @@ Add Jenkins to Your Server
 	Systemd  localhost  name=jenkins state=stopped
 	Copy  localhost   content=${v}  dest=/var/lib/jenkins/jenkins.install.InstallUtil.lastExecVersion  owner=jenkins  group=jenkins
 	Copy  localhost   content=${v}  dest=/var/lib/jenkins/jenkins.install.UpgradeWizard.state  owner=jenkins  group=jenkins
-	Copy  localhost   content='${conf}'  dest=/var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml  owner=jenkins  group=jenkins
+	Copy  localhost   content='${jenkinsconf}'  dest=/var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml  owner=jenkins  group=jenkins
 	Systemd  localhost  name=jenkins state=started
 """
 	open("jenkins.robot","w").write(w)
