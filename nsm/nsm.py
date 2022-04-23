@@ -1656,7 +1656,7 @@ Game Installation
 	open("game.robot","w").write(w)
 
 def jenkins():
-	w="""*** Settings ***
+	w=r"""*** Settings ***
 Metadata  Author  Adam Przybyla
 library  Impansible
 library  Collections
