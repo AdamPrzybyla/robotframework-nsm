@@ -1818,7 +1818,7 @@ Search Query Should Be Matching
 	open("lemat.robot","w").write(w)
 
 def mymycsv():
-	w="""*** Settings ***
+	w=r"""*** Settings ***
 Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 Documentation  Examples: https://github.com/franz-see/Robotframework-Database-Library/blob/master/test/MySQL_DB_Tests.robot
 Library  DatabaseLibrary
