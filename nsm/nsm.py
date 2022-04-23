@@ -1276,105 +1276,41 @@ Simple SQL test
 def appium():
 	t="""*** Settings ***
 Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
-
-library  Collections
-library  Impansible
-library  OperatingSystem
-library  AppiumLibrary
-library  Process
-
-Suite Setup  Requirements
+Resource  lemat.robot
+Suite Setup  Appium Requirements
 Suite Teardown  Terminate Process
 
-*** Variables ***
-${ansible_become_password}  xxxxxxxxxxxxxxxxxxxx
-${ansible_user}  %{USER}
-${btool}  https://github.com/google/bundletool/releases/download/1.2.0/bundletool-all-1.2.0.jar
-${demoapp}  https://github.com/appium/appium/raw/master/sample-code/apps/ApiDemos-debug.apk
-${androidtools}  https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip
-
-${ANDROID_AUTOMATION_NAME}    UIAutomator1
-${ANDROID_APP}                ${CURDIR}/ApiDemos-debug.apk
-${ANDROID_PLATFORM_NAME}      Android
-${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=5.1}
-
 *** Test Cases ***
-Should send keys to search box and then check the value
-  Open Test Application
-  Input Search Query  Hello World!
-  Submit Search
-  Search Query Should Be Matching  Hello World!
-
-*** Keywords ***
-Open Test Application
-  Open Application  http://127.0.0.1:4723/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}
-  ...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}
-  ...  app=${ANDROID_APP}  appPackage=io.appium.android.apis  appActivity=.app.SearchInvoke
-
-Input Search Query
-  [Arguments]  ${query}
-  Input Text  txt_query_prefill  ${query}
-  log  ${ANDROID_PLATFORM_VERSION}
-
-Submit Search
-  Click Element  btn_start_search
-
-Search Query Should Be Matching
-  [Arguments]  ${text}
-  Wait Until Page Contains Element  android:id/search_src_text
-  Element Text Should Be  android:id/search_src_text  ${text}
-  Capture Page Screenshot
-
-Requirements
-	Lemat 1 - appium is installed
-	Lemat 2 - appium works
-	Lemat 3 - appium has been started
-
-Lemat 1 - appium is installed
-	[Timeout]    7200
-        run keyword and ignore error  npm   apt   localhost  update_cache=yes       force_apt_get=yes
-        apt   localhost  upgrade=dist           force_apt_get=yes
-        apt   localhost  package=openjdk-8-jre  state=present
-        apt   localhost  package=openjdk-8-jdk  state=present
-        apt   localhost  package=android-sdk    state=present
-	${w}=   Run     which npm
-        ${w}=   run keyword and return status  Should Contain  ${w}  npm
-        Run keyword if  not ${w}  apt   localhost  package=npm            state=present
-        apt   localhost  package=cmake          state=present
-        Get url  LOCAL  url=${androidtools}  dest=/tmp/commandlinetools-linux-6200805_latest.zip  mode="0755"
-        Command  localhost  unzip -xn /tmp/commandlinetools-linux-6200805_latest.zip -d /usr/lib/android-sdk/
-        alternatives  localhost   name=java     path=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
-        Set Environment Variable  ANDROID_HOME  /usr/lib/android-sdk/
-        Set Environment Variable  JAVA_HOME     /usr/lib/jvm/java-8-openjdk-amd64
-        ${P}=   Get Environment Variable   PATH
-        Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
-        Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
-        Get url  LOCAL  url=${btool}  dest=bin/bundletool.jar  mode="0755"
-        Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk/ "tools" >/dev/null
-        Command  localhost  /usr/lib/android-sdk/tools/bin/sdkmanager --update
-        Shell  localhost  curl -sL https://deb.nodesource.com/setup_14.x | bash -
-        apt   localhost  upgrade=dist           force_apt_get=yes
-        apt   localhost  package=nodejs         state=present
-        apt   localhost  package=ffmpeg         state=present
-        run keyword and ignore error  npm   localhost  name=appium            global=yes  state=present  unsafe_perm=yes
-        npm   localhost  name=appium            global=yes  state=present  unsafe_perm=yes
-        run keyword and ignore error  npm   localhost  name=appium-doctor     global=yes  state=present
-        npm   localhost  name=appium-doctor     global=yes  state=present
-        run keyword and ignore error  npm   localhost  name=opencv4nodejs     global=yes  state=present  unsafe_perm=yes
-        npm   localhost  name=opencv4nodejs     global=yes  state=present  unsafe_perm=yes
-        run keyword and ignore error  npm   localhost  name=mjpeg-consumer    global=yes  state=present
-        npm   localhost  name=mjpeg-consumer    global=yes  state=present
-        Get url  LOCAL  url=${demoapp}  dest=${CURDIR}/ApiDemos-debug.apk
-
-Lemat 2 - appium works
-	${w}=  Shell  local   appium-doctor 2>&1
-	${err}=   get from dictionary  ${w}   stdout
-	Should Not Contain   ${err}   WARN   ${err}
-
-Lemat 3 - appium has been started
-	${w}=  Shell  localhost   adb devices
-	Start Process  appium  shell=True  alias=appiumserver  stdout=${CURDIR}/appium_stdout.txt  stderr=${CURDIR}/appium_stderr.txt
+Appium with wp.pl 
+	Open Chrome Application on Android device
+	Go to Url  https://poczta.wp.pl
+	${page_title}=  execute script  return document.title
+	should contain  ${page_title}  Poczta
+	Capture Page Screenshot
+	Click Element  ${RODO}
 	Sleep  10
+	Input Text  ${xu}   mailtest007
+	Input Text  ${xp}   MailTest007
+	Click Element  ${xb}
+	Sleep  10
+	Page Should Contain Text  Odebrane
+	Capture Page Screenshot
+	Close Application
+
+Appium with google.com
+	Open Chrome Application on Android device
+	Go to Url  https://www.google.com
+	${page_title}=  execute script  return document.title
+	should be equal  ${page_title}  Google
+	Capture Page Screenshot
+	Close Application
+
+Should send keys to search box and then check the value
+	Open Test Application
+	Input Search Query  Hello World!
+	Submit Search
+	Search Query Should Be Matching  Hello World!
+	Close Application
 """
 	open("appium.robot","w").write(t)
 
@@ -1446,7 +1382,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1530,7 +1466,10 @@ def main():
 		nsmlib()
 		mykeywords()
 		mymysql()
+		mymycsv()
 		requirements()
+		lemat()
+		jenkins()
 	elif sys.argv[1] in la:
 		eval(sys.argv[1]+"()")
 
@@ -1709,11 +1648,210 @@ Metadata  Author  Adam Przybyla
 
 *** Variables ***
 ${NR}  136
+
 *** Test cases ***
 Game Installation 
 	doinstallgame  ${NR}
 """
 	open("game.robot","w").write(w)
+
+def jenkins():
+	w="""*** Settings ***
+Metadata  Author  Adam Przybyla
+library  Impansible
+library  Collections
+library  OperatingSystem
+
+*** Variables ***
+${jenkinskey}  https://pkg.jenkins.io/debian-stable/jenkins.io.key
+${jenkinsrepo}  deb http://pkg.jenkins.io/debian-stable binary
+${ansible_user}  %{USER}
+${ansible_become_password}  xxxxxxxxxxxxxxxxxxxx
+${conf}  <?xml version='1.1' encoding='UTF-8'?>{\n}<jenkins.model.JenkinsLocationConfiguration>{\n}  <jenkinsUrl>http://192.168.122.193:8080/</jenkinsUrl>{\n}</jenkins.model.JenkinsLocationConfiguration>
+
+*** Test Cases ***
+Jenkins Setup
+	Add Jenkins to Your Server
+
+*** Keywords ***
+Add Jenkins to Your Server
+	Apt Key  localhost  url=${jenkinskey}
+	Apt Repository  localhost  repo="deb http://pkg.jenkins.io/debian-stable binary/"  filename=jenkis
+	Apt  localhost  package=jenkins  state=present
+	Systemd  localhost  name=jenkins  enabled=yes
+	${password}=   Shell  localhost  cat /var/lib/jenkins/secrets/initialAdminPassword
+	${password}=  get from dictionary  ${password}   stdout
+	${full_crumb}=  Run  curl -sk -u "admin:${password}" --cookie-jar ".tmpfile" http://localhost:8080/crumbIssuer/api/xml?xpath=concat\\(//crumbRequestField,%22:%22,//crumb\\)
+	${only_crumb}=  Evaluate   $full_crumb.split(":")[1]
+	${result}=  Run  curl -X POST -u "admin:${password}" http://localhost:8080/setupWizard/createAdminUser -H "Connection: keep-alive" -H "Accept: application/json, text/javascript" -H "X-Requested-With: XMLHttpRequest" -H "${full_crumb}" -H "Content-Type: application/x-www-form-urlencoded" --cookie ".tmpfile" --data-raw "username=user&password1=password&password2=password&fullname=full%20name&email=hello%40world.com&Jenkins-Crumb=${only_crumb}&json=%7B%22username%22%3A%20%22user%22%2C%20%22password1%22%3A%20%22password%22%2C%20%22%24redact%22%3A%20%5B%22password1%22%2C%20%22password2%22%5D%2C%20%22password2%22%3A%20%22password%22%2C%20%22fullname%22%3A%20%22full%20name%22%2C%20%22email%22%3A%20%22hello%40world.com%22%2C%20%22Jenkins-Crumb%22%3A%20%22${only_crumb}%22%7D&core%3Aapply=&Submit=Save&json=%7B%22username%22%3A%20%22user%22%2C%20%22password1%22%3A%20%22password%22%2C%20%22%24redact%22%3A%20%5B%22password1%22%2C%20%22password2%22%5D%2C%20%22password2%22%3A%20%22password%22%2C%20%22fullname%22%3A%20%22full%20name%22%2C%20%22email%22%3A%20%22hello%40world.com%22%2C%20%22Jenkins-Crumb%22%3A%20%22${only_crumb}%22%7D"
+	${result}=  Run  curl -X POST -u "admin:${password}" http://localhost:8080/pluginManager/installPlugins -H 'Connection: keep-alive' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'X-Requested-With: XMLHttpRequest' -H "${full_crumb}" -H 'Content-Type: application/json' -H 'Accept-Language: en,en-US;q=0.9,it;q=0.8' --cookie .tmpfile --data-raw "{'dynamicLoad':true,'plugins':['cloudbees-folder','antisamy-markup-formatter','build-timeout','credentials-binding','timestamper','ws-cleanup','ant','gradle','workflow-aggregator','github-branch-source','pipeline-github-lib','pipeline-stage-view','git','ssh-slaves','matrix-auth','pam-auth','ldap','email-ext','mailer'],'Jenkins-Crumb':'${only_crumb}'}"
+	${result}=  Run  curl -X POST -u "user:password" http://localhost:8080/pluginManager/installPlugins -H 'Connection: keep-alive' -H 'Accept: application/json, text/javascript, */*; q=0.01' -H 'X-Requested-With: XMLHttpRequest' -H "${full_crumb}" -H 'Content-Type: application/json' -H 'Accept-Language: en,en-US;q=0.9,it;q=0.8' --cookie .tmpfile --data-raw "{'dynamicLoad':true,'plugins':['cloudbees-folder','antisamy-markup-formatter','build-timeout','credentials-binding','timestamper','ws-cleanup','ant','gradle','workflow-aggregator','github-branch-source','pipeline-github-lib','pipeline-stage-view','git','ssh-slaves','matrix-auth','pam-auth','ldap','email-ext','mailer'],'Jenkins-Crumb':'${only_crumb}'}"
+        ${x}=   package facts  localhost
+        ${x}=   get from dictionary  ${x}   ansible_facts
+        ${x}=   get from dictionary  ${x}   packages
+        ${x}=   get from dictionary  ${x}   jenkins
+        ${v}=  get from dictionary  ${x}[0]   version
+	Systemd  localhost  name=jenkins state=stopped
+	Copy  localhost   content=${v}  dest=/var/lib/jenkins/jenkins.install.InstallUtil.lastExecVersion  owner=jenkins  group=jenkins
+	Copy  localhost   content=${v}  dest=/var/lib/jenkins/jenkins.install.UpgradeWizard.state  owner=jenkins  group=jenkins
+	Copy  localhost   content='${conf}'  dest=/var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml  owner=jenkins  group=jenkins
+	Systemd  localhost  name=jenkins state=started
+"""
+	open("jenkins.robot","w").write(w)
+
+def lemat():
+	w="""*** Settings ***
+library  Collections
+library  Impansible
+library  OperatingSystem
+library  AppiumLibrary
+library  Process
+
+*** Variables ***
+${ansible_become_password}  xxxxxxxxxxxxxx
+${ansible_user}  %{USER}
+${btool}  https://github.com/google/bundletool/releases/download/1.2.0/bundletool-all-1.2.0.jar
+${demoapp}  https://github.com/appium/appium/raw/master/sample-code/apps/ApiDemos-debug.apk
+${androidtools}  https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip
+
+${ANDROID_AUTOMATION_NAME}    UIAutomator1
+${ANDROID_PLATFORM_NAME}      Android
+${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=5.1}
+${ANDROID_APP}                ${CURDIR}/ApiDemos-debug.apk
+${RODO}     //button[contains(text(),'PRZECHODZ')]
+${nolo}  android:id/infobar_close_button
+${xu}  //*[@id="login"]
+${xp}  //*[@id="password"]
+${xb}  //button[@type='submit']
+${RODO}     //button[contains(text(),'PRZECHODZ')]
+${chd95}  https://chromedriver.storage.googleapis.com/95.0.4638.54/chromedriver_linux64.zip
+
+*** Keywords ***
+Open Chrome Application on Android device
+	Open Application  http://127.0.0.1:4723/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}
+	...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}
+	...  browserName=Chrome  chromedriverExecutable=${CURDIR}/bin/chromedriver95
+
+Appium Requirements
+	The Appium should be installed
+	The ApiDemo has been available
+	The Chromedriver for Android should be installed
+	The Appium works
+	The Appium has been started
+
+The Appium should be installed
+	[Timeout]    7200
+        run keyword and ignore error  apt   localhost  update_cache=yes       force_apt_get=yes
+        apt   localhost  upgrade=dist           force_apt_get=yes
+        apt   localhost  package=openjdk-8-jre  state=present
+        apt   localhost  package=openjdk-8-jdk  state=present
+        apt   localhost  package=android-sdk    state=present
+	${w}=   Run     which npm
+        ${w}=   run keyword and return status  Should Contain  ${w}  npm
+        Run keyword if  not ${w}  apt   localhost  package=npm            state=present
+        apt   localhost  package=cmake          state=present
+        Get url  LOCAL  url=${androidtools}  dest=/tmp/commandlinetools-linux-6200805_latest.zip  mode="0755"
+        Command  localhost  unzip -xn /tmp/commandlinetools-linux-6200805_latest.zip -d /usr/lib/android-sdk/
+        alternatives  localhost   name=java     path=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+        Set Environment Variable  ANDROID_HOME  /usr/lib/android-sdk/
+        Set Environment Variable  JAVA_HOME     /usr/lib/jvm/java-8-openjdk-amd64
+        ${P}=   Get Environment Variable   PATH
+        Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
+        Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
+        Get url  LOCAL  url=${btool}  dest=bin/bundletool.jar  mode="0755"
+        Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk/ "tools" >/dev/null
+        Command  localhost  /usr/lib/android-sdk/tools/bin/sdkmanager --update
+        Shell  localhost  curl -sL https://deb.nodesource.com/setup_14.x | bash -
+        apt   localhost  upgrade=dist           force_apt_get=yes
+        apt   localhost  package=nodejs         state=present
+        apt   localhost  package=ffmpeg         state=present
+        run keyword and ignore error  npm   localhost  name=appium            global=yes  state=present  unsafe_perm=yes
+        npm   localhost  name=appium            global=yes  state=present  unsafe_perm=yes
+        run keyword and ignore error  npm   localhost  name=appium-doctor     global=yes  state=present
+        npm   localhost  name=appium-doctor     global=yes  state=present
+        run keyword and ignore error  npm   localhost  name=opencv4nodejs     global=yes  state=present  unsafe_perm=yes
+        npm   localhost  name=opencv4nodejs     global=yes  state=present  unsafe_perm=yes
+        run keyword and ignore error  npm   localhost  name=mjpeg-consumer    global=yes  state=present
+        npm   localhost  name=mjpeg-consumer    global=yes  state=present
+
+The Chromedriver for Android should be installed
+	[Timeout]    600
+	${xz}=   Run keyword and return status  File Should Exist   ${CURDIR}/bin/chromedriver95
+	Run keyword if  not ${xz}  Get Url  LOCAL  url=${chd95}  dest=.
+	Run keyword if  not ${xz}  Evaluate  zipfile.ZipFile("chromedriver_linux64.zip").extract("chromedriver",'${CURDIR}/')   modules=zipfile
+        Run keyword if  not ${xz}  Evaluate  os.chmod('${CURDIR}/chromedriver',0o755)  modules=os
+        Run keyword if  not ${xz}  Evaluate  os.rename('${CURDIR}/chromedriver','${CURDIR}/bin/chromedriver95')  modules=os
+
+The ApiDemo has been available
+        Get url  LOCAL  url=${demoapp}  dest=${CURDIR}/ApiDemos-debug.apk
+
+The Appium works
+	${w}=  Shell  local   appium-doctor 2>&1
+	${err}=   get from dictionary  ${w}   stdout
+	Should Not Contain   ${err}   WARN   ${err}
+
+The Appium has been started
+	${w}=  Shell  localhost   adb devices
+	Start Process  appium  shell=True  alias=appiumserver  stdout=${CURDIR}/appium_stdout.txt
+	...  stderr=${CURDIR}/appium_stderr.txt
+	Sleep  10
+
+Open Test Application
+	Open Application  http://127.0.0.1:4723/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}
+	...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}
+	...  app=${ANDROID_APP}  appPackage=io.appium.android.apis  appActivity=.app.SearchInvoke
+
+Input Search Query
+	[Arguments]  ${query}
+	Input Text  txt_query_prefill  ${query}
+	log  ${ANDROID_PLATFORM_VERSION}
+
+Submit Search
+	Click Element  btn_start_search
+
+Search Query Should Be Matching
+	[Arguments]  ${text}
+	Wait Until Page Contains Element  android:id/search_src_text
+	Element Text Should Be  android:id/search_src_text  ${text}
+	Capture Page Screenshot
+"""
+	open("lemat.robot","w").write(w)
+
+def mymycsv():
+	w="""*** Settings ***
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+Documentation  Examples: https://github.com/franz-see/Robotframework-Database-Library/blob/master/test/MySQL_DB_Tests.robot
+Library  DatabaseLibrary
+Resource  requirements.robot
+Suite Setup   MySQL Requirements
+
+*** Variables ***
+${myCSV}  https://gist.githubusercontent.com/thulioph/ba51413417b566e70205717c0189c9f9/raw/18e43bcf7e7c182c4ed341cde502870fc331ca27/MOCK_DATA.csv
+${wyfile}  /var/lib/mysql-files/mock_data.csv
+${DBName}  app
+
+*** Test Cases ***
+Simple SQL test
+        ${wynik}=  Query   select email from users where first_name='Donn'
+        log  ${wynik}
+        ${wynik}=   Get from list  ${wynik}  0
+        log  ${wynik}
+        ${wynik}=   Get from list  ${wynik}  0
+        log  ${wynik}
+        Should be equal   ${wynik}   dcohenj@eepurl.com
+
+*** Keywords ***
+Mysql should have database imported
+        [Timeout]    600
+        mysql db  localhost  name=${DBName}  state=present
+        Get url   localhost  url=${myCSV}     dest=${wyfile}
+        Connect To Database   pymysql  ${DBName}  ${DBUser}  ${DBPass}  ${DBHost}  ${DBPort}
+        Execute SQL String  SET GLOBAL local_infile=1;
+        Execute SQL String  Drop table if exists users
+        Execute SQL String  CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, first_name VARCHAR(255) NOT NULL, last_name VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, transactions INT NOT NULL, account_creation DATE NOT NULL, PRIMARY KEY (id))
+        Shell  localhost   mysql --local-infile=1 app -e "LOAD DATA LOCAL INFILE '/var/lib/mysql-files/mock_data.csv' INTO TABLE users FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS (id, first_name, last_name, email, transactions, @account_creation)SET account_creation  = STR_TO_DATE(@account_creation, '%m/%d/%y');"
+"""
+	open("mymycsv.robot","w").write(w)
 
 if __name__=='__main__':
 	main()
