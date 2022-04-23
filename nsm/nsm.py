@@ -1843,8 +1843,9 @@ Simple SQL test
 *** Keywords ***
 Mysql should have database imported
         [Timeout]    600
-        mysql db  localhost  name=${DBName}  state=present
+        MySQL DB  localhost  name=${DBName}  state=present
         Get url   localhost  url=${myCSV}     dest=${wyfile}  group=mysql  owner=mysql
+	MySQL User  localhost  name=${DBUser}  password=${DBPass}  priv=*.*:ALL
         Connect To Database   pymysql  ${DBName}  ${DBUser}  ${DBPass}  ${DBHost}  ${DBPort}
         Execute SQL String  SET GLOBAL local_infile=1;
         Execute SQL String  Drop table if exists users
