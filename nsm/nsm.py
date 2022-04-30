@@ -1311,6 +1311,33 @@ Should send keys to search box and then check the value
 	Submit Search
 	Search Query Should Be Matching  Hello World!
 	Close Application
+
+Should Create and Destroy Android Session
+	Open Test Application
+	${activity}=  get activity
+	should be equal  ${activity}  .app.SearchInvoke
+	Close Application
+	sleep  3s
+	${previous kw}= 	Register Keyword To Run On Failure 	Nothing
+	Run Keyword And Expect Error  No application is open  Get Activity
+	Register Keyword To Run On Failure 	${previous kw}
+
+Should find elements by ID
+	Open Test Application
+	page should contain element  android:id/action_bar_container
+	Close Application
+
+Should find elements by class name
+	Open Test Application
+	@{elements}=  get webelements  class=android.widget.FrameLayout
+	length should be  ${elements}  3
+	Close Application
+
+Should find elements by XPath
+	Open Test Application
+	@{elements}=  get webelements  //*[@class='android.widget.FrameLayout']
+	length should be  ${elements}  3
+	Close Application
 """
 	open("appium.robot","w").write(t)
 
@@ -1714,7 +1741,7 @@ ${btool}  https://github.com/google/bundletool/releases/download/1.2.0/bundletoo
 ${demoapp}  https://github.com/appium/appium/raw/master/sample-code/apps/ApiDemos-debug.apk
 ${androidtools}  https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip
 
-${ANDROID_AUTOMATION_NAME}    UIAutomator1
+${ANDROID_AUTOMATION_NAME}    UIAutomator2
 ${ANDROID_PLATFORM_NAME}      Android
 ${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=5.1}
 ${ANDROID_APP}                ${CURDIR}/ApiDemos-debug.apk
@@ -1724,13 +1751,16 @@ ${xu}  //*[@id="login"]
 ${xp}  //*[@id="password"]
 ${xb}  //button[@type='submit']
 ${RODO}     //button[contains(text(),'PRZECHODZ')]
-${chd95}  https://chromedriver.storage.googleapis.com/95.0.4638.54/chromedriver_linux64.zip
+${chdpage}  https://chromedriver.storage.googleapis.com/
 
 *** Keywords ***
 Open Chrome Application on Android device
-	Open Application  http://127.0.0.1:4723/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}
-	...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}
-	...  browserName=Chrome  chromedriverExecutable=${CURDIR}/bin/chromedriver95
+	${v}=   Chrome Main Version
+	${pv}=  Android Main Version
+	${av}=  Android Automation Version
+	Open Application  http://127.0.0.1:4723/wd/hub  automationName=UIAutomator${av}
+	...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${pv}
+	...  browserName=Chrome  chromedriverExecutable=${CURDIR}/bin/chromedriver${v}
 
 Appium Requirements
 	The Appium should be installed
@@ -1776,11 +1806,13 @@ The Appium should be installed
 
 The Chromedriver for Android should be installed
 	[Timeout]    600
-	${xz}=   Run keyword and return status  File Should Exist   ${CURDIR}/bin/chromedriver95
-	Run keyword if  not ${xz}  Get Url  LOCAL  url=${chd95}  dest=.
+	${v}=  Chrome Main Version
+	${chd}=  Get Chromedriver url  ${v}
+	${xz}=   Run keyword and return status  File Should Exist   ${CURDIR}/bin/chromedriver${v}
+	Run keyword if  not ${xz}  Get Url  LOCAL  url=${chd}  dest=.
 	Run keyword if  not ${xz}  Evaluate  zipfile.ZipFile("chromedriver_linux64.zip").extract("chromedriver",'${CURDIR}/')   modules=zipfile
         Run keyword if  not ${xz}  Evaluate  os.chmod('${CURDIR}/chromedriver',0o755)  modules=os
-        Run keyword if  not ${xz}  Evaluate  os.rename('${CURDIR}/chromedriver','${CURDIR}/bin/chromedriver95')  modules=os
+        Run keyword if  not ${xz}  Evaluate  os.rename('${CURDIR}/chromedriver','${CURDIR}/bin/chromedriver${v}')  modules=os
 
 The ApiDemo has been available
         Get url  LOCAL  url=${demoapp}  dest=${CURDIR}/ApiDemos-debug.apk
@@ -1797,8 +1829,10 @@ The Appium has been started
 	Sleep  10
 
 Open Test Application
-	Open Application  http://127.0.0.1:4723/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}
-	...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}
+	${pv}=  Android Main Version
+	${av}=  Android Automation Version
+	Open Application  http://127.0.0.1:4723/wd/hub  automationName=UIAutomator${av}
+	...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${pv}
 	...  app=${ANDROID_APP}  appPackage=io.appium.android.apis  appActivity=.app.SearchInvoke
 
 Input Search Query
@@ -1814,6 +1848,32 @@ Search Query Should Be Matching
 	Wait Until Page Contains Element  android:id/search_src_text
 	Element Text Should Be  android:id/search_src_text  ${text}
 	Capture Page Screenshot
+
+Get Chromedriver url
+        [Arguments]   ${va}
+        ${v}=  Evaluate  sys.version_info.major   modules=sys
+        ${w2}=  run keyword if  ${v}==2  Evaluate  urllib2.urlopen($chdpage).read()  modules=urllib2
+        ${w3}=  run keyword if  ${v}==3  Evaluate  urllib.request.urlopen($chdpage).read().decode("utf-8","ignore")  modules=urllib
+        ${w}=   set variable if  ${v}==2  ${w2}  ${w3}
+	${match}=    Evaluate   re.findall(r'(?smi)<Key>('+$va+'[0-9.]+)/chromedriver_linux64.zip\</Key>',$w)[-1]  modules=re
+        [return]   https://chromedriver.storage.googleapis.com/${match}/chromedriver_linux64.zip
+
+Chrome Main Version
+	${w}=   Shell  localhost  adb shell dumpsys package com.android.chrome | /usr/bin/sed -n '/versionName=/\{s/\\(.*\\)=\\([0-9]*\\).*/\\2/p;q\}'
+	[return]  ${w["stdout"]}
+
+Android Main Version
+	${w}=   Shell  localhost  adb shell getprop ro.build.version.release
+	[return]  ${w["stdout"]}
+
+Android Main api Version
+	${w}=   Shell  localhost  adb shell getprop ro.build.version.sdk
+	[return]  ${w["stdout"]}
+
+Android Automation Version
+	${w}=   Shell  localhost  adb shell getprop ro.build.version.sdk
+	${w}=   Evaluate   "12"[(int($w["stdout"])>20)]
+	[return]  ${w}
 """
 	open("lemat.robot","w").write(w)
 
