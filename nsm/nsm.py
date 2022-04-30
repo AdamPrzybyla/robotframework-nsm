@@ -1859,7 +1859,7 @@ Get Chromedriver url
         [return]   https://chromedriver.storage.googleapis.com/${match}/chromedriver_linux64.zip
 
 Chrome Main Version
-	${w}=   Shell  localhost  adb shell dumpsys package com.android.chrome | /usr/bin/sed -n '/versionName=/\{s/\\(.*\\)=\\([0-9]*\\).*/\\2/p;q\}'
+	${w}=   Shell  localhost  adb shell dumpsys package com.android.chrome | /usr/bin/sed -n '/versionName=/\{s/\\\\(.*\\\\)=\\\\([0-9]*\\\\).*/\\\\2/p;q\}'
 	[return]  ${w["stdout"]}
 
 Android Main Version
