@@ -1727,7 +1727,7 @@ Add Jenkins to Your Server
 	open("jenkins.robot","w").write(w)
 
 def lemat():
-	w="""*** Settings ***
+	w=r"""*** Settings ***
 library  Collections
 library  Impansible
 library  OperatingSystem
