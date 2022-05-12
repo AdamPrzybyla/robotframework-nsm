@@ -1281,62 +1281,95 @@ Suite Setup  Appium Requirements
 Suite Teardown  Terminate Process
 
 *** Test Cases ***
-Appium with wp.pl 
+Should open the wp.pl and login to website
 	Open Chrome Application on Android device
 	Go to Url  https://poczta.wp.pl
 	${page_title}=  execute script  return document.title
-	should contain  ${page_title}  Poczta
+	Should Contain  ${page_title}  Poczta
 	Capture Page Screenshot
 	Click Element  ${RODO}
 	Sleep  10
 	Input Text  ${xu}   mailtest007
 	Input Text  ${xp}   MailTest007
+	Sleep  10
 	Click Element  ${xb}
 	Sleep  10
 	Page Should Contain Text  Odebrane
 	Capture Page Screenshot
 	Close Application
 
-Appium with google.com
-	Open Chrome Application on Android device
-	Go to Url  https://www.google.com
-	${page_title}=  execute script  return document.title
-	should be equal  ${page_title}  Google
-	Capture Page Screenshot
+Should send keys to search box and then check the value
+	Open Android Test App  .app.SearchInvoke
+	Input Text  txt_query_prefill  Hello world!
+	Click Element  btn_start_search
+	Wait until Page Contains Element  android:id/search_src_text
+	Element Text Should be  android:id/search_src_text  Hello world!
 	Close Application
 
-Should send keys to search box and then check the value
-	Open Test Application
-	Input Search Query  Hello World!
-	Submit Search
-	Search Query Should Be Matching  Hello World!
+Should click a button that opens an alert and then dismisses it
+	Open Android Test App  .app.AlertDialogSamples
+	Click element  two_buttons
+	Wait until Page Contains Element  android:id/alertTitle
+	Element should contain text  android:id/alertTitle  Lorem ipsum dolor sit aie consectetur adipiscing
+	${close_dialog_button}  get webelement  android:id/button1
+	Click Element  ${close_dialog_button}
 	Close Application
 
 Should Create and Destroy Android Session
-	Open Test Application
-	${activity}=  get activity
-	should be equal  ${activity}  .app.SearchInvoke
+	[Documentation]  Android Create Native Test Session
+	[teardown]  No Operation
+	Open Android Test App
+	${activity}  get activity
+	Should be Equal  ${activity}  .ApiDemos
 	Close Application
-	sleep  3s
-	${previous kw}= 	Register Keyword To Run On Failure 	Nothing
-	Run Keyword And Expect Error  No application is open  Get Activity
-	Register Keyword To Run On Failure 	${previous kw}
+	Sleep  3s
+	${previous kw}=         Register Keyword To Run On Failure      Nothing
+	Run Keyword and Expect Error  No application is open  get activity
+	Register Keyword To Run On Failure      ${previous kw}
+
+Should Create and Destroy Android Web Session
+	[Documentation]  Android Web Session
+	[teardown]  No Operation
+	Open Chrome Application on Android device
+	Go to Url  https://www.google.com
+	${page_title}  execute script  return document.title
+	Should be Equal  ${page_title}  Google
+	Close Application
+	Sleep  3s
+	${previous kw}=         Register Keyword To Run On Failure      Nothing
+	Run Keyword and Expect Error  No application is open  Execute Script  return document.title
+	Register Keyword To Run On Failure      ${previous kw}
+
+Should find elements by Accessibility ID
+	[Documentation]  Android Selectors
+	Open Android Test App
+	${element}  get webelement  accessibility_id=Content
+	element should be visible  ${element}
+	Close Application
 
 Should find elements by ID
-	Open Test Application
+	Open Android Test App
 	page should contain element  android:id/action_bar_container
 	Close Application
 
 Should find elements by class name
-	Open Test Application
-	@{elements}=  get webelements  class=android.widget.FrameLayout
+	Open Android Test App
+	@{elements}  get webelements  class=android.widget.FrameLayout
 	length should be  ${elements}  3
 	Close Application
 
 Should find elements by XPath
-	Open Test Application
-	@{elements}=  get webelements  //*[@class='android.widget.FrameLayout']
+	Open Android Test App
+	@{elements}  get webelements  //*[@class='android.widget.FrameLayout']
 	length should be  ${elements}  3
+	Close Application
+
+Should send keys to search box and then check the value 2
+	[Documentation]  Simple example using AppiumLibrary
+	Open Android Test App  .app.SearchInvoke
+	Input Search Query  Hello World!
+	Submit Search
+	Search Query Should Be Matching  Hello World!
 	Close Application
 """
 	open("appium.robot","w").write(t)
@@ -1828,12 +1861,14 @@ The Appium has been started
 	...  stderr=${CURDIR}/appium_stderr.txt
 	Sleep  10
 
-Open Test Application
+Open Android Test App
+#Open Test Application
+	[Arguments]    ${appActivity}=${EMPTY}
 	${pv}=  Android Main Version
 	${av}=  Android Automation Version
 	Open Application  http://127.0.0.1:4723/wd/hub  automationName=UIAutomator${av}
 	...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${pv}
-	...  app=${ANDROID_APP}  appPackage=io.appium.android.apis  appActivity=.app.SearchInvoke
+	...  app=${ANDROID_APP}  appPackage=io.appium.android.apis  appActivity=${appActivity}
 
 Input Search Query
 	[Arguments]  ${query}
