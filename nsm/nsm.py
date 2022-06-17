@@ -1374,6 +1374,107 @@ Should send keys to search box and then check the value 2
 """
 	open("appium.robot","w").write(t)
 
+def emulator():
+	t="""*** Settings ***
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+Resource  lemat.robot
+Suite Setup  Appium Emulator Requirements
+Suite Teardown  Terminate All Processes
+
+*** Test Cases ***
+Should open the wp.pl and login to website
+	Open Chrome Application on Android device
+	Go to Url  https://poczta.wp.pl
+	${page_title}=  execute script  return document.title
+	Should Contain  ${page_title}  Poczta
+	Capture Page Screenshot
+	Click Element  ${RODO}
+	Sleep  10
+	Input Text  ${xu}   mailtest007
+	Input Text  ${xp}   MailTest007
+	Sleep  10
+	Click Element  ${xb}
+	Sleep  10
+	Page Should Contain Text  Odebrane
+	Capture Page Screenshot
+	Close Application
+
+Should send keys to search box and then check the value
+	Open Android Test App  .app.SearchInvoke
+	Input Text  txt_query_prefill  Hello world!
+	Click Element  btn_start_search
+	Wait until Page Contains Element  android:id/search_src_text
+	Element Text Should be  android:id/search_src_text  Hello world!
+	Close Application
+
+Should click a button that opens an alert and then dismisses it
+	Open Android Test App  .app.AlertDialogSamples
+	Click element  two_buttons
+	Wait until Page Contains Element  android:id/alertTitle
+	Element should contain text  android:id/alertTitle  Lorem ipsum dolor sit aie consectetur adipiscing
+	${close_dialog_button}  get webelement  android:id/button1
+	Click Element  ${close_dialog_button}
+	Close Application
+
+Should Create and Destroy Android Session
+	[Documentation]  Android Create Native Test Session
+	[teardown]  No Operation
+	Open Android Test App
+	${activity}  get activity
+	Should be Equal  ${activity}  .ApiDemos
+	Close Application
+	Sleep  3s
+	${previous kw}=         Register Keyword To Run On Failure      Nothing
+	Run Keyword and Expect Error  No application is open  get activity
+	Register Keyword To Run On Failure      ${previous kw}
+
+Should Create and Destroy Android Web Session
+	[Documentation]  Android Web Session
+	[teardown]  No Operation
+	Open Chrome Application on Android device
+	Go to Url  https://www.google.com
+	${page_title}  execute script  return document.title
+	Should be Equal  ${page_title}  Google
+	Close Application
+	Sleep  3s
+	${previous kw}=         Register Keyword To Run On Failure      Nothing
+	Run Keyword and Expect Error  No application is open  Execute Script  return document.title
+	Register Keyword To Run On Failure      ${previous kw}
+
+Should find elements by Accessibility ID
+	[Documentation]  Android Selectors
+	Open Android Test App
+	${element}  get webelement  accessibility_id=Content
+	element should be visible  ${element}
+	Close Application
+
+Should find elements by ID
+	Open Android Test App
+	page should contain element  android:id/action_bar_container
+	Close Application
+
+Should find elements by class name
+	Open Android Test App
+	@{elements}  get webelements  class=android.widget.FrameLayout
+	length should be  ${elements}  3
+	Close Application
+
+Should find elements by XPath
+	Open Android Test App
+	@{elements}  get webelements  //*[@class='android.widget.FrameLayout']
+	length should be  ${elements}  3
+	Close Application
+
+Should send keys to search box and then check the value 2
+	[Documentation]  Simple example using AppiumLibrary
+	Open Android Test App  .app.SearchInvoke
+	Input Search Query  Hello World!
+	Submit Search
+	Search Query Should Be Matching  Hello World!
+	Close Application
+"""
+	open("emulator.robot","w").write(t)
+
 def selenium():
 	t="""*** Settings ***
 Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
@@ -1442,7 +1543,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv","emulator"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1529,6 +1630,7 @@ def main():
 		mymycsv()
 		requirements()
 		lemat()
+		emulator()
 		jenkins()
 	elif sys.argv[1] in la:
 		eval(sys.argv[1]+"()")
@@ -1802,6 +1904,14 @@ Appium Requirements
 	The Appium works
 	The Appium has been started
 
+Appium Emulator Requirements
+	The Appium should be installed
+	The ApiDemo has been available
+	The Appium Emulator has been started
+	The Chromedriver for Android should be installed
+	The Appium works
+	The Appium has been started
+
 The Appium should be installed
 	[Timeout]    7200
         run keyword and ignore error  apt   localhost  update_cache=yes       force_apt_get=yes
@@ -1823,6 +1933,10 @@ The Appium should be installed
         Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
         Get url  LOCAL  url=${btool}  dest=bin/bundletool.jar  mode="0755"
         Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk/ "tools" >/dev/null
+	Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --install "platform-tools" "platforms;android-28"
+	Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --install "system-images;android-28;google_apis;x86"
+	Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --licenses
+	Shell   localhost  echo no | /usr/lib/android-sdk/tools/bin/avdmanager create avd -n Android28 -k "system-images;android-28;google_apis;x86"
         Command  localhost  /usr/lib/android-sdk/tools/bin/sdkmanager --update
         Shell  localhost  curl -sL https://deb.nodesource.com/setup_14.x | bash -
         apt   localhost  upgrade=dist           force_apt_get=yes
@@ -1861,8 +1975,12 @@ The Appium has been started
 	...  stderr=${CURDIR}/appium_stderr.txt
 	Sleep  10
 
+The Appium Emulator has been started
+	Start Process  /usr/lib/android-sdk//emulator/emulator -no-window \@Android28  shell=True  alias=appiumemulator  stdout=${CURDIR}/appium_emulator_stdout.txt
+	...  stderr=${CURDIR}/appium_emulator_stderr.txt
+	Sleep  10
+
 Open Android Test App
-#Open Test Application
 	[Arguments]    ${appActivity}=${EMPTY}
 	${pv}=  Android Main Version
 	${av}=  Android Automation Version
@@ -1890,7 +2008,9 @@ Get Chromedriver url
         ${w2}=  run keyword if  ${v}==2  Evaluate  urllib2.urlopen($chdpage).read()  modules=urllib2
         ${w3}=  run keyword if  ${v}==3  Evaluate  urllib.request.urlopen($chdpage).read().decode("utf-8","ignore")  modules=urllib
         ${w}=   set variable if  ${v}==2  ${w2}  ${w3}
-	${match}=    Evaluate   re.findall(r'(?smi)<Key>('+$va+'[0-9.]+)/chromedriver_linux64.zip\</Key>',$w)[-1]  modules=re
+	${z}=   Evaluate   {"68":"2.42","69":"2.44","70":"2.45","71":"2.46","72":"2.46"}.get($va)
+	${va}=   set variable if  int(${va})<73    ${z}  ${va}
+	${match}=    Evaluate   re.findall(r'(?smi)<Key>('+$va+'[0-9.]*)/chromedriver_linux64.zip\</Key>',$w)[-1]  modules=re
         [return]   https://chromedriver.storage.googleapis.com/${match}/chromedriver_linux64.zip
 
 Chrome Main Version
