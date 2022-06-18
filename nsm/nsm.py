@@ -1291,9 +1291,8 @@ Should open the wp.pl and login to website
 	Sleep  10
 	Input Text  ${xu}   mailtest007
 	Input Text  ${xp}   MailTest007
-	Sleep  10
-	Click Element  ${xb}
-	Sleep  10
+	Wait Until Element is visible  ${xb}  15s
+        Wait Until Keyword Succeeds  3x  5s  Click Element  ${xb}
 	Page Should Contain Text  Odebrane
 	Capture Page Screenshot
 	Close Application
