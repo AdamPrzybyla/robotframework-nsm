@@ -1260,15 +1260,15 @@ Suite Setup   MySQL Requirements
 
 *** Test Cases ***
 Simple SQL test
-        ${wynik}=  Execute SQL String  SELECT * FROM customers
-        log  ${wynik}
-        ${wynik}=  Query   select * from w3schools.customers where City='Berlin'
-        log  ${wynik}
-        ${wynik}=   Get from list  ${wynik}  0
-        log  ${wynik}
-        ${wynik}=   Get from list  ${wynik}  1
-        log  ${wynik}
-        Should be equal   ${wynik}   Alfreds Futterkiste
+	${wynik}=  Execute SQL String  SELECT * FROM customers
+	log  ${wynik}
+	${wynik}=  Query   select * from w3schools.customers where City='Berlin'
+	log  ${wynik}
+	${wynik}=   Get from list  ${wynik}  0
+	log  ${wynik}
+	${wynik}=   Get from list  ${wynik}  1
+	log  ${wynik}
+	Should be equal   ${wynik}   Alfreds Futterkiste
 """
 	open("mymysql.robot","w").write(t)
 
@@ -1292,7 +1292,7 @@ Should open the wp.pl and login to website
 	Input Text  ${xu}   mailtest007
 	Input Text  ${xp}   MailTest007
 	Wait Until Element is visible  ${xb}  15s
-        Wait Until Keyword Succeeds  3x  5s  Click Element  ${xb}
+	Wait Until Keyword Succeeds  3x  5s  Click Element  ${xb}
 	Page Should Contain Text  Odebrane
 	Capture Page Screenshot
 	Close Application
@@ -1392,7 +1392,7 @@ Should open the wp.pl and login to website
 	Input Text  ${xu}   mailtest007
 	Input Text  ${xp}   MailTest007
 	Wait Until Element is visible  ${xb}  15s
-        Wait Until Keyword Succeeds  3x  5s  Click Element  ${xb}
+	Wait Until Keyword Succeeds  3x  5s  Click Element  ${xb}
 	Page Should Contain Text  Odebrane
 	Capture Page Screenshot
 	Close Application
