@@ -1392,9 +1392,8 @@ Should open the wp.pl and login to website
 	Sleep  10
 	Input Text  ${xu}   mailtest007
 	Input Text  ${xp}   MailTest007
-	Sleep  10
-	Click Element  ${xb}
-	Sleep  10
+	Wait Until Element is visible  ${xb}  15s
+        Wait Until Keyword Succeeds  3x  5s  Click Element  ${xb}
 	Page Should Contain Text  Odebrane
 	Capture Page Screenshot
 	Close Application
@@ -1930,14 +1929,14 @@ The Appium should be installed
         Set Environment Variable  JAVA_HOME     /usr/lib/jvm/java-8-openjdk-amd64
         ${P}=   Get Environment Variable   PATH
         Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
-        Set Environment Variable  PATH  /usr/lib/jvm/java-8-openjdk-amd64/bin:${P}
         Get url  LOCAL  url=${btool}  dest=bin/bundletool.jar  mode="0755"
-        Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk/ "tools" >/dev/null
-	Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --install "platform-tools" "platforms;android-28"
-	Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --install "system-images;android-28;google_apis;x86"
-	Shell   localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --licenses
-	Shell   localhost  echo no | /usr/lib/android-sdk/tools/bin/avdmanager create avd -n Android28 -k "system-images;android-28;google_apis;x86"
-        Command  localhost  /usr/lib/android-sdk/tools/bin/sdkmanager --update
+        Shell  localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --sdk_root=/usr/lib/android-sdk/ "tools" >/dev/null
+	Shell  localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --install "platform-tools" "platforms;android-28"
+	Shell  localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --install "system-images;android-28;google_apis;x86"
+	Shell  localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --licenses
+	Shell  localhost  /usr/lib/android-sdk/tools/bin/sdkmanager --update
+	Shell  localhost  echo no | /usr/lib/android-sdk/tools/bin/avdmanager create avd -n Android28 -k "system-images;android-28;google_apis;x86" -f
+	User   localhost  name=${ansible_user}  groups=kvm  append=yes
         Shell  localhost  curl -sL https://deb.nodesource.com/setup_14.x | bash -
         apt   localhost  upgrade=dist           force_apt_get=yes
         apt   localhost  package=nodejs         state=present
@@ -1976,9 +1975,9 @@ The Appium has been started
 	Sleep  10
 
 The Appium Emulator has been started
-	Start Process  /usr/lib/android-sdk//emulator/emulator -no-window \@Android28  shell=True  alias=appiumemulator  stdout=${CURDIR}/appium_emulator_stdout.txt
+	Start Process  sg kvm -c "/usr/lib/android-sdk//emulator/emulator -no-window \@Android28"  shell=True  alias=appiumemulator  stdout=${CURDIR}/appium_emulator_stdout.txt
 	...  stderr=${CURDIR}/appium_emulator_stderr.txt
-	Sleep  10
+	Sleep  120
 
 Open Android Test App
 	[Arguments]    ${appActivity}=${EMPTY}
