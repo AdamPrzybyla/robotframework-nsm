@@ -1975,6 +1975,7 @@ The Appium has been started
 	Sleep  10
 
 The Appium Emulator has been started
+	${w}=  Shell  localhost   adb devices
 	Start Process  sg kvm -c "/usr/lib/android-sdk//emulator/emulator -no-window \@Android28"  shell=True  alias=appiumemulator  stdout=${CURDIR}/appium_emulator_stdout.txt
 	...  stderr=${CURDIR}/appium_emulator_stderr.txt
 	Sleep  120
