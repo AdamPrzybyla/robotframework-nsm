@@ -1935,7 +1935,7 @@ The Appium should be installed
 	Shell  localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --install "system-images;android-28;google_apis;x86"
 	Shell  localhost  yes | /usr/lib/android-sdk/tools/bin/sdkmanager --licenses
 	Shell  localhost  /usr/lib/android-sdk/tools/bin/sdkmanager --update
-	Shell  localhost  echo no | /usr/lib/android-sdk/tools/bin/avdmanager create avd -n Android28 -k "system-images;android-28;google_apis;x86" -f
+	Run    echo no | /usr/lib/android-sdk/tools/bin/avdmanager create avd -n Android28 -k "system-images;android-28;google_apis;x86" -f
 	User   localhost  name=${ansible_user}  groups=kvm  append=yes
         Shell  localhost  curl -sL https://deb.nodesource.com/setup_14.x | bash -
         apt   localhost  upgrade=dist           force_apt_get=yes
