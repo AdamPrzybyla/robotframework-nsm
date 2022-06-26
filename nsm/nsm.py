@@ -2125,7 +2125,7 @@ Add Sonar to Your Server
 	Command  localhost   ln -s sonarqube-8.9.8.54436 sonarqube  chdir=/opt
 	Command  localhost   sed -i '/wrapper.java.command/s/=java/=\\/usr\\/lib\\/jvm\\/java-11-openjdk-amd64\\/bin\\/java/g' /opt/sonarqube-8.9.8.54436/conf/wrapper.conf
 	Systemd  localhost  name=sonar  state=started  enabled=yes  daemon_reload=yes
-        Wait Until Keyword Succeeds  10x  15s  Sonar should be powered up
+        Wait Until Keyword Succeeds  10x  25s  Sonar should be powered up
 	${result}=   Run   curl -u admin:admin -X POST "http://localhost:9000/api/users/change_password?login\=admin&previousPassword\=admin&password\=tester"
 
 Sonar should be powered up
