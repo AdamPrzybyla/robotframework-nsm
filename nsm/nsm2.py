@@ -42,7 +42,7 @@ class genNSM(type):
 				getattr(cls,n).__func__.robot_name=name.decode("utf-8")
 			
 class nsm(object):
-	ROBOT_LIBRARY_VERSION = '0.31'
+	ROBOT_LIBRARY_VERSION = '0.32'
 	__metaclass__ = genNSM
 
 	def call_p1(self,p1):
