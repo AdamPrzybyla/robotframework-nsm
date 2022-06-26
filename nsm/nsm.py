@@ -1542,7 +1542,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv","emulator"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv","emulator","sonar"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1628,6 +1628,7 @@ def main():
 		mymysql()
 		mymycsv()
 		requirements()
+		sonar()
 		lemat()
 		emulator()
 		jenkins()
@@ -1825,7 +1826,7 @@ library  OperatingSystem
 
 *** Variables ***
 ${jenkinskey}  https://pkg.jenkins.io/debian-stable/jenkins.io.key
-${jenkinsrepo}  deb http://pkg.jenkins.io/debian-stable binary
+${jenkinsrepo}  deb https://pkg.jenkins.io/debian-stable binary
 ${ansible_user}  %{USER}
 ${ansible_become_password}  xxxxxxxxxxxxxxxxxxxx
 ${jenkinsconf}  <?xml version='1.1' encoding='UTF-8'?>{\n}<jenkins.model.JenkinsLocationConfiguration>{\n}  <jenkinsUrl>http://192.168.122.193:8080/</jenkinsUrl>{\n}</jenkins.model.JenkinsLocationConfiguration>
@@ -1836,10 +1837,15 @@ Jenkins Setup
 
 *** Keywords ***
 Add Jenkins to Your Server
+	[Timeout]    7200
+	apt   localhost  upgrade=dist
+	apt   localhost  package=openjdk-8-jre  state=present
+        apt   localhost  package=openjdk-8-jdk  state=present
 	Apt Key  localhost  url=${jenkinskey}
-	Apt Repository  localhost  repo="deb http://pkg.jenkins.io/debian-stable binary/"  filename=jenkins
-	Apt  localhost  package=jenkins  state=present
-	Systemd  localhost  name=jenkins  enabled=yes
+	Apt Repository  localhost  repo="deb https://pkg.jenkins.io/debian-stable binary/"  filename=jenkins
+	#Apt  localhost  package=jenkins  state=present
+	Apt  localhost  deb=https://ftp.halifax.rwth-aachen.de/jenkins/debian-stable/jenkins_2.332.3_all.deb
+	Systemd  localhost  name=jenkins  enabled=yes  state=started
 	${password}=   Shell  localhost  cat /var/lib/jenkins/secrets/initialAdminPassword
 	${password}=  get from dictionary  ${password}   stdout
 	${full_crumb}=  Run  curl -sk -u "admin:${password}" --cookie-jar ".tmpfile" http://localhost:8080/crumbIssuer/api/xml?xpath=concat\\(//crumbRequestField,%22:%22,//crumb\\)
@@ -2068,6 +2074,67 @@ Mysql should have database imported
         Shell  localhost   mysql --local-infile=1 app -e "LOAD DATA LOCAL INFILE '/var/lib/mysql-files/mock_data.csv' INTO TABLE users FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS (id, first_name, last_name, email, transactions, @account_creation)SET account_creation = STR_TO_DATE(@account_creation, '%m/%d/%y');"
 """
 	open("mymycsv.robot","w").write(w)
+
+def sonar():
+	w=r"""*** Settings ***
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+library  Impansible
+library  Collections
+library  OperatingSystem
+#Resource  lemat.robot
+#Suite Setup  Sonar Requirements
+*** Variables ***
+${sonarlocalurl}  http://localhost:9000
+${sonarurl}    https://binaries.sonarsource.com/Distribution/
+${sonarbin}    https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.8.54436.zip
+${scannerbin}  https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.0.0.1744-linux.zip
+${ansible_user}  %{USER}
+${ansible_become_password}  xxxxxxxxxxxxxxxxxxxx
+${sonarconf}  [Unit]\n
+...  Description=SonarQube service\n
+...  After=syslog.target network.target\n
+...  \n
+...  [Service]\n
+...  Type=forking\n
+...  ExecStart=/opt/sonarqube/bin/linux-x86-64/sonar.sh start\n
+...  ExecStop=/opt/sonarqube/bin/linux-x86-64/sonar.sh stop\n
+...  LimitNOFILE=131072\n
+...  LimitNPROC=8192\n
+...  User=sonar\n
+...  Group=sonar\n
+...  Restart=on-failure\n
+...  \n
+...  [Install]\n
+...  WantedBy=multi-user.target\n
+
+*** Test Cases ***
+Add Sonar to Your Server
+	Add Sonar to Your Server
+
+*** Keywords ***
+Add Sonar to Your Server
+	Group  localhost   name=sonar
+	User  localhost   name=sonar  group=sonar  password=sonar  password_lock=yes
+	Copy  localhost   content='${sonarconf}'  dest=/etc/systemd/system/sonar.service  owner=sonar  group=sonar
+        Get url  LOCAL  url=${sonarbin}  dest=/tmp/  mode="0755"
+        Command  localhost  unzip -xn /tmp/sonarqube-8.9.8.54436.zip -d /opt
+        Get url  LOCAL  url=${scannerbin}  dest=/tmp/  mode="0755"
+        Command  localhost  unzip -xn /tmp/sonar-scanner-cli-4.0.0.1744-linux.zip -d /opt
+	Command  localhost  chown -R sonar:sonar /opt/sonarqube-8.9.8.54436/
+	Command  localhost   ln -s sonarqube-8.9.8.54436 sonarqube  chdir=/opt
+	Command  localhost   sed -i '/wrapper.java.command/s/=java/=\\/usr\\/lib\\/jvm\\/java-11-openjdk-amd64\\/bin\\/java/g' /opt/sonarqube-8.9.8.54436/conf/wrapper.conf
+	Systemd  localhost  name=sonar  state=started  enabled=yes  daemon_reload=yes
+        Wait Until Keyword Succeeds  10x  15s  Sonar should be powered up
+	${result}=   Run   curl -u admin:admin -X POST "http://localhost:9000/api/users/change_password?login\=admin&previousPassword\=admin&password\=tester"
+
+Sonar should be powered up
+        ${v}=  Evaluate  sys.version_info.major   modules=sys
+        ${w2}=  run keyword if  ${v}==2  Evaluate  urllib2.urlopen($sonarlocalurl).read()  modules=urllib2
+        ${w3}=  run keyword if  ${v}==3  Evaluate  urllib.request.urlopen($sonarlocalurl).read().decode("utf-8","ignore")  modules=urllib
+        ${w}=   set variable if  ${v}==2  ${w2}  ${w3}
+	should contain   ${w}   UP   Sonar is not powered up
+"""
+	open("sonar.robot","w").write(w)
 
 if __name__=='__main__':
 	main()
