@@ -2113,6 +2113,7 @@ Add Sonar to Your Server
 
 *** Keywords ***
 Add Sonar to Your Server
+	apt   localhost  package=openjdk-11-jre  state=present
 	Group  localhost   name=sonar
 	User  localhost   name=sonar  group=sonar  password=sonar  password_lock=yes
 	Copy  localhost   content='${sonarconf}'  dest=/etc/systemd/system/sonar.service  owner=sonar  group=sonar
