@@ -1092,7 +1092,6 @@ webpage check
 
 def mykeywords0():
 	t="""*** Settings ***
-Resource  requirements.robot
 Library  SeleniumLibrary
 
 *** Variables ***
