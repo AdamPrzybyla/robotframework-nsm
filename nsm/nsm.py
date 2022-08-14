@@ -432,6 +432,33 @@ Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 """
 	open("tamil.robot","w").write(t)
 
+def italian():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+*** Test Cases ***
+Prova 1
+	È così adesso: io vedo webpage
+	Non si vedono le parole logged su webpage
+	Dopo si usano le parole credentials su webpage
+	Per questo si vedono le parole logged su webpage
+	Dopo questo non si vede più webpage
+
+Prova 2
+	È così adesso: io vedo webpage
+	Non si vedono le parole logged su webpage
+	Dopo si usano le parole bad credentials su webpage
+	Per questo non si vedono le parole logged su webpage
+	Dopo questo non si vede più webpage
+
+Prova 3
+	È così adesso: io vedo webpage
+	Non si vedono le parole logged su webpage
+	Dopo questo non si vede più webpage
+"""
+	open("italian.robot","w").write(t)
+
 def nsmlib():
 	t="""*** Settings ***
 Resource  mykeywords.robot
@@ -986,6 +1013,45 @@ jo ni widza ${page:[^ ]+}
 #i see the ${page:[^ ]+}
 jo widza ${page:[^ ]+}
 	Run keyword  ${page} setup
+
+#italian 
+È così adesso: ${state}
+	Run keyword  ${state}
+
+io vedo ${page:[^ ]+}
+	Run keyword  ${page} setup
+
+#Non si vedono le parole logged su webpage
+Non si vedono le parole ${logged} su ${page:[^ ]+}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+#because of this: ${state}
+Per questo ${state}
+	Run keyword  ${state}
+
+#Dopo si usano le parole credentials su webpage
+Dopo si usano le parole ${cred} su ${page:[^ ]+}
+#I use the words ${cred} on ${page}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+#Per questo si vedono le parole logged su webpage
+#I see words ${logged} on the ${page}
+#Per questo si vedono le parole ${logged} su ${page}
+si vedono le parole ${logged} su ${page}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+#Dopo questo non si vede più webpage
+#after this ${state}
+Dopo questo ${state}
+	Run keyword  ${state}
+
+non si vede più ${page}
+	Run keyword  ${page} teardown
 """
 	open("NSM.robot","w").write(t)
 
@@ -1542,7 +1608,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv","emulator","sonar"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv","emulator","sonar","italian"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1629,6 +1695,7 @@ def main():
 		mymycsv()
 		requirements()
 		sonar()
+		italian()
 		lemat()
 		emulator()
 		jenkins()
