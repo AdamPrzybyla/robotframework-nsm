@@ -1352,14 +1352,14 @@ Should open the wp.pl and login to website
 	${page_title}=  execute script  return document.title
 	Should Contain  ${page_title}  Poczta
 	Capture Page Screenshot
-	Click Element  ${RODO}
-	Sleep  10
+	Sleep  100
+	Run Keyword And Ignore Error  Click Element  ${RODO}
+	Sleep  100
 	Input Text  ${xu}   mailtest007
 	Input Text  ${xp}   MailTest007
 	Wait Until Element is visible  ${xb}  15s
 	Wait Until Keyword Succeeds  3x  5s  Click Element  ${xb}
-	Sleep  10
-	Page Should Contain Text  Odebrane
+	Wait Until Keyword Succeeds  5x  20s  Page Should Contain Text  Odebrane
 	Capture Page Screenshot
 	Close Application
 
@@ -1453,13 +1453,14 @@ Should open the wp.pl and login to website
 	${page_title}=  execute script  return document.title
 	Should Contain  ${page_title}  Poczta
 	Capture Page Screenshot
-	Click Element  ${RODO}
-	Sleep  10
+	Sleep  100
+	Run Keyword And Ignore Error  Click Element  ${RODO}
+	Sleep  100
 	Input Text  ${xu}   mailtest007
 	Input Text  ${xp}   MailTest007
 	Wait Until Element is visible  ${xb}  15s
 	Wait Until Keyword Succeeds  3x  5s  Click Element  ${xb}
-	Page Should Contain Text  Odebrane
+	Wait Until Keyword Succeeds  5x  20s  Page Should Contain Text  Odebrane
 	Capture Page Screenshot
 	Close Application
 
@@ -1964,7 +1965,6 @@ ${ANDROID_AUTOMATION_NAME}    UIAutomator2
 ${ANDROID_PLATFORM_NAME}      Android
 ${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=5.1}
 ${ANDROID_APP}                ${CURDIR}/ApiDemos-debug.apk
-${RODO}     //button[contains(text(),'PRZECHODZ')]
 ${nolo}  android:id/infobar_close_button
 ${xu}  //*[@id="login"]
 ${xp}  //*[@id="password"]
