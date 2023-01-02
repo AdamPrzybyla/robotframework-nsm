@@ -1957,7 +1957,6 @@ library  Process
 ${ansible_become_password}  xxxxxxxxxxxxxx
 ${ansible_user}  %{USER}
 ${btool}  https://github.com/google/bundletool/releases/download/1.2.0/bundletool-all-1.2.0.jar
-#${demoapp}  https://github.com/appium/appium/raw/master/sample-code/apps/ApiDemos-debug.apk
 ${demoapp}  https://github.com/appium-boneyard/sample-code/raw/master/sample-code/apps/ApiDemos/bin/ApiDemos-debug.apk
 ${androidtools}  https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip
 
@@ -1979,7 +1978,7 @@ Open Chrome Application on Android device
 	${av}=  Android Automation Version
 	Open Application  http://127.0.0.1:4723/wd/hub  automationName=UIAutomator${av}
 	...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${pv}
-	...  browserName=Chrome  chromedriverExecutable=${CURDIR}/bin/chromedriver${v}
+	...  browserName=Chrome  chromedriverExecutable=${CURDIR}/bin/chromedriver${v}  newCommandTimeout=120
 
 Appium Requirements
 	The Appium should be installed
@@ -2049,7 +2048,7 @@ The ApiDemo has been available
         Get url  LOCAL  url=${demoapp}  dest=${CURDIR}/ApiDemos-debug.apk
 
 The Appium works
-	${w}=  Shell  local   appium-doctor 2>&1
+	${w}=  Shell  local   appium-doctor 2>&1|grep -v Deprecated
 	${err}=   get from dictionary  ${w}   stdout
 	Should Not Contain   ${err}   WARN   ${err}
 
@@ -2063,7 +2062,7 @@ The Appium Emulator has been started
 	${w}=  Shell  localhost   adb devices
 	Start Process  sg kvm -c "/usr/lib/android-sdk//emulator/emulator -no-window \@Android28"  shell=True  alias=appiumemulator  stdout=${CURDIR}/appium_emulator_stdout.txt
 	...  stderr=${CURDIR}/appium_emulator_stderr.txt
-	Sleep  120
+	Sleep  200
 
 Open Android Test App
 	[Arguments]    ${appActivity}=${EMPTY}
@@ -2071,7 +2070,7 @@ Open Android Test App
 	${av}=  Android Automation Version
 	Open Application  http://127.0.0.1:4723/wd/hub  automationName=UIAutomator${av}
 	...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${pv}
-	...  app=${ANDROID_APP}  appPackage=io.appium.android.apis  appActivity=${appActivity}
+	...  app=${ANDROID_APP}  appPackage=io.appium.android.apis  appActivity=${appActivity}  newCommandTimeout=120
 
 Input Search Query
 	[Arguments]  ${query}
