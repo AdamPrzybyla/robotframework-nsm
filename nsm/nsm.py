@@ -1608,7 +1608,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv","emulator","sonar","italian","data"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv","emulator","sonar","italian","data","music","mymusic"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1698,6 +1698,8 @@ def main():
 		sonar()
 		italian()
 		lemat()
+		music()
+		mymusic()
 		emulator()
 		jenkins()
 	elif sys.argv[1] in la:
@@ -27184,6 +27186,17047 @@ def data():
 ['m3/MOONSHDW_04994_01.zip', 13395564544]])
 """
 	open("data.py","w").write(w)
+
+def music():
+	w=r"""#!/usr/bin/python
+# -*- coding: utf-8 -*-
+music='''String Driven Thing - River of Sleep
+Uriah Heep - Lady In Black
+The Sisters of Mercy - Valentine
+The Sisters of Mercy - You Could Be The One
+The Sisters of Mercy - Fix
+Closterkeller - Purple
+Steve Hackett - How Can I
+Creedence Clearwater Revival - Up Around the Bend
+Fields of the Nephilim - Psychonaut
+The Sisters of Mercy - Lights
+The Sisters of Mercy - Emma
+The Moody Blues - King and Queen
+The Cure - The Kiss
+Barclay James Harvest - Child of the Universe
+Simple Minds - Real Life
+Talk Talk - Talk Talk
+Xymox - The River
+The Stranglers - Toiler on the Sea
+The Sisters of Mercy - Kiss The Carpet
+The Sisters of Mercy - Anaconda
+Psyche - Salvation Stranger
+Siglo XX - The Pain Came
+Moev - Crucify Me
+King Crimson - Cage
+Bel Canto - Dewy Fields
+1984 - Pierwszy dzień zmartwychwstania
+Yes - The Revealing Science Of God (Dance Of The Dawn)
+Yes - The Remembering (High The Memory)
+Yes - The Ancient (Giants Under The Sun)
+Yes - Ritual (Nous Sommes Du Soleil)
+Bad Company - Can't Get Enough
+Bad Company - Rock Steady
+U.K. - Danger Money
+Bad Company - Ready for Love
+Bad Company - Don't Let Me Down
+Bad Company - Bad Company
+The Cassandra Complex - God John
+The Cassandra Complex - Oz
+The Cassandra Complex - Too Stupid to Sin
+Pink Floyd - One Slip
+The Cassandra Complex - Honeytrap
+The Cassandra Complex - One Millionth Happy Customer
+The Cassandra Complex - Ground
+The Cassandra Complex - Second Shot
+The Cassandra Complex - Defcon I
+Bad Company - The Way I Choose
+Bad Company - Movin' On
+Bad Company - Seagull
+Chandelier - Stellar Attraction
+Chandelier - After the Day
+Chandelier - Stay
+Chandelier - Pure
+Chandelier - Winterpause
+Chandelier - Cat's Worst Grave
+Chandelier - Dictator
+Chandelier - The Ultimate Song
+Chandelier - Call for Life
+Bel Canto - Look 3
+Bel Canto - Continuum
+Bel Canto - The Suffering
+Bel Canto - The Glassmaker
+Bel Canto - Picnic on the Moon
+Bel Canto - Intravenous
+Bel Canto - Oyster
+Bel Canto - Birds of Passage
+Bel Canto - Shoulder to the Wheel
+Bel Canto - Time Without End
+Depeche Mode - Strangelove (Maxi Mix)
+Depeche Mode - Strangelove (Midi Mix)
+Depeche Mode - Fpmip
+Depeche Mode - Strangelove (Blind Mix)
+Depeche Mode - Strangelove (Pain Mix)
+Depeche Mode - But Not Tonight (Remix)
+Depeche Mode - Never Let Me Down Again (Remix)
+Depeche Mode - Behind the Wheel (Remix)
+Depeche Mode - Route 66
+Depeche Mode - Strangelove (Hijack Remix)
+Depeche Mode - Strangelove (Remix Edit)
+Depeche Mode - Nothing (Zip-Hop Mix)
+Depeche Mode - Nothing (Dub)
+Depeche Mode - Behind the Wheel - Remix '87
+Depeche Mode - Route 66 - Remix
+Depeche Mode - Strangemix
+Depeche Mode - Photographic (Some Bizarre Version)
+Depeche Mode - I Sometimes Wish I Was Dead (Deathwish Remix)
+Simple Minds - Someone Somewhere In Summertime
+Simple Minds - Colours Fly and Catherine Wheel
+Simple Minds - Promised You A Miracle
+Simple Minds - Big Sleep
+Simple Minds - Somebody Up There Likes Me
+Simple Minds - New Gold Dream (81-82-83-84)
+Simple Minds - Glittering Prize
+Simple Minds - Hunter And The Hunted
+Simple Minds - King Is White And In The Crowd
+Bauhaus - She's In Parties
+Bauhaus - Wasp
+Bauhaus - King Volcano
+Bauhaus - Slice Of Life
+Bauhaus - Kingdom's Coming
+Bauhaus - Burning From The Inside
+Bauhaus - Hope
+Bauhaus - Here's The Dub
+Bauhaus - Departure
+Bauhaus - The Sanity Assassin
+Dalis Car - Dalis Car
+Dalis Car - His Box
+Carl Orff - O Fortuna (Carmina Burana)
+Dalis Car - Cornwall Stone
+Dalis Car - Artemis
+Dalis Car - Create and Melt
+Dalis Car - Moonlife
+Dalis Car - The Judgement Is the Mirror
+Duran Duran - My Own Way
+Duran Duran - Lonely in Your Nightmare
+Duran Duran - Hungry Like the Wolf
+Duran Duran - Hold Back the Rain
+Duran Duran - The Reflex
+Duran Duran - Wild Boys (Wilder Than Wild Boys)
+Duran Duran - New Religion
+Duran Duran - A View to a Kill
+Duran Duran - Meet El Presidente
+Duran Duran - We Need You
+The Moody Blues - Melancholy Man
+Psyche - Insatiable
+Psyche - Wake The Flood Unconsciously
+Psyche - The Outsider
+Fish - Cliché
+Marillion - Going Under
+Chris De Burgh - Last Night
+Genesis - Invisible Touch
+Psyche - Uncivilized
+Genesis - Mad Man Moon
+Chris De Burgh - Fire on the Water
+The Moody Blues - Your Wildest Dreams
+Psyche - Eternal
+Psyche - Make No Mistake
+Nazareth - Loved And Lost
+Camel - Pressure Points
+Tears For Fears - Shout
+Psyche - You're The Only One
+Van Der Graaf Generator - Lost
+Psyche - Ride On
+Psyche - Dreamstreet
+Psyche - Nocturnal Passenger (Extended)
+Genesis - Duke's Travels
+Genesis - Duke's End
+Psyche - Black Panther
+Psyche - Prisoner To Desire (Version I)
+Joy Division - Warsaw
+Joy Division - Leaders Of Men
+Gary Numan - Cold Warning
+Joy Division - Autosuggestion
+Alice Cooper - Didn't We Meet
+Joy Division - She's Lost Control
+Joy Division - Incubation
+Joy Division - Dead Souls
+Joy Division - Atmosphere
+Tangerine Dream - Burning Force
+Joy Division - No Love Lost
+Joy Division - Faults
+Joy Division - Glass
+Joy Division - From Safety To Where?
+Joy Division - Exercise One
+Joy Division - Ice Age
+Joy Division - The Sound Of Music
+Joy Division - The Only Mistake
+Joy Division - Walked In Line
+Joy Division - The Kill
+Joy Division - Something Must Break
+Joy Division - Sister Ray
+Joy Division - Love Will Tear Us Apart
+Joy Division - Ceremony
+Joy Division - Shadowplay
+Joy Division - A Means To An End
+Joy Division - Passover
+Joy Division - New Dawn Fades
+Joy Division - 24 Hours
+Joy Division - Transmission
+Joy Division - Disorder
+Joy Division - Isolation
+Joy Division - Decades
+Joy Division - Digital
+Simple Minds - Up On The Catwalk
+Simple Minds - Book' Of Brilliant Things
+Simple Minds - Speed Your Love To Me
+Simple Minds - Waterfront
+Simple Minds - East At Easter
+Simple Minds - Street Hassle
+Simple Minds - White Hot Day
+Simple Minds - "C" Moon Cry Like A Baby
+Simple Minds - The Kick Inside Of Me
+Simple Minds - Shake Off The Ghosts
+Simple Minds - Once Upon A Time
+Simple Minds - Ghost Dancing
+Simple Minds - Oh Jungleland
+Simple Minds - I Wish You Were Here
+Simple Minds - Sanctify Yourself
+Simple Minds - Come A Long Way
+Visage - Beat Boy
+Visage - Casualty
+Visage - Questions
+Visage - Only The Good Die Young
+Visage - Can You Hear Me
+Visage - The Promise
+Visage - Love Glove
+Visage - Yesterday's Shadow
+Joy Division - Komakino
+Joy Division - These Days
+Depeche Mode - World in My Eyes
+Depeche Mode - Sweetest Perfection
+Depeche Mode - Personal Jesus
+Depeche Mode - Halo
+Depeche Mode - Waiting for the Night
+Depeche Mode - Enjoy the Silence
+Depeche Mode - Crucifix (Instr.)
+Depeche Mode - Policy of Truth
+Depeche Mode - Blue Dress
+Depeche Mode - Interlude Two (Instr.)
+Depeche Mode - Clean
+Clan Of Xymox - Back Door
+Marc Almond - My Candle Burns
+The Cure - Other Voices
+Tangerine Dream - Crystal Voice
+The Alan Parsons Project - Nucleus
+Clan Of Xymox - Lorretine
+Van Der Graaf Generator - Man-Erg
+Sinead O'Connor - Feel So Different
+Sinead O'Connor - I Am Stretched On Your Grave
+Sinead O'Connor - Three Babies
+Sinead O'Connor - The Emperor's New Clothes
+Sinead O'Connor - Black Boys On Mopeds
+Sinead O'Connor - Nothing Compares 2 U
+Sinead O'Connor - Jump In The River
+Sinead O'Connor - You Cause As Much Sorrow
+Sinead O'Connor - The Last Day Of Our Acquaintance
+Sinead O'Connor - I Do Not Want What I Haven't Got
+The Sisters of Mercy - Dominion/Mother Russia
+The Sisters of Mercy - Flood I
+The Sisters of Mercy - Lucretia (My Reflection)
+The Sisters of Mercy - 1959
+The Sisters of Mercy - This Corrosion
+The Sisters of Mercy - Flood II
+The Sisters of Mercy - Driven Like The Snow
+The Sisters of Mercy - Neverland
+The Sisters of Mercy - Torch
+The Sisters of Mercy - Colours
+Peter Hammill - Evidently Goldfish
+Peter Hammill - Not the Man
+Peter Hammill - No Moon in the Water
+Peter Hammill - Our Oyster
+Peter Hammill - Green Fingers
+Peter Hammill - On the Surface
+Peter Hammill - A Way Out
+The Moody Blues - I Know You're Out There Somewhere
+The Moody Blues - Want To Be With You
+The Moody Blues - River Of The Endless Love
+The Moody Blues - No More Lies
+The Moody Blues - Here Comes The Weekend
+The Moody Blues - Vintage Wine
+The Moody Blues - Breaking Point
+The Moody Blues - Miracle
+The Moody Blues - Love Is On The Run
+The Moody Blues - Deep
+Xymox - Evelyn
+Xymox - Obsession
+Xymox - Craving
+Xymox - Blind Hearts
+Pieter Nooten - Several Times I
+Xymox - A Million Things
+Xymox - Tonight
+Xymox - Imagination
+Xymox - In a City
+Xymox - Clementina
+The Mission - Wasteland
+The Mission - Bridges Burning
+The Mission - Garden Of Delight (Hereafter)
+The Mission - Stay With Me
+The Mission - Blood Brother
+The Mission - Let Sleeping Dogs Die
+The Mission - Sacrilege
+The Mission - Dance On Glass
+The Mission - And The Dance Goes On
+The Mission - Severina
+The Mission - Love Me To Death
+The Mission - Island In A Stream
+The Cult - Nirvana
+The Cult - Big Neon Glitter
+The Cult - Love
+The Cult - Brother Wolf, Sister Moon
+The Cult - Rain
+The Cult - The Phoenix
+The Cult - Hollow Man
+The Cult - Revolution
+The Cult - She Sells Sanctuary
+The Cult - Black Angel
+Bazooka Joe - Now I Know
+Bazooka Joe - Smallville
+Bazooka Joe - The World Turns On
+Bazooka Joe - King for a Day
+Bazooka Joe - Billy's Fiver
+Talk Talk - Living in Another World
+Bazooka Joe - Johnny's Bones
+Bazooka Joe - Constitution
+Psyche - I'm A Gentleman
+Psyche - Eraserhead
+Psyche - Wrench II
+Psyche - Another Billion Eyes
+Psyche - Empty Spirit
+Psyche - A Threat
+Psyche - The Brain Collapses
+Psyche - Children Carry Knives
+Psyche - Theme For Runaway
+Psyche - Screaming' Machine
+Psyche - Cheated
+Psyche - The Crawler
+Psyche - Mind Over Matter
+Psyche - Waiting For The Stranger
+Psyche - The Darkside
+Psyche - Psychic Vampire
+Marc Almond - Madame de la Luna
+Marc Almond - Waifs and Strays
+Marc Almond - The Desperate Hours
+Marc Almond - Widow Weeds
+Marc Almond - A Lover Spurned
+Marc Almond - Death's Diary
+Marc Almond - The Sea Still Signs
+Marc Almond - Carnival of Life
+Marc Almond - Orpheus in Red Velvet
+Jon Anderson - Easier Said Than Done
+Bauhaus - Telegram Sam
+Bauhaus - In the Flat Field
+Jon Anderson - Three Ships
+Bauhaus - In Fear Of Fear
+Bauhaus - Poison Pen
+Jon Anderson - Forest of Fire
+Bauhaus - Swing The Heartache
+Bauhaus - Terror Couple Kill Colonel
+Bauhaus - Night Time
+Camel - Cloak and Dagger Man
+Simple Minds - Street Fighting Years
+Simple Minds - Soul Crying Out
+Simple Minds - Wall Of Love
+Simple Minds - This Is Your Land
+Simple Minds - Take A Step Back
+Simple Minds - Kick It In
+Simple Minds - Let It All Come Down
+Simple Minds - Mandela Day
+Simple Minds - Belfast Child
+Simple Minds - Biko
+Simple Minds - When Spirits Rise
+Fields of the Nephilim - (Dead but Dreaming)
+Fields of the Nephilim - For Her Light
+Fields of the Nephilim - At the Gates of Silent Memory
+Fields of the Nephilim - (Paradise Regained)
+Fields of the Nephilim - Submission
+Fields of the Nephilim - Sumerland (What Dreams May Come)
+Siouxsie & The Banshees - Eve White/Eve Black
+Fields of the Nephilim - And There Will Your Heart Be Also
+The Sisters of Mercy - Vision Thing
+The Sisters of Mercy - Ribbons
+The Sisters of Mercy - Detonation Boulevard
+The Sisters of Mercy - Something Fast
+The Sisters of Mercy - When You Don't See Me
+The Sisters of Mercy - Doctor Jeep
+The Sisters of Mercy - More
+The Sisters of Mercy - I Was Wrong
+Yes - Yours Is No Disgrace
+Yes - The Clap
+Yes - Starship Trooper (Life Seeker / Disillusion / Würm)
+Yes - I've Seen All Good People (Your Move / All Good People)
+Yes - A Venture
+Yes - Perpetual Change
+Yes - Roundabout
+Yes - Cans And Brahms (Extracts From Brahms' 4th Symphony In E Minor, 3rd Movement)
+Yes - We Have Heaven
+Yes - South Side Of The Sky
+Yes - Five Per Cent For Nothing
+Yes - Long Distance Runaround
+Yes - The Fish (Schindleria Praematurus)
+Yes - Mood For a Day
+Yes - Heart Of The Sunrise
+Pet Shop Boys - Being Boring
+Pet Shop Boys - This Must Be The Place I Waited Years To Leave
+Pet Shop Boys - To Face The Truth
+Pet Shop Boys - How Can You Expect To Be Taken Seriously?
+Pet Shop Boys - Only The Wind
+Pet Shop Boys - My October Symphony
+Pet Shop Boys - So Hard
+Pet Shop Boys - Nervously
+Pet Shop Boys - The End Of The World
+Pet Shop Boys - Jealousy
+Quasar - The Loreli
+Quasar - Seeing Stars Part 2 (The Dark Star)
+Quasar - As You Fall Asleep
+Quasar - Logic?
+Quasar - Power In Your Hands
+Yes - Close to the Edge (The Solid Time Of Change / Total Mass Retain / I Get Up I Get Down / Seasons Of Man)
+Yes - And You And I (Cord Of Life / Eclipse / The Preacher The Teacher / Apocalypse)
+Yes - Siberian Khatru
+Yes - Opening (Excerpt From "Firebird Suite")
+Nick Cave - Song of Joy
+Nick Cave - Little Empty Boat
+Patti Smith - Till Victory
+Yes - Excerpts From "The Six Wives Of Henry VIII"
+Talk Talk - ?
+Yes - The Perpetual Change
+Yes - And You And I
+Yes - Your Move / All Good People
+The Creatures - Exterminating Angel
+The Creatures - Another Planet
+Yes - Close to the Edge
+Renata Przemyk - Zabijany
+Yes - Starship Trooper
+New Model Army - Get Me Out
+New Model Army - Space
+New Model Army - Innocence
+New Model Army - Purity
+New Model Army - Whirlwind
+New Model Army - Marrakesh
+New Model Army - Lust For Power
+New Model Army - Bury The Hatchet
+New Model Army - Eleven Years
+New Model Army - Lurhstaap
+New Model Army - Before I Get Old
+New Model Army - Vanity
+Aragon - For Your Eyes
+Aragon - The Cradle
+Aragon - Solstice
+Aragon - Cry Out
+Aragon - Gabrielle
+Aragon - The Crucifixion
+Renata Przemyk - Odłóżmy Broń
+Patti Smith - Easter
+Patti Smith - Because The Night
+Patti Smith - Ghost Dance
+Artrosis - Ukryty wymiar
+The Creatures - Take Mine
+Talk Talk - Why Is It So Hard?
+Spring - The Prisoner (Eight By Ten)
+Spring - Grail
+Deyss - Passage
+Deyss - Take Yourself Back
+Deyss - Chained Human
+Deyss - Untouchable Ghost
+Deyss - The Crazy Life of Mister Tale
+Deyss - Fifteenth Century Fox
+Deyss - Last Chance Flight
+Deyss - Vision in the Dark
+Yes - Gates Of Delirium
+Yes - Sound Chaser
+Yes - To Be Over
+Yes - Going For The One
+Yes - Turn Of The Century
+Yes - Parallels
+Yes - Wonderous Stories
+Yes - Awaken
+The Legendary Pink Dots - Disturbance
+The Legendary Pink Dots - Pennies For Heaven
+The Legendary Pink Dots - The Third Secret
+The Legendary Pink Dots - Belladonna
+The Legendary Pink Dots - A Space Between
+The Legendary Pink Dots - Evolution
+The Legendary Pink Dots - Cheraderama
+The Legendary Pink Dots - Lilith
+The Legendary Pink Dots - Fourth Secret
+The Legendary Pink Dots - Home
+The Legendary Pink Dots - Crushed Velvet
+Yes - Future Times
+Yes - Rejoice
+Yes - Don't Kill The Whale
+Yes - Madrigal
+Yes - Release Release
+Yes - Arriving UFO
+Yes - Onward
+Yes - On The Silent Wings Of Freedom
+Yes - Machine Messiah
+Yes - White Car
+Yes - Does It Really Happen?
+Yes - Into The Lens
+Yes - Run Through The Light
+Yes - Tempus Fugit
+Hawkwind - Warrior at the Age of Time
+Jefferson Starship - Waking
+Spring - Boats
+Spring - Shipwrecked Soldier
+The Alan Parsons Project - The Raven
+Gary Moore - Empty Room
+The Alan Parsons Project - Some Other Time
+Sting - Fragile
+Marillion - Torch Song
+Barclay James Harvest - Alone in the Night
+Genesis - Turn It on Again
+Marillion - Lavender
+The Alan Parsons Project - Silence and I
+Pink Floyd - Yet Another Movie
+Camel - Long Goodbyes
+Marillion - Bitter Suite
+Pink Floyd - Goodbye Cruel World
+Propaganda - Strength To Dream
+Jon Anderson - Ding Dong Merrily on High
+Gary Numan - I Still Remember
+Nico - The End
+Andromeda - Let's All Watch the Sky Fall Down
+Andromeda - Keep Out 'Cos I'm Dying
+James Bernard - The Scars of Dracula-Love Theme
+Camel - Stationary Traveller
+The Alan Parsons Project - The Traveller
+Spring - Golden Fleece
+The Alan Parsons Project - Shadow of a Lonely Man
+Lisa Gerrard - Sanvean: I Am Your Shadow
+OMD - Crush
+Ultravox - Sat'day Night In The City Of The Dead
+Ultravox - Life At Rainbow's End
+Ultravox - Slipaway
+Ultravox - I Want To Be A Machine
+Ultravox - Wide Boys
+Ultravox - Dangerous Rhythm
+Ultravox - The Lonely Hunter
+Ultravox - The Wild, The Beautiful And The Damned
+Ultravox - My Sex
+Ultravox - Rockwrok
+Ultravox - The Frozen Ones
+Ultravox - Fear In The Western World
+Ultravox - Distant Smile
+Ultravox - The Man Who Dies Everyday
+Ultravox - Artificial Life
+Ultravox - While I'm Still Alive
+Ultravox - Hiroshima Mon Amour
+Pink Floyd - Lucifer Sam
+Pink Floyd - Set The Controls For The Heart Of The Sun (live)
+Pink Floyd - When The Tigers Broke Free
+The Cure - 2 Late
+The Cure - Apart
+The Cure - Charlotte Sometimes
+The Cure - Cold
+The Cure - End
+The Cure - Forever (live)
+The Cure - Foxy Lady
+The Cure - Kyoto Song
+The Cure - Pictures of You
+The Cure - Plainsong
+The Cure - Plastic Passion
+The Cure - Play
+The Cure - Scared as You
+Tear Garden - In Search Of My Rose
+The Cure - This Twilight Garden
+The Cure - Trust
+Curved Air - Screw
+Curved Air - Stretch
+The Danse Society - Come Inside
+The Danse Society - Heaven Is Waiting
+The Danse Society - Red Light (Shine)
+The Danse Society - The Night
+The Danse Society - Wake Up
+The Danse Society - Where Are You Now
+David Bowie - 1984
+David Bowie - Always Crashing in the Same Car
+Dead Can Dance - The Host of Seraphim
+Deep Purple - Child in Time
+Deep Purple - Demon's Eye
+Diamanda Galás - Cry of the Blind
+Dire Straits - Iron Hand
+Dire Straits - On Every Street
+Don McLean - Vincent
+Earth & Fire - Storm and Thunder
+Egdon Heath - No Second Faust
+Egdon Heath - Secret Fence
+Egdon Heath - Waiting for the Outburst
+Barclay James Harvest - Breathless
+Barclay James Harvest - Brother Thrush
+Barclay James Harvest - Child of Man
+Barclay James Harvest - Early Morning
+Barclay James Harvest - Echoes and Shadows
+Barclay James Harvest - Eden Unobtainable
+Barclay James Harvest - I Can't Go On Without You
+Barclay James Harvest - I'm Over You
+Barclay James Harvest - If Love Is King
+Barclay James Harvest - Mr. Sunshine
+Barclay James Harvest - Pools of Blue
+Barclay James Harvest - Poor Man's Moody Blues
+Barclay James Harvest - Poor Wages
+Barclay James Harvest - Rock and Roll Woman
+Barclay James Harvest - She Said
+Barclay James Harvest - Suicide?
+Barclay James Harvest - The Joker
+Barclay James Harvest - When the City Sleeps
+Electric Light Orchestra - Ticket to the Moon
+Elton John - Crocodile Rock
+Emerson, Lake & Palmer - A Time and a Place
+Emerson, Lake & Palmer - Abaddon's Bolero
+Emerson, Lake & Palmer - Are You Ready Eddy?
+Emerson, Lake & Palmer - Benny the Bouncer
+Emerson, Lake & Palmer - Better Days
+Emerson, Lake & Palmer - Black Moon
+Emerson, Lake & Palmer - C'est la Vie
+Emerson, Lake & Palmer - Closer To Believing
+Emerson, Lake & Palmer - Dancing With the Black Spirits
+Emerson, Lake & Palmer - Fanfare for the Common Man
+Emerson, Lake & Palmer - Farewell to Arms
+Emerson, Lake & Palmer - Food for Your Soul
+Emerson, Lake & Palmer - From the Beginning
+Emerson, Lake & Palmer - Hallowed Be Thy Name
+Emerson, Lake & Palmer - Hoedown (Taken From Rodeo)
+Emerson, Lake & Palmer - Jerusalem
+Emerson, Lake & Palmer - Karn Evil No. 9
+Emerson, Lake & Palmer - Knife Edge
+Emerson, Lake & Palmer - L.A. Nights
+Emerson, Lake & Palmer - Lend Your Love to Me Tonight
+Emerson, Lake & Palmer - Living Sin
+Emerson, Lake & Palmer - Lucky Man
+Emerson, Lake & Palmer - New Orleans
+Emerson, Lake & Palmer - Nobody Loves You Like I Do
+Emerson, Lake & Palmer - Piano Concerto No. 1
+Emerson, Lake & Palmer - Pirates
+Emerson, Lake & Palmer - Still... You Turn Me On
+Emerson, Lake & Palmer - Take a Pebble
+Emerson, Lake & Palmer - Tank
+Emerson, Lake & Palmer - The Barbarian
+Emerson, Lake & Palmer - The Endless Enigma
+Emerson, Lake & Palmer - The Three Fates
+Emerson, Lake & Palmer - Toccata
+Emerson, Lake & Palmer - Trilogy
+Emerson, Lake & Palmer - Two Part Invention in D Minor
+Ennio Morricone - Ecstasy Of Gold
+Enya - Cursum Perficio
+Fancyfluid - Big Rush
+Fancyfluid - Man at the Door
+Fashion - You in the Night
+Fish - Faith Healer (Live Version)
+Fish - Internal Exile
+Fish - Just Good Friends
+Fish - Shadowplay
+Fish - Whiplash
+Fleetwood Mac - Albatross
+Free - Soon I Will Be Gone
+Freudiana - Freudiana
+Freudiana - The Nirvana Principle (Instrumental)
+Galahad - Face to the Sun
+Galahad - Room 801
+Gentle Giant - Alucard
+Gentle Giant - Giant
+Gracious - The Dream
+Iron Butterfly - In-A-Gadda-Da-Vida
+James Ray & The Performance - Mexico Sundown Blues
+Japan - Gentlemen Take Polaroids
+Japan - Methods of Dance
+Japan - Night Porter
+Japan - Swing
+Jethro Tull - Still Loving You Tonight
+Jethro Tull - Witches Promise
+John Foxx - Touch and Go
+Jon & Vangelis - Page Of Life
+Talk Talk - After The Flood
+Talk Talk - Again, a Game Again
+Talk Talk - Ascension Day
+Talk Talk - Call in the Night Boy (Acoustic Version)
+Talk Talk - Does Caroline Know?
+Talk Talk - For What It's Worth
+Talk Talk - It's Getting Late in the Evening
+Talk Talk - It's My Life
+Talk Talk - John Cope
+Talk Talk - My Foolish Friend
+Talk Talk - Myrrhman
+Talk Talk - Renee
+Talk Talk - Strike up the Band
+Talk Talk - Talk Talk ? Remix
+Talk Talk - Taphead
+Judas Priest - Victim of Changes
+Jon Anderson - Save All Your Love (Reprise)
+Justin Hayward - Crazy Lovers
+Justin Hayward - Silverbird
+Kate Bush - I'm Still Waiting
+Kate Bush - The Hammer Horror
+Kate Bush - Wuthering Heights
+King Crimson - Exiles
+King Crimson - In The Court Of The Crimson King
+Little Nemo - Blue Years
+Little Nemo - Saint Castle
+Little Nemo - Sandcastle
+Little Nemo - Tales of the Wind
+Love Like Blood - Apathy And Boredom
+Love Like Blood - Kiss & Tell
+Love Like Blood - Mercy Killing
+Love Like Blood - More Than Salvation
+Love Like Blood - Out Of Sight
+Love Like Blood - Tears Of Liberation
+Love Like Blood - Within The Realm Of A Dying Sun
+Magazine - Definitive Gaze
+Magazine - Motorcade
+Magazine - My Tulpa
+Magazine - Shot By Both Sides
+Magazine - The Great Beautician In The Sky
+Spring - Inside Out
+Xymox - Crossing the Water
+Xymox - The Shore Down Under
+Xymox - Written in the Stars
+Marc Almond & Nico - Your Kisses Burn
+Martin L. Gore - In a Manner of Speaking
+Metallica - Master Of Puppets
+Metallica - The Unforgiven
+Midge Ure - Call Of The Wild
+Midge Ure - Let It Go?
+Monty Python - Always Look on the Bright Side of Life
+New Order - Chosen Time
+New Order - Denial
+New Order - Doubts Even Here
+New Order - I.C.B.
+New Order - The Him
+New Order - Truth
+Nick Cave - Brother, My Cup Is Empty
+Nick Cave & the Bad Seeds - John Finn's Wife
+Nick Cave - Mercy
+Nick Cave - The Mercy Seat
+Now - Converging Universes
+Now - Lost
+Opposition - Big Room Small View
+Opposition - Calling Home
+Opposition - Crawl To Me
+Ozzy Osbourne - Mr. Crowley
+The Stranglers - Midnight Summer Dream
+The Stranglers - Second Coming
+Parade Ground - Such Is The Bow
+Pavlov's Dog - Did You See Him Cry
+Pavlov's Dog - Julia
+Pavlov's Dog - Late November
+Pavlov's Dog - Of Once and Future Kings
+Pendragon - And We'll Go Hunting Deer
+Peter Gabriel - Solsbury Hill
+Peter Gabriel - Wallflower
+Peter Murphy - All Night Long
+Peter Murphy - Blind Sublime
+Peter Murphy - Blue Heart
+Peter Murphy - Canvas Beauty
+Peter Murphy - Confession
+Peter Murphy - Dragonet Drag
+Peter Murphy - Final Solution
+Peter Murphy - God Sends
+Peter Murphy - His Circle And Hers Meat
+Peter Murphy - Indigo Eyes
+Peter Murphy - Jemal
+Peter Murphy - Keep Me From Harm
+Peter Murphy - Let Me Love You
+Peter Murphy - My Last Two Weeks
+Peter Murphy - Neverman
+Peter Murphy - Should The World Fail To Fall Apart
+Peter Murphy - Socrates The Python
+Peter Murphy - The Answer Is Clear
+Peter Murphy - The Light Pours Out Of Me
+Peter Murphy - Time Has Got Nothing To Do With It
+Pieter Nooten - Time
+Procol Harum - (You Can't) Turn Back The Page
+Procol Harum - A Salty Dog
+Procol Harum - A Whiter Shade of Pale
+Procol Harum - About To Die
+Procol Harum - Barnyard Story
+Procol Harum - Conquistador (live)
+Procol Harum - Conquistador
+Procol Harum - Fires
+Procol Harum - Homburg
+Procol Harum - In Held Twas I
+Procol Harum - King Of Hearts
+Procol Harum - Repent Walpurgis
+Procol Harum - The Dead Man's Dream
+Procol Harum - The Truth Won't Fade Away
+Procol Harum - Whaling Stories (live)
+Public Image Limited - The Order Of Death
+Queen - White Queen (As It Began)
+Rain Tree Crow - Blackwater
+Psyche - Alone With A Gun
+Psyche - Angel Lies Sleeping
+Psyche - Billial
+Psyche - Destiny
+Psyche - If You Believe (Remix)
+Psyche - Insatiable (U.S. Mix)
+Psyche - Misery
+Psyche - Mr. Eyeball Ooze
+Psyche - Psyche Theme
+Psyche - The Saint Became a Lush
+Rare Bird - Hammerhead
+Rare Bird - Sympathy
+Red Box - Chenko
+Red Box - Hungry
+Red Box - The Power Is Down
+Red Box - Train
+Refugee - Credo
+Rick Wakeman - King Arthur and the Knights of the Round Table
+Rise And Fall Of A Decade - A Sort of Bitter Taste
+Rise And Fall Of A Decade - Be Yourself
+Rise And Fall Of A Decade - Wings of Desire
+Rise And Fall Of A Decade - Yesterday, Today and Tomorrow
+Rod Stewart - Sailing
+Roger Hodgson - Lovers in the Wind
+Roxy Music - A Song for Europe
+Roxy Music - In Every Dream Home A Heartache
+Roxy Music - Ladytron
+Roxy Music - Psalm
+Roxy Music - Same Old Scene
+Roxy Music - Virginia Plain
+Rush - Red Sector A
+Rush - Subdivisions
+Rush - Witch Hunt
+Saga - Careful Where You Step
+Siglo XX - 35 Poems
+Siglo XX - Fear
+Siglo XX - Sister Suicide
+Siglo XX - The Naked And The Death
+The Sensational Alex Harvey Band - The Faith Healer
+Simon Dupree And The Big Sound - Kites
+Sinead O'Connor - Troy (live)
+Siouxsie & The Banshees - Carousel
+Siouxsie & The Banshees - Got To Get Up
+Siouxsie & The Banshees - Icon
+Siouxsie & The Banshees - Nightshift
+Siouxsie & The Banshees - Silly Thing
+Siouxsie & The Banshees - Swimming Horses
+Sisters Of Mercy/Ofra Haza - Temple Of Love
+Sisters Of Mercy/Ofra Haza - Temple Of Love'92
+Soft Cell - Facility Girls
+Soft Cell - Memorabilia
+Soft Cell - Persuasion
+Soft Cell - So
+Soft Cell - Tainted Love
+Soft Cell - Where Did Our Love Go?
+Soft Cell - You Only Live Twice
+Southern Death Cult - Apache
+Southern Death Cult - Crow (live)
+Southern Death Cult - Crypt
+Southern Death Cult - Faith (live)
+Southern Death Cult - Fatman
+Southern Death Cult - Flowers in the Forest
+Southern Death Cult - Moya
+Southern Death Cult - Patriot
+Southern Death Cult - Vivisection (live)
+Spandau Ballet - Mandolin
+Spandau Ballet - Reformation
+Spandau Ballet - The Freeze
+Spandau Ballet - To Cut a Long Story Short
+Spandau Ballet - Toys
+Sparks - Never Turn Your Back On Mother Earth
+Moev - Open Mind
+Moev - Sadistic Years
+Moev - Wanting
+Black Tape For a Blue Girl - Remnants of a Deeper Purity
+Spooky Tooth - Better by You, Better Than Me
+Spooky Tooth - Lost in My Dream
+Spooky Tooth - Prayer
+Spooky Tooth - Waiting For The Wind
+Stan Ridgway - Camouflage
+Steve Howe - Beginnings
+Strawbs - Down by the Sea
+Strawbs - Fingertips
+Strawbs - Grave New World
+Sunday All Over The World - Don't Take It Away
+Sunday All Over The World - Sunday All Over The World
+Supertramp - Don't Leave Me Now
+Supertramp - School
+T. Rex - Children of the Revolution
+The Bollock Brothers - Dinner With Dracula
+The Bollock Brothers - GDM
+The Bollock Brothers - Wilde Mythology
+The Charlatans - Subtitle
+The Charlatans - Tremelo Song
+The Church - Aura
+The Church - Chaos
+The Church - Ripple
+The Church - The Disillusionist
+The Dylans - Planet Love
+The Cure - Homesick
+The Church - Film
+The Famous B. Brothers - Babylon The Great Has Fallen
+Monty Norman - James Bond Theme
+Genesis - Second Home by the Sea
+The Icicle Works - Hightime
+The Rolling Stones - Heaven
+The Rolling Stones - Sympathy for the Devil
+Thee Hypnotics - Cold Blooded Love
+Thee Hypnotics - Kissed by the Flames
+Thee Hypnotics - Shake Down
+Thee Hypnotics - Soul Accelerator
+Thin Lizzy - Frankie Carroll
+This Mortal Coil - Acid, Bitter And Sad
+The Moody Blues - Bless the Wings (That Bring You Back)
+The Moody Blues - Blue World
+The Moody Blues - I'm Just a Singer in a Rock'n'Roll Band
+The Moody Blues - Isn't Life Strange
+The Moody Blues - Lean On Me (Tonight)
+The Moody Blues - Legend of a Mind
+The Moody Blues - New Horizons
+The Moody Blues - Nights in White Satin
+The Moody Blues - The Actor
+The Moody Blues - What Am I Doing Here
+Tony Banks - Angel Face
+Tony Banks - Still It Takes Me by Surprise
+Tony Banks/Fish - Another Murder Of A Day
+Tony Banks/Fish - Another Murder Of The Day
+Tracy Hitchings - Caamora
+Tracy Hitchings - From Ignorance to Ecstasy
+Tracy Hitchings - Horizons In Your Eyes
+U.F.O. - Belladonna
+U.F.O. - Doctor Doctor
+U.F.O. - Love To Love
+U.F.O. - Martian Landscape
+U.F.O. - Rock Bottom
+U2 - Acrobat
+U2 - Love Is Blindness
+U.K. - Rendezvous 6:02
+Van Der Graaf Generator - Cat's Eye/Yellow Fever (Running)
+Van Der Graaf Generator - House With No Door
+Van Der Graaf Generator - La Rossa
+Van Der Graaf Generator - My Room (Waiting For Wonderland)
+Van Der Graaf Generator - Refugees
+Van Der Graaf Generator - Still Life
+Van Der Graaf Generator - White Hammer
+Varius Manx - Blind Fate
+Wishbone Ash - Everybody Needs a Friend
+Wishbone Ash - Leaf And Stream
+Emerson, Lake & Palmer - Karn Evil 9 (1st Impression - Part One)
+Bad Company - Fade Away
+The Cassandra Complex - Lullaby for the First Baby Born in Outer Space
+The Cassandra Complex - March 86
+The Cassandra Complex - Report From the Back
+The Cassandra Complex - She Loves Me
+The Cassandra Complex - Tell Me
+The Cassandra Complex - What Can I Do for You?
+The Cassandra Complex - Awake All Night / When Love Comes
+The Cassandra Complex - Why?
+Depeche Mode - Little 15
+Bauhaus - Bela Lugosi Is Dead
+Visage - Fade to Grey
+Visage - Malpaso Man
+Visage - Mind of a Toy
+Visage - Moon Over Moscow
+Visage - The Steps
+Visage - Visa-Age
+Peter Hammill - Crying Wolf
+Peter Hammill - Easy To Slip Away
+Peter Hammill - Fireships
+Peter Hammill - I Will Find You
+Peter Hammill - If I Could
+Peter Hammill - Lost and Found
+Peter Hammill - Sign
+Peter Hammill - Time for a Change
+Uriah Heep - Dreamer
+Uriah Heep - Rain
+Uriah Heep - Rainbow Demon
+Uriah Heep - Salisbury
+The Mission - Bird Of Passage
+The Mission - Butterfly On A Wheel (wersja akustyczna)
+The Mission - Heaven on Earth
+The Mission - The Spider and the Fly
+The Mission - Tower of Strength
+Bazooka Joe - Sugar Island
+Marc Almond - A Beautiful Brutal Thing
+Marc Almond - Champagne
+Marc Almond - Tenement Symphony: V The Days of Pearly Spencer
+Marc Almond - Tenement Symphony: II Jacky
+Marc Almond - Meet Me in My Dream
+Marc Almond - My Death
+Marc Almond - Tenement Symphony: VI My Hand Over My Heart
+Marc Almond - Tenderness Is a Weakness
+Marc Almond - The Gambler
+Marc Almond - Tenement Symphony: IV Trois Chansons de Bilitis - Extract
+Marc Almond - Vaudeville and Burlesque
+Marc Almond - Tenement Symphony: III What Is Love?
+Yes - Abilene
+Yes - Amazing Grace
+Yes - America
+Yes - Changes
+Yes - Dear Father
+Yes - Everydays
+Yes - It Can Happen
+Yes - Make It Easy
+Yes - Money
+Yes - Soon
+Yes - Then
+Yes - Vevey, Part One
+Yes - Vevey, Part Two
+Yes - Without Hope You Cannot Start the Day
+The Sisters of Mercy - 1969
+The Sisters of Mercy - Adrenochrome
+The Sisters of Mercy - Alice
+The Sisters of Mercy - Blood Money
+The Sisters of Mercy - Body Electric
+The Sisters of Mercy - Burn
+The Sisters of Mercy - Bury Me Deep
+The Sisters of Mercy - Dominion
+The Sisters of Mercy - Doctor Jeep (Extended Version)
+The Sisters of Mercy - Garden of Delight
+The Sisters of Mercy - Gimme Shelter
+The Sisters of Mercy - Heartland
+The Sisters of Mercy - Home of the Hitmen
+The Sisters of Mercy - Jolene (live)
+The Sisters of Mercy - Jolene
+The Sisters of Mercy - Knocking On Heaven's Door (live)
+The Sisters of Mercy - Knocking On Heaven's Door (Live Bootleg Recording)
+The Sisters of Mercy - Long Train
+The Sisters of Mercy - On The Wire
+The Sisters of Mercy - Poison Door
+The Sisters of Mercy - Red Skies Disappear
+The Sisters of Mercy - Something Fast (Live Aufnahme, Hamburg, 17.11.90)
+The Sisters of Mercy - Temple of Love
+The Sisters of Mercy - The Damage Done
+The Sisters of Mercy - Train
+The Sisters of Mercy - Walk Away
+The Sisters of Mercy - Watch
+Pet Shop Boys - Always on My Mind
+New Model Army - Ballad
+New Model Army - No Rest
+Deyss - After and After
+Deyss - The Meeting of the Lords
+The Legendary Pink Dots - Astrid
+The Legendary Pink Dots - Neon Mariners
+The Legendary Pink Dots - New Tomorrow
+The Legendary Pink Dots - Rope & Glory
+The Legendary Pink Dots - Stoned Obituary
+The Legendary Pink Dots - The Lovers
+The Legendary Pink Dots - Tower Four
+The Legendary Pink Dots - Tower Three
+The Legendary Pink Dots - Tower Two
+The Legendary Pink Dots - Waiting for the Cloud
+Closterkeller - Blue Wolfgang
+Closterkeller - Blue
+Closterkeller - Czarna Apokalipsa
+Closterkeller - Czerwone wino
+Closterkeller - Czy taki zły, czy tylko głupi
+Closterkeller - I Don't Believe
+Closterkeller - Iluzyt
+Mercury Rev - Sweet Oddysee Of A Cancer Cell T' Th' Center Of Yer Heart
+Closterkeller - I jeszcze raz do końca
+Closterkeller - Jihad
+Closterkeller - Just Another Day
+Closterkeller - Lady Macbeth
+Closterkeller - Lullaby
+Closterkeller - Modesty Blaise
+Closterkeller - Nothing Is Here
+Closterkeller - Ostatnia noc wizji
+Closterkeller - Sin
+Closterkeller - Spokój
+Closterkeller - The Dead Zone
+Closterkeller - Tutaj nie ma Boga
+Closterkeller - Wyznanie
+Hawkwind - Assault and Battery/Golden Void
+Hawkwind - Paradox
+Hawkwind - Treadmill
+Al Stewart - Year Of The Cat
+Chris Isaak - Wicked Game
+Blue Öyster Cult - Tattoo Vampire
+Abraxas - Tabula Rasa
+Abraxas - Tarot
+Asgard - The Queen of Ice
+Eloy - Call of the Wild
+Babe Ruth - Mexican
+Big Savod And The Deep Manko - The Face & the Boy
+Budgie - Crash Course in Brain Surgery
+Budgie - Napoleon Bona-Part One/Napoleon Bona-Part Two
+Chris De Burgh - Brother John
+Chris De Burgh - Heart of Darkness
+Curve - Coast Is Clear (?)
+Final Conflict - Across the Room
+Final Conflict - The Time Has Arrived
+Fruupp - Lord of the Incubus
+Fruupp - Song for a Thought
+Fruupp - Wise as Wisdom
+Hello! - Little Flower
+Spring - Song To Absent Friends (The Island)
+James Rays Gangwar - Heart Surgery
+James Rays Gangwar - Santa Susana
+Landmarq - Forever Young
+Landmarq - Tippi Hedren
+Lucky Strikers - Angie
+Renata Przemyk - Zero (odkochaj nas)
+Our Heaven - Heaven in Pain
+Renaissance - Jekyll And Hyde
+Robert John Godfrey - The Daemon of the World
+Robert John Godfrey - Water Song
+Roger Waters - utwór z płyty "Amused To Death"
+Rubicon - Killing Time
+Rubicon - Watch Without Pain
+Shiva Burlesque - Peace
+The Hair And The Skin Trading Company - Joe In Hell
+The Hair And The Skin Trading Company - Pipeline
+The Tear Garden - Circles In The Sand
+The Tear Garden - Hyperform
+The Tear Garden - Isis Veiled
+The Tear Garden - The Running Man
+Wilki - Gloria
+Wilki - Nic zamieszkują demony
+Wilki - Rachela
+Wilki - Son of the Blue Sky
+James Rays Gangwar - Cadillac Coming
+James Rays Gangwar - Hardwar
+The Alan Parsons Project - Ammonia Avenue
+The Alan Parsons Project - Damned If I Do
+The Alan Parsons Project - Don't Answer Me
+The Alan Parsons Project - Games People Play
+The Alan Parsons Project - Hawkeye
+The Alan Parsons Project - In the Lap of the Gods
+The Alan Parsons Project - Lucifer
+The Alan Parsons Project - Old and Wise
+Jon Anderson - The Holly and the Ivy
+The Alan Parsons Project - The Tell-Tale Heart
+The Alan Parsons Project - Time
+Marillion - Cinderella Search
+Marillion - Grendel
+Marillion - He Knows You Know
+Marillion - Jigsaw
+Marillion - Script For a Jester's Tear
+Marillion - Slainte Mhath
+Marillion - Sugar Mice
+Marillion - Three Boats Down From The Candy
+Marillion - utwór z płyty "Fugazi"
+Steve Hackett - Every Day
+Genesis - Afterglow
+Genesis - Cinema Show
+Genesis - Dance on a Volcano
+Genesis - Dreaming While You Sleep
+Genesis - Driving the Last Spike
+Genesis - Fading Lights
+Genesis - I Know What I Like (In Your Wardrobe)
+Genesis - Inside and Out
+Genesis - Jesus He Knows Me
+Genesis - Mama
+Genesis - Match of the Day
+Genesis - No Son of Mine
+Genesis - Pigeons
+Genesis - Tell Me Why
+Genesis - The Knife
+Genesis - The Lady Lies
+Camel - Drafted (live)
+Propaganda - Dr Mabuse
+Camel - Lady Fantasy
+Camel - Pressure Points (live)
+Camel - Summer Lightning
+Camel - Tell Me
+Camel - West Berlin
+Gary Numan - Cars
+Gary Numan - Complex
+Gary Numan - Cry The Clock Said
+Gary Numan - Night Talk
+Gary Numan - Slow Car To China
+OMD - Romance Of The Telescope
+OMD - Speed Of Light
+Icehouse - Angel Street
+Icehouse - Don't Believe Anymore
+Icehouse - Hey Little Girl
+Spring - Gazing
+Icehouse - Icehouse
+Icehouse - The Perfect Crime
+Ultravox - All Fall Down
+Ultravox - All Stood Still
+Ultravox - Astradyne
+Ultravox - Blue Light
+Ultravox - Dancing With Tears In My Eyes
+Ultravox - Dislocation
+Ultravox - I Can't Stay Long
+Ultravox - Just For A Moment
+Ultravox - Maximum Acceleration
+Ultravox - Mr. X
+Ultravox - New Europeans
+Ultravox - Passing Strangers
+Ultravox - Private Lives
+Ultravox - Quiet Men
+Ultravox - Sleepwalk
+Ultravox - Slow Motion
+Ultravox - Some Of Them
+Ultravox - Vienna
+Ultravox - Visions In Blue
+Ultravox - Western Promise
+Ultravox - When You Walk Through Me
+Alice Cooper - Dangerous Tonight
+Alice Cooper - Devil's Food
+Alice Cooper - Go to Hell
+Alice Cooper - Halo of Flies
+Alice Cooper - I Love the Dead
+Jon Anderson - Day of Days
+Alice Cooper - Poison
+Alice Cooper - The Black Widow
+Alice Cooper - Under My Wheels
+Alice Cooper - Unfinished Sweet
+Alice Cooper - Wake Me Gently
+Alien Sex Fiend - Magic
+Anne Clark - Cane Hill
+Anne Clark - Nida
+Anne Clark - Now
+Anne Clark - Up
+B Movie - Nowhere Girl
+Big Country - Dynamite Lady
+Blitzkrieg - Elevator
+Blitzkrieg - Holding the Gun
+Blitzkrieg - Holy War
+Blitzkrieg - King of the Castle
+Fields of the Nephilim - Back in Gehenna
+Fields of the Nephilim - Blue Water
+Fields of the Nephilim - Darkcell
+Fields of the Nephilim - Dawnrazor (live)
+Fields of the Nephilim - In Every Dream Home a Heartache
+Fields of the Nephilim - Love Under Will (live)
+Fields of the Nephilim - Love Under Will
+Fields of the Nephilim - Moonchild
+Fields of the Nephilim - Psychonaut ? live
+Fields of the Nephilim - Sumerland
+Fields of the Nephilim - Trees Come Down
+Breathless - All That Matters Now
+Breathless - Moment by Moment (Version)
+Breathless - You Can Call It Yours
+Brian Eno - Baby's on Fire
+Bruce Springsteen - Book Of Dreams
+Bruce Springsteen - I Wish I Were Blind
+Cat Stevens - Morning Has Broken
+Chris And Cosey - Synaesthesia
+Clan Of Xymox - Medusa
+Cockney Rebel - Back to the Farm
+Cockney Rebel - Black or White
+Cockney Rebel - Death Trip
+Cockney Rebel - Loretta's Tale
+Cockney Rebel - Psychomodo
+Cockney Rebel - Sebastian (live)
+Cockney Rebel - Sebastian
+Cockney Rebel - Sweet Dreams
+Cockney Rebel - Tumbling Down
+Collage - Baśnie
+Collage - Dalej, dalej
+Collage - God
+Collage - Imagine
+Collage - Ja i ty
+Collage - Living in the Moonlight
+Collage - Lovely Day
+Collage - The Blues
+Colosseum - Lost Angeles
+Edward Ka-Spel - A Grain of Salt
+Pink Floyd - Hey You
+The Cure - Friday I'm in Love (Strangelove Mix)
+Yes - Montreux's Theme
+Yes - Something's Coming
+Ultravox - Someone Else's Clothes
+The Creatures - 2nd Floor
+The Creatures - Don't Go To Sleep Without Me
+Peter Hammill - That Must Be the House
+Peter Hammill - Architecture
+Peter Hammill - One Thing at a Time
+Peter Hammill - A Louse Is Not a Home
+Peter Hammill - Leave This House
+Peter Hammill - Dreaming
+Peter Hammill - A Chronic Catalepsy
+Peter Hammill - The Herbalist
+Peter Hammill - Five Years Ago
+Peter Hammill - An Influence
+Peter Hammill - She Is Dead
+Peter Hammill - (In The) Black Room / The Tower / (In The) Black Room (II)
+Peter Hammill - The Haunted Palace
+Peter Hammill - I Dared Not Speak
+Peter Hammill - She Comes Towards the Door/The Fall
+Andromeda - Darkenss of Her Room
+Kate Bush - Houdini
+Lucifer's Friend - Prince Of Darkness
+Wishbone Ash - Lorelei
+Genesis - Lamia
+Bel Canto - Waking Will
+Bel Canto - Sleep in Deep
+Bel Canto - Buthania
+Closterkeller - Desperado
+Inkubus Sukkubus - Wytches
+Patti Smith - My Madrigal
+Talath Dirnen - Modlitwa. Krzyk Obłąkanego
+Fading Colours - Time
+Strawbs - Something for Nothing
+Strawbs - Another Day Without You
+Strawbs - Heartbreak Hill
+Strawbs - Starting Over
+XIII. Století - Upír s houslemi
+Steve Hackett - The Steppes
+Steve Hackett - Tiger Mouth
+Big Country - The Storm
+Steve Hackett - Tower Struck Down
+Steve Hackett - Spectral Mornings
+Steve Hackett - Clocks
+Steve Hackett - I Know What I Like
+Lacrimosa - Versiegelt Glanzumströmt
+??? - ???
+Jon Anderson - 2000 Years
+The Alan Parsons Project - Prime Time
+Depeche Mode - In Your Room
+The Alan Parsons Project - The Eagle Will Rise Again
+Nosferatu - Close
+Duran Duran - Save a Prayer
+David Sylvian - Orpheus
+Ennio Morricone - The Good, The Bad And The Ugly
+Fields of the Nephilim - Intro (The Harmonica Man)
+A-Ha - The Living Daylights
+Nancy Sinatra - You Only Live Twice - Title Song
+Nancy Sinatra - Moonraker
+Vangelis - Blade Runner
+The Alan Parsons Project - Let Me Go Home
+The Alan Parsons Project - One Good Reason
+The Alan Parsons Project - Since the Last Goodbye
+The Alan Parsons Project - Dancing on a Highwire
+The Alan Parsons Project - You Don't Believe
+Andromeda - Your Way
+The Alan Parsons Project - Separate Lives
+The Alan Parsons Project - Days Are Numbers (The Traveller)
+The Alan Parsons Project - Sooner or Later
+The Alan Parsons Project - Vulture Culture
+The Alan Parsons Project - Somebody Out There
+The Alan Parsons Project - The Same Old Sun
+Hawkwind - The Psychedelic Warlords (Disappear In Smoke)
+Hawkwind - Wind of Change
+Hawkwind - D-Rider
+Hawkwind - Web Weaver
+Hawkwind - You'd Better Believe It
+Hawkwind - Hall of the Mountain Grill
+Hawkwind - Lost Johnny
+Hawkwind - Goat Willow
+Hawkwind - Levitation
+Hawkwind - Motorway City
+Hawkwind - Psychosis
+Hawkwind - World of Tiers
+Hawkwind - Prelude
+Hawkwind - Who's Gonna Win the War
+Hawkwind - Space Chase
+Hawkwind - The 5th Second of Forever (From the Film)
+Hawkwind - Dust of Time
+Manfred Mann's Earth Band - You Angel You
+Manfred Mann's Earth Band - Hollywood Town
+Manfred Mann's Earth Band - "Belle" Of The Earth
+Manfred Mann's Earth Band - Platform End
+Manfred Mann's Earth Band - You Are - I Am
+Manfred Mann's Earth Band - Waiting For The Rain
+Manfred Mann's Earth Band - Resurrection
+Manfred Mann's Earth Band - Lies (Through The 80's)
+Manfred Mann's Earth Band - On The Run
+Manfred Mann's Earth Band - Adolescent Dream
+Manfred Mann's Earth Band - Fritz The Blank
+Manfred Mann's Earth Band - Stranded
+Manfred Mann's Earth Band - Hello, I Am You Heart
+Manfred Mann's Earth Band - No Guarantee
+Manfred Mann's Earth Band - Heart On The Street
+U.F.O. - Can You Roll Her
+U.F.O. - Try Me
+Deep Purple - Pictures of Home
+Gary Moore - Thunder Rising
+Emerson, Lake & Palmer - The Sheriff
+Uriah Heep - Suicidal Man
+Ken Hensley - When Evening Comes
+The Doors - End of the Night
+Closterkeller - Dance on the Highwire
+Peter Hammill - Curtains
+Peter Hammill - His Best Girl
+Peter Hammill - Gaia
+Camel - Rain Dances
+Camel - Dust Bowl
+Camel - Go West
+Camel - Dusted Out
+Camel - Storm Clouds
+Camel - Cotton Camp
+Camel - Broken Banks
+Camel - Sheet Rain
+Camel - Whispers
+Vanilla Fudge - People Get Ready
+Camel - Hopeless Anger
+Psyche - Solitude
+The Legendary Pink Dots - Madame Guillotine
+The Legendary Pink Dots - Hotel Z
+The Legendary Pink Dots - Siren
+Renata Przemyk - Aż po grób
+Collegium Musicum - Concerto in D
+Genesis - The Cinema Show
+Dire Straits - Romeo and Juliet
+Renata Przemyk - Nie udawaj że...
+Rod Stewart - You Keep Me Hangin' On
+Elton John - Shoot Down the Moon
+Eloy - Jeanne D'Arc
+Jadis - Wonderful World
+Jadis - More Than Meets the Eye
+Kim Wilde - Words Fell Down
+Kim Wilde - Action City
+Kim Wilde - View From A Bridge
+Kim Wilde - Just A Feeling
+Kim Wilde - Take Me Tonight
+Kim Wilde - Cambodia & Reprise
+Nick Cave - Where the Wild Roses Grow
+Men Of Lake - October Night
+Men Of Lake - The Traveller
+Casino - Prey
+Casino - Drunk
+Peter Gabriel - I Love To Be Loved
+Abraxas - De Profundis
+Asgard - The Breath of a Veiled Goddess
+Asgard - A Gathering of Fairies
+Renata Przemyk - Każdy trochę jest potrzebny
+Final Conflict - The Quest
+Final Conflict - Last Act
+Final Conflict - All Alone
+Peter Gabriel - Fourteen Black Paintings
+Curved Air - Blind Man
+Curved Air - Hide and Seek
+Curved Air - It Happened Today
+Curved Air - Propositions
+Curved Air - Rob One
+Curved Air - Situations
+Curved Air - Vivaldi With Cannons
+Curved Air - Vivaldi
+Barclay James Harvest - After the Day
+Barclay James Harvest - The Poet
+Elton John - Empty Garden
+Iron Butterfly - Belda-Beast
+Iron Butterfly - Filled With Fear
+Iron Butterfly - Her Favorite Style
+Iron Butterfly - In the Crowds
+Iron Butterfly - In the Time of Our Lives
+Iron Butterfly - It Must Be Love
+Iron Butterfly - Lonely Boy
+Iron Butterfly - Real Fright
+Iron Butterfly - Soul Experience
+Love Like Blood - Dear Catherine
+Love Like Blood - Doomsday
+Love Like Blood - In The Shadow Of The Sun
+Love Like Blood - Look Out
+Love Like Blood - Noxious Secrets
+Procol Harum - Grand Hotel
+Psyche - Anguish
+Psyche - Insatiable (Remix)
+Psyche - Lord Unleashed
+Psyche - What Sorrow Cannot Say
+Roxy Music - Jealous Guy (live)
+Siouxsie & The Banshees - Dear Prudence (live)
+The Moody Blues - The Land Of Make-Believe
+The Moody Blues - The Voice
+The Moody Blues - When You're A Freeman
+Casino - Crap Game
+Peter Hammill - The Sleeper
+Uriah Heep - Circle Of Hands
+Aragon - The Changeling
+Aragon - The Meeting
+Asgard - The Mirror of the King
+Jefferson Starship - All Fly Away
+Jefferson Starship - Higher Fly
+Renaissance - Forever Changing
+Renaissance - Friends
+Renaissance - Golden Key
+Renaissance - Kalynda (A Magical Isle)
+Renaissance - Only Angels Have Wings
+Renaissance - Secret Mission
+Renaissance - The Discovery (Instrumental)
+Renaissance - The Flood At Lyons
+Renaissance - The Winter Tree
+Robert John Godfrey - Mountains
+Robert John Godfrey - The Raven
+Rubicon - Before My Eyes
+Rubicon - Changes Are Made
+Rubicon - Crazed
+Rubicon - Unspoken
+Rubicon - What Starts, Ends
+The Tear Garden - A Ship Named Despair
+Chris Squire - Hold Out Your Head
+Chris Squire - Silently Falling
+Chris Squire - You By My Side
+Citizen Cain - Stab in the Back
+Decameron - All the Best Wishes
+Decameron - Journey's End
+Decameron - Morning Glory
+Decameron - Rock and Roll Away
+Decameron - Saturday
+Decameron - The Strawman
+Decameron - The Ungodly
+Decameron - Trapeze
+Frank Marino - Full Circle
+Frank Marino - Rise Above
+John Lennon - Imagine
+Leonard Cohen - Anthem
+Leonard Cohen - Be for Real
+Leonard Cohen - Waiting for the Miracle
+Marianne Faithfull - Working Class Hero
+Nine Inch Nails - Sanctified
+Nine Inch Nails - Something I Can Never Have
+Nine Inch Nails - Terrible Lie
+Robin Trower - Bridge of Sighs
+Robin Trower - In This Place
+Styx - Castle Walls
+Vanilla Fudge - Ticket To Ride
+Steve Hackett - On That Quiet Earth
+Genesis - Hold On My Heart
+Genesis - Los Endos
+Genesis - Musical Box
+Camel - Ice
+Gary Numan - A Subway Called You
+Gary Numan - Boys Like Me
+Gary Numan - Crash
+Gary Numan - Moral
+Gary Numan - My Brother's Time
+Gary Numan - She's Got Claws
+Gary Numan - Stories
+Gary Numan - You Are, You Are
+Collage - Cold Turkey
+Collage - Power To The People
+Collage - There's a Place
+Collage - Tomorrow Never Knows
+Inkubus Sukkubus - Devils
+Iron Maiden - Phantom of the Opera
+Blue Öyster Cult - Godzilla
+Alice Cooper - Man With the Golden Gun
+Simple Minds - Boys From Brazil
+Closterkeller - China Blue
+Kate Bush - The Wedding List
+Julee Cruise - The World Spins
+Closterkeller - Paranoja coraz bliżej
+Jimmi Scot - Sycamore Trees
+Blue Öyster Cult - Fire of Unknown Origin
+Johnny Cash - Ring Of Fire
+Julee Cruise - Questions in a World of Blue
+Breakout - Wielki Ogień
+Barclay James Harvest - Once More
+The Icicle Works - High Time
+Love Club - The Mirror
+Love Club - One Last Kiss
+Love Club - Corpses In The Sand
+Love Club - The Thief
+Steve Hackett - Sierra Quemada
+Steve Hackett - In the Heart of the City
+Nick Cave - Ain't Gonna Rain Anymore
+Jane - Air (Superman)
+Jane - Air (Let the Sunshine In)
+James Rays Gangwar - Fuel
+Alice Cooper - Nothing's Free
+Alice Cooper - You're My Temptation
+Alice Cooper - Cleansed by Fire
+Fish - Emperor's Song
+The Mission - Buterfly On The Wheel
+Tony Banks - Red Day on Blue Street
+Fish - Punch & Judy
+Beggar's Opera - I've No Idea
+Beggar's Opera - Silver Peacock
+Love Club - Holding Heaven's Hand
+Inkubus Sukkubus - Queen Of The May
+Inkubus Sukkubus - Church of Madness
+Fish - Fortunes of War
+Fish - Somebody Special
+Van Der Graaf Generator - Afterwords
+Van Der Graaf Generator - Necromonser
+Van Der Graaf Generator - The Boat Of Millions Of Years
+Van Der Graaf Generator - Arrow
+Van Der Graaf Generator - W
+Van Der Graaf Generator - Wondering
+Albion - Collapse
+Fish - Jump Suit City
+Tucky Buzzard - (She's A) Striker
+Tucky Buzzard - Sky Balloon
+Tucky Buzzard - Which Way, When For Why
+Inkubus Sukkubus - Gypsy Lament
+Egdon Heath - Jinc
+The Sisters of Mercy - Crash and Burn
+The Sisters of Mercy - We are the Same, Susanne
+The Sisters of Mercy - War on Drugs
+The Sisters of Mercy - Will I Dream?
+The Sisters of Mercy - Summer
+The Sisters of Mercy - Slept
+The Sisterhood - Giving Ground
+The Sisters of Mercy - Romeo Down
+The Sisters of Mercy - Top Nite Out
+The Rolling Stones - The Last Time
+Peter Hammill - The Play's the Thing
+Peter Hammill - Bubble
+Camel - Rajaz
+Iron Maiden - The Edge of Darkness
+Garbage - The World Is Not Enough
+Peter Hammill - Time To Burn
+Devil Doll - Dies Irae
+Rory Gallagher - For the Last Time
+Marianne Faithfull - File It Under Fun From the Past
+Abraxas - Pokuszenie
+Abraxas - Moje mantry
+Peter Hammill - Stranger Still
+Peter Hammill - Shell
+Lacrimosa - Halt mich
+Type O Negative - Lung
+Landmarq - Ta' Jiang
+Breathless - Don't Just Disappear
+Jethro Tull - King Henry's Madrigal
+John Foxx - Twilight's Last Gleaming
+Deep Purple - Space Truckin'
+Deep Purple - Hard Lovin' Man
+Kate Bush - Salomon's Song
+Closterkeller - Inny obszar
+Fish - Plague of Ghosts
+Fish - Old Haunts
+Fish - Digging Deep
+Fish - Chocolate Frogs
+Fish - Waving at Stars
+Fish - Raingods Dancing
+Fish - The Wake-Up Call (Make It Happen)
+Jethro Tull - We Used To Know
+The Eagles - Hotel California
+Genesis - Home by the Sea
+Closterkeller - Perła
+Anthony Phillips - Wind - Tales
+Anthony Phillips - Which Way The Wind Blows
+Anthony Phillips - Henry: Portraits From Tudor Times
+Anthony Phillips - God If I Saw Her Now
+Anthony Phillips - Chinese Mushroom Cloud
+Anthony Phillips - The Geese And The Ghost
+Anthony Phillips - Collections
+Japan - Ghosts
+Marc Almond - The House Is Haunted
+New Model Army - Ghost Of Your Father
+Kate Bush - And So Is Love
+Dead Can Dance - Yulunga (Spirit Dance)
+Dead Can Dance - The Carnival Is Over
+Dead Can Dance - Ariadne
+Jon Anderson - Where Were You?
+Phil Collins - Can't Find My Way
+Inkubus Sukkubus - Conquistadors
+Inkubus Sukkubus - Call Out My Name
+Albion - Golgotha
+Bob Dylan - Knockin' On Heaven's Door
+Inkubus Sukkubus - Enchantment
+Black Jester - Mirrors Songs
+Peter Gabriel - Passion
+Hawkwind - Don't Understand
+Tony Banks - The Gift
+Van Der Graaf Generator - Man Erg
+Peter Gabriel - Here Comes the Flood
+Van Der Graaf Generator - After The Flood
+Dead Can Dance - Saltarello
+The Damned - Sanctum Sanctorum
+Black Sabbath - Paranoid
+Black Sabbath - Killing Yourself To Live
+Jon Anderson - O Holy Night
+U.F.O. - Lights Out
+Iron Maiden - Seventh Son of a Seventh Son
+The Beatles - Helter Skelter
+The Cult - (Here Comes) The Rain
+Suzanne Vega - Rusted Pipe
+Barclay James Harvest - Lady Macbeth
+Emerson, Lake & Palmer - Tarkus
+Deep Purple - Fools
+Jon Anderson - How It Hits You
+Bad Company - Feel Like Makin' Love
+Bad Company - Rock 'n' Roll Fantasy
+Bad Company - Leaving You
+Manfred Mann Chapter III - One Way Glass
+The Garden Of Delight - Shared Creation
+The Garden Of Delight - Opened Paradise
+Cyan - All Around the World
+Änglagård - Jordrök
+Anthony Phillips - February
+The Mission - Sweet Smile Of A Mystery
+Suicide - Ghost Rider
+Black Sabbath - Electric Funeral
+Mike Oldfield - Five Miles Out
+Jon Anderson - Jingle Bells
+Jethro Tull - A New Day Yesterday
+Rainbow - Eyes of the World
+X-mal Deutschland - Mondlicht
+Rick Wakeman - Arthur
+Peter Hammill - Your Tall Ship
+Laurie Anderson - Freefall
+Laurie Anderson - Big Science
+Laurie Anderson - Spechless
+Laurie Anderson - Poison
+Laurie Anderson - Gravity's Angel
+Laurie Anderson - Bright Red
+Laurie Anderson - World Without End
+Laurie Anderson - Tightrope
+Laurie Anderson - Hiawatha
+Camouflage - From Ay To Bee
+Camouflage - Helpless Helpless
+Camouflage - I Once Had a Dream
+Camouflage - Music for Ballerinas
+Camouflage - Neighbours
+Camouflage - Pompeji
+Camouflage - Stranger Thoughts
+Camouflage - That Smiling Face
+Camouflage - The Great Commandment
+Camouflage - They Catch Secrets
+Camouflage - Winner Takes Nothing
+Camouflage - Where Has the Childhood Gone
+Midge Ure - Just For You
+The Cranberries - Shattered
+Mike Batt - Berber's Prayer
+Mike Batt - The Walls of the World
+Mike Batt - The Fires of Rabat
+Mike Batt - It Seemed Like a Good Idea at the Time
+Mike Batt - Bouree
+Mike Batt - Railway Hotel
+Mike Batt - Voices in the Dark
+Mike Batt - Don't Let Me Be Misunderstood
+Justin Hayward & Mike Batt - MacArthur Park
+Bloodrock - Castle of Thoughts
+Bloodrock - Lucky in the Morning
+Bloodrock - Gotta Find a Way
+Bloodrock - D.O.A.
+Savage Rose - Long Before I Was Born
+Porcupine Tree - Slave Called Shiver
+Porcupine Tree - Tinto Brass
+Porcupine Tree - Radioactive Toy
+Porcupine Tree - The Sky Moves Sideways
+Porcupine Tree - Dislocated Day
+John Debney - Main Title: Morgan's Ride
+John Debney - To the Bottom of the Sea
+John Debney - The Battle
+John Debney - It's Only Gold/End Credits
+Barclay James Harvest - Sitting Upon a Shelf
+The Legendary Pink Dots - Fate's Faithful Punchline
+The Legendary Pink Dots - Grain Kings 98
+The Legendary Pink Dots - Spike
+The Legendary Pink Dots - Aarzhklahh Olgevezh!
+The Legendary Pink Dots - Harvest Babies
+The Legendary Pink Dots - A Velvet Resurrection
+The Legendary Pink Dots - Hellsville
+Peter Murphy - Just for Love
+Peter Murphy - Cool Cool Breeze
+Illusion - Madonna Blue
+Illusion - Never Be the Same
+Illusion - Man of Miracle
+Illusion - Wings Across the Sea
+Illusion - The Revolutionary
+Yes - Looking Around
+Gentle Giant - Funny Ways
+Gentle Giant - Pantagruel's Nativity
+Men Of Lake - Walking along the Rhine
+Lene Lovich - Bird Song
+Lene Lovich - What Will I Do Without You
+Lene Lovich - The Night
+Lene Lovich - You Can't Kill Me
+Lene Lovich - The Freeze
+Lene Lovich - It's You, Only You (Mein Schmerz)
+Lene Lovich - Blue Hotel
+Lene Lovich - Walking Low
+Lene Lovich - Special Star
+Hawkwind - Assassins
+Jethro Tull - Reasons for Waiting
+Abraxas - Spowiedź
+Abraxas - Anatema, czyli moje obsesje
+Abraxas - Pętla medialna
+Abraxas - Oczyszczenie
+Batalion D'Amour - Zapomnienie
+The Legendary Pink Dots - Andromeda Suite '98
+The Legendary Pink Dots - Is It Something I Said?
+The Legendary Pink Dots - Cheating The Shadow
+Breathless - Come Reassure Me
+Eternal Triangle - Only in the Night
+Breathless - Walk Down to the Water
+Triumvirat - The Capitol Of Power
+Triumvirat - The School Of Instant Pain
+Triumvirat - The Walls Of Doom
+Triumvirat - The Deadly Dream Of Freedom
+Triumvirat - The Hazy Shades Of Dawn
+Triumvirat - The Burning Sword Of Capua
+Triumvirat - The Sweetest Sound Of Liberty
+Triumvirat - The March To The Eternal City
+Triumvirat - Spartacus
+The Legendary Pink Dots - Needles
+The Legendary Pink Dots - Destined to Repeat
+The Legendary Pink Dots - Hallway
+The Legendary Pink Dots - Ghost
+The Legendary Pink Dots - Under Your Wheels
+Closterkeller - Ostatnie spotkanie
+Kissing The Pink - The Last Film
+The Stranglers - Everybody Loves You When You're Dead
+The Beatles - Yesterday
+Wishbone Ash - Persephone
+Lorien - Wyciągam ręce
+Deine Lakaien - Lonely
+Closterkeller - A ona, ona
+Twelfth Night - Counterpoint
+Peter Hammill - Solitude
+Peter Hammill - Forsaken Gardens
+Peter Hammill - Shingle Song
+Peter Murphy - Fun Time
+Peter Murphy - I've Got a Miniature Secret Camera
+Peter Murphy - Fun Time (Cabaret Mix)
+Galahad - Legacy
+Peter Hammill - Last Frame
+Siouxsie & The Banshees - Kiss Them From Me
+Marillion - Cover My Eyes (Pain And Heaven)
+The Sisters of Mercy - Floorshow
+Southern Death Cult - Today
+Southern Death Cult - False Faces
+Pavlov's Dog - Song Dance
+Pavlov's Dog - Natchez Trace
+Pavlov's Dog - Theme from Subway Sue
+Pavlov's Dog - Episode
+Pavlov's Dog - Preludin
+Pavlov's Dog - She Came Shining
+Pavlov's Dog - Standing Here with You (Megan's Song)
+Pavlov's Dog - Mersey
+Pavlov's Dog - Valkerie
+Pavlov's Dog - Try to Hang On
+Pavlov's Dog - Gold Nuggets
+Pavlov's Dog - She Breaks Like A Morning Sky
+Pavlov's Dog - Early Morning On
+Genesis - Deep in the Motherlode
+Christopher Gunning - Hands Of The Ripper
+Illusion - Isadora
+Illusion - Face of Yesterday
+Illusion - Candles Are Burning
+Museo Rosenbach - Degli uomini
+Museo Rosenbach - Della natura
+Museo Rosenbach - Dell'eterno ritorno
+Edward Ka-Spel - A Roman Candle
+Edward Ka-Spel - Design Fault
+Edward Ka-Spel - Gemini
+Edward Ka-Spel - The Blue Room
+Abraxas - Medalion
+Abraxas - Iris
+Breathless - Viva
+Breathless - Goodnight
+Breathless - Green Finger Swinger
+The Legendary Pink Dots - Scarlet Wish
+The Legendary Pink Dots - The Man With The Cut-Glass Heart
+Abraxas - 14.06.1999
+Abraxas - Czekam
+Abraxas - Jezebel
+Lacrimosa - Die Strasse der Zeit
+Lacrimosa - Am Ende der Stille
+Lacrimosa - Dich zu töten fiel mir schwer
+The Legendary Pink Dots - Scarlett Cross
+Renamed - Fly
+Arcadium - Birth, Life and Death
+High Tide - Blankman Cries Again
+Black Cat Bones - Chauffeur
+Black Cat Bones - Death Valley Blues
+Black Cat Bones - Safe My Love
+The Legendary Pink Dots - Sterre
+Rare Bird - As Your Mind Flies By
+Roy Harper - Me and My Woman
+Roy Harper - ???
+Procol Harum - Live
+Babe Ruth - Black Dog
+Gun - ???
+The Moody Blues - Blue Guitar
+Camel - Air Born
+Twelfth Night - We Are Sane
+Twelfth Night - Creepshow
+Wishbone Ash - The King Will Come
+Wishbone Ash - Throw Down the Sword
+Wishbone Ash - Sing Out the Song
+Titus Groan - Hall Of Bright Carvings
+Antinomia - From A Golden Step
+Barclay James Harvest - Forever Yesterday
+Barclay James Harvest - Back to Earth
+Ten Years After - I'd Love To Change The World
+Ten Years After - Standing At The Station
+Ten Years After - Speed Kills
+Black Sabbath - Looking For Today
+Black Sabbath - Spiral Architect
+Galahad - Lady Messiah
+Barclay James Harvest - Wielkie Nieznane
+Barclay James Harvest - Copii Romania
+Ten Years After - Religion
+Ten Years After - Over The Hill
+U.K. - Live
+U.K. - 30 years
+Marc Almond - Toreador in the Rain
+Marc Almond - Black Lullaby
+Marc Almond - Your Kisses Burn
+Marc Almond - Mr. Sad
+Marc Almond - There Is a Bed
+Marc Almond - Youth
+Marc Almond - If You Go Away
+Marc Almond - Jackal Jackal
+Marc Almond - Black Heart
+Marc Almond - The Bulls
+Marc Almond - Torment and Toreros
+Marc Almond - Catch the Falling Stars
+Marc Almond - The Animal in You
+Marc Almond - My Little Book of Sorrows
+Marc Almond - Beat Out That Rhythm on a Drum
+XIII. Století - Transylvanian Werewolf
+Jethro Tull - The Witches Promise
+Marc Almond - Say Hello Wave Goodbye
+Deep Purple - Speed King
+Deep Purple - Hungry Daze
+Eloy - The Another Side of Life
+Fields of the Nephilim - Elizjum
+Fields of the Nephilim - Secrets
+The Doors - Summer's Almost Gone
+Eloy - Dawn
+Nick Cave - Henry's Dream
+Barclay James Harvest - Looking From the Outside
+Salamander - 10 przykazań
+Raw Material - Time Is
+Hawkwind - Bóg Słońce
+Spring - Patrząc, obserwując, przyglądając sie
+Psyche - Ghost
+Love Like Blood - Awake in Desire
+Anneli M. Drecker - Waking will
+Elton John - Leningrad Lyrics
+The Expression - The Waiting Game
+Jefferson Airplane - Crazy Miranda
+Jefferson Airplane - Mexico
+Jefferson Airplane - Have You Seen the Saucers
+Jefferson Airplane - War Movie
+darXtar - Voices Of My Dreams
+Eyes of the Nightmare Jungle - Power
+Eyes of the Nightmare Jungle - Mud Huts and Satellite Dishes
+Eyes of the Nightmare Jungle - Children
+Jim Morrison - Hyacinth House
+Classix Nouveaux - Never Never Comes
+Tindersticks - Raindrops
+John Wetton - Battle Lines
+King Crimson - Heartbeat
+Ten Years After - You Give Me Lovin
+James Rays Gangwar - Sinner
+James Rays Gangwar - Third Generation
+Traffic - Graveyard People
+The Garden Of Delight - Satyricon
+David Bowie - Heroes
+King Crimson - Larks' Tongues in Aspic Part III
+King Crimson - B'boom
+King Crimson - Cirkus: Entry of the Chameleons
+King Crimson - VROOOM VROOOM: Coda
+King Crimson - VROOOM VROOOM
+Simon Boswell - Born to Murder the World
+The Stranglers - In the Shadows
+Iron Maiden - Fear of the Dark
+XIII. Století - Intro
+Justin Hayward - Scarborough Fair
+Breathless - Drifting
+Breathless - Ballroom
+Breathless - No Answered Prayers
+Justin Hayward - Lay It on Me
+Strawbs - The Last Resort
+Strawbs - No Return
+Strawbs - Heartbreaker
+Strawbs - Simple Visions
+Strawbs - Out in the Cold
+Strawbs - Round and Round
+Strawbs - Cut Like a Diamond
+Justin Hayward - One Again
+Justin Hayward - One Lonely Room
+Justin Hayward - Nostradamus
+Justin Hayward - Moving Mountains
+Justin Hayward - Lost and Found
+Justin Hayward - Stairway to Heaven
+Eric Burdon & The War - Nights In White Satin
+Blitzkrieg - Fire Inside
+Deep Purple - Into the Fire
+U2 - Unforgettable Fire
+New Model Army - My People
+New Model Army - The Living In the Rose
+Justin Hayward & Mike Batt - A Whiter Shade of Pale
+Jethro Tull - Spiral
+Jethro Tull - Dot Com
+Jethro Tull - Black Mamba
+The Church - Another Earth
+The Church - Glow Worm
+Justin Hayward - Vincent
+Rory Gallagher - Calling Card
+Rory Gallagher - What in the World
+Rory Gallagher - Jacknife Beat
+Fish - Warm Wet Circles
+Fish - Vigil in a Wilderness of Mirrors
+Fish - Slainthe Mhath
+Justin Hayward & Mike Batt - Vincent
+Justin Hayward & Mike Batt - Railway Hotel
+McDonald & Giles - Suite in C
+McDonald & Giles - Flight of the Ibis
+McDonald & Giles - Is She Waiting?
+McDonald & Giles - Tomorrow's People - The Children of Today
+McDonald & Giles - Birdman
+Jethro Tull - A Gift of Roses
+The Church - Anaesthesia
+The Church - Ricochet
+The Church - Louisiana
+Breathless - All the Reasons Slide
+Breathless - Stone Harvest
+Barclay James Harvest - The Great Unknown
+Porcupine Tree - Dark Matter
+Tony Banks - Hero for an Hour
+The Moody Blues - Eternity Road
+The Doors - Take It as It Comes
+The Doors - The Changeling
+Anathema - Deep
+Anathema - Pitiless
+Anathema - Forgotten Hopes
+Anathema - Destiny Is Dead
+Cirque du Soleil - Ouverture/Ramsani
+Cirque du Soleil - Égypte
+Cirque du Soleil - Misha
+Cirque du Soleil - Ulysse
+Cirque du Soleil - Rondo/Double Face
+Anathema - Make It Right (F.F.S.)
+Paul Rodgers - Wishing Well
+Fish - Mr Buttons
+David Sylvian - September
+The Moody Blues - Nothing Changes
+Iron Maiden - Where Eagles Dare
+Type O Negative - Everyone I Love Is Dead
+Barry Adamson & Nick Cave - The Sweetest Embrace
+Anathema - Anyone, Anywhere
+Bauhaus - Double Dare
+Warfare - Velvet rapsody
+Philip Glass, Kronos Quartet - In His Cell
+Psyche - You Ran Away
+Psyche - Travel In Mind
+Psyche - Remember
+Faith And The Muse - Fade and Remain
+Faith And The Muse - Cantus
+Psyche - Dreaming My World
+The Alan Parsons Project - La Sagrada Familia
+U2 - In God's Country
+Sinead O'Connor - Jackie
+Sinead O'Connor - Drink Before The War
+Marc Almond - Champ
+Psyche - Tears
+Peter Gabriel - Down the Dolce Vita
+The Beatles - Lucy In The Sky With Diamonds
+The Beatles - Good Morning, Good Morning
+The Beatles - Sergeant Pepper's Lonely Hearts Club Band
+The Beatles - A Day In The Life
+The Moody Blues - (Evening) Time to get away
+The Moody Blues - The Sunset
+The Moody Blues - Twilight Time
+Umbra Et Imago - Poesia Vampiria
+Electric Light Orchestra - Midnight Blue
+Leonard Cohen - Dance Me to the End of Love
+Queen - You Take My Breath Away
+Philip Glass - Satyagraha - Act I - Tolstoy
+Decameron - Stone House
+Decameron - Parade
+Decameron - The Empty Space
+Decameron - The Deal
+Decameron - Ask Me Tomorrow
+Marianne Faithfull - Prologue
+Decameron - The Shadows On The Stairs
+Decameron - Crazy Seed
+Creedence Clearwater Revival - Cotton Fields
+Creedence Clearwater Revival - I Put a Spell on You
+Creedence Clearwater Revival - Proud Mary
+Creedence Clearwater Revival - Bad Moon Rising
+Creedence Clearwater Revival - Fortunate Son
+Creedence Clearwater Revival - Travelin' Band
+Creedence Clearwater Revival - Who'll Stop the Rain
+Creedence Clearwater Revival - Walk on the Water
+Creedence Clearwater Revival - Tombstone Shadow
+Creedence Clearwater Revival - (Wish I Could) Hideaway
+Creedence Clearwater Revival - Have You Ever Seen the Rain
+Creedence Clearwater Revival - Hey Tonight
+Creedence Clearwater Revival - Someday Never Comes
+Type O Negative - Wolfmoon
+Roger Hodgson - In Jeopardy
+Cat Stevens - Wild World
+XIII. Století - Mystery Ana
+XIII. Století - Royale Carpathia
+XIII. Století - Bratrstvo Vlkodlaka
+XIII. Století - Vampire Woodoo
+XIII. Století - Třinácté Znamení
+XIII. Století - Stigmata Vampire
+Closterkeller - Domino
+Inkubus Sukkubus - Beltaine
+Inkubus Sukkubus - Goblin Jig
+Fading Colours - The Visitor
+Inkubus Sukkubus - In Defence
+Psyche - Lonely One
+Psyche - Insecurity
+Psyche - Ghost Child
+Faith And The Muse - Arianrhod
+Faith And The Muse - Branwen Slayne
+Faith And The Muse - The Sea Angler
+Faith And The Muse - The Birds of Rhiannon
+Procol Harum - Whiskey Train
+Procol Harum - Still There'll Be More
+Procol Harum - Piggy Pig Pig
+Procol Harum - Whaling Stories
+Procol Harum - Your Own Choice
+Sheryl Crow - Tomorrow Never Dies
+David Arnold - White Knight
+David Arnold - Paris and Bond
+Richard Wright - Against The Odds
+K.D. Lang - Surrender
+The Doors - Roadhouse Blues
+The Doors - Ship of Fools
+The Doors - Peace Frog
+The Doors - Blue Sunday
+The Doors - Gloria
+The Doors - Crawling King Snake
+The Doors - Money
+The Doors - Poontang Blues / Build Me A Woman / Sunday Trucker
+David Cross - Exiles
+Fading Colours - Spring
+Moonlight - Belibaste
+Ozzy Osbourne - Bark at the Moon
+XIII. Století - Psycho
+Moonlight - Ekstaza milczenia
+Moonlight - Conquistador
+XIII. Století - Růže a kříž
+Psyche - Guilt
+Marianne Faithfull - Guilt
+Marianne Faithfull - The Ballad of Lucy Jordan
+Marianne Faithfull - Times Square
+Marianne Faithfull - Falling From Grace
+Marianne Faithfull - Morning Come
+Marianne Faithfull - Strange Weather
+Electric Light Orchestra - Roll Over Beethoven
+Electric Light Orchestra - Ocean Breakup
+Electric Light Orchestra - King of the Universe
+Electric Light Orchestra - Bluebird Is Dead
+Electric Light Orchestra - Oh No Not Susan
+Electric Light Orchestra - New World Rising
+Electric Light Orchestra - Ocean Break up (Reprise)
+Electric Light Orchestra - Daybreaker
+Electric Light Orchestra - Ma-Ma-Ma Belle
+Electric Light Orchestra - Dreaming of 4000
+Electric Light Orchestra - In the Hall of the Mountain King
+Barclay James Harvest - Following Me
+XIII. Století - Gotika
+Camel - Fingertips
+The Rolling Stones - As Tears Go By
+Barclay James Harvest - Guitar Blues
+Iron Maiden - The Prisoner
+Barclay James Harvest - On the Wings of Love
+Peter Murphy - Strange Kind of Love
+Babe Ruth - King Kong
+Electric Sandwich - Devil's Dream
+Electric Sandwich - I Want You
+Electric Sandwich - Material Darkness
+Hurdy Gurdy - Tell Me Your Name
+Hurdy Gurdy - Space Man
+Hurdy Gurdy - You Can't Go Backwards
+The Moody Blues - Gypsy (Of A Strange And Distant Time)
+Catapilla - Naked Death
+Five Day Rain - Marie's a Woman
+Five Day Rain - Rough Cut Marmalade
+Armageddon - Paths And Planes And Future Gains
+Armageddon - Buzzard
+Os Mundi - Overture
+Os Mundi - Kyrie
+Frank Zappa - Call Any Vegetable
+Frank Zappa - Invocation And Ritual Dance Of The Young Pumpkin
+Frank Zappa - Soft-Sell Conclusion
+Frank Zappa - Willie the Pimp
+Nosferatu - Uninvited Guest
+Camel - End of the Line
+Nosferatu - Into The Night
+Nosferatu - The Passing
+Faith And The Muse - Elyria
+Faith And The Muse - Interlude: Annabell
+Faith And The Muse - Vervain
+Faith And The Muse - The Unquiet Grave
+Asgard - ???
+The Moody Blues - Never Comes The Day
+The Moody Blues - Peak Hour
+Nosferatu - Invocation
+Hawkwind - Altair
+Hawkwind - Quark, Strangeness and Charm
+Hawkwind - Green Finned Demon
+Hawkwind - Do That
+Hawkwind - The Day A Wall Came Down
+Hawkwind - Berlin Axis
+Hawkwind - Void of Golden Light
+Camel - The Great Marsh
+Camel - Rhayader
+Camel - Rhayader Goes to Town
+Camel - Sanctuary
+Camel - Fritha
+Camel - The Snow Goose
+Camel - Friendship
+Camel - Migration
+Camel - Rhayader Alone
+Camel - Flight of the Snow Goose
+Camel - Preparation
+Camel - Dunkirk
+Camel - Epitaph
+Camel - Fritha Alone
+Camel - La Princesse Perdue
+Cat Stevens - Foreigner Suite
+Cat Stevens - Silent Sunlight
+Cat Stevens - 18th Avenue
+Cat Stevens - Sweet Scarlet
+Cat Stevens - Ruins
+Cat Stevens - Oh Very Young
+Cat Stevens - King Of Trees
+Cat Stevens - Home In The Sky
+Steve Harley & Cockney Rebel - Riding the Waves
+Steve Harley & Cockney Rebel - Star for a Week
+Steve Harley & Cockney Rebel - Lighthouse
+Steve Harley & Cockney Rebel - The Best years of our life
+Steve Harley & Cockney Rebel - Sweet Dreams
+Steve Harley & Cockney Rebel - Psychomodo
+Peter Murphy - Mercy Rain
+Benny Goodman - Sing, Sing, Sing
+Genesis - A Trick of the Tail
+Genesis - White Mountain
+Anthony Phillips - Bleak House
+A-Ha - Angel in the Snow
+Depeche Mode - Barrel of a Gun
+Umbra Et Imago - Requiem mit dem ich meine Mitmenschen um Verzeihung bitten möchte
+Umbra Et Imago - Hörst Du mein Rufen
+Umbra Et Imago - Madeira
+Umbra Et Imago - Black Waves
+Umbra Et Imago - Wintertage
+Marianne Faithfull - The Wedding
+Evidence - Heart's Grave
+Renata Przemyk - Zmrok
+Renata Przemyk - Mój aniele
+Renata Przemyk - Dogonić kota
+Warhorse - Vulture Blood
+Warhorse - Burning
+Warhorse - Ritual
+Warhorse - Solitude
+Steel Mill - Green Eyed God
+Steel Mill - Mijo and the laying of the which
+Nick Cave & the Bad Seeds - Little Empty Boat
+Nick Cave & the Bad Seeds - West Country Girl
+Nick Cave & the Bad Seeds - (Are You) The One That I've Been Waiting For?
+Nick Cave & the Bad Seeds - Into My Arms
+Nick Cave & the Bad Seeds - Lime Tree Arbour
+Nick Cave & the Bad Seeds - Black Hair
+Nick Cave & the Bad Seeds - Where Do We Go Now but Nowhere
+Nick Cave & the Bad Seeds - Idiot Prayer
+Nick Cave & the Bad Seeds - Do You Love Me?
+A-Ha - Cold as Stone
+Closterkeller - Dwa dni (grafitowy)
+Kasia Kowalska - Straciłam swój rozsądek
+The Moody Blues - Are You Sitting Comfortably?
+The Moody Blues - The Voyage
+The Moody Blues - Have You Heard, Pt. 1
+The Moody Blues - Have You Heard, Pt. 2
+Steel Mill - Get On The Line
+Steel Mill - Zang Will
+Steel Mill - Turn The Page Over
+Steel Mill - Black Jewel Of The Forest
+Steel Mill - Har Fleur
+Titus Groan - I Can't Change
+Titus Groan - It's All Up With Us
+Titus Groan - Fuschia
+Closterkeller - I już tylko noc
+Maanam - Krakowski spleen
+Inkubus Sukkubus - Take My Hunger
+Faith And The Muse - Annwyn, Beneath the Waves
+Kate Bush - And Dream of Sheep
+Kate Bush - Under Ice
+Kate Bush - Waking the Witch
+Kate Bush - Watching You Without Me
+Kate Bush - Jig of Life
+Kate Bush - Hello Earth
+Kate Bush - The Morning Fog
+PJ Harvey - The Dancer
+Patti Smith - Gone Again
+Mira Kubasińska & Breakout - Wielki ogień
+Sinead O'Connor - Troy
+The Cure - Prayers for Rain
+Savage Rose - Let's See Her
+Savage Rose - Ride My Mountain
+Savage Rose - Shepherd and Sally
+Savage Rose - Trial in Our Native Town
+Jefferson Airplane - White Rabbit
+Curved Air - Melinda (More or Less)
+Janis Joplin - Summertime
+Genesis - Horizons
+Genesis - Shipwrecked
+Genesis - In the Cage
+Steve Hackett - The Hermit
+Genesis - The Musical Box
+Genesis - Firth of Fifth
+Steve Hackett - Shadow of the Hierophant
+Steve Hackett - Time To Get Out
+Steve Hackett - Leaving
+Steve Hackett - Two Vamps as Guests
+Steve Hackett - Jacuzzi
+Nazareth - Ship Of Dreams
+Gentle Giant - Wreck
+Procol Harum - The Wreck of the Hesperus
+Al Stewart - Life In Dark Water
+Jon & Vangelis - The Mayflower
+Ewa Demarczyk - Taki pejzaż
+Nick Cave - Idiot Prayer
+Umbra Et Imago - Es war einmal eine "O"
+Umbra Et Imago - You Are Poison For Me
+XIII. Století - Macbeth
+Hawkwind - Abducted
+Hawkwind - Death Trap
+Hawkwind - Wastelands
+Hawkwind - Are You Losing Your Mind?
+Hawkwind - Blue Skin
+Hawkwind - Sputnik Stan
+Hawkwind - Photo Encounter
+Hawkwind - Alien (I Am)
+Camel - Six Ate
+Camel - White Rider
+Camel - God of Light Revisited
+Led Zeppelin - The Song Remains The Same
+Led Zeppelin - Dazed And Confused
+Led Zeppelin - You Shook Me
+Led Zeppelin - When The Levee Breaks
+Led Zeppelin - No Quarter
+Led Zeppelin - I'm Gonna Crawl
+Journey - Of A Lifetime
+Fleetwood Mac - I'm So Afraid
+Gary Moore - Out In The Fields
+Gary Moore - Parisienne Walkways
+Camel - Slow Yourself Down
+Lacrimosa - Siehst du mich im Licht?
+Lacrimosa - Stolzes Herz
+Camel - Metrognome
+Blackwater Park - Indian Summer
+Blackwater Park - Rock Song
+Agitation Free - Khan El Khalili
+Agitation Free - Malesch
+Agitation Free - Rücksturz
+Emerson, Lake & Palmer - Tarkus (Medley): Eruption/Stones of Years/Iconoclast
+Emerson, Lake & Palmer - Paper Blood
+Lightshine - Sword In The Sky
+Lightshine - Lory
+Lightshine - Nightmare
+Martin L. Gore - Compulsion
+Elton John - Sixty Years On
+Deep Purple - Soldier of Fortune
+Celine Dion - My Heart Will Go On (Love Theme From 'Titanic')
+James Horner - Leaving Port
+James Horner - The Sinking
+Budgie - Truth Drug
+Flash & The Pan - Captain Beware
+Jerry Goldsmith - Ave Satani
+Justin Hayward - Sometimes Less Is More
+XIII. Století - Antikrist
+XIII. Století - Evangelium
+Camel - Irish Air (Instrumental Reprise)
+Fish - The Perception of Johnny Punter
+Fish - Sunsets on Empire
+Justin Hayward - I Heard It
+Justin Hayward - Broken Dream
+Justin Hayward - The Promised Land
+Justin Hayward - It's Not Too Late
+Justin Hayward - Children of Paradise
+Genesis - A Winter's Tale
+Genesis - There Must Be Some Other Way
+Goblin - Witch
+Genesis - Watcher of the Skies
+Deep Purple - Made in Japan
+East Of Eden - Nymphenburger
+East Of Eden - Jig-A-Jig
+Kin Ping Meh - Sometimes
+Kin Ping Meh - Drugsen's trip
+Kin Ping Meh - My Dove
+The Blue Effect - Little Girl (Děvčátko)
+The Blue Effect - Deserted Alley (Osamělá ulice)
+The Blue Effect - Blue Effect Street
+The Blue Effect - Blue About Stone
+The Blue Effect - Rainy Day (Deštivý den)
+The Blue Effect - Where Is My Star (Kde je má hvězda)
+Flied Egg - 521 Seconds Schizophrenic Symphony
+Formula Tre - Dies Irae
+Suck - War Pigs
+Spooky Tooth - Evil Woman
+Nick Cave - (Are You) The One That I've Been Waiting For?
+Nick Cave - People Ain't No Good
+Porcupine Tree - Signify
+The Legendary Pink Dots - Spike Psychomix
+Porcupine Tree - Pagan
+Porcupine Tree - Waiting Phase One
+Porcupine Tree - Waiting Phase Two
+Fish - Tara
+Rage - Alive But Dead
+Nick Cave - Far From Me
+Hawkwind - Right Stuff
+Hawkwind - The Dream Goes On
+Hawkwind - Right To Decide
+Hawkwind - The Dream Has Ended
+Hawkwind - This Future
+XIII. Století - Ten starý dům se rozpadá
+XIII. Století - Nevěsta temnot
+Van Der Graaf Generator - People You Were Going To
+Van Der Graaf Generator - Afterwards
+Van Der Graaf Generator - Orthenthian St. Part 1 & 2
+Van Der Graaf Generator - Running Back
+Van Der Graaf Generator - Into a Game
+Alan Parsons - Back Against the Wall
+Van Der Graaf Generator - Necromancer
+Van Der Graaf Generator - Octopus
+Inkubus Sukkubus - Vampire Kiss
+Fading Colours - Eveline (feat. Anne Clark)
+Fading Colours - Hypocrisy
+Peter Murphy - Wild Birds Flock To Me
+Talk Talk - I Don't Believe in You
+Led Zeppelin - The Battle Of Evermore
+Echo & The Bunnymen - Ocean Rain
+Beggar's Opera - Poet and Peasant
+Beggar's Opera - Passacaglia
+Beggar's Opera - Raymond's Road
+Beggar's Opera - Light Cavalry
+Beggar's Opera - Time Machine
+Budgie - Nude Disintegrating Parachutist Woman
+Budgie - Whisky River
+Budgie - In for the Kill
+Budgie - Flowers in the Attic
+Budgie - Hold On To Love
+Gun - Race With the Devil
+The Rolling Stones - Paint It Black
+Fish - Change of Heart
+Soft Cell - Frustration
+Soft Cell - Entertain Me
+Soft Cell - Chips on My Shoulder
+Soft Cell - Say Hello, Wave Goodbye
+Soft Cell - What!
+Camel - Irish Air
+Flied Egg - Goodbye My Friends
+Flied Egg - Out to the Sea
+Flied Egg - Before You Descend
+Flied Egg - Five More Pennies
+Flied Egg - Rock Me Baby
+Flied Egg - Rolling Down the Broadway
+Flied Egg - Leave Me Woman
+The Garden Of Delight - Paradise Will Be There
+Fish - Say It With Flowers
+This Mortal Coil - Song To The Siren
+Quella Vecchia Locanda - Prologo
+Quella Vecchia Locanda - Un Villaggio, Un' Illusione
+Quella Vecchia Locanda - Realta'
+Quella Vecchia Locanda - Immagini Sfocate
+Quella Vecchia Locanda - Il Cieco
+Quella Vecchia Locanda - Dialogo
+Quella Vecchia Locanda - Verso la Locanda
+Quella Vecchia Locanda - Sogno, Risveglio E...
+Il Balletto Di Bronzo - Il Balletto Di Bronzo
+Il Balletto Di Bronzo - Introduzione
+Il Balletto Di Bronzo - Primo Incontro
+Il Balletto Di Bronzo - Secondo Incontro
+Il Balletto Di Bronzo - Terzo Incontro [*]
+Il Balletto Di Bronzo - Epilogo [*]
+Il Balletto Di Bronzo - Ys
+Semiramis - La Bottega del Rigattiere
+Semiramis - Luna Park
+Semiramis - Uno Zoo Di Vetro
+The Trip - Visioni dell'aldila
+The Trip - Prologuo
+The Trip - Riflessioni
+The Trip - Incubi
+The Trip - Una petra colorata
+Biglietto Per l'Inferno - Confessione
+Biglietto Per l'Inferno - L'amico suicida
+Panna Fredda - La Puara
+Panna Fredda - Un Uomo
+Panna Fredda - Scacco Al Re Lot
+Trent Reznor - Driver Down
+Dalton - Idea D'Infinito
+Dalton - Stagione Che Muore
+Circus 2000 - Hey Man
+Circus 2000 - You Aren't Listening
+Circus 2000 - Our Father
+Circus 2000 - Need
+Circus 2000 - When the Sun Refuses To Shine
+Analogy - Analogy
+Inkubus Sukkubus - Heart of Lilith
+Love Like Blood - Pale Sky
+Votiva Lux - Il Vampiro
+Dreadful Shadows - Dusk (Remix)
+The Shroud - Prophecy
+The Merry Thoughts - The Sun and the Rainfall
+XIII. Století - Hněv andělů
+Ghosting - Pathos Desert
+Goethes Erben - Die Form
+XIII. Století - Svatá válka
+King Crimson - Mantra
+King Crimson - Travel Weary Capricorn
+King Crimson - Mars
+King Crimson - Improvisation
+Fish - Goldfish & Clowns
+Emerson, Lake & Palmer - 21st Century Schizoid Man
+Jethro Tull - Budapest
+Tiamat - Atlantis as a Lover
+Umbra Et Imago - Kein Gott Und Keine Liebe
+Fading Colours - In This Garden of Mine
+Nick Cave - Stranger Than Kindness
+Tiamat - Teonanacatl
+Tiamat - Phantasma de Luxe
+Led Zeppelin - In The Evening
+Tiamat - A Deeper Kind of Slumber
+The Cure - Sinking
+Jethro Tull - Too Old to Rock 'n' Roll: Too Young To Die
+Alice Cooper - Is Anyone Home
+Jethro Tull - Jack Frost and the Hooded Crow
+The Legendary Pink Dots - All Sides
+Alice Cooper - Only Women Bleed
+Greg Lake - Watching Over You
+Greg Lake - Daddy
+Jethro Tull - My Sunday Feeling
+Patti Smith - Wicked Messenger
+Patti Smith - Smoke On The Water
+Patti Smith - Redondo Beach
+Patti Smith - People Have the Power
+Patti Smith - Crystal Ship
+Patti Smith - When Doves Cry
+Patti Smith - Wild Leaves
+Patti Smith - People Have the Power (spoken)
+Jethro Tull - Grace
+Jethro Tull - Kissing Willie
+Jethro Tull - To Be Sad Is a Mad Way To Be
+Jethro Tull - Dr. Bogenbroom
+Jethro Tull - Cold Wind to Valhalla
+Jethro Tull - Black Sunday
+13 Candles - Siren
+Talath Dirnen - Port Nadziei
+Kate Bush - Wow
+Kate Bush - Ran Tan Waltz
+Darc Entries - Die Maden
+Led Zeppelin - How Many More Times
+Jose Feliciano - Old Turkey Buzzard
+Fleetwood Mac - Man of the World
+Fleetwood Mac - The Green Manalishi (With The Two Pronged Crown)
+Fleetwood Mac - Woman of a Thousand Years
+Fleetwood Mac - Sands of Time
+Fleetwood Mac - Dragonfly
+Fleetwood Mac - Black Magic Woman
+Fleetwood Mac - Coming Your Way
+Fleetwood Mac - Sunny Side of Heaven
+Fleetwood Mac - Safe Harbour
+Flash & The Pan - Atlantis Calling
+Donovan - Atlantis
+Eloy - Atlantis' Agony at June 5th - 8498, 13 P.M. Gregorian Earthtime
+Os Mundi - It's All There
+Os Mundi - Missile
+Os Mundi - But Reality Will Show
+The Blue Effect - Pamět' lásky
+Suck - Aimless Lady
+Suck - The Whip
+Os Mundi - Triple
+Tiamat - Cold Seed
+The Legendary Pink Dots - Love Puppets
+The Legendary Pink Dots - Poppy Day
+The Legendary Pink Dots - On High
+The Legendary Pink Dots - Mekkanikk
+Deep Purple - Flight of the Rat
+Frank Zappa - Stairway to Heaven
+Xymox - Cry in the Wind
+Wishbone Ash - Living Proof
+Wishbone Ash - Haunting Me
+Wishbone Ash - Insomnia
+Grand Funk Railroad - Bad Time
+Grand Funk Railroad - I’m Your Captain/Closer to Home
+Steel Mill - Blood Runs Deep
+Peter Hammill - Losing Faith in Words
+Peter Hammill - The Jargon King
+Peter Hammill - The Spirit
+Peter Hammill - In Slow Time
+Peter Hammill - The Wipe
+Peter Hammill - Flight
+Breathless - Blue Moon
+Velvett Fogg - Wizard of Gobsolod
+Velvett Fogg - Once Among the Trees
+Velvett Fogg - Owed to the Dip
+Velvett Fogg - Within' the Night
+Velvett Fogg - Plastic Man
+Velvett Fogg - Telstar '69
+James Newton Howard - 57th Street
+Jeff Wayne - The Eve of the War
+Jeff Wayne - Horsell Common And The Heat Ray
+Jeff Wayne - The Artilleryman And The Fighting Machine
+Jeff Wayne - Forever Autumn
+Jeff Wayne - Thunder Child
+Jeff Wayne - The Red Weed Part 1
+Jeff Wayne - Parson Nathaniel / The Sprit Of Man
+Jeff Wayne - The Red Weed Part 2
+Jeff Wayne - Brave New World
+Jeff Wayne - Dead London
+Jeff Wayne - Epilogue (Part 1)
+Jeff Wayne - Epilogue (Part 2) (NASA)
+Talk Talk - Happiness Is Easy
+Talk Talk - Life's What You Make It
+Talk Talk - April 5th
+Talk Talk - Give It Up
+Talk Talk - Chameleon Day
+Talk Talk - Time It's Time
+Martin L. Gore - Smile in the Crowd
+Martin L. Gore - Gone
+Martin L. Gore - Never Turn Your Back on Mother Earth
+Martin L. Gore - Motherless Child
+Peter Gabriel - At Night
+Peter Gabriel - The Feeling Begins
+Peter Gabriel - Gethsemane
+Peter Gabriel - Of These, Hope
+Peter Gabriel - Lazarus Raised
+Peter Gabriel - In Doubt
+Peter Gabriel - A Different Drum
+Peter Gabriel - Zaar
+Peter Gabriel - Troubled
+Peter Gabriel - Open
+Peter Gabriel - Before Night Falls
+Peter Gabriel - With This Love - Choir
+Peter Gabriel - Sandstorm
+Peter Gabriel - Stigmata
+Peter Gabriel - Wall of Breath
+Peter Gabriel - The Promise of Shadows
+Peter Gabriel - Disturbed
+Peter Gabriel - It Is Accomplished
+Peter Gabriel - Bread and Wine
+Peter Gabriel - Of These, Hope - Reprise
+Pendragon - As Good as Gold
+Horse - Sacrifice
+Horse - Journey
+Horse - And I have love you
+Toad - Cottonwood Hill
+Toad - A Life That Ain't Worth Livin
+Toad - Tank
+Toad - They Say I'm Made
+Toad - Life Goes On
+Toad - Pig's Walk
+Toad - The One I Mean
+Black Widow - In Ancient Days
+Black Widow - Way to Power
+Black Widow - Come to the Sabbath
+Black Widow - Conjuration
+Black Widow - Seduction
+Black Widow - Attack of the Demon
+Black Widow - Sacrifice
+Wild Turkey - Butterfly
+Wild Turkey - To the Stars
+Wild Turkey - Twelve Streets of Cobbled Black
+Wild Turkey - Dulwich Fox
+Wild Turkey - Easter Psalm
+Wild Turkey - Sanctuary
+Wild Turkey - One Sole Survivor
+Wild Turkey - Gentle Rain
+Wild Turkey - Battle Hymn
+Wild Turkey - Sentinel
+Cargo - Sail Inside
+Cargo - Cross Talking
+Cargo - Finding Out
+Cargo - Summerfair
+Cargo - Choker
+Cargo - Lydia Purple
+Cargo - Yelly Rose
+Cargo - If Mr. Right Comes Along
+Cargo - Little Sister
+Cargo - Walk on By
+Cargo - Run Away
+Cargo - One More Chance
+Pendragon - The Masquerade Overture
+Pendragon - Paintbox
+Pendragon - The Pursuit of Excellence
+Pendragon - Guardian of My Soul
+Pendragon - The Shadow
+Pendragon - Masters of Illusion
+Pendragon - Schizo
+Porcupine Tree - Cloud Zero
+Porcupine Tree - Joke's On You
+Porcupine Tree - Navigator
+Porcupine Tree - Rainy Taxi
+Porcupine Tree - Yellow Hedgerow Dreamscape
+Second Hand - Hangin' on an Eyelid
+Second Hand - Lucifer and the Egg
+Second Hand - Somethin' You Got
+Second Hand - Dip It Out of the Bog Fred
+Second Hand - Baby R U Anudda Monster
+Second Hand - Cyclops
+Second Hand - Death May Be Your Santa Claus
+Second Hand - Funeral
+Second Hand - Death May Be Your Santa Claus (Reprise)
+Bel Canto - Unicorn
+Emerson, Lake & Palmer - Romeo & Juliet
+Bel Canto - Le Temps Dégagé
+Bel Canto - Spiderdust
+Bel Canto - Die Geschichte einer Mutter
+Bel Canto - Mornixuur
+Big Day - Zostawić ślad
+Nick Cave - Avalanche
+Nick Cave & the Bad Seeds - From Her to Eternity
+Nick Cave - Cabin Fever!
+Nick Cave - Well of Misery
+Nick Cave - In the Ghetto
+Nick Cave - A Box for Black Paul
+Nick Cave - Wings off Flies
+Nick Cave - Saint Huck
+Nick Cave - The Moon Is in the Gutter
+Nick Cave & the Bad Seeds - Tupelo
+Nick Cave - Say Goodbye to the Little Girl Tree
+Nick Cave - Train Long-Suffering
+Nick Cave - Black Crow King
+Nick Cave - Knockin' on Joe
+Nick Cave - Wanted Man
+Nick Cave - Blind Lemon Jefferson
+Nick Cave - The Six Strings That Drew Blood
+Uriah Heep - Walking in Your Shadow
+Uriah Heep - Real Turned On
+Uriah Heep - I'll Keep On Trying
+Uriah Heep - Time to Live
+Uriah Heep - High Priestess
+Uriah Heep - Lucy Blues
+Uriah Heep - Born in a Trunk (Previously Unreleased)
+Radiohead - Street Spirit
+The Nefilim - Still Life
+The Nefilim - Xodus
+The Nefilim - Zoon [Part 1 & 2] (Saturation)
+The Nefilim - Zoon [Part 3] (Wake World)
+Jethro Tull - Heavy Water
+Kasia Kowalska - Chcę znać swój grzech
+Pendragon - King of the Castle
+Ginhouse - I Cannot Understand
+Ginhouse - The Journey
+Gila - Kommunikation
+Smashing Pumpkins - Eye
+The Legendary Pink Dots - Day Zero
+Depeche Mode - It's No Good
+Depeche Mode - Sister of Night
+Depeche Mode - Freestate
+King Crimson - Coda: Marine 475
+Big Day - Jeszcze jeden dzień
+Big Day - Miłość
+Inkubus Sukkubus - All the Devil's Men
+Inkubus Sukkubus - Belladonna & Aconite
+Inkubus Sukkubus - Vampyres
+Big Day - Bliskość
+Inkubus Sukkubus - Eternity
+Emerson, Lake & Palmer - Creole Dance
+Emerson, Lake & Palmer - Finale (Medley): Fanfare for the Common Man/America/Rondo
+Paco de Lucía & Orquesta de Cadaques - Concierto de Aranjuez: Adagio
+Ken Hensley - From Time To Time
+King Crimson - Frame By Frame
+The Legendary Pink Dots - Stoned Obit 1980
+Soft Machine - Moon in June
+Beggar's Opera - Pathfinder
+Camel - Changing Places
+David Bowie - Life on Mars?
+Vanilla Fudge - She's Not There
+Vanilla Fudge - Bang Bang
+Vanilla Fudge - Stra (Illusion Of My Childchood - Part One)
+Vanilla Fudge - Wber (Illusion Of My Childchood - Part Two)
+Vanilla Fudge - Take Me For a Little While
+Vanilla Fudge - Ryfi (Illusion Of My Childchood - Part Three)
+Vanilla Fudge - Eleanor Rigby
+Vanilla Fudge - Elds
+Philip Glass - Akhnaten - Act II - Scene 1: The Temple
+Philip Glass - Akhnaten - Act II - Scene 2: Akhnaten and Nefertiti
+Jerry Goldsmith - Arthur's Farewell
+Loreena McKennitt - Night Ride Across the Caucasus
+Philip Glass - Akhnaten - Act III - Scene 2: Attack and Fall
+Philip Glass - Akhnaten - Act III - Scene 3: The Ruins
+Philip Glass - Akhnaten - Act III - Scene 4: Epilogue
+Uriah Heep - Return To Fantasy
+Uriah Heep - Shady Lady
+Uriah Heep - Devil's Daughter
+Uriah Heep - Beautiful Dream
+Uriah Heep - Prima Donna
+Uriah Heep - Your Turn To Remember
+Uriah Heep - Showdown
+Uriah Heep - Why Did You Go
+Uriah Heep - A Year Or A Day
+King Crimson - Larks' Tongues in Aspic (live)
+King Crimson - The Fright Watch (live)
+Philip Glass - Itaipu - III. The Dam
+Philip Glass - Itaipu - IV. To the Sea
+Bachman-Turner Overdrive - Rock Is My Life, and This Is My Song
+Bachman-Turner Overdrive - Not Fragile
+Bachman-Turner Overdrive - Roll On Down the Highway
+Bachman-Turner Overdrive - You Ain't Seen Nothing Yet
+Bachman-Turner Overdrive - She's a Devil
+Bachman-Turner Overdrive - Find Out About Love
+Bachman-Turner Overdrive - Away From Home
+Elton John - If the River Can Bend
+Elton John - The Big Picture
+Dead Can Dance - The Protagonist
+Fish - A Gentleman's Excuse Me
+Elton John - Wicked Dreams
+Michael Nyman - Bravura in the Face of Grief
+Wishbone Ash - Lady Jay
+Wishbone Ash - FUBB
+The Rolling Stones - Dancing With Mr. D
+The Rolling Stones - Jumping Jack Flash
+The Rolling Stones - Nineteenth Nervous Breakdown
+The Rolling Stones - If You Can't Rock Me
+The Rolling Stones - Play With Fire
+Novalis - Banished Bridge
+Novalis - High Evolution
+Novalis - Laughing
+Novalis - Inside of Me (Inside of You)
+Free - Heavy Load
+Wishbone Ash - Doctor
+Tindersticks - El Diablo en el Ojo
+Tindersticks - A Night In
+Tindersticks - No More Affairs
+Tindersticks - Travelling Light
+Nick Cave - The Good Son
+Strawbs - Burning for Me
+Loreena McKennitt - Marco Polo
+Led Zeppelin - The Girl I Love She Got Long Black Wavy Hair
+The Doors - Black Train Song
+AC/DC - Rocker
+Aunt Mary - Playthings of the Wind
+Aunt Mary - Blowin' Tiffany
+Aunt Mary - G Flat Road
+Buffalo - Bean Stew
+Buffalo - Dead Forever
+James Bernard - Overture - Omens of Nosferatu
+James Bernard - Journey to Orlok's Castle
+Marsupilami - AB Initio Ad Finem (The Opera)
+Captain Beyond - Dancing Madly Backwards (On a Sea of Air)
+Captain Beyond - Armworth
+Captain Beyond - Myopic Void
+Captain Beyond - Mesmerization Eclipse
+Captain Beyond - Raging River of Fear
+James Bernard - Ellen by the Seashore
+James Bernard - The Ship of Doom
+Simon & Garfunkel - Bridge Over Troubled Water
+Yes - Harold Land
+Two Witches - Like Christopher Lee
+Two Witches - Dead Dog's Howl
+The Cure - Faith
+Uriah Heep - Magician's Birthday
+Yes - Children of Light
+The Tear Garden - In Search of My Rose
+Yes - Be the One
+Yes - Bring Me To the Power
+Simon & Garfunkel - The Boxer
+Inkubus Sukkubus - The Witch of Berkeley
+James Bernard - The Power of Orlok / The Death of Ellen
+Patti Smith - 1959
+Patti Smith - Waiting Underground
+Patti Smith - Spell
+Patti Smith - Dead City
+Patti Smith - Blue Poles
+Hans Zimmer - Sarajevo
+Hans Zimmer - Chase
+James Bernard - Ellen Sleep-Walks
+King Crimson - Book of Saturday
+Marcel - God Rest Ye Merry Gentlemen
+Virus - X-Mas Submarine
+Dies Irae - Silent Night
+Virus - Old Time Movie
+Virus - Going On
+Virus - King Heroin
+Kleptomania - Moonchild
+Kleptomania - Eligie
+Kleptomania - Visit For Above
+Man - Spunk Rock
+Yes - For Everyone
+John Kongos - Tokoloshe Man
+Birth Control - Stop Little Lady
+Birth Control - Pandemonium
+Road - I'm Trying
+Road - Road
+The United States of America - The American Metaphysical Circus
+John Barry - Moonraker: Main Title
+Fuse - Show Me
+Fuse - To Your Health
+Warpig - Tough Nuts (Melody With Balls)
+Warpig - Rock Star
+Nick Cave & the Bad Seeds - I Let Love In
+Barry Adamson - Mr. Eddy's Theme 2
+Aardvark - The Greencap
+Alan Parsons - Jigue
+Nick Cave & the Bad Seeds - People Ain't No Good
+Nick Cave & the Bad Seeds - Far From Me
+Nick Cave & the Bad Seeds - Stranger Than Kindness
+Paul & Linda McCartney - Live and Let Die
+Anderson Bruford Wakeman Howe - And You and I
+Nosferatu - The Wiccaman
+Nosferatu - Abominations
+Nosferatu - Arabian Heat
+Nosferatu - The Crystal Ring
+Nosferatu - Diva
+Nosferatu - Siren
+Nosferatu - Pictures of Betrayal
+Nosferatu - Vampyres Cry
+Nosferatu - Inside The Devil
+Camel - Send Home the Slates
+Rick Wakeman - Recollection
+Rick Wakeman - Music reincarnate - The Realisation
+Tony Banks - From the Undertow
+Rick Wakeman - Music reincarnate - The Spaceman
+Rick Wakeman - Catherine Parr
+Rick Wakeman - The Prisoner
+Tony Banks - Lucky Me
+Tony Banks - The Lie
+Tony Banks - After the Lie
+Tony Banks - A Curious Feeling
+Tony Banks - Forever Morning
+Tony Banks - You
+Tony Banks - Somebody Else's Dream
+Tony Banks - The Waters of Lethe
+Tony Banks - For a While
+Tony Banks - In the Dark
+The Beatles - From Me To You
+Rick Wakeman - Journey to the Center of the Earth
+Rick Wakeman - Catherine Howard
+Rick Wakeman - Lancelot & The Black Knight
+Rick Wakeman - Anne Boleyn
+Rick Wakeman - The Forrest
+Le Orme - Collage
+Le Orme - Era Inverno
+Le Orme - Cemento Armato
+Le Orme - Sguardo Verso il Cielo
+Le Orme - Alienazione
+Le Orme - Una Delcezza Nuova
+Le Orme - La Porta Chiusa
+Le Orme - Breve Immagine
+Le Orme - Gloco Di Bimba
+Le Orme - Figure Di Cartone
+Le Orme - Aspettando l'Alba
+Le Orme - Evasione Totale
+Le Orme - Immagini
+Le Orme - Morte di un Fiore
+Peter Gabriel - Come Talk to Me
+Tindersticks - Mistakes
+Tindersticks - Sleepy Song
+Rick Wakeman - Arthur and Guinevere
+Thin Lizzy - Whisky in the Jar
+Thin Lizzy - Vagabond of the Western World
+Thin Lizzy - Little Girl in Bloom
+Thin Lizzy - Still in Love With You
+Thin Lizzy - Philomena
+Thin Lizzy - The Boys Are Back in Town
+Thin Lizzy - Emerald
+Thin Lizzy - Old Flame
+Thin Lizzy - Massacre
+John Barry - Main Theme - On Her Majesty's Secret Service
+John Barry - We Have All the Time in the World
+John Barry - Do You Know How Christmas Trees Are Grown?
+Blodwyn Pig - The Modern Alchemist
+Blodwyn Pig - Ain't Ya Coming Home, Babe?
+The Gathering - Strange Machines
+Spooky Tooth - I Am The Walrus
+U.K. - Night After Night
+The Beatles - Ticket To Ride
+Andromeda - Go Your Way
+Andromeda - Exodus
+King Crimson - Night watch
+Home - Schooldays
+Home - The Old Man Dying
+Home - Time Passes By
+Home - The Old Man Calling (Save the People)
+Home - The Disaster
+Home - The Sun's Revenge
+Home - A Secret To Keep
+Home - The Brass Band Played
+Home - Rejoicing
+Home - The Disaster Returns (Devastation)
+Home - The Death of the Alchemist
+Home - The Alchemist
+Talk Talk - I Believe in You
+Killing Joke - Pleasures Of The Flesh
+The Gathering - In Motion #1
+John Wetton - Open Your Eyes
+Mahavishnu Orchestra - Sanctuary
+Le Orme - Contrappunti
+Le Orme - Frutto Acerbo
+Deep Purple - Sometimes I Feel Like Screaming
+Camel - Cóbh
+Camel - Harbour of Tears
+Camel - Under the Moon
+Camel - Watching the Bobbins
+Greg Lake - Lend Your Love to Me Tonight
+Bruce Springsteen - One Step Up
+Tom Jones - Delilah
+Leonard Cohen - Avalanche
+Bruce Springsteen - Valentine's Day
+Inside - Vampire
+Jon Anderson - Enter Ye the Mystery School
+Jon Anderson - Ave Verum
+Scott Walker - Farmer in the City
+Inside - Unwanted World: Light
+Inside - The Whip
+Inside - Send Me the Moon
+Scott Walker - Bouncer See Bouncer
+Pink Floyd - Julia Dream
+Dead Can Dance - Advent
+Dead Can Dance - Anywhere Out of the World
+Dead Can Dance - Ascension
+Dead Can Dance - Avatar
+Dead Can Dance - Cantara
+Dead Can Dance - Circumradiant Dawn
+Dead Can Dance - Dawn of the Iconoclast
+Dead Can Dance - De Profundis (Out of the Depths of Sorrow)
+Dead Can Dance - Enigma of the Absolute
+Dead Can Dance - In the Wake of Adversity
+Dead Can Dance - Indoctrination (A Design for Living)
+Dead Can Dance - Mesmerism
+Dead Can Dance - Musica Eternal
+Dead Can Dance - Persephone (The Gathering of Flowers)
+Dead Can Dance - Summoning of the Muse
+Dead Can Dance - The Cardinal Sin
+Dead Can Dance - Windfall
+Dead Can Dance - Xavier
+The Stranglers - (Get A) Grip (On Yourself)
+The Stranglers - Dead Loss Angeles
+The Stranglers - Hanging Around
+The Stranglers - Introduction
+The Stranglers - London Lady
+The Stranglers - No More Heroes
+The Stranglers - Something Better Change
+The Stranglers - Tank
+The Stranglers - The Raven
+The Stranglers - Threatened
+Strawbs - Beside the Rio Grande
+Strawbs - Deadly Nightshade
+Strawbs - Ghosts
+Strawbs - Hero and Heroine
+Strawbs - Midnight Sun
+Strawbs - New World
+Strawbs - The Hangman and the Papist
+Strawbs - The Life Auction
+Strawbs - Tomorrow
+XIII. Století - Karneval (Gothic Machine)
+Closterkeller - Czas komety
+Renata Przemyk - Nie Zginiesz
+Renata Przemyk - Zazdrosna
+The Stranglers - Nice 'n Sleazy
+Strawbs - The Soldier's Tale
+Scott Walker - Bolivia '95
+Scott Walker - Patriot (A Single)
+Shirley Bassey - Diamonds Are Forever (Main Title)
+Pink Floyd - Careful With That Axe Eugene
+Pink Floyd - The Gunner's Dream
+Pink Floyd - Wish You Were Here
+Pink Floyd - Your Possible Pasts
+The Cure - All Cats Are Grey
+The Cure - The Hanging Garden
+David Bowie - I'm Deranged
+Deep Purple - April
+Deep Purple - Hey Joe
+Deep Purple - When a Blind Man Cries
+Don McLean - The Grave
+Barclay James Harvest - Float
+Barclay James Harvest - Star Bright
+Barclay James Harvest - The Devils That I Keep
+Electric Light Orchestra - Wild West Hero
+Elton John - Candle in the Wind
+Elton John - Indian Sunset
+Elton John - Roy Rogers
+Emerson, Lake & Palmer - Brain Salad Surgery
+Ennio Morricone - The Man With the Harmonica
+Fish - What Colour Is God?
+Mythos - Mythoette
+Fleetwood Mac - Future Games
+Galahad - Bug Eye
+Galahad - Ocean Blue
+Galahad - There Must Be a Way
+Judas Priest - The Ripper
+Kate Bush - Get Out of My House
+Kate Bush - Hammer Horror
+King Crimson - I Talk to the Wind
+King Crimson - The Court of the Crimson King
+King Crimson - The Law of Maximum Distress: Part One
+King Crimson - The Law of Maximum Distress: Part Two
+New Order - Elegia
+New Order - Vanishing Point
+Nick Cave - Death Is Not the End
+Nick Cave - Mercy Seat
+Nick Cave - Sweetest Embrace
+Ozzy Osbourne - My Jekyll Doesn't Hide
+Ozzy Osbourne - Waiting For Darkness
+Pendragon - Shane
+Peter Gabriel - I Don't Remember
+Peter Gabriel - The Rhythm of the Heat
+Procol Harum - Fires (Which Burnt Brightly)
+Procol Harum - In Held Twas In I
+Psyche - Haunted (Hill House Mix)
+Psyche - Haunted
+Psyche - Influence
+Psyche - Trespass
+Psyche - Vampire
+Rare Bird - Fears Of The Night
+Rare Bird - Her Darkest Hour
+Rare Bird - Hey Man
+Rare Bird - Turn It All Around
+Rare Bird - Turning The Lights Out
+Rare Bird - You're Lost
+Rod Stewart - Mama, You Been On My Mind
+Roxy Music - If There Is Something
+Siouxsie & The Banshees - Night Shift
+Spooky Tooth - Confession
+Spooky Tooth - Credo
+Spooky Tooth - Have Mercy
+Spooky Tooth - Hosanna
+Spooky Tooth - Offering
+Strawbs - Forever
+Strawbs - Witchwood
+Mythos - Oriental Journey
+The Bollock Brothers - Count Dracula
+The Church - Constant in Opal
+The Church - Dead Man's Dream
+The Church - Destination
+The Church - Disappointment
+The Church - Electric
+The Church - Fly Home
+The Church - It Doesn't Change
+The Church - Violet Town
+The Church - Welcome
+The Rolling Stones - Moonlight Mile
+The Moody Blues - All That Is Real Is You
+The Moody Blues - English Sunset
+The Moody Blues - Foolish Love
+The Moody Blues - Lost in a Lost World
+The Moody Blues - One More Time To Live
+The Moody Blues - Our Guessing Game
+U2 - An Cat Dubh
+U2 - New Year's Day
+Van Der Graaf Generator - Cat's Eye/Yellow Fever
+Wishbone Ash - Lullaby
+Anathema - Judgement
+Anathema - One Last Goodbye
+Anathema - Parisienne Moonlight
+Anathema - Transacoustic
+Deine Lakaien - Colour-ize
+Deine Lakaien - Dark Star
+Deine Lakaien - Fight
+Deine Lakaien - Forest
+Deine Lakaien - Frühlingstraum
+Deine Lakaien - Into My Arms
+Deine Lakaien - Intro; Return
+Deine Lakaien - Kasmodiah
+Deine Lakaien - Kiss the Future
+Deine Lakaien - Love Me to the End
+Mythos - Hero's Death
+Deine Lakaien - Love Will Not Die
+Deine Lakaien - My Shadows
+Deine Lakaien - Overpaid
+Deine Lakaien - Sometimes
+Deine Lakaien - The Game
+Deine Lakaien - Try
+Deine Lakaien - Venus Man
+Devil Doll - A Change of Mind
+Devil Doll - A, B, & C
+Devil Doll - Arrival
+Devil Doll - Checkmate
+Devil Doll - Dance of the Dead
+Devil Doll - Do Not Forsake Me
+Devil Doll - Eliogabalus
+Devil Doll - Fall Out
+Devil Doll - Free for All
+Devil Doll - Hammer Into Anvil
+Devil Doll - It's Your Funeral
+Devil Doll - Living in Harmony
+Devil Doll - Many Happy Returns
+Devil Doll - Once Upon a Time
+Devil Doll - The Chimes of Big Ben
+Devil Doll - The General
+Devil Doll - The Girl Who Was... Death
+Devil Doll - The Schizoid Man
+Lacrimosa - Der Kelch des Lebens
+Lacrimosa - Intro (Lacrimosa Theme)
+Lacrimosa - Sanctus
+Mythos - Encyclopedia Terra, Pt. 1
+Mythos - Encyclopedia Terra, Pt. 2
+Quidam - Jest taki samotny dom
+Porcupine Tree - A Smart Kid
+Porcupine Tree - Don't Hate Me
+Porcupine Tree - Even Less i Komentarz Tomasza
+Porcupine Tree - Even Less
+Porcupine Tree - Nine Cats
+Porcupine Tree - Stars Die
+Porcupine Tree - Stop Swimming
+Tiamat - As Long as You Are Mine
+Tiamat - Best Friend Money Can Buy
+Tiamat - Church of Tiamat
+Tiamat - Lucy
+Tiamat - Sympathy for the Devil
+Type O Negative - Black No. 1 (Little Miss Scare-All)
+Type O Negative - Bloody Kisses
+Type O Negative - Creepy Green Light
+Type O Negative - Day Tripper (Medley)
+Type O Negative - Everything Dies
+Type O Negative - All Hallows Eve
+Type O Negative - Red Water
+Type O Negative - Suspended in Dusk
+Type O Negative - World Coming Down
+XIII. Století - Elizabeth
+XIII. Století - Vlčí žena
+Bauhaus - Hollow Hills
+Bauhaus - Silent Hedges
+Joy Division - Insight
+Peter Hammill - Fogwalking
+Peter Hammill - The Fall of the House of Usher
+Uriah Heep - Dreams
+Uriah Heep - Look at Yourself
+Uriah Heep - The Hanging Tree
+Uriah Heep - The Magician's Birthday
+Yes - No Opportunity Necessary, No Experience Needed
+New Model Army - Lullaby
+Aragon - Company of Wolves
+The Legendary Pink Dots - The Death Of Jack The Ripper
+Closterkeller - Agnieszka
+Closterkeller - Ate
+Closterkeller - Fortepian
+Closterkeller - Graphite
+Peter Banks - Beyond the Loneliest Sea
+Closterkeller - Na krawędzi
+Closterkeller - Phantom
+Closterkeller - Zaklęta w marmur
+Hawkwind - Elfin
+Hawkwind - Kapal
+Hawkwind - Love in Space
+Hawkwind - Silver Machine
+Hawkwind - Vega
+Hawkwind - Welcome
+Hawkwind - Xenomorph
+Blue Öyster Cult - (Don't Fear) The Reaper
+Blue Öyster Cult - Astronomy
+Blue Öyster Cult - Golden Age of Leather
+Blue Öyster Cult - I Love the Night
+Blue Öyster Cult - Joan Crawford
+Blue Öyster Cult - Lonely Teardrops
+Blue Öyster Cult - Nosferatu
+Blue Öyster Cult - Shooting Shark
+Blue Öyster Cult - The Revenge of Vera Gemini
+Blue Öyster Cult - The Vigil
+Blue Öyster Cult - Veteran of the Psychic Wars
+Abraxas - Dorian Gray
+Abraxas - Excalibur
+Abraxas - Kameleon
+Abraxas - Michel de Nostredame - mistrz z Salon
+Abraxas - Velvet
+Eloy - Between Future and Past
+Eloy - Ro Setau
+Chris De Burgh - The Traveller
+Fruupp - Graveyard Epistle
+The Alan Parsons Project - I Robot
+Jon Anderson - State of Independence
+The Alan Parsons Project - Voyager
+John Lennon - Aisumasen (I'm Sorry)
+John Lennon - Bring On The Lucie
+John Lennon - Cold Turkey
+John Lennon - Give Me Some Truth
+John Lennon - God
+John Lennon - How Do You Sleep?
+John Lennon - Jealous Guy
+John Lennon - Look At Me
+John Lennon - Mother
+John Lennon - Steel And Glass
+John Lennon - Working Class Hero
+Marianne Faithfull - After the Ceasefire
+Marianne Faithfull - As Tears Go By
+Marianne Faithfull - For Wanting You
+Marianne Faithfull - Great Expectations
+Marianne Faithfull - Incarceration of a Flower Child
+Marianne Faithfull - Marathon Kiss
+Marianne Faithfull - Tower of Song
+Marianne Faithfull - Why D'Ya Do It
+Marianne Faithfull - Wilder Shores of Love
+Styx - Aku-Aku
+Styx - Blue Collar Man
+Styx - Man In The Wilderness
+Styx - Miss America
+Styx - Pieces Of Eight
+Styx - Queen Of Spades
+Styx - Renegede
+Styx - Suite Madame Blue
+Vanilla Fudge - Faceless People
+Vanilla Fudge - Season Of The Witch
+Vanilla Fudge - Some Velvet Morning
+Vanilla Fudge - Thoughts
+Vanilla Fudge - Where Is Happiness
+Vanilla Fudge - You Keep Me Hanging On
+Marillion - Assassing
+Steve Hackett - Darktown
+Steve Hackett - Days of Long Ago
+Steve Hackett - Jane Austen's Door
+Steve Hackett - Man Overboard
+Steve Hackett - The Golden Age of Steam
+Genesis - Ballad of Big
+Genesis - Blood on the Rooftops
+Krzysztof Komeda - Koukol Laughs
+James Bernard - Frankenstein Must Be Destroyed
+Andromeda - Return to Sanity
+Annie Lennox - Love Song For A Vampire
+Anthony Phillips - Sleepfall: The Geese Fly West
+Arzachel - Azathoth
+Arzachel - Clean Innocent Fun
+Arzachel - Garden of Earthly Delights
+Arzachel - Leg
+Arzachel - Metempsychosis
+Asia - Never in a Million Years
+Atomic Rooster - 7 Streets
+Atomic Rooster - Devil's Answer
+Atomic Rooster - Sleeping for Years
+Atomic Rooster - Winter
+Babe Ruth - The Mexican
+Babe Ruth - Wells Fargo
+Camel - Lawrence
+Camel - Refugee
+Camel - Sahara
+Camel - The Final Encore
+Basil Poledouris - muzyka z filmu The Hunt For Red October
+Beggar's Opera - Nimbus
+Benjamin Frankel - muzyka z filmu The Curse of the Werewolf (1961)
+Bill Finley - Faust
+Black Sabbath - Black Sabbath
+Black Sabbath - N.I.B.
+Black Sabbath - Psycho Man
+Black Sabbath - Solitude
+Black Sabbath - Who Are You?
+Bloodrock - A Certain Kind
+Bloodrock - Breach of Lease
+Bloodrock - Hangman's Dance
+Bloodrock - Jessica
+Bloodrock - Magic Man
+Bloodrock - Whiskey Vengeange
+Bob Dylan - Main Title Theme (Billy)
+Bob Dylan - Blowin' in the Wind
+Bob Dylan - Señor (Tales Of Yankee Power)
+Budka Suflera - Jest taki samotny dom
+Carlo Martelli - muzyka z filmu The Curse of the Mummy's Tomb (1964)
+Christie - San Bernardino
+Christopher Gunning - motyw przewodni z filmu "Hands of the Ripper" (1971)
+Colin Bass - Burning Bridges
+Colin Bass - Denpasar Moon
+Colin Bass - Holding Out My Hand
+Czar - A Day in September
+Czar - Beyond the Moon
+Czar - Cecelia
+Czar - Dawning of a New Day
+Czar - Follow Me
+Czar - Today
+Czar - Tread Softly on My Dreams
+Czesław Niemen - Piosenka dla zmarłej
+Daniele Amfitheatrof - muzyka z filmu Major Dundee
+David Whitaker - muzyka z filmu Dr. Jekyll and Sister Hyde (1971)
+Don Fardon - Indian Reservation
+Dooley Wilson - As Time Goes By
+Dreams of Sanity - Phantom Of The Opera
+Dust - From a Dry Camel
+Earth & Fire - Atlantis
+Earth & Fire - Fanfare
+Earth & Fire - Interlude
+Earth & Fire - Maybe Tomorrow, Maybe Tonight
+Earth & Fire - Song of the Marching Children
+Gravy Train - Messenger
+Edgar Winter Group - Frankenstein
+Eire Apparent - Captive in the Sun
+Eire Apparent - Morning Glory
+Eire Apparent - Mr. Guy Fawks
+Eire Apparent - The Clown
+Fairport Convention - Meet on the Ledge
+Focus - Focus II
+Franz Schubert - Trio in E-flat major (Op. 100): Andante con moto
+Frijid Pink - We're Gonna Be There (When Johnny Comes Marchin' Home)
+Full Moon - Awakening
+Full Moon - Beltaine Fires
+Full Moon - Nemesis
+The Garden Of Delight - The Relation of Light to Shadow
+George Harrison - All Things Must Pass
+George Harrison - Ballad of Sir Frankie Crisp (Let It Roll)
+George Harrison - Beware of Darkness
+Gladys Knight - Licence to Kill
+Glen Weston - What Is A Youth? (Love Theme From Romeo and Juliet)
+Gnidrolog - A Dog With No Collar
+Gnidrolog - I Could Never Be a Soldier
+Gnidrolog - Lady Lake
+Gnidrolog - Same Dreams
+Gnidrolog - Ship
+Gnidrolog - Social Embarrassment
+Goblin - Death Dies (Album Version)
+Goblin - Profondo Rosso (Album Version)
+Goblin - Deep Shadows (Album Version)
+Goblin - Mad Puppet
+Goblin - Suspiria
+Goblin - School At Night (Lullaby - Child Version)
+Grand Funk Railroad - Anybody's Answer
+Grand Funk Railroad - Heartbreaker
+Grand Funk Railroad - Inside Looking Out
+Grand Funk Railroad - Loneliest Rider
+Grand Funk Railroad - Loneliness
+Grand Funk Railroad - The Railroad
+Grand Funk Railroad - We’re an American Band
+Greg Lake - C'est la vie
+Harold Oblong - Somebody Super Like You (Beef Construction Song)
+Fairport Convention - Matty Groves
+Indian Summer - Another Tree Will Grow
+Indian Summer - Black Sunshine
+Indian Summer - Emotions of Men
+Indian Summer - From the Film of the Same Name
+Indian Summer - Glimpse
+Indian Summer - God Is the Dog
+Indian Summer - Half Changed Again
+Indian Summer - Secrets Reflected
+Iron Maiden - Don't Look to the Eyes of a Stranger
+Iron Maiden - Peace of Mind
+Iron Maiden - Quest for Fire
+Iron Maiden - The Evil That Men Do
+Jane - Daytime
+Jane - Hangman
+Jane - Spain
+Jane - Together
+Jane - Try To Find
+Jane - Wind
+Jane - Windows
+Jericho - Justin and Nova
+Jerry Goldsmith - Giza Port
+Jerry Goldsmith - Omen Suite
+Jerry Goldsmith - The Mummy
+Jerry Goldsmith - The Sand Volcano
+Jerry Goldsmith - The Sarcophagus
+Jessica Harper - Old Souls
+Joan Baez - Night They Drove Old Dixie Down
+John Cale - Streets of Laredo
+John Williams - Temat z filmu Jaws (1990)
+Johnny Cash - Ghost Rider in the Sky
+Jon & Vangelis - So Long Ago, So Clear
+Kin Ping Meh - Fairy Tales
+Kansas - Cheyenne Anthem
+Keith Emerson - Inferno (Main Titles Theme)
+Keith Emerson - Matter Tenebrarum
+Keith Emerson - Taxi Ride (Rome)
+Lake of Tears - Come Night I Reign
+Lake of Tears - The Homecoming
+Lake of Tears - To Blossom Blue
+Led Zeppelin - Stairway To Heaven
+Led Zeppelin - Tea For One
+Led Zeppelin - Whole Lotta love
+Live - Rattlesnake
+Malcolm Williamson - The Brides of Dracula
+Mandalaband - Aenord's Lament
+Mandalaband - Almar's Tower
+Mandalaband - Coronation Of Damien
+Mandalaband - Dawn Of A New Day
+Mandalaband - Departure From Carthilias
+Mandalaband - Elsethea
+Mandalaband - Florian's Song
+Mandalaband - Funeral Of The King
+Mandalaband - Like The Wind
+Mandalaband - Ride To The City
+Mandalaband - Silesandre
+Mandalaband - The Eye Of Wendor
+Mandalaband - The Tempest
+Mandalaband - Witch Of Waldow Wood
+Medicine Head - Only to Do What Is True
+Mike Batt - Insh'Allah
+Moonspell - Adaptables
+Moonspell - Disappear Here
+Morte Macabre - Apoteosi del Mistero
+Frame - All I Really Want Explain
+Manfred Mann's Earth Band - Angels At My Gate
+Manfred Mann's Earth Band - Blinded By The Light
+Manfred Mann's Earth Band - California
+Manfred Mann's Earth Band - Chicago Institute
+Manfred Mann's Earth Band - Demolition Man (Live)
+Manfred Mann's Earth Band - Don't Kill It Carol
+Manfred Mann's Earth Band - Drowning On Dry Land
+Manfred Mann's Earth Band - Earth Hymn
+Manfred Mann's Earth Band - Father Of Day, Father Of Night
+Manfred Mann's Earth Band - FishSoup
+Manfred Mann's Earth Band - For You
+Manfred Mann's Earth Band - Glorified Magnified
+Manfred Mann's Earth Band - Joy Bringer
+Manfred Mann's Earth Band - Messin'
+Manfred Mann's Earth Band - Mighty Quinn
+Manfred Mann's Earth Band - One Way Glass
+Manfred Mann's Earth Band - Questions
+Manfred Mann's Earth Band - Redemption Song (Live)
+Manfred Mann's Earth Band - Singing the Dolphin Through
+Manfred Mann's Earth Band - Spirits in the Night (Live)
+Manfred Mann's Earth Band - Spirits In The Night
+Manfred Mann's Earth Band - Starbird
+Manfred Mann's Earth Band - The Road To Babylon
+Joan Baez - Matty Groves
+Manfred Mann's Earth Band - Visionary Mountains
+Nektar - A Tab In The Ocean
+Nektar - Crying In The Dark
+Nektar - Desolation Valley
+Nektar - King Of Twilight
+Nektar - Waves
+Nosferatu - Dark Angel
+Nosferatu - Farewell My Little Earth
+Nosferatu - The Hunger
+Nosferatu - Number 4
+Nosferatu - Requiem
+Nosferatu - The Haunting
+Nosferatu - Willy The Fox
+Omega - Ten Thousand Steps
+Patrick Doyle - He Was My Father
+Patrick Doyle - Temat z filmu "Dead Again"
+Patti Smith - Privilege (Set Me Free)
+Paul Williams - Phantom's Theme (Beauty and the Beast)
+Procol Harum - The Worm & The Tree: Pt. 1, Introduction-Menace-Occupation
+Pete Sinfield - A House of Hopes and Dreams
+Pete Sinfield - Envelopes of Yesterday
+Pete Sinfield - Still
+Pete Sinfield - The Night People
+Pete Sinfield - The Piper
+Pete Sinfield - The Song of the Sea Goat
+Pete Sinfield - Under the Sky
+Pete Sinfield - Wholefood Boogie
+Pete Sinfield - Will It Be You
+Procol Harum - The Worm & The Tree: Pt. 2, Enervation-Expectancy-Battle
+Procol Harum - The Worm & The Tree: Pt. 3, Regeneration-Epilogue
+Marc Almond - Come in Sweet Assassin
+Philip Glass - Akhnaten - Act I - Scene 1: Funeral of Amenhotep III
+Popol Vuh - muzyka do Nosferatu Werner'a Herzog'a (1979)
+Python Lee Jackson - In a Broken Dream
+Raw Material - Empty Houses
+Ringo Starr - Beaucoups Of Blues
+Ron Goodwin - Motyw Przewodni z filmu "Tylko dla orłów"
+Rory Gallagher - Crest of a Wave
+Rory Gallagher - I'm Not Awake Yet
+Rory Gallagher - Should've Learnt My Lesson
+Sergei Prokofiev & Keith Emerson - Suite from Romeo and Juliet
+Simon & Garfunkel - April Come She Will
+Simon & Garfunkel - Sound of Silence
+Siouxsie & The Banshees - Premature Burial
+Solstice - Cheyenne
+Stephen Warbeck - Shakespeare in Love
+Steve Harley & Cockney Rebel - Carry Me Again
+Steve Harley & Cockney Rebel - Finally a Card Game
+Steve Harley & Cockney Rebel - Here Comes the Sun
+Umbra Et Imago - Der kleine Tod
+Steve Harley & Cockney Rebel - Seeking a Love
+Steve Harley & Cockney Rebel - Too Much Tenderness
+Ten Years After - Turned off T.V. Blues
+The Animals - Inside Looking Out
+The Beatles - I Want You (She's So Heavy)
+The Beatles - Let It Be
+The Bolshoi - Barrowlands
+The Cranberries - Animal Instict
+The Cranberries - Delilah
+The Cranberries - Fee Fi Fo
+The Cranberries - Promises
+The Crazy World Of Arthur Brown - Fire
+The Damned - Shadow of Love
+Philip Glass, Kronos Quartet - Dr. Van Helsing and Dracula
+Philip Glass, Kronos Quartet - Dracula Enters
+Philip Glass, Kronos Quartet - Dracula
+Philip Glass, Kronos Quartet - In the Theatre
+Philip Glass, Kronos Quartet - Mina's Bedroom / The Abbey
+Philip Glass, Kronos Quartet - Renfield
+Philip Glass, Kronos Quartet - The End of Dracula
+Philip Glass, Kronos Quartet - The Inn
+The Trip - Ultima Ore a Ode a J.Hendrix
+Thomas Dolby - Byronic Love
+Thomas Dolby - Fantasmagoria
+Thomas Dolby - Gipsygirl
+Thomas Dolby - Impalement
+Thomas Dolby - It's His!
+Thomas Dolby - Leech Juice
+Thomas Dolby - Mary's Theme
+Thomas Dolby - Party Games
+Thomas Dolby - Restless Sleep 1, 2 & 3
+Thomas Dolby - Shelleymania
+Thomas Dolby - Sin And Buggery
+Thomas Dolby - Skullpulse
+Thomas Dolby - The Crucifix
+Thomas Dolby - The Fundamental Source
+Thomas Dolby - muzyka z filmu Kena Russella Gothic (1986) cz.2
+Tristram Cary - muzyka z filmu Blood from the Mummy's Tomb (1971)
+Umbra Et Imago - Gedanken eines Vampirs
+Umbra Et Imago - Gothic Erotic
+Velvett Fogg - Come Away Melinda
+Warfare - Baron Frankenstein
+Warfare - Phantom Of The Opera
+Yello - Stalakdrama
+Fields of the Nephilim - Preacher Man
+Brian Eno - By This River
+Brian Eno - Everything Merges With the Night
+Brian Eno - Here He Comes
+Brian Eno - I'll Come Running
+Brian Eno - Mother Whale Eyeless
+Brian Eno - Spirits Drifting
+Brian Eno - The Fat Lady of Limbourg
+Brian Eno - The Great Pretender
+Brian Eno - The Paw Paw Negro Blowtorch
+Cat Stevens - Lady D'Arbanville
+Cat Stevens - Lilywhite
+Collage - Safe
+Colosseum - The Valentyne Suite
+Umbra Et Imago - Wake Up
+Umbra Et Imago - Devotion
+Marc Almond - Addicted
+Umbra Et Imago - Sail Away
+Marc Almond - Caged
+Marc Almond - Out There
+Marc Almond - Child Star
+Peter Hammill - The Emperor In His War Room
+Marc Almond - The Edge of Heartbreak
+Marc Almond - Love To Die For
+Marc Almond - Betrayed
+Inside - Puppets Have No Tears
+Inside - Last Embrace: Intro
+Scott Walker - Tilt
+Marillion - Happy Ending
+Basil Poledouris - Battle of the Mounds
+Deep Purple - The Mule
+Deep Purple - Wasted Sunset
+Galahad - The Automaton
+Deep Purple - Black Knight
+Tomasz Żółtko - Labirynt oświeconych
+King Crimson - This Night Wounds Time
+Hannibal - Look Upon Me
+Hannibal - Winter
+Amon Düül II - Soap Shop Rock
+Tetragon - Fugue
+King Crimson - Sharks' Lungs In Lemsip
+King Crimson - Larks' Tongues In Aspic Part I
+King Crimson - Easy Money
+King Crimson - Tight Scrummy
+King Crimson - Peace - A Theme
+King Crimson - Cat Food
+Pet Shop Boys - Hit and Miss
+Blue Öyster Cult - Monsters
+The Sensational Alex Harvey Band - Water Beastie
+Blue Öyster Cult - Siege and Investiture of Baron von Frankenstein's Castle at Weisseria
+Jadis - Hold Your Breath
+Funhouse - Voices (Short Version)
+Hawkwind - Pulsing Cavern
+Hawkwind - Needle Gun
+Hawkwind - Assassins of Allah (Hassan I Sahba)
+Steamhammer - Riding on the L&N
+Steamhammer - Hold That Train
+Jethro Tull - Nothing Is Easy
+Jethro Tull - A Song for Jeffrey
+Jethro Tull - Sossity, You're a Woman
+Jethro Tull - Guitar Solo
+Jethro Tull - For a Thousand Mothers
+David Bowie - Space Oddity
+Jericho Jones - Freedom
+Jericho Jones - Mare Tranquilitatas
+Jericho Jones - Man in the Crowd
+Jericho Jones - There Is Always a Train
+Horslips - Setanta
+Horslips - Maeve's Court
+Horslips - Charolais
+Big Country - Remembrance Day
+Big Country - The Red Fox
+Big Country - Seer
+Basil Poledouris - Prologue
+Patti Smith - Dancing Barefoot
+Nick Cave & the Bad Seeds - Knoxville Girl
+Chris De Burgh - Crusader
+Aphrodite's Child - End of the World
+Redbone - Witch Queen of New Orleans
+Cozy Powell - Dance With the Devil
+Slade - Mama Weer All Crazee Now
+Mud - Hypnosis
+Blackfoot Sue - Standing in the Road
+Suzi Quatro - Can The Can
+Hot Chocolate - Emma
+The Hollies - Long Cool Woman In a Black Dress
+Can - I Want More
+Smokie - I'll Meet You At Midnight
+Writing On the Wall - Shadow of Man
+Writing On the Wall - Aries
+Prince Scandal - September Song
+Into The Abyss - Crimes in Advance
+Printed At Bismarck's Death - Le Juif Errant
+Änglagård - Höstsejd
+Änglagård - Skogsranden
+Misantrophe - Relatives Menschsein
+Elton John - Tonight
+Depeche Mode - Blasphemous Rumours
+Arena - Fool's Gold
+Arena - Crying for Help VIII
+Arena - Sirens
+Catweazle - Gulag (Instrumental)
+Catweazle - a: Astray, b: Audience
+Catweazle - Green Room
+Catweazle - Walk on Waves
+Emerson, Lake & Palmer - Fugue
+Arena - Welcome to the Cage
+Catweazle - Counting Out the Time
+Catweazle - Sun-tanned in the Shadows
+Catweazle - Lizards' Journey
+Catweazle - Heathersong
+Wishbone Ash - Phoenix
+Hawkwind - It Is the Business of the Future To Be Dangerous
+Hawkwind - Space Is Their (Palestine)
+Hawkwind - Tibet Is Not China (part 1)
+Hawkwind - Tibet Is Not China (part 2)
+Hawkwind - Wave Upon Wave
+Jon Anderson - Hearts
+Patricia Morrison - Saviours
+Patricia Morrison - The Living End
+Chocolate Spoon - I'm Walking
+Emerson, Lake & Palmer - Heart on Ice
+Arena - Empire of a Thousand Days
+Three Man Army - Butter Queen
+Three Man Army - Another Way
+Spirit of John Morgan - I Want You
+Spirit of John Morgan - She's gone
+The Nice - America
+The Nice - Rondo
+Family - Weaver's Answer
+Diabolus - Night Clouded Moon
+Diabolus - 3 Piece Suite
+Diabolus - Raven's Call
+Pete Brown & Piblokto - Station Song Platform Two
+Pete Brown & Piblokto - Aeroplan Head Woman
+Pete Brown & Piblokto - Can't Get Off The Planet
+Badger - Wheel of Fortune
+Badger - Fountain
+Cat Stevens - Fill My Eyes
+Simon & Garfunkel - America
+Leonard Cohen - Suzanne
+Don McLean - Till Tomorrow
+IQ - Awake and Nervous
+IQ - It All Stops Here
+IQ - Just Changing Hands
+Rainbow - Catch the Rainbow
+Simon & Garfunkel - He Was My Brother
+Simon & Garfunkel - For Emily, Whenever I May Find Her (Live)
+Simon & Garfunkel - The Dangling Conversation
+Donovan - Jersey Thursday
+Donovan - Dona, Dona
+Suzanne Vega - Small Blue Thing
+Suzanne Vega - Undertow
+Suzanne Vega - The Queen and the Soldier
+Cat Stevens - How Can I Tell You
+Leonard Cohen - You Know Who I Am
+Leonard Cohen - Lady Midnight
+Leonard Cohen - Teachers
+Donovan - Universal Soldier
+Gary Numan & Tubeway Army - Me! I Disconnect From You
+Gary Numan & Tubeway Army - Are 'Friends' Electric?
+Gary Numan & Tubeway Army - Down In The Park
+Gary Numan & Tubeway Army - Replicas
+Gary Numan - Engineers
+Gary Numan - Conversation
+Gary Numan - Films
+Gary Numan - We Are Glass
+Kansas - Belexes
+Kansas - Journey From Mariabronn
+Kansas - Apercu
+Kansas - Death Of Mother Nature Suite
+Kansas - The Devil Game
+Kansas - Incomudro - Hymn to the Atman
+Le Orme - In Ottobre
+Abraxas - La Strada
+Phil Collins - That's What You Said
+Phil Collins - Lorenzo
+Phil Collins - Just Another Story
+Phil Collins - Love Police
+Kasia Kowalska - Mój los
+Kasia Kowalska - Tak mi ciebie brak
+Leonard Cohen - Love Calls You by Your Name
+Leonard Cohen - Joan of Arc
+Leonard Cohen - Leaving Green Sleeves
+Roy Harper - I'll See You Again
+Roy Harper - Twelve Hours of Sunset
+Cat Stevens - Moonshadow
+The Moody Blues - Procession
+The Moody Blues - After You Came
+Tony Banks - I Wanna Change the Score
+The Moody Blues - You Can Never Go Home
+Phil Collins - The Same Moon
+Phil Collins - River So Wide
+Cockney Rebel - Chameleon
+Richard Wright - Breaking Water
+Richard Wright - Night of a Thousand Furry Toys
+Richard Wright - Hidden Fear
+Richard Wright - Black Cloud
+Richard Wright - Far from the Harbour Wall
+Richard Wright - Drowning
+Richard Wright - Reaching for the Rail
+Elton John - Chameleon
+Gary Numan - Music for Chameleons
+Status Quo - Pictures of Matchstick Men
+Status Quo - A Year
+Status Quo - Blue Eyed Lady
+Status Quo - Backwater
+Status Quo - Just Take Me
+Status Quo - Drifting Away
+Status Quo - Lonely Man
+Black Sabbath - Heaven and Hell
+The Moody Blues - Day We Meet Again
+Vangelis - Bacchanale
+Vangelis - Symphony to the Powers B (Movements 1 and 2)
+Vangelis - Movement 3 (from Symphony to the Powers B) also known as "Theme from Cosmos"
+Vangelis - So Long Ago, So Clear
+Vangelis - Intestinal Bat
+Vangelis - Needles and Bones
+Vangelis - Heaven And Hell (Part 2): 12 O'Clock
+Vangelis - Aries / A way
+Ancient Grease - Freedom Train (Alternate Take)
+Ancient Grease - Women And Children First
+Scorpions - Inheritance
+Scorpions - Action
+Scorpions - Lonesome Crow
+Amon Düül II - Kanaan
+Amon Düül II - Dem Guten, Schönen, Wahren
+Gentle Giant - City Hermit
+Murphy Blend - At First
+Amon Düül II - Luzifers Ghilom
+Amon Düül II - Henriette Krötenschwanz
+Amon Düül II - Phallus Dei
+Fruupp - Decision
+Climax Blues Band - Flight
+Climax Blues Band - So Many Roads, so Many Trains
+Nektar - One-two-three-four
+Clear Blue Sky - You Mystify
+Tonton Macoute - Don't Make Me Cry
+Tonton Macoute - Flying South in Winter
+Amon Düül II - Cymbals in the End
+Amon Düül II - Freak Out Requiem I
+Amon Düül II - Freak Out Requiem II
+Amon Düül II - Freak Out Requiem III
+Amon Düül II - Freak Out Requiem IV
+Gun - Rat Race
+The Legendary Pink Dots - The Qaspell
+Home - Dreamer
+Home - Knave
+Home - Fancy Lady, Hollywood Child
+Home - Rise Up
+Home - Dear Lord
+Home - Baby Friend of Mine
+Home - Western Front
+Home - Lady of the Birds
+The Beatles - The Fool On The Hill
+The Legendary Pink Dots - Beautiful Machine
+The Legendary Pink Dots - Anastasia
+Free - Over the Green Hills (Part II)
+Pallas - Dance Through The Fire
+Nazareth - Expect No Mercy
+Judas Priest - Beyond the Realms of Death
+Iron Maiden - Strange World
+Judas Priest - Breaking the Law
+Fleetwood Mac - Rattlesnake Shake
+Epitaph - Moving to the Country
+Epitaph - Visions
+Epitaph - Early Morning
+Skin Alley - Living In Sin
+Skin Alley - Marsha
+Skin Alley - Country Aire
+Skin Alley - Night Time
+Orange Peel - You Can't Change Them All
+Strawbs - Goodbye (Is Not an Easy Word to Say)
+Genesis - Snowbound
+Uriah Heep - Footprints in the Snow
+Yazoo - Winter Kills
+Arcadia - Lady Ice
+The Doors - Wintertime Love
+Strawbs - I Only Want My Love to Grow in You
+Strawbs - Hard, Hard Winter
+Strawbs - Charmer
+Strawbs - So Close and Yet So Far Away
+Strawbs - Barcarole (For the Death of Venice)
+The Beatles - Help!
+The Beatles - I Want To Hold Your Hand
+Deine Lakaien - Manastir Baroue
+The Beatles - It's Only Love
+The Beatles - It Won't Be Long
+The Beatles - I'm Happy Just To Dance With You
+The Beatles - All My Loving
+The Beatles - You've Got To Hide Your Love Away
+The Beatles - Misery
+The Beatles - Don't Bother Me
+The Beatles - I Need You
+The Beatles - And I Love Her
+The Beatles - If I Fell
+The Beatles - Dizzy Miss Lizzy
+The Beatles - Please Please Me
+The Beatles - Things We Said Today
+The Beatles - Tell Me What You See
+The Beatles - Across the Universe
+The Beatles - A Taste Of Honey
+The Beatles - She Loves You
+The Beatles - I'll Be Back
+The Garden Of Delight - Colder
+Dreadful Shadows - Dirge
+Umbra Et Imago - Vampir Song
+Manfred Mann's Earth Band - Drowning On Dry Land / Fish Soup
+Siouxsie & The Banshees - Stargazer
+Nosferatu - Thrill Killer
+Galahad - Sir Galahad (Scene One)
+Pär Lindh Project - Night on Bare Mountain
+Arena - Crying for Help IV
+Elton John - Believe
+Elton John - Latitude
+Umbra Et Imago - Desiderium
+Dead Can Dance - Sanvean
+Lacrimosa - Sonne (Acoustic version)
+Ray Manzarek - The Wheel of Fortune (O Fortuna)
+Camel - Nimrodel / The Procession / The White Rider
+Genesis - Scenes From a Night's Dream
+Sparks - Hasta Manana, Monsieur
+Elton John - The Bitch Is Back
+U.F.O. - Too Hot to Handle
+Umbra Et Imago - Never
+Marc Almond - Adored and Explored (7" Edit)
+Light - Dream On
+Warfare - Plague Of The Zombies
+Dilemma - Vampire
+darXtar - Travel Fast Nowwhere
+Timelock - Napoleon Bonaparte
+Warfare - A Solo Of Shadows
+Warfare - A Velvet Rhapsody
+Warfare - Intro/Dracula Theme
+Siouxsie & The Banshees - Voodoo Dolly
+Siouxsie & The Banshees - Nicotine Stain
+Siouxsie & The Banshees - Switch
+Fading Colours - Lie
+Fading Colours - Fable
+Elton John - Madness
+Elton John - Sorry Seems To Be the Hardest Word
+Nosferatu - The Gathering
+Jonathan Elias - The Vampire Coven's Prayer
+Daniel Licht - The Blood Sucker's Ball
+Jim Morrison - Hour For Magic
+Jim Morrison - Freedom Exists
+Jim Morrison - A Feast Of Friends
+The Doors - Waiting for the Sun
+Ultravox - Friend I Call Desire
+John Foxx - Dancing Like a Gun
+Depeche Mode - Somebody
+Richard Stone - Redemption Of The Damned (Finale)
+Marillion - King
+Arena - Out of the Wilderness
+Marillion - Out of This World
+Marillion - Afraid of Sunlight
+The Rolling Stones - She's a Rainbow
+The Rolling Stones - Let's Spend the Night Together
+The Legendary Pink Dots - I Dream Of Jeannie
+Edward Ka-Spel - The Qa'Spel
+Edward Ka-Spel - Laughing Venus
+Strawbs - Lay a Little Light on Me
+The Who - Won't Get Fooled Again
+Roger Hodgson - Only Because of You
+Bryan Ferry - A Song for Europe
+Marillion - Forgotten Sons
+Pet Shop Boys - Some Speculation
+John Wetton - Easy Money
+John Wetton - In the Dead of Night
+John Wetton - Thirty Years
+John Wetton - Starless
+John Wetton - Book of Saturday
+Psyche - The Sundial
+Hawkwind - Jack of Shadows
+The Legendary Pink Dots - This Hollowed Ground
+Tindersticks - Jism
+Hawkwind - Only the Dead Dreams of the Cold War Kid
+Derek & the Dominos - Layla
+Rainbow - A Light in the Black
+Rainbow - Stargazer
+Jon & Vangelis - The Friends of Mr. Cairo
+Tindersticks - Whiskey and Water
+Tindersticks - Marbles
+Jethro Tull - Rare and Precious Chain
+Marc Almond - Old Jack's Charm
+Jethro Tull - Roots to Branches
+Jethro Tull - At Last Forever
+Jethro Tull - This Free Will
+Peter Hammill - The Way
+Matt Monroe - From Russia With Love
+John Barry - 007
+Crystal Phoenix - Dark Shadow: The Dove and the Bat / The Last Flight
+Peter Hammill - Lost
+Television - The Fire
+Revenge of Nephthys - Trace To My Room
+Revenge of Nephthys - Inside Me
+Dreadful Shadows - Homeless
+Dreadful Shadows - Paradize
+Lisa Gerrard - Nilleshna
+Fish - Vigil
+Fish - Credo
+Fish - Boston Tea Party
+Babe Ruth - Dancer
+Babe Ruth - Somebody's Nobody
+Babe Ruth - A Fistful of Dollars
+Babe Ruth - We People Darker Than Blue
+Babe Ruth - Jack O'Lantern
+Babe Ruth - Private Number
+Babe Ruth - Turquoise
+Babe Ruth - Sad but Rich
+Babe Ruth - The Duchess of Orlean
+Tony Banks - Water Out of Wine
+Tony Banks - Back to Back
+Tony Banks - The Final Curtain
+Van Der Graaf Generator - Childlike Faith In Childhood's End
+Southern Death Cult - The Girl
+Southern Death Cult - All Glory
+Babe Ruth - Doctor Love
+Southern Death Cult - The Crypt
+Southern Death Cult - Crow
+Southern Death Cult - Faith
+Southern Death Cult - Vivisection
+Southern Death Cult - Moya (Remix)
+Southern Death Cult - Fatman (Remix)
+Anne Clark - All We Have To Be Thankful Fo
+Anne Clark - Nothing at All
+Anne Clark - Weltschmerz
+Anne Clark - Killing Time
+Anne Clark - True Love Tales
+Anne Clark - Self Destruct
+Anne Clark - Our Darknes
+Parade Ground - Hollywood
+Parade Ground - Modern Hunting
+Parade Ground - I Will Talk
+Parade Ground - Moans
+Parade Ground - Moist Hands
+Parade Ground - Cup Up The Neck-Tie
+Parade Ground - Cut-Throat Business
+Parade Ground - Strange World
+The Cassandra Complex - Children
+The Cassandra Complex - Wonderworld
+The Cassandra Complex - Presents (Come of Age)
+The Cassandra Complex - Pickup
+The Cassandra Complex - Power
+The Cassandra Complex - Prairie Bitch
+The Cassandra Complex - Motherad
+The Cassandra Complex - Dr. Adder
+The Cassandra Complex - And You Say
+The Cassandra Complex - Mind Machine
+Rise And Fall Of A Decade - Arch of Lament
+Rise And Fall Of A Decade - Lisbeth
+Rise And Fall Of A Decade - Nothing to Say, Easy to Answer
+Rise And Fall Of A Decade - A System of Pulleys
+The Cassandra Complex - Lakeside
+Rise And Fall Of A Decade - Without Even Speaking
+Moev - Yeah Whatever
+Rise And Fall Of A Decade - The Amazing Game
+Rise And Fall Of A Decade - Speaking Hands (To Yoshi)
+Moev - Slide
+Moev - Right Hand Of God
+Moev - Capital Heaven
+Portishead - Half Day Closing
+Portishead - Over
+Sergio Mendes & Brasil '66 - Scarborough Fair
+Bryan Ferry - Love Me or Leave Me
+Sergio Mendes & Brasil '66 - Like a Lover
+Lisa Stansfield - Honest
+Sergio Mendes & Brasil '66 - Mas Que Nada
+??? - The Flinstones (brak)
+Sergio Mendes & Brasil '66 - With a Little Help
+The The - Giant
+Ian McDonald - Demimonde
+Ian McDonald - Forever And Ever
+Sinti - The Flinstones
+Tori Amos - Here, In My Head (Live)
+Peter Gabriel - The Time of the Turning
+RPWL - Hole In The Sky (Part 1 ... Fly, Part 2 ... Crawl To You)
+RPWL - Hole In The Sky (Part 3 ... The Promise)
+Jeff Beck - Angel (Footsteps)
+Hawkwind - Lives of Great Men
+Hawkwind - Utopia
+Bad Company - Anna
+Barclay James Harvest - Cold War
+Dead Can Dance - The Ubiquitous Mr Lovegrove
+Lennie Niehaus - Claudia's Theme
+Alice Cooper - Luney Tune
+The Rolling Stones - Out Of Tears
+Hawkwind - Magnu
+Fish - He Knows You Know
+Fish - She Chameleon
+Anthony Phillips - January
+Anthony Phillips - May
+Anthony Phillips - June
+Anthony Phillips - July
+Anthony Phillips - August
+Anthony Phillips - September
+Anthony Phillips - October
+Anthony Phillips - November
+Anthony Phillips - December
+Edward Ka-Spel - Dr. Blizz
+The Legendary Pink Dots - Nadelstadt
+Strawbs - The Antique Suite
+Strawbs - Shine on Silver Sun
+The Moody Blues - Lovely To See You
+The Moody Blues - Overture
+The Famous B. Brothers - In Holiness, In Honour
+Alan Parsons - The Raven
+Hugh Cornwell & Robert Williams - Nosferatu
+Nash The Slash - Children of the Night
+Jerry Goldsmith - Main Title
+Alan Parsons - Oh Life (There Must Be More)
+Max Steiner - Medley: At la Belle Aurore
+Roxy Music - Re-Make/Re-Model
+Roxy Music - Take A Chance With Me
+Roxy Music - Do The Strand
+Russell B. - Apocalypse Des Animaux
+Camel - Three Wishes
+Camel - Lost and Found
+Jon Anderson - Alive & Well
+Jon Anderson - The Kiss
+Camel - Shout
+Camel - Straight to My Heart
+Jon Anderson - Chagall Duet
+Bryan Ferry - The Way You Look Tonight
+James Bernard - Christina
+Bryan Ferry - Easy Living
+Bryan Ferry - When Somebody Thinks You're Wonderful
+Bryan Ferry - Sweet and Lovely
+Bryan Ferry - Miss Otis Regrets
+Bryan Ferry - Time on My Hands
+Bryan Ferry - Lover Come Back to Me
+Bryan Ferry - Falling in Love Again
+Bryan Ferry - You Do Something to Me
+Bryan Ferry - Just One of Those Things
+The Rolling Stones - Mercy Mercy
+Bryan Ferry - September Song
+Bryan Ferry - I'm In The Mood For Love
+The Rolling Stones - Hitch Hike
+Krzysztof Komeda - Kołysanka
+The Rolling Stones - That's How Strong My Love Is
+The Rolling Stones - Good Times
+The Rolling Stones - I'm All Right
+The Rolling Stones - Satisfaction
+The Rolling Stones - Cry To Me
+The Rolling Stones - The Under Assistant West Coast Promotion Man
+The Rolling Stones - The Spider And The Fly
+The Rolling Stones - One More Try
+Depeche Mode - Shouldn't Have Done That
+Pavlov's Dog - Fast Gun
+Depeche Mode - The Sun & the Rainfall
+Saga - Don't Be Late
+Saga - Humble Stance
+Saga - Wind Him Up
+Saga - How Long
+Saga - No Regrets
+Saga - A Brief Case
+Saga - You're Not Alone
+Saga - On The Loose
+Saga - How Long?
+Saga - Climbing The Ladder
+Saga - Will It Be You? (Chapter Four)
+Saga - Give 'em The Money
+Saga - Ice Nice
+Saga - Tired World (Chapter Six)
+Saga - It's Time (Chapter Three)
+Saga - See Them Smile
+Saga - Slow Motion
+Medicine Head - Come on
+Saga - Take It Or Leave It
+Saga - Images (Chapter One)
+Saga - Hot To Cold
+Icehouse - Love in Motion
+Icehouse - Sister
+Icehouse - Walls
+Icehouse - Sons
+Icehouse - We Can Get Together
+Icehouse - Boulevarde
+Icehouse - Fatman
+Peter Murphy - Big Love of a Tiny Fool
+Icehouse - Skin
+Icehouse - Not My Kind
+Icehouse - Paradise
+Icehouse - Mr Big
+Icehouse - The Flame
+Icehouse - Regular Boys
+Icehouse - Cross the Border
+Icehouse - Spanish Gold
+Peter Murphy - Big And Tiny (Live)
+Icehouse - Lucky Me
+Icehouse - Baby, You're So Strange
+Peter Murphy - Surrendered
+Icehouse - Too Late Now
+Icehouse - Into the Wild
+Japan - Oil on Canvas
+Tangerine Dream - Ricochet (Part One)
+Japan - Sons of Pioneers
+Japan - Cantonese Boy
+Japan - Voices Raised in Welcome, Hands Held in Prayer
+Japan - Still Life in Mobile Homes
+Japan - The Art of Parties
+Japan - Canton
+Japan - Temple of Dawn
+Japan - Nightporter
+Japan - Burning Bridges
+Japan - Ain't That Peculiar
+Japan - Taking Islands in Africa
+Saga - The Flyer
+Saga - Cat Walk
+Saga - The Sound Of Strangers
+Saga - The Writing
+Saga - Intermission
+Saga - Social Orphan
+The Trip - Caronte I
+Saga - The Vendetta (Still Helpless)
+The Trip - Caronte II
+Saga - Scratching The Surface
+Saga - The Pitchman
+The Alan Parsons Project - Pipeline (Instrumental)
+Pendragon - Ghosts
+Pendragon - The Walls of Babylon
+Pendragon - Nostradamus (Stargazing)
+Pendragon - The Last Man on Earth
+Pendragon - Am I Really Losing You?
+Soft Cell - Mr. Self Destruct
+Supertramp - Hidden Yourself
+Soft Cell - Slave To This
+Closterkeller - Violette
+Ulysses - Teenage Sweethearts
+Ulysses - Freedom Will Be Mine
+Soft Cell - Little Rough Rhinestone
+Soft Cell - Meet Murder My Angel
+Soft Cell - The Best Way To Kill
+Yes - The Gates Of Delirium
+Treshold - Days Of Dearth
+Treshold - Paradox
+Treshold - Siege Of Baghdad (The New Crusade)
+Treshold - Keep It With Mine
+Soft Cell - L'Esqualita
+Soft Cell - Down In The Subway
+Ulysses - Where the River Runs
+Ulysses - Mistinguett (Instrumental)
+Soft Cell - Surrender (To A Stranger)
+Soft Cell - Soul Inside
+Asgard - ImagoMundi
+Asgard - Transmigration (On a Blow of Immense)
+Asgard - Imagination - Land of the Thule and Tir-N-N"og
+Asgard - Vulgarity - Land of the Slimes
+Asgard - Egoism - Land of the Burning Sands
+Soft Cell - Where Was Your Heart (When You Needed It Most)
+Love Like Blood - Odyssee
+Ultravox - Hymn (The Power And The Glory)
+Ultravox - Love's Great Adventure
+Ultravox - Dancing With Tears In My Eyes (Special Re-Mix)
+Ultravox - Serenade (Special Re-Mix)
+Ultravox - One Small Day (Final Mix)
+Ultravox - Love's Great Adventure (Extended Version)
+Solstice - Morning Light
+Solstice - Journey
+Ultravox - We Came To Dance (Extended Version)
+Collage - My czarodzieje
+Collage - 38/39
+Ultravox - Reap The Wild Wind (Extended Version)
+Ulysses - Vagabond Child
+Joy Division - Day Of The Lords
+Joy Division - Candidate
+Love Like Blood - Stormy Visions
+Love Like Blood - High Tension
+Love Like Blood - The Night Is Young
+Love Like Blood - Epitaph
+Joy Division - Wilderness
+Closterkeller - Babeluu
+Twelfth Night - Love Is An Open Door
+Twelfth Night - The Collector
+Twelfth Night - Sequences
+Joy Division - Interzone
+Joy Division - I Remember Nothing
+King Crimson - Epitaph
+Joy Division - Atrocity Exhibition
+Joy Division - Colony
+Joy Division - Heart And Soul
+OMD - Bunker Soldiers
+OMD - Almost
+OMD - Mystereality
+OMD - Electricity
+OMD - The Messerschmitt Twins
+OMD - Messages
+OMD - Julia's Song
+OMD - Red Frame/White Light
+OMD - Dancing
+OMD - Pretending To See The Future
+Kim Wilde - The Touch
+Kim Wilde - Is It Over
+Kim Wilde - Suburbs Of Moscow
+Kim Wilde - Fit In
+Kim Wilde - Rage To Love
+Kim Wilde - The Second Time
+Kim Wilde - Bladerunner
+Kim Wilde - Janine
+Kim Wilde - Shangri-La
+Kim Wilde - Thought It Was Goodbye
+Kim Wilde - Ego
+Kim Wilde - Chaos At The Airport
+Kim Wilde - Can You Come Over
+Kim Wilde - Wendy Sadd
+China Crisis - The Highest High
+China Crisis - Strength of Character
+China Crisis - You Did Cut Me
+China Crisis - Black Man Ray
+China Crisis - Wall of God
+China Crisis - Gift of Freedom
+China Crisis - King in a Catholic Style
+China Crisis - Bigger the Punch I'm Feeling
+China Crisis - The World Spins, I'm Part of It
+China Crisis - Blue Sea
+Yazoo - Don't Go
+Yazoo - Too Pieces
+Yazoo - Bad Connection
+Yazoo - I Before E Except After C
+Yazoo - Midnight
+Yazoo - In My Room
+Yazoo - Only You
+Yazoo - Goodbye 70's
+Yazoo - Tuesday
+Jon Anderson - Run On, Jon
+Yazoo - Bring Your Love Down (Didn't I)
+Yazoo - Situation
+Yazoo - Situation (Dub Version)
+Depeche Mode - Any Second Now (Voices)
+John Foxx - Plaza
+John Foxx - He's a Liquid
+John Foxx - Underpass
+John Foxx - Metal Beat
+John Foxx - No-One Driving
+John Foxx - A New Kind of Man
+John Foxx - Blurred Girl
+John Foxx - 030
+John Foxx - Tidal Wave
+Jon Anderson - Candle Song
+New Order - Dreams Never End
+New Order - Senses
+New Order - ICB
+Ultravox - Rage In Eden
+Ultravox - I Remember (Death In The Afternoon)
+Ultravox - Stranger Within
+Ultravox - Accent On Youth
+Ultravox - The Ascent
+Ultravox - Your Name (Has Slipped My Mind Again)
+Yello - Desire
+Yello - Vicious Games
+Yello - Oh Yeah
+Yello - Desert Inn
+Jon Anderson - View From the Coppice
+Yello - Koladi-ola (Low Blow)
+Yello - Domingo
+Yello - Sometimes (Dr. Hirsch)
+Yello - Let Me Cry
+Yello - Ciel Ouvert
+Yello - Angel No
+OMD - 2nd Thought
+OMD - VCL XI
+OMD - Motion And Heart
+OMD - Statues
+OMD - The Misunderstanding
+OMD - The More I See You
+OMD - Promise
+OMD - Stanlow
+John Foxx - Lose All Sense of Time
+John Foxx - Shine On
+John Foxx - Enter the Angel
+John Foxx - In Mysterious Ways
+John Foxx - This Side of Paradise
+John Foxx - Stepping Softly
+John Foxx - Enter the Angel II
+John Foxx - Morning Glory
+Midge Ure - If I Was
+Midge Ure - When The Winds Blow
+Midge Ure - That Certain Smile
+Midge Ure - The Gift
+Midge Ure - Antilles
+Midge Ure - Wastelands
+Midge Ure - The Chieftain
+Midge Ure - She Cried
+Midge Ure - The Gift (Reprise)
+Roger Waters - The Ballad Of Bill Hubbard
+Roger Waters - Late Home Tonight, Part I
+Roger Waters - Late Home Tonight, Part II
+Roger Waters - Watching TV
+Roger Waters - The Ballad Of Bill Hubbard
+Roger Waters - 4:33 (Running Shoes)
+Roger Waters - 4:39 AM (For The First Time Today - Part 2)
+Roger Waters - 4:56 AM (For The First Time Today - Part 1)
+Roxy Music - Beauty Queen
+Roxy Music - Editions Of You
+Roxy Music - The Bogus Man
+Roxy Music - Grey Lagoons
+Roxy Music - For Your Pleasure
+The Human League - Almost Medieval
+The Human League - Circus Of Death
+The Human League - The Path Of Least Resistance
+The Human League - Blind Youth
+The Human League - The Word Before Last
+The Human League - Empire State Human
+The Human League - Morale...
+The Human League - You've Lost That Loving Feeling
+The Human League - Austerity/Girl One (Medley)
+The Human League - Zero As A Limit
+Ultravox - Man Who Dies Every Day
+John Foxx - A Kind of Wave
+Depeche Mode - Love in Itself
+Depeche Mode - People Are People
+Depeche Mode - Master and Servant
+Depeche Mode - Shake the Disease
+Depeche Mode - It's Called a Heart
+The Icicle Works - Hollow Horse
+The Icicle Works - Perambulator
+The Icicle Works - Seven Horses
+The Icicle Works - Rapids
+The Icicle Works - Windfall
+The Icicle Works - Assumed Sundown
+The Icicle Works - Saint's Sojourn
+The Icicle Works - All the Daughters (Of Her Father's House)
+The Icicle Works - Book of Reason
+The Icicle Works - Conscience of Kings
+John Foxx - Enter the Angel (Extended Mix)
+John Foxx - Stairway
+Midge Ure - Fade To Grey
+Real Life - No Shame
+Real Life - Face To Face
+Real Life - One Blind Love/Love's Not Easy
+Real Life - The Longest Day
+Real Life - I Wish
+Real Life - Flame
+Real Life - The Legend
+Real Life - Take My Breath Away
+Real Life - Let's Fall In Love
+Real Life - Cathedral
+Gary Numan - Call Out The Dogs
+Gary Numan - This Disease
+Gary Numan - Your Fascination
+Gary Numan - Miracles
+Gary Numan - The Pleasure Skin
+Gary Numan - Creatures
+Gary Numan - Tricks
+Gary Numan - God Only Knows
+Talk Talk - Why Is It So Hard? (12" U.S. Remix - Extended Version)
+Talk Talk - Talk Talk (12" Mix - Extended Version)
+Talk Talk - My Foolish Friend (12" Mix - Extended Version)
+Talk Talk - It's My Life (12" Mix - Extended Version)
+Talk Talk - Dum Dum Girl (12" Remix - Extended Version)
+Talk Talk - Such A Shame (12" U.S. Remix - Extended Version)
+Saga - Listen To Your Heart
+Saga - Take A Chance
+Saga - What Do I Know?
+Saga - Misbehaviour
+Saga - Nine Lives Of Miss Midi
+Saga - You And The Night
+Saga - Out Of The Shadows
+Saga - Easy Way Out
+Saga - Promises
+Saga - Here I Am
+Saga - (Goodbye) Once Upon A Time
+OMD - The New Stone Age
+OMD - She's Leaving
+OMD - Souvenir
+OMD - Sealand
+OMD - Joan Of Arc
+OMD - Joan Of Arc (Maid Of Orleans)
+OMD - Architecture & Morality
+OMD - Georgia
+OMD - The Beginning And The End
+Depeche Mode - Fly on the Windscreen - Final
+Classix Nouveaux - Foreward (Instrumental)
+Classix Nouveaux - Guilty
+Classix Nouveaux - Run Away
+Classix Nouveaux - No Sympathy, No Violins
+Classix Nouveaux - Inside Outside
+Classix Nouveaux - 623 (Instrumental)
+Classix Nouveaux - Every Home Should Have One
+Classix Nouveaux - Tokyo
+Classix Nouveaux - Or A Movie
+Classix Nouveaux - Soldier
+Classix Nouveaux - The Protector Of Night
+Clan Of Xymox - A Day
+Clan Of Xymox - No Words
+Clan Of Xymox - Stumble and Fall
+Clan Of Xymox - Cry in the Wind
+Clan Of Xymox - Equal Ways
+Clan Of Xymox - 7th Time
+Clan Of Xymox - No Human Can Drown
+Tears For Fears - The Hurting
+Tears For Fears - Mad World
+Tears For Fears - Pale Shelter
+Tears For Fears - Ideas As Opiates
+Tears For Fears - Memories Fade
+Tears For Fears - Suffer The Children
+Tears For Fears - Watch Me Bleed
+Tears For Fears - The Prisoner
+Tears For Fears - Start Of The Breakdown
+Pseudo Echo - A Beat For You
+Pseudo Echo - See Through
+Pseudo Echo - From The Shore
+Pseudo Echo - Stranger In Me
+Pseudo Echo - Dancing Until Midnight
+Pseudo Echo - Listening
+Pseudo Echo - His Eyes
+Pseudo Echo - Walkaway
+Pseudo Echo - Fast Cars
+Pseudo Echo - Destination Unknown
+China Crisis - Seven Sports for All
+China Crisis - No More Blue Horizons (Fool, Fool, Fool)
+China Crisis - Feel To Be Driven Away
+China Crisis - Some People I Know To Lead Fantastic Lives
+China Crisis - Christian
+China Crisis - African and White
+China Crisis - Are We a Worker
+China Crisis - Red Sails
+China Crisis - You Never See It
+China Crisis - Temptations Big Blue Eyes
+China Crisis - Jean Walks In Freshfields
+Chris De Burgh - The Ballroom of Romance
+Chris De Burgh - The Lady in Red
+Chris De Burgh - Say Goodbye to It All
+Chris De Burgh - The Spirit of Man
+Chris De Burgh - Fatal Hesitation
+Chris De Burgh - One Word (Straight to the Heart)
+Chris De Burgh - For Rosanna
+Chris De Burgh - The Leader
+Chris De Burgh - The Vision
+Chris De Burgh - What About Me?
+Clan Of Xymox - Theme I
+Clan Of Xymox - Michelle
+Clan Of Xymox - Theme II
+Clan Of Xymox - Louise
+Clan Of Xymox - Agonised by Love
+Clan Of Xymox - Masquerade
+Clan Of Xymox - After the Call
+Classix Nouveaux - All Around The World
+Classix Nouveaux - Manitou
+Classix Nouveaux - Heart From The Start
+Classix Nouveaux - The Fire Inside
+Classix Nouveaux - Forever And A Day
+Classix Nouveaux - The Unloved
+Classix Nouveaux - When They All Have Gone
+Classix Nouveaux - No Other Way
+David Sylvian - The Boy With the Gun
+David Sylvian - Maria
+David Sylvian - The Devil's Own
+David Sylvian - When Poets Dreamed Of Angels
+David Sylvian - Mother and Child
+David Sylvian - Let the Happiness In
+David Sylvian - Waterfront
+Depeche Mode - Never Let Me Down Again
+Depeche Mode - The Things You Said
+Depeche Mode - Strangelove
+Depeche Mode - Sacred
+Depeche Mode - Behind the Wheel
+Depeche Mode - I Want You Now
+Depeche Mode - To Have and To Hold
+Depeche Mode - Nothing
+Depeche Mode - Pimpf
+Depeche Mode - Something To Do
+Depeche Mode - Lie to Me
+Depeche Mode - It Doesn't Matter
+Depeche Mode - Stories of Old
+Depeche Mode - If You Want
+Jon Anderson - Hurry Home
+Duran Duran - New Moon on Monday
+Duran Duran - (I'm Looking For) Cracks in the Pavement
+Duran Duran - I Take the Dice
+Duran Duran - Of Crime and Passion
+Duran Duran - Union of the Snake
+Duran Duran - Shadows on Your Side
+Duran Duran - Tiger Tiger
+Duran Duran - The Seventh Stranger
+Fad Gadget - One Man´s Meat (Remix)
+Fad Gadget - Sleep (Electro-Induced Original)
+Fad Gadget - Ricky's Hand (Live)
+Genesis - Am I Very Wrong
+IQ - Common Ground
+IQ - Colourflow
+IQ - No Love Lost (Piano/Vocal Version)
+Japan - Automatic Gun
+Japan - . . . . Rhodesia
+Japan - Love Is Infectious
+Japan - Sometimes I Feel So Low
+Japan - Obscure Alternatives
+Japan - Deviation
+Japan - Suburban Berlin
+Japan - The Tenant
+Japan - Transmission
+Japan - The Unconventional
+Japan - Wish You Were Black
+Japan - Performance
+Japan - Lovers on Main Street
+Japan - Don't Rain on My Parade
+Japan - Suburban Love
+Japan - Adolescent Sex
+Japan - Communist China
+Japan - Television
+Kim Wilde - House Of Salome
+Kim Wilde - Back Street Joe
+Kim Wilde - Stay A While
+Kim Wilde - Love Blonde
+Kim Wilde - Dream Sequence
+Kim Wilde - Dancing In The Dark
+Kim Wilde - Shoot To Disable
+Kim Wilde - Can You Hear It
+Kim Wilde - Sparks
+Kim Wilde - Sing It Out For Love
+OMD - Radio Prague
+OMD - Genetic Engineering
+OMD - ABC Auto-Industry
+OMD - Telegraph
+OMD - This Is Helena
+OMD - International
+OMD - Dazzle Ships (Parts II III & VII)
+OMD - Silent Running
+OMD - Radio Waves
+OMD - Time Zones
+OMD - Of All The Things We've Made
+Talk Talk - Dum Dum Girl
+Jon Anderson - Under the Sun
+Talk Talk - Renée
+Talk Talk - The Last Time
+Talk Talk - Call in the Night Boy
+Talk Talk - It's You
+OMD - Stay (The Black Rose and the Universal Wheel)
+OMD - (Forever) Live and Die
+OMD - The Pacific Age
+OMD - The Dead Girls
+OMD - Shame
+OMD - Southern
+OMD - Flame of Hope
+OMD - Goddess of Love
+OMD - We Love You
+OMD - Watch Us Fall
+Ultravox - Same Old Story
+Ultravox - Sweet Surrender
+Ultravox - The Prize
+Ultravox - Time To Kill
+Ultravox - Moon Madness
+Ultravox - Follow Your Hear
+Ultravox - Lament (Extended Mix)
+The Expression - Small Brave Land
+The Expression - Run the Hill
+The Expression - One More Time
+The Expression - Old Mankind
+The Expression - You'Re Still Running
+The Expression - The Story Goes On
+The Expression - The Light of Day
+Opposition - Voice Has Changed
+Opposition - A Day In The Future
+Opposition - Aching Arms
+Opposition - I Became A New Man
+Opposition - In The Heart
+Opposition - Lifes Blood
+Opposition - Sand And Glue
+Opposition - My Room Is White
+Opposition - New Homes
+Soft Cell - Fun City
+Soft Cell - Insecure Me
+Soft Cell - ....So
+Soft Cell - Where Did Our Love Go
+Soft Cell - What
+Soft Cell - A Man Could Get Lost
+New Order - In A Lonely Place
+Gary Numan & Tubeway Army - The Machman
+Gary Numan & Tubeway Army - Praying To The Aliens
+Gary Numan & Tubeway Army - You Are In My Vision
+Gary Numan & Tubeway Army - It Must Have Been Years
+Gary Numan & Tubeway Army - When The Machines Rock
+Gary Numan & Tubeway Army - I Nearly Married A Human
+Blue Öyster Cult - White Flags
+Blue Öyster Cult - Dancin' in the Ruins
+Blue Öyster Cult - Make Rock Not War
+Blue Öyster Cult - Perfect Water
+Blue Öyster Cult - Spy in the House of the Night
+Blue Öyster Cult - Beat 'Em Up
+Blue Öyster Cult - When the War Comes
+Blue Öyster Cult - Shadow Warrior
+Blue Öyster Cult - Madness to the Method
+Big Country - Look Away
+Big Country - The Seer
+Big Country - I Walk the Hill
+Big Country - Eiledon
+Big Country - One Great Thing
+Big Country - Hold the Heart
+Big Country - The Sailor
+The Human League - The Black Hit Of Space
+The Human League - Only After Dark
+The Human League - Life Kills
+The Human League - Dreams Of Leaving
+The Human League - Toyota City
+The Human League - Crow And A Baby
+The Human League - The Touchables
+The Human League - Gordon'S Gin
+The Human League - Being Boiled
+The Human League - WXJL Tonight
+Gary Numan - This Wreckage
+Gary Numan - The Aircrash Bureau
+Gary Numan - Telekon
+Gary Numan - Remind Me To Smile
+Gary Numan - Sleep By Windows
+Gary Numan - I'm An Agent
+Gary Numan - I Dream Of Wires
+Gary Numan - Remember I Was Vapour
+Gary Numan - Please Push No More
+Gary Numan - The Joy Circuit
+Simple Minds - Someone
+Simple Minds - Sad Affair
+Simple Minds - All For You
+Simple Minds - No Cure
+Simple Minds - Chelsea Girl
+Simple Minds - Wasteland
+Simple Minds - Destiny
+Simple Minds - Murder Story
+Pink Floyd - Obscured By Clouds
+Pink Floyd - When You're In
+Pink Floyd - Burning Bridges
+Pink Floyd - The Gold It's In The...
+Pink Floyd - Wot's...Uh The Deal
+Pink Floyd - Mudmen
+Pink Floyd - Childhood's End
+Pink Floyd - Free Four
+Pink Floyd - Stay
+Pink Floyd - Absolutely Curtains
+Marillion - Warm Wet Circles (7" Version)
+Marillion - White Russian ("Live" At Loreley)
+Marillion - Incommunicado ("Live" At Loreley)
+OMD - Junk Culture
+OMD - Tesla Girls
+OMD - Locomotion
+OMD - Apollo
+OMD - Never Turn Away
+OMD - Love And Violence
+OMD - Hard Day
+OMD - All Wrapped Up
+OMD - White Trash
+OMD - Talking Loud And Clear
+Love Spirals Downwards - Avincenna
+Lycia - The Return Of Nothing
+David Bowie - A Small Plot of Land
+David Bowie - Hallo Spaceboy
+David Bowie - Wishful Beginnings
+David Bowie - Strangers When We Meet
+David Bowie - Wild Is the Wind
+David Bowie - Subterraneans
+New Order - Shellshock
+New Order - State Of The Nation
+New Order - Bizarre Love Triangle
+New Order - True Faith
+Andromeda - Searchin' For You
+New Order - Procession
+New Order - Cries And Whispers
+New Order - Hurt
+New Order - The Beach
+New Order - Confused Instrumental
+New Order - Lonesome Tonight
+New Order - Murder
+New Order - Thieves Like Us (Instrumental)
+New Order - Kiss Of Death
+New Order - Shame Of The Nation
+New Order - 1963
+The Cure - Hot Hot Hot!!!
+The Cure - Icing Sugar
+The Cure - A Thousand Hours
+The Cure - Shiver and Shake
+The Cure - Fight
+Mike Oldfield - Requiem For A City
+Mike Oldfield - Evacuation
+Mike Oldfield - Pran's Theme 2
+Mike Oldfield - Capture
+Mike Oldfield - Execution
+Mike Oldfield - Worksite
+Mike Oldfield - The Year Zero
+Mike Oldfield - Blood Sucking
+Mike Oldfield - The Year Zero 2
+Mike Oldfield - Pran's Escape/The Killing Fields
+Sting - If You Love Somebody Set Them Free
+Mike Oldfield - The Boy's Burial/Pran Sees The Red Cross
+Mike Oldfield - Good News
+Mike Oldfield - Étude
+Sting - Love Is The Seventh Wave
+Sting - Russians
+Sting - Children's Crusade
+Sting - Shadows In The Rain
+Sting - We Work The Black Seam
+Sting - Consider Me Gone
+Sting - The Dream Of The Blue Turtles
+Alphaville - Big in Japan (Extended Instrumental)
+Sting - Fortress Around Your Heart
+Pieter Nooten - Searching
+Pieter Nooten - The Choice
+Pieter Nooten - After The Call
+Pieter Nooten - Finally II
+Pieter Nooten - Instrumental
+Pieter Nooten - Suddenly II
+Pieter Nooten - Suddenly I
+Pieter Nooten - Clouds
+Pieter Nooten - Finally I
+Pieter Nooten - Several Times II
+Pieter Nooten - Equal Ways
+Pieter Nooten - These Waves
+Pieter Nooten - Several Times III
+Rush - Force Ten
+Rush - Time Stand Still
+Rush - Open Secrets
+Rush - Second Nature
+Rush - Prime Mover
+Rush - Lock And Key
+Rush - Mission
+Rush - Turn The Page
+Rush - High Water
+Colosseum - Plenty Hard Luck
+Colosseum - Debut
+Colosseum - The Road She Walked Before
+Colosseum - Backwater Blues
+Ultravox - All In One Day (Unedited Version)
+Ultravox - White China (Live)
+Van Der Graaf Generator - Pioneers Over C
+Van Der Graaf Generator - A Place To Survive
+Van Der Graaf Generator - Meurglys III (The Songwriter's Guild)
+Alphaville - A Victory of Love
+Alphaville - Summer in Berlin
+Alphaville - To Germany With Love
+Alphaville - Fallen Angel
+Alphaville - In the Mood
+Alphaville - Lies
+Alphaville - The Jet Set
+Simon & Garfunkel - Leaves That Are Green
+Simon & Garfunkel - Blessed
+Simon & Garfunkel - Kathy's Song
+Simon & Garfunkel - Somewhere They Can't Find Me
+Simon & Garfunkel - Anji
+Simon & Garfunkel - Richard Cory
+Simon & Garfunkel - A Most Peculiar Man
+Simon & Garfunkel - We've Got a Groovey Thing Goin'
+Simon & Garfunkel - I Am a Rock
+U2 - Two Hearts Beat As One
+U2 - The Three Sunrises
+Simple Minds - Naked Eye
+Simple Minds - Citizen (Dance Of Youth)
+Simple Minds - Carnival (Shelter In A Suitcase)
+Simple Minds - Factory
+Simple Minds - Cacophony
+Simple Minds - Veldt
+Simple Minds - Premonition
+Simple Minds - Changeling
+Simple Minds - Film Theme
+Simple Minds - Calling Your Name
+Simple Minds - Scar
+The Sisters of Mercy - Temple Of Love (Extended Version)
+The Icicle Works - Reverie Girl
+David Sylvian - Weathered Wall (Instrumental)
+Depeche Mode - Somebody (Remix)
+Depeche Mode - Everything Counts (Live Version)
+Depeche Mode - Told You So (Live Version)
+Fad Gadget - Life on the Line
+Pet Shop Boys - Opportunities (Original Dance Mix)
+Pet Shop Boys - It's A Sin
+Pet Shop Boys - What Have I Done To Deserve This?
+Pet Shop Boys - Rent
+Pet Shop Boys - Heart
+Classix Nouveaux - Foreward
+Classix Nouveaux - Is It A Dream
+Classix Nouveaux - To Believe
+Classix Nouveaux - Because You're Young
+Classix Nouveaux - Six To Eight
+Classix Nouveaux - La Verité
+Classix Nouveaux - Never Again
+Classix Nouveaux - It's All Over
+Classix Nouveaux - 1999
+Classix Nouveaux - I Will Return
+Classix Nouveaux - Finale
+Andromeda - Seven Lonely Street
+Leonard Cohen - Last Year's Man
+Leonard Cohen - Dress Rehearsal Rag
+Leonard Cohen - Diamonds in the Mine
+Leonard Cohen - Famous Blue Raincoat
+Leonard Cohen - Sing Another Song, Boys
+Fashion - Eye Talk
+Fashion - Dreaming
+Fashion - Hit Girl
+Fashion - Trader
+Fashion - Delirious
+Fashion - Hurricane
+Fashion - Too Much Too Soon
+Fashion - Slow Down
+Fashion - Twilight Of Idol
+The Sisters of Mercy - Untitled
+The Sisters of Mercy - Sandstorm
+The Sisters of Mercy - Ozymandias
+Soft Cell - Forever The Same
+Soft Cell - Where The Heart Is
+Soft Cell - Numbers
+Soft Cell - Heat
+Soft Cell - Kitchen Sink Drama
+Soft Cell - Baby Doll
+Soft Cell - Loving You, Hating Me
+Soft Cell - The Art Of Falling Apart
+Soft Cell - Hendrix Medley
+U2 - Desire (Hollywood Remix)
+U2 - Where the Streets Have No Name
+U2 - I Still Haven'T Found What I'M Looking For
+U2 - With Or Without You
+Siouxsie & The Banshees - Peek-A-Boo
+Siouxsie & The Banshees - The Killing Jar
+Siouxsie & The Banshees - Scarecrow
+Siouxsie & The Banshees - Burn Up
+Siouxsie & The Banshees - Ornaments Of Gold
+Siouxsie & The Banshees - Turn To Stone
+Siouxsie & The Banshees - Rawhead And Bloodybones
+Siouxsie & The Banshees - The Last Beat Of My Hear
+Depeche Mode - Behind the Wheel (7" Remix)
+Depeche Mode - Behind the Wheel (Shep Pettibone Mix)
+Depeche Mode - Behind the Wheel (LP Mix)
+Depeche Mode - Never Let Me Down Again (Split Mix)
+Depeche Mode - Pleasure, Little Treasure (Join Mix)
+Depeche Mode - To Have and To Hold (Spanish Taster)
+Depeche Mode - Never Let Me Down Again (Aggro Mix)
+Depeche Mode - Stjarna
+Depeche Mode - Sonata No. 14 in C#m "Moonlight Sonata"
+Jon & Vangelis - Curious Electric
+Jon & Vangelis - I Hear You Now
+Jon & Vangelis - The Road
+Jon & Vangelis - Far Away In Baagad
+Jon & Vangelis - Love Is
+Jon & Vangelis - One More Time
+Jon & Vangelis - Thunder
+Jon & Vangelis - A Play Within A Play
+The Cure - Accuracy
+The Cure - Object
+The Cure - Jumping Someone Else's Train
+The Cure - Fire in Cairo
+The Cure - Another Day
+The Cure - Grinding Halt
+The Cure - World War
+The Cure - Three Imaginary Boys
+The Cure - Meat Hook
+The Cure - So What
+The Cure - It's Not You
+The Cure - The Weedy Burton
+The Cure - Let's Go To Bed
+The Cure - The Lovecats
+The Cure - The Caterpillar
+The Cure - Close to Me
+The Cure - A Night Like This
+The Waterboys - Fisherman's Blues
+The Waterboys - We Will Not Be Lovers
+The Waterboys - Strange Boat
+The Waterboys - World Party
+The Waterboys - Sweet Thing
+The Waterboys - Jimmy Hickey's Waltz
+The Waterboys - And A Bang On The Ear
+The Waterboys - Has Anybody Here Seen Hank?
+The Waterboys - When Will We Be Married?
+The Waterboys - When Ye Go Away
+The Waterboys - Dunford's Fancy
+The Waterboys - The Stolen Child
+The Waterboys - This Land Is Your Land
+Cockney Rebel - Hideaway
+Cockney Rebel - What Ruthy Said
+Andromeda - Sleep
+Cockney Rebel - Crazy Raver
+Cockney Rebel - Mirror Freak
+Cockney Rebel - My Only Vice
+Cockney Rebel - Muriel the Actor
+The Cure - The Dream
+The Cure - Just One Kiss
+The Cure - The Upstairs Room
+The Cure - Speak My Language
+The Cure - Lament
+The Cure - Bird Mad Girl
+The Cure - Wailing Wall
+The Cure - Dressing Up
+The Cure - Piggy in the Mirror
+The Cure - The Empty World
+The Cure - Bananafishbones
+The Cure - The Top
+King Crimson - Neal And Jack And Me
+King Crimson - Sartori In Tangier
+King Crimson - Neurotica
+King Crimson - Two Hands
+King Crimson - The Howler
+King Crimson - Requiem
+King Crimson - Elephant Talk
+King Crimson - Thela Hun Ginjeet
+King Crimson - The Sheltering Sky
+King Crimson - Discipline
+King Crimson - Three Of A Perfect Pair
+King Crimson - Model Man
+King Crimson - Sleepless
+King Crimson - Man With An Open Heart
+King Crimson - Nuages (That Which Passes, Passes Like Clouds)
+King Crimson - Industry
+King Crimson - Dig Me
+King Crimson - No Warning
+Red Box - For America
+Red Box - Heart Of The Sun
+Red Box - Billy's Line
+Red Box - Bantu
+Red Box - Living In Domes
+Red Box - Lean On Me Reprise
+Red Box - Chenko (Tenka-Io)
+Red Box - Lean On Me (Ah-Li-Ayo)
+Red Box - Saskatchewan
+Red Box - Leaders In Seventh Heaven
+Red Box - Walk Walk
+Red Box - Moving
+Red Box - The Clapping Song
+Red Box - Soldier Of Love
+Red Box - Now Ask
+Red Box - Casbah
+Red Box - Walk On My Hands
+Red Box - New England
+The Cure - The Blood
+The Cure - Six Different Ways
+The Cure - Push
+The Cure - The Baby Screams
+The Cure - Screw
+Peter Gabriel - Big Time (Seven Inch Version)
+Alice Cooper - Be My Lover
+Alice Cooper - You Drive Me Nervous
+Alice Cooper - Yeah, Yeah, Yeah
+Alice Cooper - Dead Babies
+Pet Shop Boys - Rent (Dub)
+Pet Shop Boys - What Have I Done To Deserve This? (Extended Mix)
+Pet Shop Boys - What Have I Done To Deserve This? (Disco Mix)
+Uriah Heep - I Wanna Be Free
+Uriah Heep - Tears In My Eyes
+Uriah Heep - Shadows Of Grief
+Uriah Heep - What Should Be Done
+Uriah Heep - Love Machine
+Uriah Heep - Traveller In Time
+Uriah Heep - Poet's Justice
+Uriah Heep - All My Life
+Uriah Heep - Paradise
+Uriah Heep - The Spell
+OMD - Maid Of Orleans
+OMD - If You Leave
+OMD - Forever Live And Die
+OMD - Dreaming
+OMD - We Love You (12" Version)
+OMD - La Femme Accident (12" Version)
+Deep Purple - Chasing Shadows
+Deep Purple - Blind
+Deep Purple - Lalena
+Deep Purple - Fault Line/The Painter
+Marc Almond - A Woman's Story
+Deep Purple - Why Didn't Rosemary?
+Deep Purple - Bird Has Flown
+Marc Almond - The Heel
+Marc Almond - A Salty Dog
+Marc Almond - The Plague
+Marc Almond - The Little White Cloud That Cried
+Marc Almond - For One Moment
+Marc Almond - Just Good Friends
+Marillion - Holloway Girl
+The Moody Blues - Steal Your Heart Away
+The Moody Blues - Lose Your Money
+The Moody Blues - I Don't Mind
+The Moody Blues - Let Me Go
+The Moody Blues - I'll Go Crazy
+The Moody Blues - Time Is On My Side
+The Moody Blues - It's Easy Child
+The Moody Blues - Something You've Got
+The Moody Blues - I've Got A Dream
+The Moody Blues - From The Bottom Of My Heart
+The Moody Blues - Can't Nobody Love You
+The Moody Blues - Stop
+The Moody Blues - Come Back (I Don't Want To Go On Without You)
+The Moody Blues - Bye Bye Bird
+The Moody Blues - It Ain't Necessarily So
+The Moody Blues - True Story
+The Moody Blues - And My Baby's Gone
+Simple Minds - Celebrate
+Simple Minds - This Fear Of Gods
+Simple Minds - Capital City
+Simple Minds - Constantinople Line
+Simple Minds - Twist/Run/Repulsion
+Simple Minds - Thirty Frames A Second
+Simple Minds - Kant-Kino
+Simple Minds - Room
+Breathless - Compulsion
+Breathless - Here by Chance
+Breathless - Better Late Than Never
+Breathless - Heartburst
+Breathless - Moment by Moment
+Breathless - Smash Palace
+Breathless - Sometimes on Sunday
+Breathless - Glow
+Kissing The Pink - Frightened In France
+Kissing The Pink - Watching Their Eyes
+Kissing The Pink - Love Lasts Forever
+Kissing The Pink - All For You
+Kissing The Pink - The Last Film (Hymn Version)
+Kissing The Pink - Big Man Restless
+Kissing The Pink - Desert Song
+Kissing The Pink - Broken Body
+Kissing The Pink - Maybe This Day
+Kissing The Pink - In Awe Of Industry
+Kissing The Pink - Mr. Blunt
+Icehouse - Touch the Fire
+Icehouse - Jimmy Dean
+Icehouse - No Promises (Dance Mix)
+The Cure - Forever (Version)
+The Moody Blues - Boulevard De La Madeleine
+The Moody Blues - People Gotta Go
+The Moody Blues - This Is My House
+The Moody Blues - Life's Not Life
+Depeche Mode - Agent Orange
+Depeche Mode - Stripped (Highland Mix)
+U2 - Into The Heart
+Barclay James Harvest - The Life You Lead
+Barclay James Harvest - Cheap the Bullet
+Barclay James Harvest - Welcome to the Show
+Barclay James Harvest - Halfway To Freedom
+Barclay James Harvest - African Nights
+Barclay James Harvest - Psychedelic Child
+Barclay James Harvest - Where Do We Go
+Barclay James Harvest - Origin Earth
+Barclay James Harvest - Shadows on the Sky
+Psyche - Uncivilized (Instrumental)
+The Moody Blues - Talkin' Talkin'
+The Moody Blues - I Just Don'T Care
+The Moody Blues - Running Out Of Love
+The Moody Blues - The Other Side Of Life
+The Moody Blues - The Spirit
+The Moody Blues - Slings And Arrows
+The Moody Blues - It May Be A Fire
+Marc Almond - The Devil (Okay)
+Marc Almond - If You Need
+Marc Almond - The Lockman
+Marc Almond - We Must Look
+Marc Almond - Alone
+Marc Almond - I'm Coming
+Marc Almond - Litany for a Return
+Marc Almond - The Town Fell Asleep
+Marc Almond - Never To Be Next
+Louise Tucker, Charlie Skarbek - Midnight Blue
+Louise Tucker, Charlie Skarbek - Only For You
+Louise Tucker, Charlie Skarbek - Hush
+Louise Tucker, Charlie Skarbek - Shadows
+Louise Tucker, Charlie Skarbek - Waiting For Hugo
+Louise Tucker, Charlie Skarbek - Voices In The Wind
+Louise Tucker, Charlie Skarbek - Jerusalem
+Louise Tucker, Charlie Skarbek - Graveyard Angel
+Louise Tucker, Charlie Skarbek - Getting Older
+Marillion - Assassing (Full Version)
+Genesis - Tonight, Tonight, Tonight
+Genesis - In Too Deep
+Genesis - Domino
+Genesis - Throwing It All Away
+Genesis - The Brazilian
+Genesis - Anything She Does
+The Moody Blues - Meet Me Halfway
+The Moody Blues - Sitting At The Wheel
+The Moody Blues - Going Nowhere
+The Moody Blues - Hole In The World
+The Moody Blues - Under My Feet
+The Moody Blues - Running Water
+The Moody Blues - I Am
+The Moody Blues - Sorry
+Gary Moore - Moving On
+Gary Moore - Oh Pretty Woman
+Gary Moore - Walking By Myself
+Gary Moore - Texas Strut
+Gary Moore - Too Tired
+Gary Moore - King Of The Blues
+Gary Moore - As The Years Go Passing By
+Gary Moore - Midnight Blues
+Gary Moore - That Kind Of Woman
+Gary Moore - All Your Love
+Gary Moore - Stop Messin' Around
+Tones On Tail - Rain
+Nick Cave & the Bad Seeds - I'm Gonna Kill That Woman
+Nick Cave & the Bad Seeds - Sleeping Annaleah
+Nick Cave & the Bad Seeds - Long Black Veil
+Nick Cave & the Bad Seeds - Hey Joe
+Nick Cave & the Bad Seeds - The Singer
+Nick Cave & the Bad Seeds - All Tomorrow's Parties
+Nick Cave & the Bad Seeds - By the Time I Get to Phoenix
+Nick Cave & the Bad Seeds - Jesus Met the Woman at the Well
+Nick Cave & the Bad Seeds - The Carnival Is Over
+The Mission - Breathe
+The Mission - Child's Play
+The Mission - Shamera Kye
+The Mission - Black Mountain Mist
+The Mission - Dream On
+The Mission - Heat
+The Mission - Hymn (For America)
+Twelfth Night - Art & Illusion
+Twelfth Night - C.R.A.B.
+Twelfth Night - Kings & Queens
+Twelfth Night - First New Day
+Van Der Graaf Generator - Whatever Would Robert Have Said?
+Van Der Graaf Generator - Out Of My Book
+Strawbs - Sad Young Man
+Strawbs - Just Love
+Andromeda - See Into the Stars
+Strawbs - Hero's Theme
+Van Der Graaf Generator - Lemmings (Including Cog)
+Van Der Graaf Generator - A Plague Of Lighthouse Keepers
+The Damned - Street of Dreams
+The Damned - There'll Come a Day
+The Damned - Is It a Dream
+The Damned - Grimly Fiendish
+The Damned - Edward the Bear
+The Damned - Eighth Day
+The Damned - Trojans
+Blue Öyster Cult - Kick Out the Jams
+Blue Öyster Cult - We Gotta Get Out of This Place
+U.F.O. - Just Another Suicide
+U.F.O. - Gettin' Ready
+U.F.O. - Alone Again Or
+U.F.O. - Electric Phase
+Black Sabbath - Planet Caravan
+Black Sabbath - Hand of Doom
+Black Sabbath - Rat Salad
+Budgie - Slipaway
+Budgie - I Can't See My Feelings
+Budgie - I Ain't No Mountain
+Deep Purple - Maybe I'm a Leo
+Deep Purple - Never Before
+Gary Moore - Over The Hills And Far Away
+Gary Moore - Wild Frontier
+Gary Moore - Take A Little Time
+Gary Moore - The Loner
+Gary Moore - Wild Frontier (12'' Version)
+Gary Moore - Friday On My Mind
+Gary Moore - Strangers In The Darkness
+Gary Moore - Johnny Boy
+Gary Moore - Over The Hills And Far Away (12'' Version)
+Gary Moore - Crying In The Shadows
+Uriah Heep - Gypsy (Single Version)
+Uriah Heep - Come Away Melinda (Previously Unreleased)
+The Cult - Little Face
+Suzanne Vega - Tired Of Sleeping
+Suzanne Vega - Men In A War
+Suzanne Vega - Book Of Dreams
+Suzanne Vega - Institution Green
+Suzanne Vega - Those Whole Girls (Run In Grace)
+Suzanne Vega - Room Off The Street
+Suzanne Vega - Big Space
+Suzanne Vega - Predictions
+Suzanne Vega - Fifty-Fifty Chance
+Suzanne Vega - Pilgrimage
+Black Sabbath - After Forever
+Black Sabbath - Embryo
+Iron Maiden - Moonchild
+Iron Maiden - Infinite Dreams
+Iron Maiden - Can I Play With Madness
+Iron Maiden - The Prophecy
+Iron Maiden - The Clairvoyant
+Iron Maiden - Only the Good Die Young
+The Beatles - Back In The U.S.S.R.
+The Beatles - Dear Prudence
+The Beatles - Glass Onion
+The Beatles - Ob-La-Di, Ob-La-Da
+The Beatles - Wild Honey Pie
+The Beatles - The Continuing Story Of Bungalow Bill
+The Beatles - While My Guitar Gently Weeps
+The Beatles - Happiness Is A Warm Gun
+The Beatles - Martha My Dear
+The Beatles - I'm So Tired
+The Beatles - Blackbird
+The Beatles - Piggies
+The Beatles - Rocky Raccoon
+The Beatles - Don't Pass Me By
+The Beatles - Why Don't We Do It In The Road?
+The Beatles - I Will
+The Beatles - Julia
+The Beatles - Birthday
+The Beatles - Yer Blues
+The Beatles - Mother Nature's Son
+The Beatles - Everybody's Got Something To Hide Except Me And My Monkey
+The Beatles - Sexy Sadie
+The Beatles - Long, Long, Long
+The Beatles - Revolution 1
+The Beatles - Honey Pie
+The Beatles - Savoy Truffle
+The Beatles - Cry Baby Cry
+The Beatles - Revolution 9
+Roger Waters - In The Flesh?
+Roger Waters - The Thin Ice
+Roger Waters - Another Brick In The Wall (Part 1)
+Roger Waters - The Happiest Days Of Our Lives
+Roger Waters - Another Brick In The Wall (Part 2)
+Roger Waters - Mother
+Roger Waters - Goodbye Blue Sky
+Roger Waters - Empty Spaces
+Roger Waters - Young Lust
+Roger Waters - One Of My Turns
+Roger Waters - Don't Leave Me Now
+Roger Waters - Another Brick In The Wall (Part 3)
+Roger Waters - Goodbye Cruel World
+Roger Waters - Hey You
+Eric Serra - Run, Shoot and Jump
+Eric Serra - That's What Keeps You Alone
+Roger Waters - Is There Anybody Out There?
+Roger Waters - Nobody Home
+Roger Waters - Vera
+Roger Waters - Bring The Boys Back Home
+Roger Waters - Comfortably Numb
+Roger Waters - In The Flesh
+Roger Waters - Run Like Hell
+Roger Waters - Waiting For The Worms
+Roger Waters - Stop
+Roger Waters - The Trial
+Roger Waters - The Tide Is Turning
+Deep Purple - No No No
+Deep Purple - Anyone's Daughter
+Deep Purple - No One Came
+Fish - A Gentleman'S Excuse Me (Demo Version)
+Full Moon - Time Machine
+Full Moon - Highlander
+Full Moon - Actious Selene
+Full Moon - Euphoric Dance
+Full Moon - Blur On The Horizon
+Full Moon - The Chequered Floor
+Full Moon - Ninth Wave
+Iron Maiden - The Fugitive
+Full Moon - The Eternal Now
+Fish - Incomplete
+Bob Dylan - Cantina Theme (Workin' For The Law)
+Bob Dylan - Billy 1
+Bob Dylan - Bunkhouse Theme
+Bob Dylan - River Theme
+Bob Dylan - Turkey Chase
+Renata Przemyk - Nie Mam Żalu
+Renata Przemyk - Moja Kara
+Bob Dylan - Final Theme
+Bob Dylan - Billy 4
+The Stranglers - Bring on the Nubiles
+The Stranglers - Peaches
+The Stranglers - Bear Cage
+The Stranglers - Duchess
+Bob Dylan - Billy 7
+The Stranglers - Down in the Sewer
+The Stranglers - Five Minutes
+Yes - The Prophet
+Breathless - Magic Lamp
+Breathless - Translation
+Yes - Clear Days
+Yes - Beyond And Before
+Fish - Rites of Passage
+Yes - I See You
+Mike Oldfield - Taurus II
+Mike Oldfield - Family Man
+Mike Oldfield - Orabidoo
+Mike Oldfield - Mount Teidi
+T. Rex - Mambo Sun
+T. Rex - Jeepster
+T. Rex - Monolith
+Raw Material - Ice Queen
+T. Rex - Lean Woman Blues
+Raw Material - Insolent Lady
+Raw Material - Miracle Worker
+Raw Material - Religion
+Raw Material - Sun God
+T. Rex - Planet Queen
+Icehouse - No Promises
+Icehouse - Stay Close Tonight
+Icehouse - Crazy
+T. Rex - Girl
+Icehouse - Trojan Blue
+Icehouse - Can't Help Myself
+Icehouse - Man of Colours
+T. Rex - The Motivator
+T. Rex - Life's a Gas
+T. Rex - Rip Off
+The Legendary Pink Dots - Mroczne Królestwo Much
+T. Rex - Mystic Lady
+The Legendary Pink Dots - Joey The Canary
+T. Rex - Rock On
+Psyche - Love Is a Winter
+Psyche - Broken Heart
+Psyche - The Cathedral
+T. Rex - The Slider
+Psyche - Freaks
+Bruno The Questionable - Lie
+T. Rex - Baby Boomerang
+T. Rex - Spaceball Ricochet
+T. Rex - Buick Mackane
+Love Like Blood - Your Shadowplay
+Wolfsheim - The Sparrows and the Nightingales
+T. Rex - Rabbit Fighter
+Big Day - W świetle i we mgle
+T. Rex - Baby Strange
+T. Rex - Chariot Choogle
+T. Rex - Main Man
+Egdon Heath - Mothers Dream
+Egdon Heath - Slightly in Despair
+Creedence Clearwater Revival - Ramble Tamble
+Creedence Clearwater Revival - Before You Accuse Me
+Creedence Clearwater Revival - Ooby Dooby
+Creedence Clearwater Revival - Lookin' Out My Back Door
+Creedence Clearwater Revival - Run Through the Jungle
+Creedence Clearwater Revival - My Baby Left Me
+Creedence Clearwater Revival - I Heard It Through the Grapevine
+Creedence Clearwater Revival - Long as I Can See the Light
+The Sensational Alex Harvey Band - Dance To Your Daddy
+The Sensational Alex Harvey Band - Amos Moses
+The Sensational Alex Harvey Band - Jungle Rubout
+The Sensational Alex Harvey Band - Sirocco
+Bruno The Questionable - Dance
+The Sensational Alex Harvey Band - Boston Tea Party
+The Legendary Pink Dots - She Gave Me an Apple
+Pornografia - Mur
+The Sensational Alex Harvey Band - Sultan's Choice
+The Sensational Alex Harvey Band - $25 For A Massage
+Rainbow - All Night Long
+Rainbow - No Time To Lose
+Rainbow - Makin' Love
+Rainbow - Since You Been Gone
+Rainbow - Love's No Friend
+Rainbow - Danger Zone
+Rainbow - Lost In Hollywood
+The Mission - Hands Across The Ocean
+The Mission - The Grip Of Disease
+The Mission - Divided We Fall
+The Mission - Mercenary
+The Mission - Mr. Pleasant
+The Mission - Kingdom Come (Forever And Again)
+The Mission - Heaven Sends You
+The Mission - Tower of Strength (The Casbah Mix)
+The Mission - Butterfly On A Wheel (Troubadour Mix)
+The Mission - Love
+The Mission - Beyond The Pale
+The Mission - A Wing And A Prayer
+The Mission - Fabienne
+Yes - Long Distance Runaround / The Fish
+Nico - Femme Fatale
+Nico - All Tomorrow's Parties
+Nico - I'll Keep It With Mine
+Manfred Mann - Father By Day,Father By Night
+Manfred Mann - In The Beginning,Darkness
+Manfred Mann - Pluto The Dog
+Manfred Mann - Solar Fire
+Manfred Mann - Saturn,The Lord Of The Ring Mercury, The Winged Messenger
+Manfred Mann - Earth,The Circle Pt.II
+Manfred Mann - Earth,The Circle Pt.I
+Nico - Chelsea Girls
+Nico - Janitor Of Lunacy
+Peter Hammill - Ferret and Featherbird
+Peter Hammill - (No More) The Sub-mariner
+Peter Hammill - Tapeworm
+Peter Hammill - Again
+Peter Hammill - Faint-Heart and the Sermon
+Peter Hammill - The Comet, the Course, the Tail
+Peter Hammill - Gog Magog (In Bromine Chambers)
+Nico - Heroes
+Nico - One More Chance
+Nico - Sixty/Forty
+Leonard Cohen - Sisters of Mercy
+Nico - I'm Waiting For The Man
+The Sisters of Mercy - First And Last And Always
+The Sisters of Mercy - Marian
+Blue Öyster Cult - This Ain't the Summer of Love
+The Sisters of Mercy - Nine While Nine
+Blue Öyster Cult - True Confessions
+The Sisterhood - Rain From Heaven
+Blue Öyster Cult - Sinful Love
+Blue Öyster Cult - Morning Final
+Blue Öyster Cult - Tenderloin
+Roger Waters - It's a Miracle
+Roger Waters - Amused to Death
+Blue Öyster Cult - Debbie Denise
+Fleetwood Mac - Stop Messin' Round
+Fleetwood Mac - Child of Mine
+Budgie - I Turned to Stone
+Fleetwood Mac - Homeward Bound
+Pink Floyd - Echoes
+The Who - Love, Reign O'er Me
+Fleetwood Mac - Sentimental Lady
+Fleetwood Mac - The Ghost
+Fleetwood Mac - Love That Burns
+Fleetwood Mac - Bare Trees
+Fleetwood Mac - Danny's Chant
+Fleetwood Mac - Spare Me a Little of Your Love
+Pink Floyd - Dogs
+Fleetwood Mac - Dust
+U.K. - Nothing To Lose
+Peter Hammill - Betrayed
+U.K. - As Long As You Want Me Here
+U.K. - Alaska
+U.K. - Time To Kill
+U.K. - Presto Vivace
+Pink Floyd - Sorrow
+U.K. - In The Dead Of Night
+U.K. - Caesar's Palace Blues
+Colosseum - The Kettle
+The Stranglers - Golden Brown
+Colosseum - Elegy
+Peter Gabriel - Start
+Colosseum - Butty's Blues
+Freudiana - I Am a Mirror
+Freudiana - Little Hans
+Freudiana - Dora
+Fish - Lavender
+Freudiana - Funny You Should Say That
+Pink Floyd - The Great Gig In The Sky
+Freudiana - You're on Your Own
+Freudiana - Far Away From Home
+Freudiana - Let Yourself Go
+Freudiana - Beyond the Pleasure Principle (Instrumental)
+Camel - Selva
+Freudiana - The Ring
+Julee Cruise - Falling
+Freudiana - Sects Therapy
+Freudiana - No One Can Love You Better Than Me
+The Legendary Pink Dots - Lent
+Anekdoten - Sad Rain
+Freudiana - Don't Let the Moment Pass
+Wishbone Ash - Alone
+Freudiana - Upper Me
+Roger Waters - Set The Controls For The Heart Of The Sun
+Freudiana - Freudiana (Instrumental)
+The Legendary Pink Dots - When Lenny Meets Lorca
+RPWL - Hole In The Sky Part 1, 2 & 3
+Freudiana - Destiny
+The Legendary Pink Dots - Pain Bubbles
+Freudiana - There but for the Grace of God
+Wishbone Ash - So Many Things To Say
+Wishbone Ash - Ballad Of The Beacon
+Roger Waters - Each Small Candle
+Wishbone Ash - Sorrel
+Free - The Highway Song
+Elton John - Funeral for a Friend (Love Lies Bleeding)
+Elton John - Love Lies Bleeding
+Free - The Stealer
+Free - On My Way
+IQ - Widow's Peak
+Free - Sunny Day
+Pendragon - The Black Knight
+Free - Ride on Pony
+Marillion - Kayleigh
+Free - Bodie
+Rod Stewart - Three Time Loser
+Marillion - White Russian
+Rod Stewart - Alright For An Hour
+Rod Stewart - All In The Name Of Rock 'n Roll
+Bauhaus - Spirit
+Rod Stewart - Drift Away
+Abraxas - Alhambra
+Rod Stewart - Stone Cold Sober
+Rod Stewart - I Don't Want To Talk About It
+Rod Stewart - It's Not The Spotlight
+Pink Floyd - Atom Heart Mother
+Rod Stewart - This Old Heart Of Mine
+Rod Stewart - Still Love You
+The Alan Parsons Project - To One in Paradise
+The Sensational Alex Harvey Band - Swampsnake
+Camel - The Hour Candle
+The Sensational Alex Harvey Band - Gang Bang
+The Doors - The Severed Garden (Adagio)
+The Sensational Alex Harvey Band - Giddy Up A Ding Dong
+Steve Hackett - In Memoriam
+The Sensational Alex Harvey Band - Vambo Marble Eye
+King Crimson - Moonchild
+McDonald & Giles - Forever and Ever
+McDonald & Giles - Birdman Suite
+The Sensational Alex Harvey Band - The Last Of The Teenage Idols
+Steve Hackett - Twice Around the Sun
+Tom Waits - Johnsburg, Illinois
+Marc Almond - The Desperate Hours (Extended Flamenco Mix)
+Little Nemo - New Flood
+Queen - Radio Ga Ga
+Oasis - Go Let It Out
+Mat Johnson - Giant
+Little Nemo - Hillside Manor
+Little Nemo - Marine
+Fleetwood Mac - Oh Well
+Little Nemo - Johnny Got His Gun
+Little Nemo - A une passante
+The Cranberries - Go Your Own Way
+Little Nemo - The Joker
+Little Nemo - Fickleness
+Frijid Pink - House of the Rising Sun
+Little Nemo - A Handful of Sand
+Steve Hackett - Your Own Special Way
+Tori Amos - Hey Jupiter (The Dakota Version)
+Tori Amos - Tear In Your Hand
+Little Nemo - My Eternal Friend
+Little Nemo - A Day Out of Time
+Metallica - Nothing Else Matters
+Metallica - Until It Sleeps
+Little Nemo - Precious Days
+Type O Negative - White Slavery
+Chris De Burgh - The Ecstasy of Flight (I Love the Night)
+Sergio Mendez - Scarboro Fair
+Sergio Mendez - Like a lover
+Bryan Ferry - As Time Goes By
+Lisa Stansfield - Iced
+Eric Clapton - Pretending
+B.B. King - Is You Is, Or Is You Ain't (My Baby)
+Van Morrison - Have I Told You Lately
+Chris De Burgh - Sight and Touch
+Raz, Dwa, Trzy - Z Rozmów
+Chris De Burgh - Taking It to the Top
+Skaldowie - Jutro Odnajdę Ciebie
+Carlos Santana - Spirits Dancing In The Flesh
+Chris De Burgh - The Head and the Heart
+Chris De Burgh - The Sound of a Gun
+Chris De Burgh - High on Emotion
+Chris De Burgh - Much More Than This
+Chris De Burgh - Man on the Line
+Chris De Burgh - Moonlight and Vodka
+Fields of the Nephilim - Intro (Dead but Dreaming)/ For Her Light/ At the Gates of Silent Memory/ (Paradise Regained)
+The Sisters of Mercy - More (Extended Version)
+Simple Minds - See The Lights
+Simple Minds - Let There Be Love
+Simple Minds - Woman
+Simple Minds - Stand By Love
+Sergio Mendez - With a Little Help
+Simple Minds - African Skies
+Simple Minds - Let The Children Speak
+Simple Minds - Ghostrider
+Simple Minds - Banging On The Door
+Simple Minds - Travelling Man
+Simple Minds - Rivers Of Ice
+Simple Minds - When Two Worlds Collide
+Talk Talk - Living In Another World - '91
+Talk Talk - Happiness Is Easy (Dub)
+Talk Talk - Dum Dum Girl (Spice Remix)
+Genesis - Banjo Man
+The Corrs - I Never Loved You Anyway
+Talk Talk - It's My Life (Tropical Rainforest Mix)
+Talk Talk - Living In Another World (Curious World Dub Mix)
+Talk Talk - Life's What You Make It (The Fluke Remix)
+The Stranglers - Outside Tokyo
+The Stranglers - Hey! (Rise of the Robots)
+The Stranglers - Sweden (All Quiet on the Eastern Front)
+The Stranglers - Curfew
+The Stranglers - Do You Wanna
+The Stranglers - Death and Night and Blood (Yukio)
+The Stranglers - Enough Time
+The Stranglers - Mean to Me
+The Stranglers - Walk On By
+Siglo XX - Fear And Desire
+Siglo XX - Everything Is On Fire
+Siglo XX - Lost In Violence
+Siglo XX - Sorrow And Pain
+Siglo XX - On The Third Day
+Siglo XX - My Sister Called Silence
+Siglo XX - View Of The Weird
+Siglo XX - Silent Crowd
+Midge Ure - When The Wind Blows (Live)
+Colosseum - Skelington
+Colosseum - Tanglewood '63
+Colosseum - Encore... Stormy Monday Blues
+Colosseum - Jumping off the Sun
+Colosseum - Bolero
+Collage - Kołysanka
+Collage - War Is Over
+Colosseum - The Machine Demands a Sacrifice
+Pendragon - Breaking the Spell
+Colosseum - The Grass Is Greener
+Ulysses - The Sunday Rising
+Xymox - Phoenix of My Heart / Wild Thing Outro
+The Legendary Pink Dots - Lovers
+Xymox - At the End of the Day
+Eloy - Apokalipsa
+Xymox - Mark the Days
+Lacrimosa - Satura
+Lacrimosa - Pieśn Pochwalna o Samotnosci we Dwoje
+Lacrimosa - Crucifixio
+Lacrimosa - Płomień na wietrze
+Lacrimosa - Rozrywajace Spojrzenie
+Xymox - Believe Me Sometimes
+Marillion - Runaway
+Marillion - Brave
+Marillion - The Great Escape
+Xymox - Wonderland
+Xymox - Dancing Barefoot
+Uriah Heep - Gypsy
+Uriah Heep - Come Away Melinda
+Uriah Heep - Wake Up (Set Your Sights)
+Uriah Heep - The Park
+Xymox - Smile Like Heaven
+Yes - I Would Have Waited Forever
+Yes - Shock To The System
+Hawkwind - Seven By Seven
+Yes - Masquerade
+Hawkwind - Master of the Universe
+Yes - Lift Me Up
+Hawkwind - We Took the Wrong Step
+Hawkwind - Adjust Me
+Hawkwind - Children of the Sun
+Hawkwind - Sweet Mistress of Pain
+Yes - Saving My Heart
+Yes - Miracle Of Life
+Yes - Silent Talking
+Yes - The More We Live - Let Go
+Yes - Angkor Wat
+Yes - Dangerous (Look In The Light Of What You'Re Searching For)
+Yes - Holding On
+Yes - Evensong
+Yes - Take The Water To The Mountain
+Yes - Give & Take
+Sinead O'Connor - Damn Your Eyes
+Sinead O'Connor - The Value Of Ignorance
+Psyche - Thundershowers
+Psyche - Caught In The Act
+Psyche - Prisoner To Desire
+Psyche - Taking Chances
+Psyche - Unveiling The Secret (Remix)
+Chris And Cosey - In Ecstasy
+Chris And Cosey - I Belong to Me
+Chris And Cosey - Take Control
+Chris And Cosey - Face To Face
+Chris And Cosey - Feel to Me
+Chris And Cosey - Go-Go Latino
+Chris And Cosey - Sin
+Chris And Cosey - Pagan Tango
+Chris And Cosey - Cords of Love
+Deine Lakaien - Follow Me
+Chris And Cosey - Balfigore (Before the Feast)
+Chris And Cosey - Sacred Silence
+Egdon Heath - Gringo
+Camouflage - Seize Your Day
+Psyche - Heaven In Pain
+Camouflage - Heaven (I Want You)
+The Legendary Pink Dots - On Another Shore
+Camouflage - Mellotron
+Jethro Tull - Living in the Past
+Camouflage - Mother
+Van Der Graaf Generator - Pilgrims
+Van Der Graaf Generator - The Emperor In His War-Room
+Van Der Graaf Generator - Killer
+Camouflage - Where the Happy Live
+Camouflage - These Eyes
+Black Sabbath - Children of the Grave
+Camouflage - What For
+Pendragon - The Haunting
+Camouflage - Waiting
+Camouflage - Accordion
+Camouflage - This Day
+Pink Floyd - High Hopes
+Camouflage - Handsome
+The Garden Of Delight - And the Wind Blows Down the Clouds
+Camouflage - Bitter Sweet
+Type O Negative - Christian Woman
+Type O Negative - A Death in the Family
+Camouflage - Spellbound
+Camouflage - Who The Hell Is David Butler?
+Gary Numan - Airlane
+Atomic Rooster - Friday the Thirteenth
+Atomic Rooster - Death Walks Behind You
+Atomic Rooster - Breakthrough
+Gary Numan - Metal
+Mike Batt - The Ride to Agadir
+Gary Numan - M.E.
+Gary Numan - Tracks
+Gary Numan - Observer
+Rain Tree Crow - Big Wheels In Shanty Town
+Simple Minds - Alive And Kicking
+Simple Minds - All The Things She Said
+Simple Minds - Don't You Forget About Me
+Simple Minds - A Brass Band In Africa
+Rain Tree Crow - Every Colour You Are
+Rain Tree Crow - Rain Tree Crow
+Bazooka Joe - Waterfront
+Rain Tree Crow - Red Earth (As Summertime Ends)
+Rain Tree Crow - Pocket Full Of Change
+Rain Tree Crow - Boat's For Burning
+Ultravox - White China
+Ultravox - Herr X
+Rain Tree Crow - New Moon At Red Deer Wallow
+Rain Tree Crow - A Reassuringly Dull Sunday
+Rain Tree Crow - Blackcrow Hits Shoe Shine City
+Rain Tree Crow - Scratchings On The Bible Belt
+Rain Tree Crow - Cries And Whispers
+Leonard Cohen - Master Song
+Leonard Cohen - Winter Lady
+Leonard Cohen - The Stranger Song
+Leonard Cohen - So Long, Marianne
+Leonard Cohen - Hey, That's No Way To Say Goodbye
+Leonard Cohen - Stories of the Street
+Leonard Cohen - One of Us Cannot Be Wrong
+The Legendary Pink Dots - Maniac
+The Legendary Pink Dots - The Talent Contest
+Mike Oldfield - Pran's Departure
+The Legendary Pink Dots - Stille Nacht
+The Legendary Pink Dots - The Month After
+The Legendary Pink Dots - Lisa's Separation
+The Legendary Pink Dots - The Golden Age?
+The Stranglers - Savage Breast
+The Stranglers - Achilles Heel
+The Stranglers - Here and There
+The Stranglers - Vladimir and Olga
+The Stranglers - In One Door
+The Legendary Pink Dots - Black Castles
+The Legendary Pink Dots - And Even The Vegetables Screamed
+Yes - Run With The Fox
+Yes - I'm Down
+Yes - Love Conquers All
+The Legendary Pink Dots - Regression
+Psyche - Sundial
+The Legendary Pink Dots - Blacklist
+The Legendary Pink Dots - Methods
+Budgie - Homicidal Suicidal
+Budgie - Parents
+Budgie - Make Me Happy
+Budgie - Hot as a Docker's Armpit
+Budgie - In the Grip of a Tyrefitter's Hand
+The Legendary Pink Dots - Our Lady In Cervetori
+The Legendary Pink Dots - Red Castles
+Roy Orbison - In Dreams
+The Legendary Pink Dots - Louder After 6
+The Legendary Pink Dots - Apocalypse Then
+The Legendary Pink Dots - Legacy
+The Legendary Pink Dots - City Ghosts
+The Legendary Pink Dots - Hanging Gardens
+The Legendary Pink Dots - Soma Bath
+The Legendary Pink Dots - Premonition 4
+Jefferson Starship - Jane
+Uriah Heep - Dreammare
+Jefferson Starship - Girl With the Hungry Eyes
+Jefferson Starship - Just the Same
+Pendragon - The Voyager
+Pendragon - Please
+Jefferson Starship - Rock Music
+The Legendary Pink Dots - Eight Minutes To Live
+Jefferson Starship - Fading Lady Light
+The Tear Garden - Tear Garden
+The Tear Garden - My Thorny Thorny Crown
+Jefferson Starship - Freedom at Point Zero
+The Sisters of Mercy - When You Don't See Me (Remix)
+The Legendary Pink Dots - I'm The Way, The Truth, The Light
+The Sisters of Mercy - Ribbons (Live Aufnahme, Hamburg, 17.11.90)
+Pendragon - 2.00 A.M.
+The Sisters of Mercy - Doctor Jeep (Radio Edit)
+Pavlov's Dog - Only You
+Pavlov's Dog - It's All For You
+Pavlov's Dog - Suicide
+Pavlov's Dog - I Love You Still
+Pavlov's Dog - Walkirya
+Ozzy Osbourne - I Don't Know
+Pendragon - Fallen Dreams and Angels
+Ozzy Osbourne - Crazy Train
+Black Sabbath - Symptom of the Universe
+Ozzy Osbourne - Goodbye To Romance
+Closterkeller - Video-Film
+Ozzy Osbourne - Dee
+Ozzy Osbourne - Suicide Solution
+Ozzy Osbourne - No Bone Movies
+Ozzy Osbourne - Revelation (Mother Earth)
+Ozzy Osbourne - Steal Away (The Night)
+James Ray & The Performance - Texas
+James Ray & The Performance - Mountain Voices (Remix)
+James Ray & The Performance - Dust Boat
+James Ray & The Performance - Edie Sedgwick
+Cocteau Twins - Lorelei
+Cocteau Twins - Shallow Then Halo
+James Ray & The Performance - Mexico Sundown Blues (Edit)
+The Legendary Pink Dots - Miłość w Brązowej Kopercie
+The Rolling Stones - Start Me Up
+Fading Colours - Gody
+Fading Colours - Shadows
+The Rolling Stones - Hang Fire
+The Rolling Stones - Slave
+Pendragon - The Third World in the U.K.
+The Rolling Stones - Little T & A
+Yes - I am Waiting
+Yes - Real Love
+The Rolling Stones - Black Limousine
+The Legendary Pink Dots - The More It Changes
+The Legendary Pink Dots - The City Of Needles
+The Rolling Stones - Neighbors
+Anekdoten - The Old Man & the Sea
+Anekdoten - Longing
+Anekdoten - Wheel
+The Rolling Stones - Worried About You
+Pendragon - Sister Bluebird
+The Rolling Stones - Tops
+The Rolling Stones - No Use In Crying
+Justin Hayward - Night Flight
+Justin Hayward - Maybe It's Just Love
+Justin Hayward - Penumbra Moon
+Justin Hayward - Nearer to You
+Justin Hayward - A Face in the Crowd
+Justin Hayward - I'm Sorry
+Justin Hayward - It's Not On
+Justin Hayward - Bedtime Stories
+Psyche - Eternal (Club Mix)
+Psyche - Unveiling The Secret (U.S. Mix)
+Psyche - Eternal (Instrumental)
+Psyche - Insatiable (Instrumental)
+OMD - Sailing On The Seven Seas
+OMD - Pandora's Box
+OMD - Then You Turn Away
+OMD - Was It Something I Said
+OMD - Big Town
+OMD - Call My Name
+OMD - Apollo XI
+OMD - Walking On Air
+OMD - Walk Tall
+OMD - Neon Lights
+OMD - All That Glitters
+Anne Clark - The Moment
+Anne Clark - Sognsvann
+Anne Clark - The Spinning Turning of the Summer Earth
+Anne Clark - Ice, Moving (Instrumental)
+Anne Clark - White Silence
+Anne Clark - Makes Me Feel at Ease
+East Of Eden - Northern Hemisphere
+East Of Eden - Isadora
+East Of Eden - Waterways
+East Of Eden - Centaur Woman
+East Of Eden - Bathers
+East Of Eden - Communion
+East Of Eden - Moth
+East Of Eden - In the Stable of the Sphinx
+East Of Eden - Gum Arabic
+East Of Eden - Confucius
+East Of Eden - Leaping Beauties For Rudy
+East Of Eden - Marcus Junior (7" Version)
+East Of Eden - Nymphenberger
+Anne Clark - Unstill Life
+Anne Clark - Empty Me
+Wayne Hussey - Buterfly on The Wheel
+Anne Clark - Counter Act
+Anne Clark - Abuse
+Fish - Mr 1470
+Fish - Lady Let It Lie
+Anne Clark - Silent Prayer
+Jadis - A Life Is All You Need
+Robert Łuczak Group - Hymnus The Spiritos Sankto
+Anne Clark - Closed Circuit
+Bazooka Joe - The Heat
+Nick Cave - Let Love In
+Nick Cave - Jangling Jack
+Nick Cave - Ain't Gonna Rain Any More
+Nick Cave - Do You Love Me?
+Bazooka Joe - Hiding From the Rentman
+Anekdoten - Karelia
+Anekdoten - Where Solitude Remains
+Anekdoten - Thouhts in Absence
+Anekdoten - The Flow
+Bazooka Joe - Hometown
+Closterkeller - Tu nie ma nic
+The Legendary Pink Dots - Black Zone
+Fields of the Nephilim - Last Exit for the Lost
+The Legendary Pink Dots - Break Day
+The Doors - The End
+The Legendary Pink Dots - Tower One
+The Legendary Pink Dots - Vigil-Anti
+The Cure - If Only Tonight We Could Sleep
+The Legendary Pink Dots - A Lust For Powder
+Focus - Eruption
+The Legendary Pink Dots - Tower Five
+The Cure - To Wish Impossible Things
+Psyche - Maggots
+Rick Wakeman - Jane Seymour
+Psyche - Wrench
+Psyche - Eating Violins
+The Alan Parsons Project - Total Eclipse
+Psyche - On The Edge
+Peter Hammill - It's Over Now
+Psyche - Brain Collapse
+Psyche - Wink Of An Eye
+Psyche - Why Should I
+Psyche - Contorting The Image
+Psyche - Suffocation
+Siglo XX - Sister In The Rain
+Siglo XX - No One Is Innocent
+Siglo XX - Afraid To Tell
+Siglo XX - Till The Act Is Done
+Siglo XX - Shadows
+Siglo XX - Flesh And Blood
+Siglo XX - Ride
+Andromeda - Too Old
+Andromeda - Day of the Change
+Andromeda - And Now the Sun Shines
+Andromeda - Turns to Dust
+Siglo XX - The End Of The Night
+Andromeda - The Reason
+Andromeda - I Can Stop the Sun
+Andromeda - When To Stop
+Siglo XX - Dead Man's Cave
+Siglo XX - The Beginning
+Siglo XX - After The Dream
+Siglo XX - The Room
+Siglo XX - Until A Day
+Siglo XX - Endless Corridor
+The Cure - Open
+The Cure - Closedown
+Wojciech Kilar - Mina's Photo
+Siglo XX - Dreams Of Pleasure
+Peter Hammill - Vision
+Siglo XX - Some Have A Laughter
+Peter Gabriel - In Your Eyes
+Siglo XX - Guilt And Desire
+The Alan Parsons Project - The Gold Bug
+Siglo XX - Moving Creatures
+Mike Oldfield - The Trek
+Siglo XX - Babies On A Battlefield
+Barclay James Harvest - Beyond the Grave
+Siglo XX - The Fiddle
+Joy Division - Eternal
+Siglo XX - It's All Over Now
+Kansas - Lamplight Symphony
+King Crimson - The Devil's Triangle
+Siglo XX - Death-Row
+The Alan Parsons Project - Paseo de Gracia (Instrumental)
+Siglo XX - Lines Of Hope
+Mike Oldfield - Bad News
+Siglo XX - Individuality
+Siglo XX - Obsession
+The Cure - One More Time
+Phil Collins - I've Forgotten Everything
+Siglo XX - Factory
+Peter Hammill - Been Alone So Long
+Siglo XX - Caraibean Nightmares
+Psyche - Blind
+Siglo XX - Art Of War
+Wojciech Kilar - Vampire Hunters
+Siglo XX - La Vie Dans La Nuit
+Van Der Graaf Generator - When She Comes
+Siglo XX - Youth Sentiment
+Wojciech Kilar - Love Remembered
+Siglo XX - Autumn
+Siglo XX - In The Garden
+Siglo XX - Silent House
+Chris De Burgh - Transmission Ends
+Siglo XX - Room (Sittard - 11.11.83)
+Siglo XX - Into The Dark (Leiden - 16.01.82)
+Procol Harum - Shine on Brightly
+Procol Harum - Wreck of the Hesperus
+Siglo XX - Progress (Den Haag - 08.01.82)
+The Moody Blues - My Song
+Siglo XX - Beginning (Sittard - 11.11.83)
+Siglo XX - Art Of War (Sittard - 11.11.83)
+Beggar's Opera - Lament
+The Waterboys - December
+Beggar's Opera - Festival
+Pink Floyd - Time
+Fad Gadget - For Whom the Bells Toll
+Beggar's Opera - Silver Peacock (Intro)
+Beggar's Opera - Impromptu
+Beggar's Opera - The Fox
+Siouxsie & The Banshees - Fear (Of The Unknown)
+Siouxsie & The Banshees - Cry
+Siouxsie & The Banshees - Little Sister
+Siouxsie & The Banshees - Shadowtime
+Siouxsie & The Banshees - Silver Waterfalls
+Siouxsie & The Banshees - Softly
+Siouxsie & The Banshees - The Ghost In You
+Marillion - No One Can
+Marillion - Holidays In Eden
+Marillion - Dry Land
+Marillion - This Town
+Blue Öyster Cult - Spheres
+Closterkeller - ?
+Sting - Moon Over Bourbon Street
+Marillion - Incubus
+??? - Children Of The Night
+King Crimson - ?
+Twelfth Night - Love Song
+Twelfth Night - ?
+Casino - Crying Onto Baize
+Twelfth Night - Fact and Fiction
+Twelfth Night - The Poet Sniffs a Flower
+Casino - Beyond That Door
+Closterkeller - Grzech
+Bruno The Questionable - Black Horse
+Bruno The Questionable - Bajka (Fable)
+Bruno The Questionable - Szał (Colours)
+Marillion - The Rakes Progress
+Love Like Blood - Psychedelic Passion
+Mercury Rev - Frittering
+Bruno The Questionable - Sister of the Night
+Neuschwanstein - Ice With Dwale
+Anne Clark - Fragility
+The Legendary Pink Dots - Zero Zero
+The Legendary Pink Dots - The Key to Heaven
+The Legendary Pink Dots - Leper Colony
+Marillion - 100 Nights
+Marillion - Splintering Hear
+Neuschwanstein - Intruders And The Punishment
+Neuschwanstein - Beyond The Bugle
+Neuschwanstein - Myths Of A Day
+The Legendary Pink Dots - Guilty Man
+The Legendary Pink Dots - Ghosts Of Unborn Children
+Hawkwind - Steppenwolf
+Hawkwind - Robot
+Hawkwind - Spirit of the Age
+Hawkwind - ?
+Hawkwind - Damnation Alley
+Hawkwind - Wings
+Love Like Blood - Walking In Demimondes (wersja zremiksowana??)
+Annie Lennox - Little Bird
+Tangerine Dream - Ricochet (Part Two)
+Rush - The Weapon
+Depeche Mode - Walking in My Shoes
+Depeche Mode - Higher Love
+Pavlov's Dog - ?
+Tangerine Dream - The Run
+The Doors - Riders on the Storm
+New Model Army - Here Comes The War
+The Doors - Light My Fire
+Alice Cooper - House of Fire
+Pink Floyd - In The Flesh?
+New Model Army - ?
+The Moody Blues - Lovely To See You Again (Live)
+The Moody Blues - ???
+The Moody Blues - Bless The Wings
+Closterkeller - W moim kraju
+Faith No More - From Out Of Nowhere
+Faith No More - Woodpecker From Mars
+??? - Fly
+Jadis - The Beginning and the End
+Pendragon - Solid Heart (Live)
+Faith No More - Zombie Eaters
+Aragon - Rocking Horse
+Hawkwind - Neon Skyline
+Hawkwind - Lost Chronicles
+Hawkwind - Sword of the East
+Peter Hammill - Like a Shot, the Entertainer
+Peter Hammill - Celebrity Kissing
+Shadowland - Scared Of The Dark
+Citizen Cain - Harmless Criminal
+Peter Hammill - Primo on the Parapet
+Strawbs - Temperament of Mind
+Strawbs - Autumn
+Tangerine Dream - Testlab
+Strawbs - The River
+Breathless - Everything I See
+Hawkwind - Warrior at the Edge of Time
+Strawbs - Benedictus
+Strawbs - Where Is This Dream of Your Youth?
+Strawbs - ?
+Jethro Tull - ?
+Jethro Tull - Still Loving You Tonight (Live)
+Indian Summer - ?
+Jethro Tull - Bourree
+Jethro Tull - Jack-A-Lynn
+Jethro Tull - Living in the Past (Live)
+Jethro Tull - With You There To Help Me (Live)
+Barclay James Harvest - A Matter of Time
+Barclay James Harvest - Ballad Of Denshow Mill
+Tangerine Dream - Charly The Kid
+Jethro Tull - Sweet Dream
+Tangerine Dream - Escaping Point
+Tangerine Dream - Rainbirds Move
+Deep Purple - Anya
+Siouxsie & The Banshees - Face To Face
+New Model Army - Marry The Sea
+New Model Army - Sleepwalking
+Deep Purple - The Battle Rages On
+Deep Purple - Solitaire
+Soft Cell - Martin
+Barclay James Harvest - Mocking Bird
+Barclay James Harvest - Who Do You Think We Are
+Barclay James Harvest - ?
+Barclay James Harvest - Song for Dying
+Hawkwind - Opaloca
+Hawkwind - The Demented King
+Tangerine Dream - Between Realities
+IQ - Fading Senses
+Galahad - Parade
+Galahad - The Chase
+Galahad - Ghost of Durtal
+Collage - The Winner Takes It All
+Galahad - ?
+IQ - The Darkest Hour
+IQ - Out of Nowhere
+Albion - Scarecrow
+The Sisters of Mercy - Under The Gun
+The Nefilim - Chaocracy
+Closterkeller - Taniec na linie (Live)
+Closterkeller - Wild Flower
+A Flock Of Seagulls - The Fall
+John Foxx - Systems of Romance
+John Foxx - This City
+John Foxx - Europe After the Rain
+John Foxx - The Garden
+Beggar's Opera - The Witch
+Warhorse - Woman Of The Devil
+Warhorse - No Chance
+Dust - Love Me Hard
+Tucky Buzzard - Which Way, When And Why
+Atomic Rooster - Break the Ice
+The Sisters of Mercy - No Time To Cry
+Closterkeller - To on - znowu następny
+Closterkeller - Dwa oblicza Ewy
+Dead Can Dance - ?
+Tangerine Dream - Shop Territory
+Closterkeller - Nadzieja
+Dead Can Dance - Tell Me About the Forest (You Once Called Home)
+The Cure - A Night Like This (Live)
+The Cure - Trust (Live)
+Dead Can Dance - Saldek
+The Sisters of Mercy - Vision Thing (Remix)
+Tangerine Dream - Flash Final
+Collage - Give Peace A Chance
+Dead Can Dance - The Spider's Stratagem
+Closterkeller - To muzyka
+Deep Purple - Knocking at Your Back Door
+Babel 17 - Come Into Hell & Murder Hate
+Pet Shop Boys - Dreaming Of The Queen
+Pet Shop Boys - To Speak Is A Sin
+Deep Purple - ?
+Deep Purple - Black Night
+Alice Cooper - Black Widow
+Deep Purple - Child in Time (Live)
+Deep Purple - Fireball
+Deep Purple - River Deep, Mountain High
+Deep Purple - Perfect Strangers
+Tangerine Dream - Out Of The Heat
+Deep Purple - Shield
+Kate Bush - ?
+Phil Collins - We Fly So Close
+Julee Cruise - This Is Our Night
+Kate Bush - The Red Shoes
+The Alan Parsons Project - ?
+Phil Collins - ?
+Julee Cruise - She Would Die for Love
+The Danse Society - Angel
+Pornografia - Psy wojny
+Nick Cave - Plain Gold Ring (Live)
+Nick Cave - Tupelo (Live)
+Pornografia - Kolory
+Closterkeller - Hassan i Sabbah
+Closterkeller - Kolana i już
+The Sisters of Mercy - Body And Soul
+Pornografia - Drzewa
+Closterkeller - Noc w haremie
+New Model Army - White Light
+Robert Fripp & David Sylvian - Firepower
+Robert Fripp & David Sylvian - 20th Century Dreaming
+Jethro Tull - Hard Liner
+Jethro Tull - Silver River Turning
+The Danse Society - The Hurt
+Dead Can Dance - How Fortunate the Man With None
+Kate Bush - Moments of Pleasure
+The Danse Society - Valiant To Vile
+The Danse Society - 2000 Light Years From Home
+Alice Cooper - You Gotta Dance
+Alice Cooper - I'm the Coolest
+Alice Cooper - Give the Kid a Break
+Alice Cooper - Guilty
+Alice Cooper - Wish You Were Here
+Alice Cooper - I'm Always Chasing Rainbows
+Alice Cooper - Going Home
+Steve Hackett - The Virgin and the Gypsy
+Steve Hackett - The Red Flowers of Tachai Blooms Everywhere
+Steve Hackett - Clocks - The Angel of Mons
+Inkubus Sukkubus - ???
+Steve Hackett - The Ballad of the Decomposing Man (Featuring "The Office Party")
+The Rolling Stones - Stones Out Of Tears
+Steve Hackett - Lost Time in Córdoba
+Nick Cave - I Let Love In
+The Rolling Stones - Love Is Strong
+The Rolling Stones - New Faces
+The Moody Blues - Say It With Love
+Inkubus Sukkubus - The Rape of Mon Bauen
+Men Of Lake - Vipers (In The Bottom Of The Well)
+Men Of Lake - The Dark Little Figure
+Men Of Lake - The Prodigal Father
+Men Of Lake - The Perception Of The Wind
+The Moody Blues - Is This Heaven?
+The Moody Blues - Say What You Mean (Part I & II)
+Collage - Woman
+Black Jester - The Labyrinth
+Hawkwind - Mask of the Morning
+Hawkwind - Rites of Netherworld
+Inkubus Sukkubus - Enchantment.
+Closterkeller - Fire Walk With Me
+Manfred Mann - One Way Glass
+The Moody Blues - Hope & Pray
+The Moody Blues - Shadows On The Wall
+Manfred Mann's Earth Band - Spirit in the Night
+The Moody Blues - Celtic Sonant
+The Moody Blues - Magic
+Nosferatu - Vampire Cry
+Inkubus Sukkubus - Pagan Born
+Inkubus Sukkubus - The Leveler
+Fish - Bandwagon
+Fish - Raw Meat
+Hawkwind - LSD
+Hawkwind - Blue Shift
+Hawkwind - Death of War
+The Moody Blues - Never Blame The Rainbows For The Rain
+Alice Cooper - Raped and Freezin'
+Alice Cooper - Generation Landslide
+Alice Cooper - Sick Things
+Strawbs - Hangman and the Papist
+Alice Cooper - Mary Ann
+Days Of Sorrow - Wild World
+Sun Glasses After Dark - Morbid Silence
+Alice Cooper - Caught in a Dream
+Alice Cooper - Long Way To Go
+Alice Cooper - Black Juju
+Alice Cooper - Is It My Body
+Nosferatu - Lucy Is Red
+Love Club - Distant
+Alice Cooper - Hallowed Be My Name
+The Garden Of Delight - Silent Gate
+The Garden Of Delight - Gods and Myths on Sargonid Seals
+Hawkwind - Mirror of Illusion
+Alice Cooper - Sun Arise
+Alice Cooper - Gutter Cat Vs. The Jets
+Hawkwind - We Took the Wrong Step Years Ago
+Hawkwind - Magnu / Angels of Death
+Hawkwind - Psychedelic Warlords
+Hawkwind - Winds of Change
+Gracious - Introdukcja
+Gracious - Heven
+Gracious - Super Nova
+Gracious - Once on a Windy Day
+Alice Cooper - Street Fight
+Alice Cooper - Blue Turk
+Alice Cooper - My Stars
+Alice Cooper - Public Animal #9
+Alice Cooper - Alma Mater
+Alice Cooper - Grande Finale
+Thomas Dolby - A Trickle Of Blood
+Thomas Dolby - Coitus Per Stigmata
+Thomas Dolby - Once We Vowed Eternal Love
+Thomas Dolby - Riddled With Guilt
+Thomas Dolby - Metamorphosis
+Thomas Dolby - The Hangman
+Thomas Dolby - The Beast In The Crypt
+Thomas Dolby - The Final Seance
+Thomas Dolby - Funeral By The Lake
+Eloy - Inside
+Psyche - Until The Shadows
+Curved Air - Moonshine
+Collage - Heroes Cry
+The Garden Of Delight - Spirit Invocation
+Thomas Dolby - No Ghosts In Daylight
+Thomas Dolby - To The Grave
+Closterkeller - Scarlet (wersja demo)
+Closterkeller - Taniec na linie
+Closterkeller - Supernova
+New Model Army - ???
+Nine Inch Nails - z LP. Downward Spiral
+Patricia Morrison - Zbawcy
+Kasia Kowalska - Kto może to dać
+Thomas Dolby - The Devil Is An Englishman
+Closterkeller - Owoce wschodu
+The Sensational Alex Harvey Band - Next
+The Sensational Alex Harvey Band - Tomorrow Belongs To Me
+The Sensational Alex Harvey Band - Rock Drill
+The Sensational Alex Harvey Band - Dogs of War
+The Sensational Alex Harvey Band - The Hot City Symphony
+The Sensational Alex Harvey Band - Anthem
+Bad Company - Do Right by Your Woman
+Bad Company - Like Water
+Bad Company - Silver, Blue & Gold
+Bad Company - Shooting Star
+Bad Company - Early in the Morning
+Bauhaus - Severance (Studio Version)
+Eloy - ?
+Citizen Cain - ?
+Porcupine Tree - Piano Lessons
+Pink Floyd - Keep Talking
+Collage - z LP. Moonshine
+King Crimson - One Time
+Dead Can Dance - (live)
+Dead Can Dance - Pieśń dla Sewilii
+Porcupine Tree - Stupid Dream
+Peter Gabriel - Blood of Eden
+Porcupine Tree - Pure Narcotic
+Loreena McKennitt - Marrakesh Night Market
+Loreena McKennitt - Santiago
+Peter Gabriel - Red Rain
+Peter Gabriel - Don't Give Up
+Dead Can Dance - ???
+Loreena McKennitt - The Mistic's Dream
+T. Rex - Metal Guru
+T. Rex - Telegram Sam
+Porcupine Tree - This Is No Rehearsal
+T. Rex - Get It On
+T. Rex - Debora
+Sweet - Blockbuster
+Sweet - Lies In Your Eyes
+Sweet - The Six Teens
+Sweet - Fox On The Run
+T. Rex - Cosmic Dancer
+Porcupine Tree - Baby Dream In Cellophane
+Porcupine Tree - Stranger By The Minute
+Elton John - Bennie and the Jets
+Elton John - This Song Has No Title
+Elton John - Jamaica Jerk-Off
+Elton John - I've Seen That Movie Too
+Elton John - Sweet Painted Lady
+Elton John - The Ballad of Danny Bailey (1909-34)
+Elton John - Dirty Little Girl
+Elton John - Your Sister Can'tTwist (But She Can Rock 'n Roll)
+Elton John - Saturday Night's Alright for Fighting
+Elton John - Social Disease
+Emerson, Lake & Palmer - I Believe in Father Christmas
+Kate Bush - December Will Be Magic Again
+Elton John - Cold as Christmas
+Elton John - Step Into Christmas
+Sparks - Thank God It?s not Christmas
+Jethro Tull - Christmas Song
+Procol Harum - Christmas
+Simon & Garfunkel - Silent Night
+John Lennon - Happy Xmas (War is over)
+Slade - Happy Xmas Everybody
+Jon Anderson - Safe All Your Love
+King Crimson - Vrooom
+King Crimson - When I Say Stop Continue
+Landberk - Kontiki
+Landberk - Mirror Man
+King Crimson - Sex, Sleep, Eat, Drink
+King Crimson - Lizard
+Landberk - Valentinsong
+King Crimson - Lament
+Justin Hayward - ???
+Blue Jays - My Brother
+Blue Jays - You
+Blue Jays - Nights, Winters, Years
+Ray Thomas - Hey Mama Life
+Mike Pinder - Message
+Mike Pinder - The Seed
+Mike Pinder - The Promise
+John Lodge - Who Could Change
+John Lodge - Say You Love Me
+Bernard Herrmann, Elmer Bernstein - Max
+Supertramp - System-Moonshine
+Collage - Moonshine
+Bernard Herrmann, Elmer Bernstein - Sam's Story
+Eloy - LP. Dawn
+Eloy - ???
+Eloy - The Bells Of Notre Dame
+Eloy - The Sun-Song
+Bernard Herrmann, Elmer Bernstein - Love?
+Bernard Herrmann, Elmer Bernstein - Strip Search
+Bernard Herrmann, Elmer Bernstein - Rape And Hospital
+Bernard Herrmann, Elmer Bernstein - Frightened Sam
+Nazareth - Broken Down Angel
+Nazareth - This Flight Tonight
+Nazareth - My White Bicykle
+Nazareth - Beggar's Day
+Nazareth - Rose In Heathler
+Nazareth - Sunshine
+Nazareth - Go Down Fighting
+Nazareth - Hair Of The Dog
+Nazareth - Silver Dollar Forger
+Nazareth - Please Don't Judas Me
+The Garden Of Delight - ???
+Psyche - Secret Angel
+Psyche - Sun Dail
+Psyche - Inseciable
+Jon Anderson - Shaker Loops
+Jon Anderson - Change We Must
+Midge Ure - Living In The Past
+Led Zeppelin - Kashmir
+Led Zeppelin - Babe I'm Gonna Leave You
+Led Zeppelin - Since I've Been Loving You
+Kasia Kowalska - No Quarter
+Jimmy Page & Robert Plant - The Battle Of Evermore
+Bernard Herrmann, Elmer Bernstein - Cady Meets The Girls
+Budgie - Guts
+Budgie - Whiskey River
+Budgie - Wondering What Everyone Knows
+Budgie - Napoleon Bona-Part One
+Budgie - Napoleon Bona-Part Two
+Budgie - You and I
+Budgie - Bored With Russia
+Bernard Herrmann, Elmer Bernstein - Sam Hides
+Bernard Herrmann, Elmer Bernstein - Drive
+Bernard Herrmann, Elmer Bernstein - Teddy Bear Wired
+Bernard Herrmann, Elmer Bernstein - Kersek Killed
+Bernard Herrmann, Elmer Bernstein - Houseboat
+Bernard Herrmann, Elmer Bernstein - The Fight
+Bernard Herrmann, Elmer Bernstein - Destruction
+Hawkwind - Sadness Runs Deep
+Nosferatu - Crysania
+Nosferatu - Sayren
+Umbra Et Imago - Away
+Umbra Et Imago - Hash Dreams
+Dreams of Sanity - Opera
+Renaissance - Prolog
+Renaissance - Wanderer
+Renaissance - Face Of Yesterday
+Renaissance - Spear Some Love
+Renaissance - At The Harbour
+Renaissance - Ashes Are Burning
+Renaissance - Black Flame
+Hawkwind - ???
+Egdon Heath - Slightly In Deapair
+Lacrimosa - ???
+The Legendary Pink Dots - ???
+Dreams of Sanity - Masquerade Act 1
+Dreams of Sanity - Masquerade Act 2
+Dreams of Sanity - Masquerade - Interlude
+Inkubus Sukkubus - Burning Times
+Closterkeller - Here Comes Another One
+Fish - No Dummy
+Fish - Pipeline
+Manfred Mann Chapter III - It's Good To Be Alive
+Dreams of Sanity - Masquerade Act 3
+Manfred Mann Chapter III - Traveling Lady
+Manfred Mann Chapter III - Lady Ace
+Manfred Mann Chapter III - Time
+Manfred Mann Chapter III - Jump Before You Think
+Manfred Mann Chapter III - Konekuf
+Manfred Mann Chapter III - Mister You're Better Man Than I
+Lacrimosa - z LP. Angst
+Hawkwind - Letting in the Past
+Hawkwind - The Camera That Could Lie
+Hawkwind - 3 or 4 Erections in the Course of a Night
+Hawkwind - Techno Tropic Zone Exists
+Hawkwind - Gimme Shelter
+Hawkwind - Avante
+Renaissance - Carpet Of The Sun
+Renaissance - Songs Of Sheherezad
+Renaissance - Cold Is Being Lonely
+Renaissance - Mother Russia
+Dreams of Sanity - Masquerade Act 4
+Dreams of Sanity - Within (The Dragon)
+Nosferatu - Rise
+Inkubus Sukkubus - Dark Mother
+Umbra Et Imago - Endorphin
+Asgard - z LPs. Arkana i Imago Mundi
+Dreams of Sanity - The Maiden And The River
+Emerson, Lake & Palmer - Still You Turn Me On
+Emerson, Lake & Palmer - All I Want Is You
+Emerson, Lake & Palmer - Lend Your Love to Me
+Collage - Wings in the Night
+Collage - In Your Eyes
+Dreams of Sanity - Lost Paradise '99
+Fish - Poet's Moon
+Galahad - Learning Curve (Live & Learn Part 2)
+Shadowland - Through The Looking Glass
+Patricia Morrison - Reflection
+Kate Bush - There Goes a Tenner
+Kate Bush - Pull Out the Pin
+Patricia Morrison - Alone
+Kasia Kowalska - Do złudzenia
+Fish - ???
+Talath Dirnen - Do niej
+Emerson, Lake & Palmer - Hand of Truth
+Emerson, Lake & Palmer - Daddy
+Emerson, Lake & Palmer - Hout Mice
+Emerson, Lake & Palmer - Man in a Long Black Coat
+Shadowland - Half Moon Street
+Shadowland - The Waking Hour
+Shadowland - A Matter of Perspective
+Shadowland - The Hunger
+Landberk - Song from Kallsedet
+Landberk - You And I
+Landberk - Lonely Land
+Landberk - Tell
+King Crimson - Indiscipline
+Uriah Heep - Easy Livin'
+Uriah Heep - July Morning
+Uriah Heep - The Wizard
+Uriah Heep - Blind Eye
+Uriah Heep - Bird Of Prey
+Uriah Heep - Sweet Loreyn
+Uriah Heep - Pilgrim
+Uriah Heep - Seven Stars
+Free - Wishing Well
+Free - All Right Now
+Free - Moonshine
+Free - Mourning Sad Morning
+Free - Love You So
+Free - Seven Angels
+Free - Fire and Water
+Free - Woman
+Free - Mr. Big
+Kate Bush - Suspended in Gaffa
+Free - ???
+Alice Cooper - No More Mr. Nice Guy
+Status Quo - Paper Plane
+Status Quo - Rain
+Status Quo - Wracając do domu
+Status Quo - Mama Weer All Crazee Now
+Slade - Far Far Away
+Alice Cooper - Straceniec
+Alice Cooper - Dmuchane laleczki za milion dolarów sztuka
+Slade - Every Day
+Status Quo - Oh Baby
+Slade - Look wot you dun
+Kate Bush - Leave It Open
+Status Quo - And It's Better Now
+The Moody Blues - Give Me Little Something
+The Moody Blues - Go Now
+Kate Bush - Night of the Swallow
+The Moody Blues - Cities
+The Moody Blues - Ride My See Saw
+The Moody Blues - Tuesday Afternoon
+The Moody Blues - I przypływ nadchodzi
+Kate Bush - All the Love
+Goblin - Mad Puppet'S Laughs (Opening Intro)
+The Moody Blues - The Dream
+The Moody Blues - Have You Heard
+Goblin - School At Night (Lullaby - Music Box Version)
+Peter Hammill - Sharply Unclear
+Peter Hammill - A Headlong Stretch
+Peter Hammill - ???
+Van Der Graaf Generator - Darkness (11/11)
+Goblin - School At Night (Instrumental Version)
+Pink Floyd - Set The Controls For The Heart Of The Sun
+The Garden Of Delight - The White Goddess
+Goblin - Profondo Rosso
+Yes - The Revealing Science Of God
+Yes - The Remembering
+Pär Lindh Project - ?
+Big Day - Gdy kiedyś znów zawołam cię
+Pär Lindh Project - Noc na Łysej Górze (Mussorgsky)
+Galahad - Looking at the Apple Piece
+U.F.O. - Prince Of India Rubber
+Saga - The Perfectionist
+Camel - Hymn to Her
+Collage - Blues
+The Alan Parsons Project - Eye in the Sky
+Collage - ?
+Arena - Valley of the Kings
+Elton John - Belfast
+Elton John - ?
+Fading Colours - Dance
+James Rays Gangwar - Fuelled Up
+James Rays Gangwar - Blue Lover
+Big Day - Lustra
+Closterkeller - Śniło
+Goblin - School At Night
+Ten Years After - Love Like A Man
+Ten Years After - ?
+King Crimson - Talking Drum (Live)
+King Crimson - 21st Century Schizoid Man (Live)
+Goblin - Death Dies (Film Version - Part 1)
+Goblin - Gianna (Alternate Version)
+Goblin - School At Night (Lullaby - Celesta Version)
+Goblin - Death Dies (Film Version - Part 2)
+Goblin - Wild Session
+Goblin - Death Dies (Film Version - Part 3)
+Goblin - Gianna (Album Version)
+Siouxsie & The Banshees - Israel
+Siouxsie & The Banshees - Jigsaw Feeling
+Siouxsie & The Banshees - ?
+Siouxsie & The Banshees - Stain
+Siouxsie & The Banshees - Head Cut
+Bloodrock - Fantastic Piece of Architecture
+Bloodrock - Melvin Laid an Egg
+Fish - Jungle Ride
+Goblin - School At Night (Lullaby - Echo Version)
+XIII. Století - Demoniac
+Jethro Tull - Life's a Long Song
+Closterkeller - Tak się boję bólu
+Closterkeller - Dlaczego noszę broń
+Closterkeller - Jeszcze raz do końca
+Closterkeller - Tak się rodzi nienawiść
+Closterkeller - Cyan
+Fish - ?
+Jethro Tull - Teacher
+Jethro Tull - With You There To Help Me
+Jethro Tull - Nothing To Say
+Jethro Tull - To Cry You a Song
+Jethro Tull - No Time for Everything
+Jethro Tull - Aqualung
+Jethro Tull - My God
+Jethro Tull - Wind Up
+Siouxsie & The Banshees - Happy House
+Siouxsie & The Banshees - Hong Kong Garden
+Siouxsie & The Banshees - Mirage
+Siouxsie & The Banshees - The Staircase Mystery
+Siouxsie & The Banshees - Helter Skelter
+Siouxsie & The Banshees - Christine
+Siouxsie & The Banshees - Desert Kisses
+Siouxsie & The Banshees - Paradise Place
+Siouxsie & The Banshees - Spellbound
+Siouxsie & The Banshees - Arabian Knights
+Goblin - School At Night (Album Version)
+Goblin - Profondo Rosso (Remix Version)
+Siouxsie & The Banshees - Playground Twist
+Elton John - Friends
+Elton John - Pinball Wizard
+Elton John - Captain Fantastic
+Goblin - Profondo Rosso (Original Sound Effect)
+Elton John - Bitter Fingers
+Elton John - Teacher I Love You
+Elton John - All the Girls Love Alice
+Elton John - Street Kids
+Elton John - I've Seen the Saucers
+Elton John - Goodbye Yellow Brick Road
+Elton John - Harmony
+Jethro Tull - Nursie
+Jethro Tull - Song for Jeffrey
+Jethro Tull - A Time for Everything
+Jethro Tull - Bourée
+Jethro Tull - Back to the Family
+Jethro Tull - Look Into the Sun
+Jethro Tull - Cross-Eyed Mary
+Jethro Tull - Locomotive Breath
+Jethro Tull - Just Trying To Be
+Elton John - Blessed
+Collage - The Blues (alt. mix)
+Eyes of the Nightmare Jungle - Innocence
+Eyes of the Nightmare Jungle - Pressure
+Eyes of the Nightmare Jungle - Voices
+Closterkeller - Scarlett
+Neuschwanstein - Midsummer Day
+Camel - The White Rider (live 1972)
+Camel - God of Light (live 1972)
+The Rolling Stones - Angie
+Hawkwind - Highrise
+Alice Cooper - Years Ago
+Alice Cooper - Steven
+Alice Cooper - The Awakening
+Pink Floyd - Arnold Layne
+Pink Floyd - Matilda Mother
+Pink Floyd - Let There Be More Light
+Pink Floyd - Cirrus Minor
+John Barry - The Sniper Was a Woman
+John Barry - Ice Chase
+The Pretenders - Where Has Every Body Gone
+Goblin - Deep Shadows (Film Version - Part 1)
+John Barry - Inflight Fight
+John Barry - Air
+John Barry - Bond
+The Pretenders - If There Was A Man
+??? - [kolęda]
+Incredible Expanding Mindfuck - ?
+H.I.M. (His Infernal Majesty) - ?
+Galahad - Perfection Personified
+Rare Bird - Baby Listen
+??? - ?
+Kansas - Eleanor Rigby [live]
+Kansas - Dust In The Wind [live]
+Kansas - Song For America [live]
+Spock's Beard - June
+Spock's Beard - Flow
+Goblin - Deep Shadows (Film Version - Part 2)
+Ultravox - We Came To Dance
+The Human League - Do Or Die
+Talk Talk - Today
+Depeche Mode - Photographic
+A Flock Of Seagulls - I Ran
+Duran Duran - Careless Memories
+Rush - 2112 [live]
+Goblin - Deep Shadows (Film Version - Part 3)
+Keith Emerson - Rose's Descent Into The Cellar
+Keith Emerson - The Library
+Keith Emerson - Sarah In The Library Vaults
+Keith Emerson - Bookbinder's Delight
+Keith Emerson - Rose Leaves The Apartment
+Keith Emerson - Rose Gets It
+Keith Emerson - Elisa's Story
+Keith Emerson - A Cat Attic Attack
+Keith Emerson - Kazanian's Tarantella
+Keith Emerson - Mark's Discovery
+Keith Emerson - Inferno Finale
+Keith Emerson - Cigarettes, Ices, Etc.
+Warfare - Scream Of The Vampire Part One
+Warfare - Vlad The Impaler
+Warfare - Scream Of The Vampire Part Two
+Warfare - Funeral In Carpathia
+Warfare - Ballad Of The Dead
+Warfare - Tales Of Gothic Genre
+Warfare - Dance Of The Dead
+Warfare - Phantom Of The Opera (Hammer House Of Horror Mix)
+Patrick Doyle - To Think of a Story
+Patrick Doyle - What's Out There?
+Patrick Doyle - There's an Answer
+Patrick Doyle - I Won't If You Won't
+Patrick Doyle - A Perilous Direction
+Patrick Doyle - A Risk Worth Taking
+Patrick Doyle - Victor Begins
+Patrick Doyle - Even If You Die
+Patrick Doyle - The Creation
+Patrick Doyle - Evil Stitched to Evil
+Marillion - Charting The Single
+Marillion - Market Square Heroes
+Marillion - Lady Nina
+Marillion - Freaks
+Marillion - Tux On
+Marillion - Margaret (Live)
+U2 - Bad (Live)
+U2 - A Sort of Homecoming (Live)
+U2 - Three Sunrises
+U2 - Love Comes Tumbling
+U2 - Treasure (Whatever Happened to Pete the Chop)
+U2 - Endless Deep
+U2 - Boomerang I (Instrumental)
+U2 - Boomerang II (Vocal)
+U2 - Sixty Seconds in Kingdom Come
+Cocteau Twins - Blood Bitch
+Cocteau Twins - Wax and Wane
+Cocteau Twins - But I'm Not
+Cocteau Twins - Blind Dumb Deaf
+Cocteau Twins - The Hollow Men
+Cocteau Twins - Garlands
+Cocteau Twins - Grail Overfloweth
+Cocteau Twins - Dear Heart
+Cocteau Twins - Hazel
+Cocteau Twins - Hearsay Please
+Cocteau Twins - Speak No Evil
+Cocteau Twins - Perhaps Some Other Aeon
+Cocteau Twins - Feathers-Oar-Blades
+Cocteau Twins - Alas Dies Laughing
+Cocteau Twins - It's All But an Ark Lark
+Cocteau Twins - Peppermint Pig (12" Version)
+Cocteau Twins - Laugh Lines
+Eyes of the Nightmare Jungle - Shadow Dance (Remix '94)
+Tiamat - Visionaire
+Tiamat - Do You Dream Of Me
+Tiamat - Planets
+Collage - Sun Meadows
+Devil Doll - Sacrilegium
+Salamander - Possessions
+Velvett Fogg - Yellow Cave Women
+Patrick Doyle - The Escape
+Velvett Fogg - New York Mining Disaster 1941
+Velvett Fogg - Lady Caroline
+Carl Orff - O Fortuna
+Tytus de Ville - W imię Ojca
+Laibach - Two of Us
+Ray Manzarek - O Fortuna
+Salamander - He Is My God
+Salamander - People
+Salamander - Kill
+Salamander - Steel
+Strawbs - Lay Down
+Strawbs - The Flower and the Young Man
+Strawbs - Part of the Union
+Strawbs - A Glimpse of Heaven
+Patrick Doyle - The Reunion
+Lacrimosa - ?
+Patrick Doyle - The Journal
+Tiamat - Gain
+Jethro Tull - Living in the Past [live]
+Genesis - The Lamb Lies Down on Broadway
+Genesis - Fly on a Windshield
+Genesis - Broadway Melody of 1974
+Genesis - Cuckoo Cocoon
+Patrick Doyle - Friendless
+Genesis - The Grand Parade of Lifeless Packaging
+Genesis - Hairless Heart
+Genesis - Counting Out Time
+Genesis - The Carpet Crawlers
+Genesis - The Chamber of 32 Doors
+Genesis - Lilywhite Lilith
+Genesis - The Waiting Room
+Genesis - Anyway
+Genesis - Here Comes the Supernatural Anaesthetist
+Genesis - The Lamia
+Genesis - Silent Sorrow in Empty Boats
+Genesis - The Colony of Slippermen (The Arrival - A Visit to the Doktor - Raven)
+Genesis - Ravine
+Genesis - The Light Dies Down on Broadway
+Genesis - Riding the Scree
+Genesis - In the Rapids
+Genesis - It
+Tiamat - ?
+Marc Almond - Loveless World
+darXtar - Magicians
+darXtar - ?
+darXtar - Dark Daze
+PTS - Island
+Warfare - Prince Of Darkness
+Warfare - Dracula
+Warfare - Frankenstein
+Warfare - Hammer Horror
+Anthony Phillips - Regrets
+Anthony Phillips - Now What Are They Doing to My Little Friends?
+Patrick Doyle - William!
+Blue Jays - Blue Guitar
+Justin Hayward - Songwriter
+Justin Hayward - Country Girl
+John Lodge - Summer Breeze
+John Lodge - Carry Me
+John Lodge - Rainbow
+Justin Hayward - Suitcase
+Justin Hayward - Raised on Love
+Justin Hayward - Doin' Time
+Eyes of the Nightmare Jungle - ?
+Eyes of the Nightmare Jungle - Riders on the Storm
+The Doors - Hyacinth House
+Marianne Faithfull - She
+Marianne Faithfull - Bored by Dreams
+Marianne Faithfull - Losing
+Jim Morrison - Awake
+Jim Morrison - Ghost Song
+Jim Morrison - Dawn's Highway
+Jim Morrison - Newborn Awakening
+Jim Morrison - To Come of Age
+Jim Morrison - Black Polished Chrome
+Jim Morrison - Latino Chrome
+Jim Morrison - Angels and Sailors
+Jim Morrison - Stoned Immaculate
+Jim Morrison - The Poet's Dreams
+Jim Morrison - The Movie
+Jim Morrison - Curses, Invocations
+Jim Morrison - The Hitchhiker
+Jim Morrison - An American Prayer
+Jim Morrison - The End
+Jim Morrison - Albinoni: Adagio
+The Doors - I Can't See Your Face in My Mind
+Pink Floyd - See Emily Play
+Pink Floyd - Astronomy Domine
+Pink Floyd - Remember a Day
+Pink Floyd - Pow R. Toc H.
+Pink Floyd - A Saucerful of Secrets [live]
+Pink Floyd - Nile Song
+Pink Floyd - Heart Beat Pig Meat
+The Doors - L'America
+U.F.O. - Star Storm
+U.F.O. - Flying
+Hawkwind - Psi Power
+Hawkwind - Fable of a Failed Race
+Hawkwind - High Rise
+Sting - Moon Over Burboun Street
+Patrick Doyle - Death of Justine / Sea of Ice
+Patrick Doyle - Yes I Speak
+Procol Harum - Nothing That I Didn't Know
+Steve Hackett - Dark as the Grave
+Justin Hayward - Forever Autumn
+Lacrimosa - Requiem
+Omega - Szvit - a. Ébredés
+Omega - Szvit - b. A Malomban
+Omega - Szvit - c. Hazafelé
+Omega - Szvit - d. A Hetedik Napon
+Omega - Szvit - e. Délutáni Szerelem
+Omega - Szvit - f. Van Aki Nyugtalan
+Omega - Nem Tudom A Neved
+Omega - Mozgó Világ
+Omega - Huszadik Szazádi Városlakó
+Genesis - Land of Confusion
+Deine Lakaien - Winter
+Fading Colours - Evelyn Was Her Name
+Inkubus Sukkubus - Hell-Fire
+Inkubus Sukkubus - Women To Her
+Basil Poledouris - Anvil of Crom
+Basil Poledouris - Riddle of Steel
+Basil Poledouris - Riders of Doom
+Basil Poledouris - The Orgy
+Basil Poledouris - Death of Rexor
+Genesis - Seven Stones
+Genesis - Can-Utility and the Coastliners
+Frijid Pink - Johny Comes Marching Home
+Fading Colours - Lorelei
+Cockney Rebel - If This Is Love (Give Me More)
+Cockney Rebel - Carry Me Again
+Cockney Rebel - Here Comes the Sun
+Cockney Rebel - Innocence and Guilt
+Patrick Doyle - God Forgive Me
+Frijid Pink - Black Lace
+Frijid Pink - I'll Never Be Lonely
+Frijid Pink - Bye Bye Blues
+Frijid Pink - Pain in My Heart
+Peter Hammill - Plays the Thing
+Peter Hammill - Just Good Friends
+Mark Knopfler - You And Your Friend
+Icehouse - Someone Like You
+Peter Hammill - Too Many of My Yesterdays
+Genesis - Supper's Ready
+Fading Colours - Still
+Love Like Blood - Heroes
+Love Like Blood - Everlasting Dream
+Love Like Blood - Flood Of Love
+Galahad - Painted Lady
+Cairo - Silent Winter
+Simon Dupree And The Big Sound - Kite
+??? - Candy ... Cloud The Sandman
+Ogrodnicy - Kolęda nocka
+Loreena McKennitt - Snow
+Rush - Nobody's Hero (live)
+Rush - Closer To The Heart (live)
+Monty Python - It's Christmas In Heaven
+IQ - Outer Limits
+Irion - Welcome To The New Dimension
+Irion - Izis And Osiris
+Threshold - Angels
+??? - James Bond Theme
+Discipline - Kental Four
+Real Life - Send Me An Angel
+Soft Cell - Torch
+China Crisis - The Gates of Door to Door
+Spandau Ballet - Freeze
+Ultravox - Hymn
+King Crimson - Fallen Angel
+??? - Fallen Angel
+??? - Angel
+??? - Like An Angel (Passing Through My Room)
+Cast - Fallen Angel
+No-Man - Angel Gets Caught In The Beauty Trap
+The Rolling Stones - Flip The Switch
+XIII. Století - Vampires
+The Beatles ??? - Good Morning ???
+Patrick Doyle - Please Wait
+Patrick Doyle - The Honeymoon
+Barclay James Harvest - Hymn
+Barclay James Harvest - Wielka Katastrofa Górnicza
+Barclay James Harvest - Titles
+Barclay James Harvest - Ra
+Barclay James Harvest - Rock'n'Roll Star
+Genesis - I Know What I Like
+Genesis - Where the Sour Turns to Sweet
+Genesis - Time Table
+Genesis - The Serpent
+Genesis - Am I Very Wrong?
+Genesis - Dancing With the Moonlit Knight
+Alice Cooper - Hello Hooray
+Alice Cooper - Welcome to My Nightmare
+Alice Cooper - Nieubłagana Alicja
+Alice Cooper - Lace and Whiskey
+Alice Cooper - Elected
+Alice Cooper - A Love the Deceased (Dead)
+Alice Cooper - Department of Youth
+Alice Cooper - I Never Cry
+Joy Division - Closer
+Fading Colours - Colours
+Siouxsie & The Banshees - The Rapture
+Deine Lakaien - Night of Love
+Deine Lakaien - Traitors
+Patrick Doyle - The Wedding Night
+Barclay James Harvest - Medicine Man
+Barclay James Harvest - Someone Very Slow
+Barclay James Harvest - Urszula-Pieśn Morskiego Łabędzia
+Big Day - Tam
+Big Day - Złoty ocean
+Nosferatu - Shadow Maker
+Type O Negative - Black Sabbath
+Abraxas - Inferno
+Hawkwind - Let Barking Dogs Lie
+Pär Lindh Project - The Cathedral
+Pavlov's Dog - Black Dog
+Camel - The Snow Goose cz. 1
+Camel - The Snow Goose cz. 2
+Patrick Doyle - Elizabeth
+Patrick Doyle - She's Beautiful
+Nitzinger - Take A Picture
+Nitzinger - Motherlode
+Nitzinger - God Bless The Pervert
+Nitzinger - Earth Eater
+Nitzinger - Driftwood
+Nitzinger - Let The Living Grow
+Nitzinger - Texas Blues / Jelly Roll (Bonus Track)
+Tindersticks - Can We Start Again?
+Tindersticks - If You're Looking For A Way Out
+Tindersticks - Pretty Words
+Tindersticks - From The Inside
+Sparks - Never Turn Back On Mother Earth
+Sparks - This Town Ain't Big Enough For Both Of Us
+Sparks - (No More) Mr. Nice Guys
+Sparks - Amateur Hour
+Sparks - Something For A Girl With Everything
+Sparks - Don't Leave Me Alone With Her
+Sparks - Falling In Love With Myself Again
+Sparks - Here In Heaven
+Sparks - Fa La Fa Lee
+Sparks - Slowboat
+Sparks - Propaganda
+Sparks - At Home, At Work, At Play
+Sparks - B.C.
+Yes - Yesterday And Today
+Yes - Sweet Dreams
+Yes - Harrow Land
+Yes - Sweetness
+Yes - Time And A Word
+Yes - The Fish
+Umbra Et Imago - Wampir
+Siouxsie & The Banshees - Double Life
+Fields of the Nephilim - Laura
+Inkubus Sukkubus - Call Out My Name In The Night
+Siouxsie & The Banshees - Not Forgotten
+Fading Colours - Wedding
+Siouxsie & The Banshees - Forever
+Siouxsie & The Banshees - Sick Child
+Siouxsie & The Banshees - Love Out Me
+Rare Bird - Down On The Floor
+Rare Bird - Iceberg
+Rare Bird - God Of War
+Rare Bird - I'm Thinking
+Supertramp - Logical Song
+Supertramp - Hidden Yourshell
+Supertramp - Words Unspoken
+Supertramp - Lady
+Supertramp - ???
+Supertramp - Po Prostu Zwyczajny Dzień
+Supertramp - Breakfast in America
+Supertramp - Uwertura Głupca
+Arena - Crying for Help
+Ennio Morricone - 60 seconds to What
+Elton John - ???
+Elton John - Walczyk
+Elton John - Lies
+Yes - The Ancient
+Yes - Ritual
+Clive Nolan & Alan Reed - Love Song
+The Mission - Afterglow
+Nosferatu - The Keeper's Call
+That Backdoor Man - Any Day After
+Twelfth Night - Piccadilly Square
+Pär Lindh Project - Dresden Lamentation
+Pär Lindh Project - Iconoclast
+Pär Lindh Project - Zielone Łąki
+Arena - Solomon
+The Mission - Daddy's Going To Heaven Now
+Eden Burning - His Love
+King Crimson - Starless
+Barclay James Harvest - Back to the Wall
+Barclay James Harvest - Doctor Doctor
+Barclay James Harvest - Rock'n'Roll Lady
+Barclay James Harvest - Life Is for Living
+Camel - Supertwister
+Camel - Never Let Go
+Camel - Song Within a Song
+Camel - Nimrodel
+Camel - The Procession
+Camel - The White Rider
+Camel - Mystic Queen
+Camel - Separation
+Camel - Another Night
+Radosne Wesołe Myśli - Success
+Fading Colours - The Lay
+Fading Colours - Unreality
+Fading Colours - Black Horse (z kasety DATA)
+Fading Colours - Black Horse (w pierwotnej wersji)
+Closterkeller - Dla jej siostry
+Closterkeller - ???
+Tindersticks - (You Take) This Heart Of Mine
+Eloy - Poseidon's Creation
+Tindersticks - I Know That Loving
+Galahad - Dreaming From the Inside
+Sparks - Nicotina
+Steve Hackett - Vampyre With a Healthy Appetite
+Devil Doll - Mr. Doctor
+Devil Doll - Elio Gabalus
+Tindersticks - CF GF
+Colosseum - Beware the Ides of March
+Colosseum - I Can't Live Without You
+Tindersticks - Nectar
+Genesis - ???
+Genesis - All in a Mouse’s Night
+Genesis - Sceny z Nocnego Marzenia
+Genesis - Follow You Follow Me
+Simple Minds - Life In A Day
+Simple Minds - Real To Real
+Simple Minds - I travel
+Simple Minds - Today I Died Again
+Simple Minds - Intrance Transmission
+Simple Minds - See Out The Angle
+Simple Minds - Hunter And The Hun
+Simple Minds - Pleasantly Disturbed
+Guns N' Roses - Sympathy for the Devil
+Jethro Tull - Cheerio
+Artica - Indomita
+Angina Pectoris - Aphrodisian
+The House of Usher - The Last Crypt
+Type O Negative - Please Don't Go
+Psyche - Wampir
+Inkubus Sukkubus - Enchentment
+The Hall Of Souls - Hope
+Tindersticks - Tyed
+Tindersticks - Sweet Sweet Man Pt. One
+Fish - 1470
+Empyrean - Chant of Tights
+Wishbone Ash - Jail Bait
+Wishbone Ash - Errors of My Ways
+Wishbone Ash - Valediction
+Wishbone Ash - Blowin' Free
+Wishbone Ash - Rock 'n Roll Widow
+Wishbone Ash - Fenix
+Tindersticks - Blood
+Big Day - Przestrzeń
+Fading Colours - Sister Of The Night
+Tindersticks - Patchwork
+Tindersticks - The Walt Blues
+Kate Bush - ??? ? Horror
+The Mission - Serpent Kiss
+The Church - The Reptile
+Babe Ruth - Runways
+Babe Ruth - Joker
+Tindersticks - Milky Teeth
+Curved Air - Day Breaks My Heart
+Curved Air - Broken Lady
+Patti Smith - Birdland
+Renaissance - The Sisters
+Nosferatu - Time of Legends
+Nosferatu - Grave Desires
+Siouxsie & The Banshees - Star Gazer
+Siouxsie & The Banshees - Fall From Grace
+Nosferatu - Fear Killer
+Nosferatu - Soul Trader
+Nosferatu - The Enchanted Tower
+Simple Minds - Hypnotized
+Twelfth Night - East Of Eden
+Tindersticks - Sweet Sweet Man Pt. Two
+Tindersticks - Piano Song
+Tindersticks - Tie-Dye
+Tindersticks - Sweet Sweet Man Pt. Three
+Lacrimosa - Alleine zu zweit
+Iron Maiden - Powerslave
+Abraxas - Noel
+Abraxas - '37
+Lacrimosa - The turning point
+Lacrimosa - Am Ende stehen wir zwei
+Wishbone Ash - Baby The Angels Are Here
+Raw Material - Time and Illusion
+Justin Hayward - Blackbird
+Gracious - Introduction
+Gracious - Heaven
+Gracious - Hell
+Gracious - Fugue in 'D' Minor
+Jefferson Starship - Hyperdrive
+Jefferson Starship - Lightning Rose
+Jefferson Starship - Things to Come
+Jefferson Starship - Awakening
+Tindersticks - Tea Stain
+Tindersticks - Drunk Tank
+Tindersticks - Paco De Renaldos Dream
+Tindersticks - The Not Knowing
+Peter Hammill - Faint Heart and the Sermon
+Peter Hammill - (No More) The Sub Mariner
+Peter Hammill - The Plays the Thing
+Rory Gallagher - Laundromat
+Rory Gallagher - Just the Smile
+Rory Gallagher - Wave Myself Goodbye
+Rory Gallagher - Hands Up
+Rory Gallagher - It's You
+Rory Gallagher - I'm Not Suprised
+Rory Gallagher - Can't Believe It's True
+Elton John - Your Song
+Elton John - Val-Hala
+Elton John - Lady What's Tomorrow
+Elton John - Lady Samantha
+Elton John - It's Me That You Need
+Elton John - Rocket Man
+Elton John - Daniel
+Elton John - Grey Seal
+Elton John - Bitch Is Back
+Elton John - Love Song
+Fish - Incommunicado
+Peter Hammill - I Want the Future Now
+Galahad - Before, After and Beyond
+King Crimson - (live)
+Fish - The Last Straw
+Wishbone Ash - Ash Time Was
+Wishbone Ash - Pilgrim
+Wishbone Ash - Warrior
+Wishbone Ash - Odrzuć miecz
+Wishbone Ash - Król nadejdzie
+Fish - The Company
+Van Der Graaf Generator - Mirror Images
+The Doors - Strange Days
+The Doors - Spanish Caravan
+The Doors - People Are Strange
+The Doors - Not To Touch the Earth
+The Doors - The Unknown Soldier
+The Doors - Odmieniec
+The Doors - Love Her Madly
+David Bowie - China Girl
+Iron Maiden - Man on the Edge
+Rainbow - Ariel
+Black Sabbath - Never Say Die
+David Bowie - Nieustanie rozbijający sie w tym samym samochodzie
+Love Like Blood - Children
+David Bowie - Leon Zabiera Nas na Zewnątrz
+David Bowie - Na Zewnątrz
+David Bowie - Hotel
+David Bowie - No Control
+David Bowie - Jestem obłąkany, wściekły
+Kasia Kowalska - A to co mam
+Peter Hammill - Lay
+The Legendary Pink Dots - Clock Wise
+The Legendary Pink Dots - Citadel
+The Legendary Pink Dots - Friend
+The Legendary Pink Dots - Damien
+The Legendary Pink Dots - This One-Eyed Man Is King
+The Legendary Pink Dots - Straight on 'til Morning
+Martin L. Gore - Coming Back to You
+Fish - Kayleigh
+The Eagles - Everybody Knows
+Umbra Et Imago - Residerium
+Love Like Blood - Johannesburg
+Lisa Gerrard - Gloradin
+Peter Gabriel - Suzanne
+Love Like Blood - The Tribute To Manila
+Iron Maiden - Sign of the Cross
+Love Like Blood - Swordlily
+Kate Bush - The Man With the Child in His Eyes
+Kate Bush - In the Warm Room
+Kate Bush - James and the Cold Gun
+Kate Bush - Babooshka
+Kate Bush - Delius (Song of Summer)
+Kate Bush - Kashka From Baghdad
+The Church - Eastern
+The Church - Angelica
+Pendragon - Am I Really Loosin' You
+Pendragon - Voyager
+The Church - Koneser
+The Church - Day of the Dead
+The Church - Lost My Touch
+The Church - Love Blind
+The Church - The Dead Man's Dream
+Psyche - Cathedral
+Peter Hammill - Uśpiona E.A. Poe
+Galahad - The Opiate
+Psyche - Secret Angels
+John Wetton - Heat Of The Moment
+John Wetton - Don't Cry
+Siouxsie & The Banshees - Into The Light
+John Wetton - Caught In The Cross Fire
+John Wetton - Prawdziwy
+John Wetton - utwóry King Crimson
+Raw Material - Future Recolection
+Peter Hammill - Golden Promises
+Peter Hammill - Still in the Dark
+Psyche - Whispers
+Love Like Blood - Exposure
+Love Like Blood - Painkilling Suicide
+David Bowie - ?
+David Bowie - Warszawa
+David Bowie - Segue - Baby Grace (A Horrid Cassette)
+David Bowie - Dzikość wiatru
+David Bowie - Saptorinians
+Breath Of Life - Idylla
+Breath Of Life - Reason
+Breath Of Life - Thoughts
+Eden - The Darkness in Me
+Black Tape For a Blue Girl - The Flow of Our Spirit
+Camel - Highways of the Sun
+Camel - Unevensong
+Camel - Breathless
+Camel - Echoes
+Camel - Eye of the Storm
+Camel - Survival
+Camel - Tańce w Deszczu
+Fading Colours - Lay
+Fading Colours - Dreams
+Eyes of the Nightmare Jungle - Manchild
+Eyes of the Nightmare Jungle - Dreamstealers
+Eyes of the Nightmare Jungle - White Slaves
+Eyes of the Nightmare Jungle - Life
+Elton John - Have Mercy on the Criminal
+Elton John - We All Fall in Love Sometimes
+Elton John - Curtains
+Rory Gallagher - I Fall Apart
+Rory Gallagher - Sinner Boy
+Rory Gallagher - Po raz ostatni
+Rory Gallagher - A Million Miles Away
+Fish - Institution Waltz
+The Stranglers - North Winds Blowing
+Fish - Time and a Word
+Hawkwind - Moc Psychiczna
+Siouxsie & The Banshees - Halloween
+Hawkwind - Śmiertelna Pułapka
+Hawkwind - Anioły Śmierci
+Hawkwind - Shot Down in the Night
+Hawkwind - Utopia 1984
+Hawkwind - Sonic Attack
+Lisa Gerrard - Violina: The Last Embrace
+Lisa Gerrard - La Bas: Song of the Drowned
+Siouxsie & The Banshees - Monitor
+Lisa Gerrard - Glorafin
+Lisa Gerrard - Laurelei
+Lisa Gerrard - Swans
+The Rolling Stones - Wiem, że to tylko Rock'N'Roll ale ja to lubię
+Galahad - Sleepers
+The Rolling Stones - Uliczny Awarturnik
+U.F.O. - Silver Bird
+U.F.O. - Prince Ketchupu
+U.F.O. - Zbliżanie się Księżyca Ketchupu
+Marianne Faithfull - Sleep
+Collage - Cages Of The Mind
+darXtar - Metal Fatigue
+darXtar - The Fireclown
+darXtar - Stars
+Styx - Boat On The River
+Siouxsie & The Banshees - Sin In My Heart
+Jethro Tull - Livin' in the Past
+Marillion - Chelsea Monday
+Fish - Sugar Mice
+The Moody Blues - Question
+The Legendary Pink Dots - Dissonance
+The Moody Blues - And The Tide Rush In
+The Moody Blues - The Story In Your Eyes
+The Moody Blues - Nasza zgadywanka
+The Moody Blues - Emily Song
+The Moody Blues - Droga Wieczności
+The Moody Blues - Candle Of Life
+Colosseum - Bring Out Your Dead
+Pet Shop Boys - Do I Have To?
+Pet Shop Boys - Was That What It Was?
+The Legendary Pink Dots - Jasz
+The Legendary Pink Dots - As Long As It's Purple And Green
+Cairo - Ruins at Avalon's Gate
+Arena - Jerycho
+Colosseum - The Machine Demands Another Sacrifice
+The Stranglers - Raven
+The Legendary Pink Dots - A Sunset For A Swan
+The Stranglers - Nice'n'Sleazy
+The Legendary Pink Dots - Zoo
+Colosseum - Walking in the Park
+Soft Cell - Youth
+Soft Cell - Sex Dwarf
+Marc And The Mambas - Black Heart
+Marc And The Mambas - In My Room
+Marc And The Mambas - Torment
+Siouxsie & The Banshees - Kiss Then From Me
+Marillion - Beautifull
+Siouxsie & The Banshees - Rapsodia
+The Legendary Pink Dots - Abracadabra
+Jethro Tull - Thick as a Brick
+Jethro Tull - Wczoraj to był nowy dzień
+Pink Floyd - A Great Day For Freedom
+Siouxsie & The Banshees - Drifter
+Elton John - Pogrzeb Przyjaciela
+Elton John - Don't Let the Sun Go Down on Me
+Elton John - Ticking
+Marianne Faithfull - Love in the Afternoon
+Marianne Faithfull - Flaming September
+Marianne Faithfull - The Stars Line Up
+Tiamat - Gaya
+Jethro Tull - Przesłanie od Korzeni do Gałęzi
+Jethro Tull - Valley
+Jethro Tull - Nareszcie na Zawsze
+Jethro Tull - Another Harry's Bar
+Steve Hackett - Wampir o Zdrowym Apetycie
+Colosseum - Those About To Die
+Jethro Tull - Wolna Wola
+Peter Hammill - The Wave
+Peter Hammill - Four Pails
+Jethro Tull - Stuck in the August Rain
+Styx - Mury Zamku
+King Crimson - Islands
+Mike Scott - Building The City Of Life
+Mike Scott - Bring All Of My Heart
+Blue Öyster Cult - Sanktum Sanktorum
+King Crimson - Dinosaur
+Fading Colours - Black Horse
+King Crimson - Thrak
+Lacrimosa - Legacy Of The Sun
+King Crimson - Walking On Air
+Tiamat - Kaleidoscope
+Lacrimosa - No blind eyes can see
+King Crimson - Red
+King Crimson - The Night Watch
+King Crimson - Matte Kudasai
+King Crimson - In the Wake Of Poseidon
+King Crimson - Waiting Man
+Giles, Giles And Fripp - The Crukster
+Giles, Giles And Fripp - Thursday Morning
+The Legendary Pink Dots - Slaapliedje
+Deine Lakaien - Love Me to the End (2nd Mix)
+Strawbs - Na Zimnie
+Deine Lakaien - Ulysses (2nd Mix)
+Iron Maiden - Fortunes of War
+Strawbs - Rzuć na mnie Trochę Światła
+Iron Maiden - Look for the Truth
+Iron Maiden - The Aftermath
+Strawbs - Sheep
+Strawbs - Tears and Pavan
+Iron Maiden - Judgement of Heaven
+Edward Ka-Spel - Ziarnko Soli
+Edward Ka-Spel - Człowiek Bez Twarzy
+Edward Ka-Spel - Śmiejąca się Wenus
+Ultravox - Satday Night In The City Of The Dead
+Ultravox - The Man Who Dies Every Day
+Ultravox - Hiroshima Mona Hour
+Ultravox - I Want To be Machine
+The Legendary Pink Dots - Dr Blits
+The Legendary Pink Dots - City Of Needles
+Pet Shop Boys - Kings Cross
+Iron Maiden - Blood on the World's Hands
+Tindersticks - City Sickness
+The Legendary Pink Dots - Kollusim
+The Legendary Pink Dots - Velvet Resurrection
+The Legendary Pink Dots - 1001 Commandments
+The Legendary Pink Dots - Remember Me This Way
+Pink Floyd - If
+Pink Floyd - Summer '68
+Pink Floyd - Fat Old Sun
+Tindersticks - Her
+The Moody Blues - Wtorkowe Popołudnie
+Iron Maiden - The Unbeliever
+The Moody Blues - Steppin' Ih A Slide Zone
+The Moody Blues - Czyż Życie Nie Jest Dziwne
+The Moody Blues - Jetsem tylko wokalistą Zespołu Rock'N'Rollowego
+David Arnold - Show Me the Money
+The Moody Blues - Ride My See-Saw
+Judas Priest - Ofiara Przemian
+Barclay James Harvest - Dark Now My Sky
+Genesis - One for the Vine
+Peter Hammill - This Side of the Looking Glass
+David Arnold - Come In 007, Your Time Is Up
+David Arnold - Access Denied
+XIII. Století - Candyman
+XIII. Století - Vítr z Karpat
+The Gallery - ???
+XIII. Století - Testament
+XIII. Století - Dům kde tančí mrtví
+David Arnold - M's Confession
+David Arnold - Welcome to Baku
+David Arnold - Casino
+David Arnold - Ice Bandits
+Shirley Bassey - Moonraker - Main Title
+John Barry - Centrifuge and Corrine Put Down
+John Barry - Flight Into Space
+John Barry - Space Lazer Battle
+John Williams - Main Title (The Fury)
+John Williams - Gillian's Escape
+Yes - And You and I (live)
+Paul Rodgers - All I Want Is You
+Genesis - Calling All Stations
+??? - Angel In The Snow
+Barclay James Harvest - Yesterday's Heroes
+Justin Hayward - Billy
+David Arnold - Elektra's Theme
+Paul Rodgers - I Lost All When I Lost You
+Patti Smith - ??
+Saga - A Mouse In The Maze
+Emerson, Lake & Palmer - Welcome Back
+Emerson, Lake & Palmer - Touch and Go
+David Arnold - Body Double
+Tiamat - Mount Marilyn
+Sweet - White Mice
+Tindersticks - Rented Rooms
+Loreena McKennitt - Kaukaz
+David Arnold - Going Down - The Bunker
+Emerson, Lake & Palmer - Tarkus/Pictures at an Exhibition
+Peter Hammill - Tenderness
+Yes - Sign Language
+Salvatore Adamo - Tombe la neige
+David Arnold - Pipeline
+Greg Lake - I Believe In Father Christmas
+David Arnold - Remember Pleasure
+Emerson, Lake & Palmer - 21th Century Schizoid Man/ America
+Tindersticks - If She's Torn
+Tindersticks - Before You Close Your Eyes
+David Arnold - Caviar Factory
+David Arnold - Torture Queen
+David Arnold - I Never Miss
+David Arnold - Submarine
+David Arnold - Christmas in Turkey
+Scott Walker - Only Myself To Blame
+David Arnold - The Sinking of the Devonshire
+David Arnold - Company Car
+David Arnold - Station Break
+David Arnold - The Last Goodbye
+David Arnold - Hamburg Break In
+David Arnold - Hamburg Break Out
+David Arnold - Doctor Kaufman
+David Arnold - *-3-Send
+David Arnold - Underwater Discovery
+David Arnold and Alex Gifford - Backseat Driver
+Moby - James Bond Theme
+John Barry - Necros Attacks
+John Barry - Kara Meets Bond
+John Barry - Koskov Escapes
+John Barry - Into Vienna
+Type O Negative - Pyretta Blaze
+Grobschnitt - Symphony
+Grobschnitt - Travelling
+Grobschnitt - Wonderfull Music
+Grobschnitt - Sun Trip
+Deine Lakaien - As It Is
+Breathless - Across the Water
+Breathless - Count On Angels
+Breathless - Monkey Talk
+Breathless - See How the Land Lies
+Breathless - Is It Good News Today?
+Breathless - Into the Fire
+Breathless - Waiting on the Wire
+Breathless - Let’s Make a Night of It
+John Barry - Hercules Takes Off
+Bauhaus - ???
+Marianne Faithfull - Electra
+Bauhaus - Severance
+Carl Orff - Carmina Burana
+Lacrimosa - Reissende Blicke
+Lacrimosa - Not every pain hurts
+Lacrimosa - Versiegelt glanzumströmt
+Lacrimosa - Mein zweites Herz
+Lacrimosa - Make it end
+Lacrimosa - Der erste Tag
+Lacrimosa - Deine Nähe
+Lacrimosa - Ich verlasse heut' Dein Herz
+Lacrimosa - Flamme im Wind
+Lacrimosa - Tränen der Existenzlosigkeit
+Bryan Ferry - I Am in the Mood for Love
+Aardvark - Copper Sunset
+Bauhaus - Serenas
+Bauhaus - Boys
+Aardvark - Very Nice of You To Call
+Bauhaus - Dark Entries
+Bryan Ferry - Where or When
+Mainhorse - Introduction
+Mainhorse - Passing Years
+Mainhorse - Such a Beautiful Day
+Mainhorse - Pale Sky
+Mainhorse - Basia
+Mainhorse - More Tea Vicar
+Mainhorse - God
+Nitzinger - The Cripple Gnat Bounce
+Nitzinger - One Foot in History
+Nitzinger - Uncle John
+Toyah - Obsolete
+Toyah - Pop Star
+Toyah - Masai Boy
+Toyah - Marionette
+Toyah - We Are
+Toyah - Angels and Demons
+Toyah - Street Creature
+Toyah - Angel and Me
+Toyah - The Packt
+Toyah - Thunder in The Mountains
+Aardvark - Many Things To Do
+Foreigner - Feels Like the First Time
+Aardvark - I Can't Stop
+Aardvark - The Outing - Yes
+John Barry - Exercise at Gibraltar
+John Barry - Approaching Kara
+John Barry - Murder at the Fair
+Fading Colours - Clean
+John Barry - "Assassin" And Drugged
+Bryan Ferry - ???
+Peter Murphy - ???
+Never Man - ???
+David Sylvian - ???
+Omega - Gyöngyhajú Lány
+John Barry - Airbase Jailbreak
+John Barry - Afghanistan Plan
+John Barry - Final Confrontation
+John Barry - Alternate End Titles
+AC/DC - Shoot to Thrill
+AC/DC - What Do You Do for Money Honey
+AC/DC - Given the Dog a Bone
+A Flock Of Seagulls - Messages
+??? - Nowhere Girl
+OMD - Enola Gay
+Japan - Life in Tokyo
+David Sylvian & Robert Fripp - Damage
+Xymox - A Day
+Babylon Will Fall - Searching for the King
+U.F.O. - ?
+The Beatles - Good Morning Good Morning
+The Legendary Pink Dots - Triple Moon Salute
+Dread Zone - Captain Dread
+Galahad - Dentist Song
+Galahad - Pictures of Bliss
+The Legendary Pink Dots - The Artificial Silence
+Edward Ka-Spel - Illumina
+Edward Ka-Spel - Memoirs of Doctor Bliss
+Edward Ka-Spel - Illumina 2
+Edward Ka-Spel - The Never Man
+Marillion - Beyond You
+The Legendary Pink Dots - A Pause In Melancholy Silence
+Pink Floyd - Embryo
+Pink Floyd - One Of These Days
+Pink Floyd - Pillow of Winds
+Pink Floyd - Fearless
+Uriah Heep - The Pilgrim
+Hawkwind - Assault and Battery
+Hawkwind - Golden Void
+String Driven Thing - Heartfeeder
+Kate Bush - The Sensual World
+Fading Colours - ?
+Nick Cave - There Is a Light
+Michael Hutchence - The Passenger
+Colosseum - Three Score and Ten, Amen
+Colosseum - Rope Ladder to the Moon
+Colosseum - Mandarin
+Colosseum - Time Lament
+Pink Floyd - Green is the Colour
+Kate Bush - The Fog
+Edward Ka-Spel - Lines
+Edward Ka-Spel - Lisa's Christening
+Edward Ka-Spel - Lisa's Resurrection
+Edward Ka-Spel - The Glory The Glory
+Edward Ka-Spel - The Forbidden Zone
+Edward Ka-Spel - Aazhydd China Doll
+Edward Ka-Spel - Flesh Parade
+Edward Ka-Spel - The Unforunate Demise of the Fabulous Puccino Brothers
+The Rolling Stones - You Can't Always Get What You Want
+Nazareth - Telegram
+Gary Moore - Empty Rooms
+AC/DC - Let Me Put My Love Into You
+AC/DC - Back in Black
+AC/DC - You Shook Me All Night Long
+AC/DC - Have a Drink on Me
+AC/DC - Shake a Leg
+AC/DC - Rock and Roll Ain't Noise Pollution
+AC/DC - It's a Long Way to the Top (If You Wanna Rock 'n' Roll)
+AC/DC - The Rock 'n' Roll Singer
+AC/DC - The Jack
+Rammstein - Engel
+Rammstein - Rammstein
+The Rolling Stones - It's Only Rock'n'Roll (But I Like It)
+The Rolling Stones - Walking The Dog
+AC/DC - T.N.T.
+Marianne Faithfull - As Tears Go By (wersja z 1965r.)
+The Rolling Stones - (I Can't Get No) Satisfaction
+AC/DC - Can I Sit Next to You Girl
+Rammstein - Bestrafe Mich
+The Rolling Stones - 19th Nervous Breakdown
+Inkubus Sukkubus - Paint It Black
+AC/DC - Little Lover
+The Rolling Stones - Wild Horses
+The Rolling Stones - Winter
+Marianne Faithfull - Sister Morphine
+Marianne Faithfull - As Tears Go By (wersja z 1987r.)
+The Rolling Stones - Anybody Seen My Baby?
+The Dance Society - 2000 Light Years From Home
+The Rolling Stones - Under Cover Of The Night
+Rammstein - Du Hast
+Rammstein - Klavier
+Black Sabbath - Gypsy
+The Rolling Stones - Time Waits For No One
+Rammstein - Tier
+Hawkwind - Clouded Vision
+Hawkwind - Reptoid Vision
+Hawkwind - Population Overload
+Daniele Amfitheatrof - muzyka do filmu
+New Model Army - Wonderful Way To Go
+New Model Army - Queen Of My Heart
+New Model Army - Gigabyte Wars
+New Model Army - Long Goodbye
+The Rolling Stones - Till The Next Goodbye
+AC/DC - High Voltage
+The Adventures - Always
+The Adventures - Send My Heart
+The Adventures - Two Rivers
+The Adventures - Don't Tell Me
+The Adventures - Another Silent Day
+The Adventures - When the World Turns Upside Down
+The Adventures - Love in Chains
+The Adventures - Lost in Hollywood
+The Adventures - These Children
+Alan Parsons - The Three of Me
+Alan Parsons - Turn It Up
+Alan Parsons - Wine From the Water
+Alan Parsons - Mr. Time
+Alan Parsons - Siren Song
+Alan Parsons - Breakaway
+James Newton Howard - muzyka z filmu
+Alan Parsons - Re-Jigue
+Moonspell - Flesh
+Moonspell - Magdalene
+Moonspell - The Hanged Man
+Moonspell - 13!
+Diamanda Galás - Double-Barrel Prayer
+Spear Of Destiny - Junkman
+Procol Harum - The Devil Came From Kansas
+Abraxas - Czakramy
+Abraxas - Nantalomba
+Moonspell - V.C. (Gloria Domini)
+Moonspell - Eurotic A
+Moonspell - Mute
+Alan Parsons - Dreamscape
+The Move - Night Of Fear
+The Move - Flowers In The Rain
+The Move - Blackberry Way
+The Move - Looking On
+The Move - What?
+The Move - Open Up Said The World At The Door
+The Move - Brontosaurus
+The Move - Hello Susie
+The Move - Don't Make My Baby Blue
+Alan Parsons - I'm Talking To You
+Alan Parsons - Sirius
+Alan Parsons - Eye in the Sky
+Alan Parsons - Luciferama
+Alan Parsons - Old and Wise
+Alan Parsons - Psychobabble
+Closterkeller - Martwa strefa
+James Newton Howard - muzyka do filmu
+Chris De Burgh - Spanish Train
+Arcadia - El Diablo
+Peter Murphy - Cascade
+Yes - Mind Drive
+Pink Floyd - Get Your Filthy Hands Off My Desert
+Pink Floyd - The Fletcher Memorial Home
+Pink Floyd - Southampton Dock
+Pink Floyd - The Final Cut
+Hawkwind - The Watcher
+Hawkwind - The Awakening
+Hawkwind - The Psychodelic Warlords
+Hawkwind - Welcome to the Future
+Gary Glitter - Hello! Hello! I'm Back Again
+Galahad - Myopia
+Budgie - Rape of the Locks
+Budgie - Rocking Man
+Budgie - Young Is a World
+The Rolling Stones - You Got Me Rocking
+Galahad - Imago
+Hans Zimmer - Mutiny
+Hans Zimmer - Alabama
+Galahad - Easier Said Than Done
+Budgie - Melt the Ice Away
+Budgie - Smile Boy Smile
+Budgie - In for the Kill / You're the Biggest Thing Since Powdered Milk
+Quidam - Rhayader / Rhayader Comes To Town
+Alan Parsons - Time
+Galahad - A Short Reflection on Two Past Lives - Part One
+Galahad - Karma for One
+Galahad - A Short Reflection on Two Past Lives - Part Two
+Budgie - Who Do You Want for Your Love?
+Budgie - Don't Dilute the Water
+Budgie - Breaking All the House Rules
+Budgie - Breadfan
+Alan Parsons - You're Gonna Get Your Fingers Burned
+Alan Parsons - Prime Time
+Alan Parsons - Limelight
+Alan Parsons - Don't Answer Me
+Lacrimosa - Lacrimosa Theme
+Lacrimosa - Ich Bin Der Brennende Komet
+Lacrimosa - Vermächtnis der Sonne
+Wishbone Ash - You See Red
+Wishbone Ash - Stand and Deliver
+Lacrimosa - Versuchung
+Lacrimosa - Darkness
+Grand Funk Railroad - Medley
+Lacrimosa - Schakal
+Lacrimosa - Seele in Not
+Galahad - Shine
+Gianmaria Testa - ???
+Alan Parsons - Standing on Higher Ground
+Opposition - The Man Who Almost Shaves
+Opposition - Do You Know How That Feels?
+Opposition - War Cries
+Opposition - Deep Down Blue
+Opposition - Her First Migraine
+Opposition - Digging For Water
+Opposition - Blue To Gray
+Galahad - Rejuvenation
+Ennio Morricone - The Exctasy of Gold
+Lacrimosa - Tränen der Sehnsucht
+Salvatore Adamo - Crier ton nom
+Salvatore Adamo - Sans toi ma mie
+Ennio Morricone - Sundown
+Vangelis - Heaven And Hell
+Salvatore Adamo - Car je veux
+Rick Wakeman - Sir Lancelot And The Black Knight
+Salvatore Adamo - Fais-toi croque-mort
+Salvatore Adamo - Amour perdu
+Salvatore Adamo - Vous permettez, monsieur?
+Salvatore Adamo - N'est-ce pas merveilleux?
+Salvatore Adamo - En blue jeans et blouson d'cuir
+Sheena Easton - For Your Eyes Only
+Type O Negative - Love You to Death
+Iron Maiden - The Clansman
+Rory Gallagher - Used To Be
+Rory Gallagher - Maybe I Will
+Rory Gallagher - Whole Lot of People
+Salamander - Prelude (He's My God)
+Iron Maiden - Como Estais Amigos
+Marianne Faithfull - The Seven Deadly Sins: Prologue
+Marianne Faithfull - The Seven Deadly Sins: Sloth
+Marianne Faithfull - The Seven Deadly Sins: Pride
+Marianne Faithfull - The Seven Deadly Sins: Anger
+Marianne Faithfull - The Seven Deadly Sins: Gluttony
+Marianne Faithfull - The Seven Deadly Sins: Lust
+Marianne Faithfull - The Seven Deadly Sins: Covetousness
+Marianne Faithfull - The Seven Deadly Sins: Envy
+Marianne Faithfull - The Seven Deadly Sins: Epilogue
+Rory Gallagher - There's a Light
+Genesis - Shepherd (BBC Nightride 1970)
+Genesis - Pacidy (BBC Nightride 1970)
+Genesis - Let Us Now Make Love (BBC Nightride 1970)
+Salvatore Adamo - Dans le vert de ses yeux
+Salvatore Adamo - Laissons dire
+Salvatore Adamo - J'aime une fleur
+Albion - Mad Look in My Eyes
+Albion - Sarajevo
+Albion - Shadow (Instrumental)
+Alien Sex Fiend - Clockwork Banana Banana-Moon
+Alien Sex Fiend - Class of '69
+Alien Sex Fiend - Alien Sex Fiend
+Alien Sex Fiend - Coma
+Alien Sex Fiend - Lickin' Ma Bone
+Alien Sex Fiend - Stre$$ed Out!
+Alien Sex Fiend - B-B-Bone Boogie
+Marc Almond - Tenement Symphony: I Prelude
+Marc Almond - I've Never Seen Your Face
+Daniele Amfitheatrof - Major Dundee March
+Daniele Amfitheatrof - Are You El Tigre?
+Daniele Amfitheatrof - The Escape / Lt. Graham - Artillery
+Daniele Amfitheatrof - Defeated by the Indians / We Ask Thee, Lord / On to Mexico
+Twenty Sixty Six and Then - At My Home
+Twenty Sixty Six and Then - Autumn
+Twenty Sixty Six and Then - Butterking
+Twenty Sixty Six and Then - Reflections on the Future
+Twenty Sixty Six and Then - The Way that I Feel Today
+Twenty Sixty Six and Then - Spring
+Twenty Sixty Six and Then - I Wanna Stay
+Twenty Sixty Six and Then - Time Can't Take It Away
+Arzachel - Queen St. Gang
+Rare Bird - Times
+Rare Bird - You Went Away
+Rare Bird - Melanie
+Rare Bird - Beautiful Scarlet
+Rare Bird - Natures Fruit
+Rare Bird - Bird on a Wing
+Rare Bird - House in the City
+Rare Bird - Epic Forest
+Rare Bird - Title No. 1 Again (Birdman)
+Rare Bird - Roadside Welcome
+Rare Bird - Four Grey Walls
+Rare Bird - What You Want to Know
+Daniele Amfitheatrof - To Be With You
+Rare Bird - Flight
+Quidam - Sanktuarium
+Quidam - Choćbym...
+Quidam - Bajkowy
+Daniele Amfitheatrof - The First Kiss / French Lancers
+Quidam - Nocne widziadła
+Quidam - Niespełnienie
+Quidam - Warkocze
+Quidam - Bijace serca
+Quidam - Płonę
+Quidam - Przebudzenie
+Quidam - Moje anioły
+Quidam - Morelowy sen
+Quidam - Wesoła
+Quidam - Mały beznogi ptak
+Quidam - Łza
+Quidam - Pod powieką
+Quidam - Przebudzenie (świt nadziei)
+Quella Vecchia Locanda - Un Villaggio, un'Illusione
+Quella Vecchia Locanda - Realt?
+PTS - Fading
+PTS - Water It Down
+PTS - The Spy
+PTS - Tides
+PTS - Valerie
+PTS - Where Are You?
+PTS - BBC
+PTS - Down To Zero
+PTS - Waiting/The End Of Waiting
+PTS - The Best Lines
+Museo Rosenbach - Zarathustra
+Morte Macabre - Threats Of Stark Reality
+Morte Macabre - Sequenza Ritmica E Tema
+Morte Macabre - Lullaby
+Morte Macabre - Quiet Drops
+Morte Macabre - Opening Theme
+Morte Macabre - The Photosession
+Morte Macabre - Symphonic Holocaust
+Lightshine - King And Queen
+Lightshine - Feeling
+Jody Grind - One Step On
+Jody Grind - Little Message
+Jody Grind - Night Today
+Jody Grind - U.S.A.
+Jody Grind - Rock'n'Roll Man
+Daniele Amfitheatrof - Gentlemen of the South / Indian Battle / Border Incident / Finale
+Amon Düül II - She Came Through the Chimney
+Amon Düül II - Archangels Thunderbird
+Amon Düül II - Cerberus
+Amon Düül II - The Return of Ruebezahl
+Amon Düül II - Eye-Shaking King
+Jody Grind - We've Had It
+Jody Grind - Bath Sister
+Jody Grind - Jump Bed Jed
+Jody Grind - O Paradiso
+Jody Grind - Plastic Shit
+Jody Grind - Vegetable Oblivion
+Jody Grind - Red Worms & Lice
+Jody Grind - Ballad for Bridget
+High Tide - Futilist's Lament
+High Tide - Death Warmed Up
+High Tide - Pushed, but Not Forgotten
+High Tide - Walking Down Their Outlook
+High Tide - Missing Out
+High Tide - Nowhere
+High Tide - The Joke
+High Tide - Saneonymous
+Peter Hammill - My Room
+Peter Hammill - Ophelia
+Peter Hammill - Given Time
+Peter Hammill - Modern
+Peter Hammill - Patient
+Peter Hammill - Traintime
+Peter Hammill - The Future Now
+Peter Hammill - Afterwards
+Peter Hammill - Darkness
+Peter Hammill - Central Hotel
+Peter Hammill - Frozen in Place (Fragment)
+Peter Hammill - Unrehearsed
+Peter Hammill - Stupid
+Peter Hammill - Since the Kids
+Peter Hammill - Nightman
+Peter Hammill - Fallen (The City of Night)
+Peter Hammill - Unready (Fragment)
+Peter Hammill - Always Is Next
+Peter Hammill - Unsteady (Fragment)
+Peter Hammill - The Light Continent
+Peter Hammill - Everyone You Hold
+Peter Hammill - Personality
+Peter Hammill - Nothing Comes
+Peter Hammill - From the Safe House
+Peter Hammill - Phosphorescence
+Peter Hammill - Falling Open
+Peter Hammill - Can Do
+Peter Hammill - A Better Time (Acapella)
+Peter Hammill - Amnesiac
+Peter Hammill - Ram Origami
+Peter Hammill - A Forest of Pronouns
+Peter Hammill - Earthbound
+Peter Hammill - Narcissus (Bar and Grill)
+Peter Hammill - Material Possession
+Peter Hammill - Come Clean
+Peter Hammill - A Better Time
+Peter Hammill - The Gift of Fire (Precursed)
+Peter Hammill - You Can't Want What You Always Get...
+Peter Hammill - ...If You Haven't Got It Yet
+Peter Hammill - A Kick To Kill the Kiss
+Peter Hammill - The Noise
+Peter Hammill - Where the Mouth Is
+Peter Hammill - The Great European Department Store
+Peter Hammill - Planet Coventry
+Peter Hammill - Oasis
+Peter Hammill - Incomlete Surrender
+Peter Hammill - Reprise
+Peter Hammill - An Unenviable Role
+Peter Hammill - I Shun the Light
+Peter Hammill - The Evil That Is Done
+Peter Hammill - No Rot
+Peter Hammill - Beating of the Heart
+Peter Hammill - She Comes Towards the Door
+Peter Hammill - The Fall
+Peter Hammill - Happy Hour
+Peter Hammill - Something About Ysabel's Dance
+Peter Hammill - Cat's Eye / Yellow Fever (Running)
+Peter Hammill - Skin
+Peter Hammill - Hemlock
+Peter Hammill - The Unconscious Life
+Peter Hammill - After the Show
+Peter Hammill - Breakthrough
+Peter Hammill - My Experience
+Peter Hammill - Empress's Clothes
+Peter Hammill - Glue
+Peter Hammill - Hesitation
+Peter Hammill - Sitting Targets
+Peter Hammill - What I Did
+Peter Hammill - Paradox Drive
+Peter Hammill - Accidents
+Peter Hammill - The Great Experiment
+Peter Hammill - Don't Tell Me
+Peter Hammill - She Wraps It Up
+Peter Hammill - Labour of Love
+Peter Hammill - Film Noir
+Peter Hammill - Jeunesse Doree
+Peter Hammill - Now More Than Ever
+Peter Hammill - Comfortable
+Peter Hammill - My Favourite
+Peter Hammill - The Birds
+Peter Hammill - (This Side Of) The Looking Glass
+Peter Hammill - Painting By Numbers
+Peter Hammill - All Said and Done
+Peter Hammill - A Perfect Date
+Peter Hammill - Now Lover
+Peter Hammill - You Hit Me Where I Live
+Peter Hammill - Faith
+Peter Hammill - Empire of Delight
+Peter Hammill - Silver
+Peter Hammill - Beside the One You Love
+Peter Hammill - Other Old Clichés
+Peter Hammill - Confidence
+Peter Hammill - Sleep Now
+Peter Hammill - Invisible Ink
+Peter Hammill - Sci-Finance (Revisited)
+Peter Hammill - This Book
+Peter Hammill - Auto
+Peter Hammill - Vote Brand X
+Peter Hammill - Sun City Nightlife
+Peter Hammill - Under Cover Names
+Peter Hammill - Smile
+Peter Hammill - Time To Burn (Instrumental)
+Peter Hammill - Careering
+Peter Hammill - Porton Down
+Peter Hammill - Mirror Images
+Peter Hammill - Handicap and Equality
+Peter Hammill - Not for Keith
+Peter Hammill - The Old School Tie
+Peter Hammill - Imperial Walls
+Peter Hammill - Mr X (Gets Tense)
+Peter Hammill - Faculty X
+Peter Hammill - Pushing Thirty
+Peter Hammill - The Second Hand
+Peter Hammill - Trappings
+Peter Hammill - The Mousetrap (Caught In)
+Peter Hammill - Energy Vampires
+Peter Hammill - Mediaevil
+Peter Hammill - A Motor-bike in Africa
+Peter Hammill - The Cut
+Peter Hammill - Palinurus (Castaway)
+Peter Hammill - Autumn
+Peter Hammill - Time Heals
+Peter Hammill - Alice (Letting Go)
+Peter Hammill - Nadir's Big Chance
+Peter Hammill - The Institute of Mental Health, Burning
+Peter Hammill - Open Your Eyes
+Peter Hammill - Nobody's Business
+Peter Hammill - Pompeii
+Peter Hammill - Airport
+Peter Hammill - People You Were Going To
+Peter Hammill - Birthday Special
+Peter Hammill - Two or Three Spectres
+Peter Hammill - Wilhelmina
+Peter Hammill - The Lie (Bernini's Saint Theresa)
+Peter Hammill - Red Shift
+Peter Hammill - Rubicon
+Peter Hammill - German Overalls
+Peter Hammill - Slender Threads
+Peter Hammill - What's it Worth
+Amon Düül II - Pale Gallery
+Peter Hammill - The Tower
+Peter Hammill - Imperial Zeppelin
+Peter Hammill - Candle
+Peter Hammill - Happy
+Peter Hammill - Re-Awakening
+Peter Hammill - Sunshine
+Peter Hammill - Child
+Peter Hammill - Summer Song (In the Autumn)
+Peter Hammill - Viking
+Peter Hammill - I Once Wrote Some Poems
+Gong - Radio Gnome
+Gong - You Can't Kill Me
+Gong - I've Bin Stone Before
+Gong - Mister Long Shanks / O Mother I Am Your Fantasy
+Gong - Dynamite: I Am Your Animal
+Gong - Wet Cheese Delirium
+Gong - Squeezing Sponges Over Policemen's Heads
+Gong - Fohat Digs Holes in Space
+Gong - Tried So Hard
+Gong - Tropical Fish / Selene
+Gong - Gnome the Second
+Five Day Rain - Leave It at That
+Five Day Rain - Don't Be Misled
+Five Day Rain - Goodyear
+Five Day Rain - Sea Song
+Five Day Rain - Lay Me Down
+Five Day Rain - Reason Why
+Five Day Rain - Fall Out
+Egg - Bulb
+Egg - While Growing My Hair
+Egg - I Will Be Absorbed
+Egg - Fugue in D Minor
+Egg - They Laughed When I Sat Down at the Piano...
+Egg - The Song of McGillicudie the Pusillanimous or (Don`t Worry James, Your Socks Are Hanging in the Coal Cellar With Thomas)
+Egg - Boilk
+Egg - Symphony No. 2
+East Of Eden - Have To Whack It Up
+East Of Eden - Leaping Beauties For Rudy / Marcus Junior
+East Of Eden - Xhorkom / Ramadhan / In The Snow For A Blow
+East Of Eden - Uno Transito Clapori
+East Of Eden - Gum Arabic / Confucius
+East Of Eden - Habibi Baby / Boehm Constrictor / Beast Of Sweden
+East Of Eden - Traditional
+Chase - Weird Song #1
+Chase - Run Back to Mama
+Chase - Twinkles
+Chase - Bochawa
+Chase - Love Is on the Way
+Chase - Close Up Tight
+Chase - Swanee River
+Chase - So Many People
+Chase - Night
+Chase - It Won't Be Long
+Chase - I Can Feel It
+Chase - Woman of the Dark
+Chase - Cronus (Saturn)
+Chase - Zeus (Jupiter)
+Chase - Poseidon (Neptune)
+Chase - Aphrodite Part I (Venus)
+Chase - Aphrodite Part II (Venus)
+Chase - Hades (Pluto)
+Brainbox - Dark Rose
+Brainbox - Reason To Believe
+Brainbox - Baby, What You Want Me To Do
+Brainbox - Scarborough Fair
+Brainbox - Summertime (From "Porgy and Bess")
+Brainbox - Sinner's Prayer
+Brainbox - Sea of Delight
+Brainbox - Down Man
+Brainbox - Womans's Gone
+Brainbox - Sea of Delight (Try out)
+Brainbox - Sea of Delight (Take 1)
+Brainbox - Amsterdam, the First Days
+Blackfeather - At The Mountain of Madness
+Blackfeather - On This Day That I Die
+Blackfeather - Seasons of Change Part1
+Blackfeather - Mangos Theme Part 2
+Blackfeather - Long Legged Lovely
+Blackfeather - The Rat (Suite)
+Beggar's Opera - Memory
+Bauhaus - A God In An Alcove
+Bauhaus - Kick In The Eye
+Bauhaus - The Passion of Lovers
+Bauhaus - Ziggy Stardust
+Bauhaus - Bela Lugosi's Dead
+Bauhaus - All We Ever Wanted
+Bauhaus - Antonin Artaud
+Bauhaus - Who Killed Mr. Moonlight
+Bauhaus - Honeymoon Croon
+Bauhaus - Lagartija Nick
+Bauhaus - Third Uncle
+Bauhaus - In The Night
+Bauhaus - The Three Shadows Part 1
+Bauhaus - The Three Shadows Part 2
+Bauhaus - The Three Shadows Part 3
+Bauhaus - All We Ever Wanted Was Everything
+Bauhaus - Exquisite Corpse
+Bauhaus - Rosegarden Funeral Of Sores
+Bauhaus - Dancing
+Bauhaus - The Man With The X-Ray Eyes
+Bauhaus - The Spy In The Cab
+Bauhaus - Stigmata Martyr
+Bauhaus - Hair of the Dog
+Bauhaus - Of Lillies And Remains
+Bauhaus - Waiting For The Man
+Bauhaus - Kick In The Eye 2
+Bauhaus - Muscle in Plastic
+Bauhaus - Mask
+Bauhaus - In Fear Of Dub
+Bauhaus - Earwax
+Bauhaus - Harry
+Bauhaus - 1. David Jay 2. Peter Murphy 3. Kevin Haskins 4. Daniel Ash
+Bauhaus - Satori
+Bauhaus - Dive
+Bauhaus - Small Talk Stinks
+Bauhaus - St. Vitus Dance
+Bauhaus - Nerves
+Bauhaus - Scopes
+Bauhaus - Untitled
+Bauhaus - A God In An Alcove (flexi version)
+Bauhaus - Crowds
+Batalion D'Amour - Dotyk iluzji
+Batalion D'Amour - Chromonikielina
+Batalion D'Amour - Epitafium
+Batalion D'Amour - Szukając
+Batalion D'Amour - Personal Jesus
+Batalion D'Amour - Gdy miłość umiera
+Batalion D'Amour - Nie widzieć krwi
+Batalion D'Amour - Znowu w noc
+Batalion D'Amour - Prywatne piekło
+Batalion D'Amour - W połowie drogi donikąd
+Batalion D'Amour - Blood's On Our Hands
+Babe Ruth - The Runaways
+Atomic Rooster - VUG
+Atomic Rooster - Tomorrow Night
+Atomic Rooster - I Can't Take No More
+Atomic Rooster - Nobody Else
+Atomic Rooster - Gershätzer
+Aquila - Change Your Ways
+Aquila - How Many More Times
+Aquila - While You Were Sleeping
+Aquila - We Can Make It if We Try
+Aquila - The Aquila Suite
+Abraxas - Szaleństwo przyszło nocą
+Abraxas - Spiritus flat ubi vult
+Abraxas - Kuźnia
+Abraxas - Before
+Abraxas - Ajudah
+Amon Düül II - Yeti (Improvisation)
+Amon Düül II - Yeti Talks to Yogi (Improvisation)
+Black Sabbath - Into the Void
+Black Sabbath - Snowblind
+Die Puhdys - Türen öffnen sich zur Stadt
+Die Puhdys - Vineta
+Amon Düül II - Sandoz in the Rain (Improvisation)
+Slayer - Bitter Peace
+Ringo Starr - One
+Carmen Maki, Blues Creation - Lord, I Can't Be Going No More
+Carmen Maki, Blues Creation - I Can't Live For Today
+Carmen Maki, Blues Creation - Understand
+Bijelo Dugme - Kad bi' bio bijelo dugme
+Analogy - Dark Reflections
+Ray Thomas - Play It Again
+Simon & Garfunkel - Scarborough Fair
+Black Sabbath - Changes
+Black Sabbath - Selling My Soul
+Black Sabbath - Behind the Wall of Sleep
+The Master's Apprentices - Games We Play I
+The Master's Apprentices - Games We Play II
+Carmen Maki, Blues Creation - Sorrow
+Black Sabbath - Dirty Women
+The Beatles - Good Night
+Analogy - Weeping May Endure
+Analogy - Indian Meditation
+Analogy - Tin's Song
+Analogy - The Year's at the Spring
+Analogy - Pan-Am Flight 24
+Laurie Anderson - The Puppet Motel
+Laurie Anderson - Speak My Language
+Laurie Anderson - Muddy River
+Laurie Anderson - Beautiful Pea Green Boat
+Laurie Anderson - Love Among The Sailors
+Breathless - All My Eye and Betty Martin
+Breathless - Every Road Leads Home
+Breathless - Touchstone
+Breathless - Sense of Purpose
+Breathless - Sold Down the River
+Breathless - Three Times and Waving
+Breathless - Working for Space
+Breathless - Dizzy Life
+Breathless - Say September Sings
+Breathless - Walk Down to the Water (edit)
+Breathless - Moonstone 3
+Breathless - Don't Just Disappear (Radio Edit)
+Breathless - I Never Know Where You Are
+Breathless - Always
+Breathless - Over and Over
+Breathless - Wave After Wave
+Breathless - Ageless
+Breathless - Pride
+Marc Almond - Stories of Johnny
+Marc Almond - House Is Haunted
+Marc Almond - Love Letter
+Marc Almond - Flesh Is Willing
+Marc Almond - Always
+Marc Almond - Contempt
+Marc Almond - I Who Never
+Marc Almond - Love and Little White Lies
+Styx - A.D. 1928
+Styx - Rockin' The Paradise
+Styx - Too Much Time On My Hands
+Styx - Nothing Ever Goes As Planned
+Styx - The Best of Times
+Styx - Lonely People
+Styx - She Cares
+Styx - Snowblind
+Styx - Half-Penny, Two-Penny
+Styx - A.D. 1958
+Styx - State Street Sadie
+Carmen Maki, Blues Creation - And You
+Carmen Maki, Blues Creation - Empty Heart
+Carmen Maki, Blues Creation - Motherless Child
+Carmen Maki, Blues Creation - Mean Old Boogie
+Carmen Maki, Blues Creation - St. James Infirmary
+Jane - Redskin
+Jane - Out in the Rain
+Jane - Dandelion
+Jane - Moving
+Jane - Waterfall
+Jane - Like a Queen
+Jane - Here We Are
+Jane - Waiting for the Sunshine
+Jane - Scratches on Your Back
+Jane - Music Machine
+Jane - Make Me Feel Better
+Jane - (Wishdream) Lady
+Jane - Lord Love
+Jane - Midnight Mover
+Jane - Silver Knickers
+Jane - So, so Long
+Jane - Comin' Again
+Jane - Mother, Don't You Know
+Jane - I Need You
+Jane - Way to Paradise
+Jane - Early in the Morning
+Jane - Jane-session
+Jane - Rock 'n' Roll Star
+Jane - King of Thule
+Jane - Baby, What You're Doin'
+Styx - Lights
+Styx - Why Me
+Styx - Babe
+Styx - Never Say Never
+Styx - Borrowed Time
+Styx - First Time
+Styx - Eddie
+Styx - Love in the Midnight
+Steve Hackett - Ace of Wands
+Steve Hackett - Hands of the Priestess Part I
+Steve Hackett - Hands of the Priestess Part II
+Steve Hackett - Star of Sirius
+Steve Hackett - The Lovers
+Genesis - Behind the Lines
+Genesis - Duchess
+Genesis - Guide Vocal
+Genesis - Man of Our Times
+Genesis - Misunderstanding
+Genesis - Heathaze
+Genesis - Alone Tonight
+Genesis - Cul-De-Sac
+Genesis - Please Don't Ask
+Bloodrock - Fatback
+Bloodrock - Double Cross
+Bloodrock - Timepiece
+Bloodrock - Wicked Truth
+Bloodrock - Gimme Your Head
+Bloodrock - Cheater
+Bloodrock - Sable and Pearl
+Bloodrock - Fallin'
+Bloodrock - Children's Heritage
+Bloodrock - Dier Not a Lover
+Bloodrock - Fancy Space Odyssey
+Jericho - Ethiopia
+Jericho - Don't You Let Me Down
+Jericho - Featherbed
+Jericho - Kill Me With Your Love
+Steel Mill - Summers Child
+Steel Mill - Treadmill
+T2 - In Circles
+T2 - J.L.T.
+T2 - No More White Horses
+T2 - Morning
+T2 - Questions and Answers
+T2 - CD
+Kate Bush - Cloudbusting
+Kate Bush - Breathing
+Kate Bush - Hounds of Love
+Kate Bush - Running up That Hill
+Kate Bush - Army Dreamers
+Kate Bush - Sat in Your Lap
+Kate Bush - Experiment IV
+Kate Bush - The Dreaming
+Laurie Anderson - In Our Sleep
+Laurie Anderson - Night in Baghdad
+Laurie Anderson - Same Time Tomorrow
+Laurie Anderson - Strange Angels
+Laurie Anderson - Monkey's Paw
+Laurie Anderson - Coolsville
+Laurie Anderson - Ramon
+Laurie Anderson - Babydoll
+Laurie Anderson - Beautiful Red Dress
+Laurie Anderson - The Day the Devil
+Laurie Anderson - The Dream Before
+Laurie Anderson - My Eyes
+The Doors - Albinoni's Adagio in G Minor
+James Bernard - The Gorgon
+David Whitaker - Dr. Jekyll & Sister Hyde
+Max Steiner - Medley: Main Title / Prologue
+Max Steiner - Rick And Renault (The Very Thought Of You (Underscore))
+Max Steiner - Arrival Of Ilsa And Victor At Rick's (Love For Sale (Underscore))
+Max Steiner - Play It Sam...Play "As Time Goes By" (Avalon (Underscore) / As Time Goes By (Underscore))
+Rita Coolidge - All Time High
+John Barry - Bond Look-Alike
+John Barry - Arrival at the Island of Octopussy
+John Barry - Bond at the Monsoon Palace
+John Barry - The Palace Fight
+New Model Army - The Charge
+New Model Army - Killing
+The Church - Reptile
+Iron Maiden - Children of the Damned
+New Model Army - Vagabonds
+Black Sabbath - Iron Man
+The Church - Lady Boy
+The Church - It Could Be Anyone
+Max Steiner - Of All The Gin Joints In All The Towns In All The World
+Max Steiner - Medley: Paris Montage
+New Model Army - Courage
+The Church - Come Down
+The Church - Ritz
+The Church - Magician Among the Spirits
+Steve Harley & Cockney Rebel - Cavaliers
+Steve Harley & Cockney Rebel - Ritz
+Steve Harley & Cockney Rebel - Death Trip
+Steve Harley & Cockney Rebel - Sebastian
+Steve Harley & Cockney Rebel - Tumbling Down
+Black Sabbath - War Pigs
+Black Sabbath - Fairies Wear Boots
+Black Sabbath - Sweet Leaf
+Black Sabbath - Sabbath Bloody Sabbath
+Black Sabbath - Orchid
+Black Sabbath - Lord of This World
+Iron Maiden - Invaders
+Iron Maiden - 22, Acacia Avenue
+Iron Maiden - The Number of the Beast
+Iron Maiden - Run to the Hills
+Iron Maiden - Gangland
+Iron Maiden - Total Eclipse
+Iron Maiden - Hallowed Be Thy Name
+New Model Army - Herion 12 Mix
+New Model Army - Adrenalin
+New Model Army - Nosense
+New Model Army - Trust
+New Model Army - Brave New World [12 Gregovich Mix]
+New Model Army - R.I.P.
+New Model Army - Brave New World 2
+New Model Army - Ten Commandments
+New Model Army - Lights Go Out
+New Model Army - Dead Eye
+New Model Army - Prison
+New Model Army - The Curse
+New Model Army - Modern Times
+New Model Army - Drummy 8 [Billy McCann Version]
+New Model Army - Whites of Their Eyes
+New Model Army - Aimless Desire
+New Model Army - Over the Wire
+New Model Army - No Pain Heaton, Sullivan 4:55
+New Model Army - Headlights
+New Model Army - Big Blue
+New Model Army - I Love the World
+New Model Army - Stupid Questions
+New Model Army - 225
+New Model Army - Inheritance
+New Model Army - Green and Grey
+New Model Army - Ballad of Bodmin Pill
+New Model Army - Family
+New Model Army - Family Life
+New Model Army - 125 M.P.H.
+New Model Army - Archway Towers
+New Model Army - Chinese Whispers
+New Model Army - Nothing Touches
+New Model Army - White Coats
+Steve Harley & Cockney Rebel - The Psychomodo
+Steve Harley & Cockney Rebel - Mr. Soft
+Steve Harley & Cockney Rebel - Singular Band
+Steve Harley & Cockney Rebel - Bed in the Corner
+Steve Harley & Cockney Rebel - Sling It!
+Steve Harley & Cockney Rebel - Hideaway
+Steve Harley & Cockney Rebel - What Ruthy Said
+Steve Harley & Cockney Rebel - Loretta's Tale
+Steve Harley & Cockney Rebel - Crazy Raver
+Steve Harley & Cockney Rebel - Mirror Freak
+Steve Harley & Cockney Rebel - My Only Vice (Is the Fantastic Prices I Charge for Being Eaten Alive)
+Steve Harley & Cockney Rebel - Muriel the Actor
+Steve Harley & Cockney Rebel - Chameleon
+Steve Harley & Cockney Rebel - Judy Teen
+Steve Harley & Cockney Rebel - Rock and Roll Parade
+The Church - Grandiose
+The Church - The Further Adventures of the Time Being
+The Church - Romany Caravan
+The Church - After Image
+Czar - Oh Lord I'm Getting Heavy
+Czar - Why Don't We Be a Rock'n Roll Band
+The Church - Under the Milky Way
+The Church - Blood Money
+The Church - Lost
+The Church - North, South, East and West
+The Church - Spark
+The Church - Antenna
+The Church - A New Season
+The Church - Hotel Womb
+Max Steiner - Ilsa Returns To Rick's
+Max Steiner - Medley (Die Wacht Am Rhein / La Marseillaise)
+Max Steiner - Ilsa Demands The Letters
+Max Steiner - Rick Confronts Ilsa And Laszlo
+Max Steiner - Airport Finale / Here's Looking At You, Kid
+Max Steiner - Medley: Shine / It Had To Be You (Alternate Orchestral Version)
+Max Steiner - Medley (Ilsa Returns / As Time Goes By)
+Max Steiner - Medley (Laszlo / As Time Goes By)
+Dooley Wilson - Medley: It Had To Be You / Shine
+Dooley Wilson - Knock On Wood
+Dooley Wilson - Dat's What Noah Done (Outtake)
+Dooley Wilson - Knock On Wood (Alternate Version)
+Philip Glass, Kronos Quartet - Journey to the Inn
+Philip Glass, Kronos Quartet - The Crypt
+Philip Glass, Kronos Quartet - Carriage Without a Driver
+Philip Glass, Kronos Quartet - The Castle
+Philip Glass, Kronos Quartet - The Drawing Room
+The Rolling Stones - Dance, Pt. 1
+The Rolling Stones - Summer Romance
+The Rolling Stones - Send It to Me
+The Rolling Stones - Let Me Go
+The Rolling Stones - Indian Girl
+The Rolling Stones - Where the Boys Go
+The Rolling Stones - Down in the Hole
+The Rolling Stones - Emotional Rescue
+The Rolling Stones - She's So Cold
+The Rolling Stones - All About You
+Queen - Flash's Theme
+Queen - In The Space Capsule (The Love Theme)
+Queen - Ming's Theme (In The Court Of Ming The Merciless)
+Queen - The Ring (Hypnotic Seduction Of Dale)
+Queen - Football Fight
+Queen - In The Death Cell
+Queen - Execution Of Flash
+Queen - The Kiss (Aura Resurrects Flash)
+Queen - Arboria (Planet Of The Tree Men)
+Queen - Escape From The Swamp
+Queen - Flash To The Rescue
+Queen - Vultan's Theme (Attack Of The Hawk Men)
+Queen - Battle Themes
+Queen - The Wedding March
+Queen - Marriage Of Dale And Ming (And Flash Approaching)
+Queen - Crash Dive On Mingo City
+Queen - Flash's Theme Reprise (Victory Celebrations)
+Queen - The Hero
+Queen - Flash's Theme (1991 Bonus Remix By Mista Lawnge)
+Black Sabbath - Shining
+Black Sabbath - Ancient Warrior
+Black Sabbath - Hard Life To Love
+Black Sabbath - Glory Ride
+Black Sabbath - Born To Lose
+Black Sabbath - Nightmare
+Black Sabbath - Scarlet Pimpernel
+Black Sabbath - Lost Forever
+Black Sabbath - Eternal Idol
+Supertramp - Gone Hollywood
+Supertramp - Goodbye Stranger
+Supertramp - Oh Darling
+Supertramp - Take the Long Way Home
+Supertramp - Lord Is It Mine
+Supertramp - Just Another Nervous Wreck
+Supertramp - Casual Conversations
+Supertramp - Child of Vision
+Philip Glass, Kronos Quartet - Excellent, Mr. Renfield
+Philip Glass, Kronos Quartet - The Three Consorts of Dracula
+Philip Glass, Kronos Quartet - The Storm
+Philip Glass, Kronos Quartet - Horrible Tragedy
+Philip Glass, Kronos Quartet - London Fog
+Philip Glass, Kronos Quartet - Lucy's Bitten
+Philip Glass, Kronos Quartet - Seward Sanatorium
+Philip Glass, Kronos Quartet - When the Dream Comes
+Philip Glass, Kronos Quartet - Or a Wolf
+Philip Glass, Kronos Quartet - Women in White
+Philip Glass, Kronos Quartet - Renfield in the Drawing Room
+Philip Glass, Kronos Quartet - Mina on the Terrace
+Toyah - I Want To Be Free
+Toyah - Elocution Lesson
+Rory Gallagher - Don't Know Where I'm Going
+Rory Gallagher - In Your Town
+Rory Gallagher - Out of My Mind
+Rory Gallagher - Persuasion
+Toyah - Jungles Of Jupiter
+Toyah - I Am
+Toyah - It's A Mystery
+Toyah - Demolition Men
+Toyah - Revelations
+Toyah - War Boys
+Toyah - Alien
+Rory Gallagher - Do You Read Me
+Rory Gallagher - Country Mile
+Rory Gallagher - Moonchild
+Rory Gallagher - I'll Admit You're Gone
+Rory Gallagher - Secret Agent Man
+Rory Gallagher - Edged in Blue
+Rory Gallagher - Barley & Grape Rag
+Rory Gallagher - Rue the Day
+Rory Gallagher - Public Enemy (B-Girl Version)
+Rory Gallagher - Cradle Rock
+Rory Gallagher - I Wonder Who (Who's Gonna Be Your Sweet Man)
+Rory Gallagher - Tattoo'd Lady
+Rory Gallagher - Too Much Alcohol
+Rory Gallagher - As the Crow Flies
+Rory Gallagher - Million Miles Away
+Rory Gallagher - Walk on Hot Coals
+Rory Gallagher - Who's That Coming
+Rory Gallagher - Back On My (Stompin' Ground)
+Rory Gallagher - Maritime
+Rory Gallagher - Calling Card [Live]
+Rory Gallagher - What in the World [Live]
+Rory Gallagher - Jacknife Beat [Live]
+Rory Gallagher - Country Mile [Live]
+Rory Gallagher - Got My Mojo Working [Live]
+Rory Gallagher - Garbage Man [Live]
+Rory Gallagher - Roberta [Live]
+Rory Gallagher - Used to Be [Live]
+Rory Gallagher - I Take What I Want [Live]
+Rory Gallagher - Cruise on Out [Live]
+Rory Gallagher - Race the Breeze
+Rory Gallagher - Hands Off
+Rory Gallagher - Feel So Bad
+Rory Gallagher - It Takes Time
+Rory Gallagher - Seventh Son of a Seventh Son
+Rory Gallagher - Daughter of the Everglades
+Rory Gallagher - They Don't Make Them Like You Anymore
+Rory Gallagher - Tore Down
+Rory Gallagher - When My Baby She Left Me
+Rory Gallagher - Hoodoo Man
+Toyah - For You
+New Model Army - All Of This
+New Model Army - Vengeance
+New Model Army - 51st State
+The Mission - Serpent's Kiss
+Alice Cooper - Snakebite
+Citizen Cain - Serpents in Camouflage
+The Church - The Time Being
+The Rolling Stones - Gimme Shelter
+The Rolling Stones - Saint Of Me
+The Rolling Stones - Waiting On A Friend
+The Rolling Stones - Sister Morphine
+The Rolling Stones - Live With Me
+Marillion - She Chameleon
+Toyah - Walkie Talkie
+Toyah - Video: I Want To Be Free (CD-ROM)
+Toyah - Creepy Room
+Toyah - Castaways
+Brian Eno - Sombre Reptiles
+The Church - Leave Your Clothes On
+Steve Harley & Cockney Rebel - Mr. Raffles
+Steve Harley & Cockney Rebel - It Wasn't Me
+Steve Harley & Cockney Rebel - Make Me Smile (Come up and See Me)
+Steve Harley & Cockney Rebel - Back to the Farm
+Steve Harley & Cockney Rebel - The Best Years of Our Lives
+The Rolling Stones - Out Of Control
+Warhorse - St. Louis
+Alice Cooper - Hey Stoopid
+Alice Cooper - Love's a Loaded Gun
+Alice Cooper - Burning Our Bed
+Alice Cooper - Might as Well Be on Mars
+Alice Cooper - Feed My Frankenstein
+Alice Cooper - Hurricane Years
+Alice Cooper - Little by Little
+Alice Cooper - Dirty Dreams
+Alice Cooper - Wind-up Toy
+Brian Eno - Sky Saw
+Brian Eno - Over Fire Island
+Brian Eno - St. Elmo's Fire
+Brian Eno - In Dark Trees
+Brian Eno - The Big Ship
+Brian Eno - Another Green World
+Brian Eno - Little Fishes
+Brian Eno - Golden Hours
+Brian Eno - Becalmed
+Brian Eno - Zawinul/Lava
+Citizen Cain - Liquid Kings
+Citizen Cain - The Gathering
+Citizen Cain - Dance of the Unicorn
+Citizen Cain - Nightlights
+Gracious - Super Nova:
+Gracious - C.B.S.
+Gracious - Blue Skies and Alibis
+Gracious - Hold Me Down
+Marillion - Punch and Judy
+Marillion - Emerald Lies
+Marillion - Fugazi
+New Model Army - The Hunt
+New Model Army - Poison Street
+New Model Army - Western Dream
+New Model Army - Love Songs
+New Model Army - Heroes
+New Model Army - Master Race
+New Model Army - Christian Militia
+New Model Army - Notice Me
+New Model Army - Smalltown England
+New Model Army - A Liberal Education
+New Model Army - Sex (The Black Angel)
+New Model Army - Running
+New Model Army - Spirit of the Falklands
+Steve Harley & Cockney Rebel - Introducing ''The Best Years''
+Steve Harley & Cockney Rebel - The Mad Mad Moonlight
+Steve Harley & Cockney Rebel - Panorama
+Steve Harley & Cockney Rebel - 49th Parallel
+Steve Harley & Cockney Rebel - Another Journey
+Steve Harley & Cockney Rebel - Sebastian (Live)
+The Church - Loveblind
+The Church - My Little Problem
+The Church - The Maven
+The Church - Lullaby
+The Church - Two Places at Once
+The Church - Business Woman
+The Church - Authority
+The Church - Drought
+The Church - Cut In Two
+The Church - The Myths You Made
+The Church - Freeze To Burn
+The Church - Macabre Tavern
+The Mission - Tomorrow Never Knows
+The Mission - Over the Hills and Far Away
+The Mission - Naked and Savage
+The Mission - Wake [RSV]
+The Mission - Like a Hurricane
+The Mission - Wishing Well
+The Mission - Dancing Barefoot
+The Mission - The Crystal Ocean
+The Rolling Stones - Intro
+The Rolling Stones - Memory Motel
+The Rolling Stones - Corinna
+The Rolling Stones - Respectable
+The Rolling Stones - Thief in the Night
+Toyah - The Druids
+Strawbs - Joey and Me
+Strawbs - Sealed With a Traitor's Kiss
+Strawbs - I Don't Want to Talk About It
+Toyah - Life In The Trees
+Strawbs - Time and Life
+Strawbs - New Beginnings
+Strawbs - Words of Wisdom
+Toyah - Dawn Chorus
+Toyah - Run Wild, Run Free
+Toyah - Brave New World
+Toyah - Warrior Rock
+Toyah - Voodoo Doll
+Toyah - Good Morning Universe
+Toyah - In The Fairground
+Toyah - Ieya 1982
+Toyah - Video: Thunder In The Mountains (CD-ROM)
+Led Zeppelin - Good times bad times
+Led Zeppelin - Your time is gonna come
+Led Zeppelin - Black Mountain side
+Led Zeppelin - Communication breakdown
+Led Zeppelin - I can't quit you baby
+Led Zeppelin - What is and what should never be
+Led Zeppelin - The lemon song
+Led Zeppelin - Thank you
+Led Zeppelin - Heartbreaker
+Led Zeppelin - Living loving maid (She's just a woman)
+Led Zeppelin - Ramble on
+Led Zeppelin - Moby Dick
+Led Zeppelin - Bring it on home
+Led Zeppelin - Immigrant song
+Led Zeppelin - Friends
+Led Zeppelin - Celebration Day
+Led Zeppelin - Out on the tiles
+Led Zeppelin - Gallows Pole
+Led Zeppelin - Tangerine
+Led Zeppelin - That's the way
+Led Zeppelin - Bron-Y-Aur Stomp
+Led Zeppelin - Hats off to (Roy) Harper
+Led Zeppelin - Black dog
+Led Zeppelin - Rock and roll
+Led Zeppelin - Misty Mountain hop
+Led Zeppelin - Four sticks
+Led Zeppelin - Going to California
+Led Zeppelin - The rain song
+Led Zeppelin - Over the hills and far away
+Led Zeppelin - The crunge
+Led Zeppelin - Dancing days
+Led Zeppelin - D'yer Mak'er
+Led Zeppelin - The ocean
+Led Zeppelin - Custard pie
+Led Zeppelin - The rover
+Led Zeppelin - In my time of dying
+Led Zeppelin - Houses of the Holy
+Led Zeppelin - Trampled underfoot
+Led Zeppelin - In the light
+Led Zeppelin - Bron-Yr-Aur
+Led Zeppelin - Down by the seaside
+Led Zeppelin - Ten years gone
+Led Zeppelin - Night flight
+Led Zeppelin - Wanton song
+Led Zeppelin - Boogie with Stu
+Led Zeppelin - Black country woman
+Led Zeppelin - Sick again
+Led Zeppelin - Achilles' last stand
+Led Zeppelin - For your life
+Led Zeppelin - Royal Orleans
+Led Zeppelin - Nobody's fault but mine
+Led Zeppelin - Candy Store rock
+Led Zeppelin - Hots on for nowhere
+Led Zeppelin - Rain song
+Led Zeppelin - South bound Saurez
+Led Zeppelin - Fool in the rain
+Led Zeppelin - Hot dog
+Led Zeppelin - Carouselambra
+Led Zeppelin - All my love
+Led Zeppelin - We're gonna groove
+Led Zeppelin - Poor Tom
+Led Zeppelin - Walter's walk
+Led Zeppelin - Ozone baby
+Led Zeppelin - Darlene
+Led Zeppelin - Bonzo's Montreaux
+Led Zeppelin - Wearing and tearing
+King Crimson - The Great Deceiver
+King Crimson - We'll Let You Know
+King Crimson - Trio
+King Crimson - The Mincer
+King Crimson - Starless And Bible Black
+King Crimson - Fracture
+The Moody Blues - Eyes Of A Child I
+The Moody Blues - Floating
+The Moody Blues - Eyes Of A Child II
+The Moody Blues - I Never Thought I'd Live To Be A Hundred
+The Moody Blues - Beyond
+The Moody Blues - Out And In
+The Moody Blues - Gypsy
+The Moody Blues - Sun Is Still Shining
+The Moody Blues - I Never Thought I'd Live To Be A Million
+The Moody Blues - Watching And Waiting
+Steve Hackett - Narnia
+Steve Hackett - Carry On up the Vicarage
+Steve Hackett - Racing in A
+Steve Hackett - Kim
+Steve Hackett - Icarus Ascending
+Steve Hackett - Hoping Love Will Last
+Steve Hackett - Land of a Thousand Autumns
+Steve Hackett - Please Don't Touch
+Steve Hackett - Voice of Necam
+Deep Purple - Stormbringer
+Deep Purple - Love Don't Mean a Thing
+Deep Purple - Holy Man
+Deep Purple - Hold On
+Deep Purple - Lady Double Dealer
+Deep Purple - You Can't Do It Right
+Deep Purple - High Ball Shooter
+Deep Purple - The Gypsy
+John Barry - May Day Jumps
+John Barry - Bond Meets Stacey (A View To A Kill)
+John Barry - Pegasus' Stable
+John Barry - Airship to Silicon Valley
+John Barry - Golden Gate Fight
+Iron Maiden - Loneliness of the Long Distance Runner
+The Gallery - Vice of Mallorn
+The Gallery - Opossite Sun 22
+The Gallery - The Sun Always Shines on T.V.
+Black Sabbath - Wheels of Confusion
+Steve Harley & Cockney Rebel - Red Is a Mean, Mean Colour
+Steve Harley & Cockney Rebel - White, White Dove
+Steve Harley & Cockney Rebel - Understand
+Steve Harley & Cockney Rebel - All Men Are Hungry
+Steve Harley & Cockney Rebel - Black or White
+Black Sabbath - A National Acrobat
+Black Sabbath - Fluff
+Black Sabbath - Sabbra Cadabra
+Black Sabbath - Hole in the Sky
+Black Sabbath - Don't Start (Too Late)
+Black Sabbath - Megalomania
+Black Sabbath - Thrill of It All
+Black Sabbath - Supertzar
+Black Sabbath - Am I Going Insane (Radio)
+Black Sabbath - The Writ
+Black Sabbath - Tomorrow`s Dream
+Black Sabbath - FX
+Black Sabbath - Supernaut
+Black Sabbath - Cornucopia
+Black Sabbath - Laguna Sunrise
+Black Sabbath - St. Vitus Dance
+Black Sabbath - Under the Sun
+The Gallery - A Wave of Mature Grain
+The Gallery - This Urgent Denial
+The Gallery - Preservation (It Wasn't Meant To Be)
+The Gallery - No Excuse
+The Gallery - Enter the Meadow Saffron
+Black Sabbath - Back Street Kids
+Black Sabbath - You Won't Change Me
+Black Sabbath - It's Alright
+Black Sabbath - All Moving Parts (Stand Still)
+Black Sabbath - Rock 'n' Roll Doctor
+Black Sabbath - She's Gone
+Deine Lakaien - My Winter
+Deine Lakaien - Fighting the Green
+Deine Lakaien - Cupid's Disease
+Deine Lakaien - Away
+Deine Lakaien - The Cabin Door
+Deine Lakaien - Fish
+Deine Lakaien - Carriage Song
+Deine Lakaien - Testosterone
+Deine Lakaien - My Spring
+Iron Maiden - Caught Somewhere in Time
+Iron Maiden - Wasted Years
+Iron Maiden - Sea of Madness
+Iron Maiden - Heaven Can Wait
+Iron Maiden - The Loneliness of the Long Distance Runner
+Iron Maiden - Stranger in a Strange Land
+Iron Maiden - Deja-Vu
+Iron Maiden - Alexander the Great
+Julee Cruise - Floating
+Julee Cruise - I Remember
+Julee Cruise - Rockin' Back Inside My Heart
+Julee Cruise - Into the Night
+Julee Cruise - I Float Alone
+Julee Cruise - The Nightingale
+Julee Cruise - The Swan
+Steve Harley & Cockney Rebel - Everything Changes
+Steve Harley & Cockney Rebel - Nothing Is Sacred
+Steve Harley & Cockney Rebel - Don't Go, Don't Cry
+Steve Harley & Cockney Rebel - Throw Your Soul Down Here
+Steve Harley & Cockney Rebel - Mad, Mad Moonlight (Live)
+The Sisterhood - Jihad
+The Sisterhood - Colours
+The Sisterhood - Finland Red, Egypt White
+Colin Bass - Macassar
+Colin Bass - As Far as I Can See
+Colin Bass - First Quartet
+Colin Bass - Goodbye to Albion
+Colin Bass - The Straits of Malacca
+Colin Bass - Aissa
+Colin Bass - Second Quartet
+Colin Bass - No Way Back
+Colin Bass - The Outcast
+Colin Bass - Reap What You Sew
+Colin Bass - Trying To Get To You
+Dust - Stone Woman
+Dust - Chasin' Ladies
+Dust - Goin' Easy
+Dust - Often Shadows
+Dust - Loose Goose
+Emerson, Lake & Palmer - Still...You Turn Me On
+Emerson, Lake & Palmer - Karn Evil 9 (2nd Impression)
+Emerson, Lake & Palmer - Take a Pebble Excerpts: Still... You Turn Me On/Lucky Man/Piano Improvisations/Take a Pebble
+Emerson, Lake & Palmer - Karn Evil 9 (3rd Impression)
+Emerson, Lake & Palmer - Piano Concerto No. 1: Third Movement
+Emerson, Lake & Palmer - Karn Evil 9 (1st Impression - Part Two)
+Emerson, Lake & Palmer - Tiger in a Spotlight
+Emerson, Lake & Palmer - Bitches Crystal
+Emerson, Lake & Palmer - Honky Tonk Train Blues
+Emerson, Lake & Palmer - Fanfare for the Common Man/Blue Rondo a la Turk
+Emerson, Lake & Palmer - 21st Century Schizoid Man/America
+Emerson, Lake & Palmer - When the Apple Blossoms Bloom in the Windmills of Your Mind I'll Be Your Valentine
+Emerson, Lake & Palmer - Bullfrog
+Emerson, Lake & Palmer - Barrelhouse Shake-Down
+Emerson, Lake & Palmer - Watching Over You
+Emerson, Lake & Palmer - So Far To Fall
+Emerson, Lake & Palmer - Maple Leaf Rag
+Emerson, Lake & Palmer - Close but Not Touching
+Emerson, Lake & Palmer - Show Me the Way To Go Home
+Genesis - Eleventh Earl of Mar
+Genesis - Your Own Special Way
+Genesis - Wot Gorilla?
+Iron Maiden - Revelations
+Iron Maiden - Flight of Icarus
+Iron Maiden - Die With Your Boots On
+Iron Maiden - The Trooper
+Iron Maiden - Still Life
+Iron Maiden - Sun and Steel
+Iron Maiden - To Tame a Land
+Kate Bush - Symphony in Blue
+Kate Bush - In Search of Peter Pan
+Kate Bush - Don’t Push Your Foot on the Heartbrake
+Kate Bush - Oh England My Lionheart
+Kate Bush - Fullhouse
+Kate Bush - Coffee Homeground
+Kin Ping Meh - Sometime
+Kin Ping Meh - Don't you know
+Kin Ping Meh - Too many people
+Kin Ping Meh - Everything
+Kin Ping Meh - My future
+The Master's Apprentices - Answer Lies Beyond
+The Master's Apprentices - Beneath the Sun
+The Master's Apprentices - The Lesson So Listen
+The Master's Apprentices - Love Is
+The Master's Apprentices - Melodies of St Kilda
+The Master's Apprentices - Southern Cross
+The Master's Apprentices - Thyme To Rhyme
+Omega - Petróleum lámpa
+Omega - Tűzvihar
+Omega - Udvari bolond kenyere
+Omega - Kérgeskezű favágók
+Omega - Tékozló fiúk
+Omega - Tizezer Lépés
+Omega - 1958-as boogie-woogie klubban
+Omega - Spanyolgitár legenda
+Omega - Félbeszakadt koncert
+Procol Harum - All This and More
+Procol Harum - In Held 'Twas in I
+Robert John Godfrey - End of Side 1
+Robert John Godfrey - Isault
+Steve Harley & Cockney Rebel - G.I. Valentine
+Steve Harley & Cockney Rebel - (Love) Compared With You
+Steve Harley & Cockney Rebel - (I Believe) Love's a Prima Donna
+Steve Harley & Cockney Rebel - Sidetrack II
+Steve Harley & Cockney Rebel - Seeking a Love, Pt. 2
+Steve Harley & Cockney Rebel - If This Is Love (Give Me More)
+Steve Harley & Cockney Rebel - Innocence and Guilt
+Steve Harley & Cockney Rebel - Is It True What They Say?
+Visage - Visage
+Visage - Blocks on Blocks
+Visage - The Dancer
+Visage - Tar
+Ultravox - Reap the Wild Wind
+Ultravox - Serenade
+Ultravox - Mine for Life
+Ultravox - When the Scream Subsides
+Ultravox - Cut and Run
+Ultravox - The Song (We Go)
+Threshold - Freaks
+Threshold - The Latent Gene
+Threshold - Lovelorn
+Threshold - Change
+Threshold - Life's Too Good
+Threshold - Goodbye Mother Earth
+Threshold - Voyager II
+Threshold - Sunrise on Mars
+The Beatles - Sgt. Pepper's Lonely Hearts Club Band
+The Beatles - With a Little Help from My Friends
+The Beatles - Getting Better
+The Beatles - Fixing A Hole
+The Beatles - She's Leaving Home
+The Beatles - Being for the Benefit of Mr. Kite!
+The Beatles - Within You Without You
+The Beatles - When I'm Sixty-Four
+The Beatles - Lovely Rita
+The Beatles - Sgt. Pepper's Lonely Hearts Club Band (Reprise)
+Talk Talk - It's So Serious
+Talk Talk - The Party's Over
+Talk Talk - Hate
+Talk Talk - Have You Heard the News?
+Talk Talk - Mirror Man
+Talk Talk - Another World
+Talk Talk - Candy
+Spock's Beard - The Good Don't Last
+Spock's Beard - In the Mouth of Madness
+Spock's Beard - Cakewalk on Easy Street
+Spock's Beard - Strange World
+Spock's Beard - Harm's Way
+Spandau Ballet - Muscle Bound
+Spandau Ballet - Age of Blows
+Spandau Ballet - Confused
+Soft Cell - Seedy Films
+Soft Cell - Bedsitter
+Soft Cell - Secret Life
+Sarah McLachlan - Building a Mystery
+Sarah McLachlan - I Love You
+Sarah McLachlan - Sweet Surrender
+Sarah McLachlan - Adia
+Sarah McLachlan - Do What You Have to Do
+Sarah McLachlan - Witness
+Sarah McLachlan - Angel
+Sarah McLachlan - Black and White
+Sarah McLachlan - Full of Grace
+Sarah McLachlan - Last Dance
+Rush - Dreamline
+Rush - Limelight
+Rush - Driven
+Rush - Bravado
+Rush - Animate
+Rush - Show Don't Tell
+Rush - The Trees
+Rush - Nobody's Hero
+Rush - Closer to the Heart
+Rush - 2112
+Rush - Test for Echo
+Rush - Analog Kid
+Rush - Freewill
+Rush - Roll the Bones
+Rush - Stick It Out
+Rush - Resist
+Rush - Leave That Thing Alone
+Rush - The Rhythm Method
+Rush - Natural Science
+Rush - The Spirit of Radio
+Rush - Tom Sawyer
+Rush - YYZ
+Rush - Bastille Day
+Rush - By-Tor and the Snow Dog
+Rush - Xanadu
+Rush - Farewell to Kings
+Rush - Something for Nothing
+Rush - Cygnus X-1
+Rush - Anthem
+Rush - Working Man
+Rush - Fly by Night
+Rush - In the Mood
+Rush - Cinderella Man
+Real Life - Catch Me I'm Falling
+Real Life - Under the Hammer
+Real Life - Heartland
+Real Life - Breaking Point
+Real Life - Broken Again
+Real Life - Always
+Real Life - Openhearted
+Real Life - Exploding Bullets
+Real Life - Burning Blue
+Robbie Robertson - Fallen Angel
+Robbie Robertson - Showdown at Big Sky
+Robbie Robertson - Broken Arrow
+Robbie Robertson - Sweet Fire of Love
+Robbie Robertson - American Roulette
+Robbie Robertson - Somewhere Down the Crazy River
+Robbie Robertson - Hell's Half Acre
+Robbie Robertson - Sonny Got Caught in the Moonlight
+Robbie Robertson - Testimony
+No-Man - You Grow More Beautiful
+No-Man - Animal Ghost
+No-Man - Soft Shoulders
+No-Man - Shell of a Fighter
+No-Man - Teardrop Fall
+No-Man - (Watching) Over Me
+No-Man - Simple
+No-Man - Things Change
+New Model Army - No Pain
+Monty Python - Sit on My Face
+Monty Python - Lumberjack Song
+Monty Python - Penis Song (Not the Noel Coward Song)
+Monty Python - Oliver Cromwell
+Monty Python - Money Song
+Monty Python - Accountancy Shanty
+Monty Python - Finland
+Monty Python - Medical Love Song
+Monty Python - I'm So Worried
+Monty Python - Every Sperm Is Sacred
+Monty Python - Never Be Rude to an Arab
+Monty Python - I Like Chinese
+Monty Python - Eric the Half-A-Bee Song
+Monty Python - Brian Song
+Monty Python - Bruce's Philosophers Song
+Monty Python - The Meaning of Life
+Monty Python - Knights of the Round Table (Camelot Song)
+Monty Python - All Things Dull and Ugly
+Monty Python - Decomposing Composers
+Monty Python - Henry Kissinger
+Monty Python - I've Got Two Legs
+Monty Python - Christmas in Heaven
+Monty Python - Galaxy Song
+Monty Python - Spam Song
+Loreena McKennitt - In Praise of Christmas
+Loreena McKennitt - The Seasons
+Loreena McKennitt - The King
+Loreena McKennitt - Banquet Hall
+Loreena McKennitt - Balulalow
+Loreena McKennitt - Let Us the Infant Greet
+Loreena McKennitt - The Wexford Carol
+Loreena McKennitt - Let All That Are to Mirth Inclined
+Lacrimosa - Kabinett der Sinne
+Lacrimosa - Copycat
+Lacrimosa - Alles Lüge
+King Crimson - One More Red Nightmare
+King Crimson - Providence
+Kansas - Eleanor Rigby
+Kansas - Dust In The Wind
+Kansas - Preamble
+Kansas - Song For America
+Kansas - In Your Eyes
+Kansas - Miracles Out of Nowhere
+Kansas - Hold On
+Kansas - The Sky Is Falling
+Kansas - Prelude & Introduction
+Kansas - The Wall
+Kansas - Need to Know
+Kansas - Nobody's Home
+IQ - The Wake
+IQ - The Magic Roundabout
+IQ - Corners
+IQ - The Thousand Days
+IQ - Headlong
+IQ - Dans le Pare du Chateau Noir
+IQ - The Thousand Days [demo version]
+IQ - The Magic Roundabout [demo version]
+Incredible Expanding Mindfuck - The Gospel According to the I.E.M.
+Incredible Expanding Mindfuck - The Last Will and Testament of Emma Peel
+Incredible Expanding Mindfuck - Fie Kesh
+Incredible Expanding Mindfuck - Deafman
+Incredible Expanding Mindfuck - Headphone Dust
+The Human League - The Things That Dreams Are Made Of
+The Human League - Open Your Heart
+The Human League - The Sound of the Crowd
+The Human League - Darkness
+The Human League - Get Carter
+The Human League - I Am the Law
+The Human League - Seconds
+The Human League - Love Action (I Believe in Love)
+The Human League - Don't You Want Me
+The Human League - Hard Times
+The Human League - Non-Stop
+H.I.M. (His Infernal Majesty) - Your Sweet Six Six Six
+H.I.M. (His Infernal Majesty) - Wicked Game
+H.I.M. (His Infernal Majesty) - The Heartless
+H.I.M. (His Infernal Majesty) - Our Diabolikal Rapture
+H.I.M. (His Infernal Majesty) - It's All Tears (Drown in This Love)
+H.I.M. (His Infernal Majesty) - When Love and Death Embrace
+H.I.M. (His Infernal Majesty) - The Beginning of the End
+H.I.M. (His Infernal Majesty) - (Don't Fear) The Reaper
+H.I.M. (His Infernal Majesty) - For You
+H.I.M. (His Infernal Majesty) - (no audio) [10-65]
+Fading Colours - Enchanted
+Fading Colours - Eveline (original version)
+Fading Colours - Strzeż Się Tych Miejsc
+Duran Duran - Girls on Film
+Duran Duran - Planet Earth
+Duran Duran - Anyone Out There
+Duran Duran - Night Boat
+Duran Duran - Sound of Thunder
+Duran Duran - Friends of Mine
+Duran Duran - Tel Aviv
+Discipline - Canto IV (Limbo)
+Discipline - Crutches
+Discipline - Into the Dream
+Discipline - Before the Storm
+Depeche Mode - New Life
+Depeche Mode - I Sometimes Wish I Were Dead
+Depeche Mode - Puppets
+Depeche Mode - Nodisco
+Depeche Mode - What's Your Name?
+Depeche Mode - Tora! Tora! Tora!
+Depeche Mode - Big Muff
+Depeche Mode - Any Second Now
+Depeche Mode - Just Can't Get Enough
+China Crisis - Working With Fire and Steel
+China Crisis - When the Piper Calls
+China Crisis - Hanna Hanna
+China Crisis - Animals in Jungles
+China Crisis - Here Come a Raincloud
+China Crisis - Wishful Thinking
+China Crisis - Tragedy and Mystery
+China Crisis - Papua
+China Crisis - The Soul Awakening
+Cast - Initiation
+Cast - We Don't Belong to Heaven
+Cast - Reality or Misanthropy? (Mix-up)
+Cast - What We See / The Increasing Sorrow of the Earth
+Cast - Angels and Demons
+Cast - Revealing Signs of Love
+Cast - Loneliness
+Cast - Fire in the Sky, Fire on Earth
+Cast - White Lies
+Cast - Brief Story of the Freewill
+Camel - No Easy Answer
+Camel - You Are the One
+Camel - Heroes
+Camel - Lullabye
+Camel - Sasquatch
+Camel - Manic
+Camel - Camelogue
+Camel - Today's Goodbye
+Camel - A Heart's Desire
+Camel - End Peace
+Camel - You Are the One - Edited Version
+Ayreon - Welcome to the New Dimension
+Ayreon - Isis and Osiris
+Ayreon - Amazing Flight
+Ayreon - Time Beyond Time
+Ayreon - The Decision Tree (We're Alive)
+Ayreon - Tunnel of Light
+Ayreon - Across the Rainbow Bridge
+Ayreon - The Garden of Emotions
+Ayreon - Valley of the Queens
+Ayreon - The Castle Hall
+Ayreon - Tower of Hope
+Ayreon - Cosmic Fusion
+Ayreon - The Mirror Maze
+Ayreon - Evil Devolution
+Ayreon - The Two Gates
+Ayreon - "Forever" of the Stars
+Ayreon - Another Time, Another Space
+ABBA - The Visitors
+ABBA - Head Over Heels
+ABBA - When All Is Said and Done
+ABBA - Soldiers
+ABBA - I Let the Music Speak
+ABBA - One of Us
+ABBA - Two for the Price of One
+ABBA - Slipping Through My Fingers
+ABBA - Like an Angel Passing Through My Room
+A Flock Of Seagulls - I Ran (So Far Away)
+A Flock Of Seagulls - Space Age Love Song
+A Flock Of Seagulls - You Can Run
+A Flock Of Seagulls - Don't Ask Me
+A Flock Of Seagulls - Telecommunication
+A Flock Of Seagulls - Modern Love Is Automatic
+A Flock Of Seagulls - Standing in the Doorway
+A Flock Of Seagulls - D.N.A.
+A Flock Of Seagulls - Manmade
+Ayreon - Isis And Osiris
+John Barry - Mujahadin and Opium
+John Barry - Air Bond
+Fading Colours - Eveline
+1984 - Na jednej chmurze do nieba
+1984 - Pierwszy śnieg
+1984 - Adelajda formalina
+1984 - Biała chorągiewka
+1984 - Jadowitym paznokciem
+1984 - Brak tlenu
+1984 - Radio niebieskie oczy Heleny
+1984 - Biegnący wzdłuż koła
+1984 - Zespolenie rytmu
+Pavlov's Dog - Trafalger
+Pavlov's Dog - Jenny
+Pavlov's Dog - While You Were Out
+Pavlov's Dog - Today I Feel
+Pavlov's Dog - Painted Ladies
+Pavlov's Dog - Falling in Love
+Mira Kubasińska & Breakout - Nie zapalaj światła
+Mira Kubasińska & Breakout - Liście zabrał wiatr
+Mira Kubasińska & Breakout - Na dnie mych oczu
+Mira Kubasińska & Breakout - Masz to dziś
+Mira Kubasińska & Breakout - Czarno-czarny film
+Mira Kubasińska & Breakout - Dałeś mi pierścień
+Closterkeller - Kołysanka dla Adasia
+Closterkeller - Walet Pik
+Closterkeller - Salome
+Closterkeller - A nadzieja
+Closterkeller - California
+Closterkeller - Coś
+Closterkeller - Po to właśnie (Norwid)
+Closterkeller - Temple of Time
+Closterkeller - Brylant
+Closterkeller - Mogę tylko patrzeć
+Closterkeller - Chat
+Closterkeller - Tak się boję bólu (przedmix)
+Closterkeller - Wyznanie siebie
+Closterkeller - Czekając na dzień
+Closterkeller - Jesteś wciąż nieuchwytny
+Closterkeller - Maska
+Closterkeller - Paranoja
+Closterkeller - Wolfgang na odlocie
+Closterkeller - Intro
+Closterkeller - Klepsydra
+Closterkeller - Władza
+Closterkeller - Heart Shaped Box
+Closterkeller - Syrenka
+Closterkeller - Sztuka ambicji
+Closterkeller - Rozbijacz symboli
+Closterkeller - Miłość za pieniądze
+Closterkeller - Ewa i Adam
+Closterkeller - Dwa dni
+Closterkeller - Zmierzch bogów
+Closterkeller - Ziemia obiecana
+Closterkeller - Cisza w moim domu
+Closterkeller - Smutek spełnionej baśni
+Closterkeller - Senne macanki
+Closterkeller - Alicja
+Closterkeller - Roszpunka
+Closterkeller - Cisza w jej domu
+Closterkeller - Vintage Wine
+Closterkeller - Lose It
+Closterkeller - Immanoleo (The Mummy)
+Closterkeller - Escape
+Closterkeller - White Wolfgang
+Closterkeller - Black Wolfgang
+Closterkeller - Epitaph
+Closterkeller - Jeszcze jeden dzień
+Budka Suflera - Cień wielkiej góry
+Budka Suflera - Lubię ten stary obraz
+Budka Suflera - Samotny nocą
+Budka Suflera - Szalony koń
+Blitzkrieg - Fall of Jericho
+Blitzkrieg - Flexible
+Blitzkrieg - Going Down
+Blitzkrieg - Need You by My Side
+Blitzkrieg - Pressure
+Blitzkrieg - Sugar
+Blitzkrieg - In Cold Blood
+Blitzkrieg - Tłum (When You Die)
+Big Day - Violet Train
+Big Day - Jeszcze czas
+Big Day - Mój znak
+Big Day - Someone
+Big Day - Mam ich wszystkich
+Big Day - Jestem jak wiatr
+Big Day - Love Is the Stream of Time
+Big Day - Obłęd brylantów
+Big Day - Ostry smak ziemi
+Big Day - Widzieć tak
+Big Day - Głos nieobecnych
+Big Day - It's No Mystery
+Albion - Burning
+Albion - Survival Games
+Albion - Mad Look
+Albion - Shout
+Albion - You
+Artrosis - (
+Artrosis - Na wieki wieków
+Artrosis - Hipnoza
+Artrosis - W górę
+Artrosis - Nie ma nic
+Artrosis - Crazy
+Artrosis - Prośba
+Artrosis - Do zła
+Big Day - Bliżej nas
+Big Day - Wszystko
+Big Day - Bez znaczenia
+Big Day - Jeden inny sens
+Big Day - Mózgowiec
+Big Day - Niezmienny
+Big Day - C-4
+Big Day - Myśli wieczoru
+Armaggedon - Round
+Armaggedon - Open
+Armaggedon - Oh Man
+Armaggedon - Rice Pudding
+Armaggedon - People Talking
+Armaggedon - Better by You, Better than Me
+Armageddon - Silver Tightrope
+Armageddon - Last Stand Before
+Armageddon - Basking in the White of the Midnight Sun
+Aragon - For Your Eyes (Reprise)
+The Alan Parsons Project - Too Late
+The Alan Parsons Project - Closer to Heaven
+The Alan Parsons Project - Standing on Higher Ground
+The Alan Parsons Project - Money Talks
+The Alan Parsons Project - Inside Looking Out
+XIII. Století - Hororový sen
+XIII. Století - Tělo na křízi
+XIII. Století - Justýna
+XIII. Století - Amulet
+XIII. Století - Bytosti
+XIII. Století - Kníze temnoty
+XIII. Století - Oheň v kruhu
+XIII. Století - Transilvania
+Ultravox - Ultravox
+Ultravox - Saturday Night In The City
+Ultravox - Life At Rainbow End
+Ultravox - Slip Away
+Ultravox - Wide Boy
+Ultravox - Lonely Hunter
+Ultravox - Wild, The Beautiful And The Damned
+XIII. Století - Svatí na nebi
+XIII. Století - Blood is Life (Sabbating)
+XIII. Století - Mistr a Markétka
+XIII. Století - Markýza z obrazu
+XIII. Století - Justýna (Symphony Version)
+XIII. Století - Tango Salieri
+XIII. Století - Mistr Leonard
+XIII. Století - Tango Salieri (Hellmix)
+XIII. Století - Opus pro Macbeth
+XIII. Století - Julie umírá kazdou noc
+Type O Negative - Bad Ground
+Type O Negative - Intro
+Type O Negative - Be My Druidess
+Type O Negative - Green Man
+Type O Negative - Red Water (Christmas Mourning)
+Type O Negative - My Girlfriend's Girlfriend
+Type O Negative - Die With Me
+Type O Negative - Burnt Flowers Fallen
+Type O Negative - In Praise of Bacchus
+Type O Negative - Cinnamon Girl
+Type O Negative - The Glorious Liberation of the People's Technocratic Republic of Vinnland by the Combined Forces of the United Territories of Europa
+Type O Negative - Wolf Moon (Including Zoanthropic Paranoia)
+Type O Negative - Haunted
+Type O Negative - Outro
+Renata Przemyk - Rabbit Polka I
+Renata Przemyk - Listonosz z niebios
+Renata Przemyk - Renata I
+Renata Przemyk - Rozamunda
+Renata Przemyk - Renata II
+Renata Przemyk - Andergrant
+Renata Przemyk - Nie udawaj że
+Renata Przemyk - Renata III
+Renata Przemyk - Każdy troche jest potrzebny
+Renata Przemyk - Bo jeśli tak ma być
+Renata Przemyk - Rabbit Polka II
+Roger Hodgson - Hooked on a Problem
+Roger Hodgson - Showdown
+Roger Hodgson - Had a Dream (Sleeping With the Enemy)
+Roger Hodgson - Take The Long Way Home
+Roger Hodgson - Red Lake
+Roger Hodgson - I'm Not Afraid
+Roger Hodgson - Time Waits For No One
+Roger Hodgson - No Colours
+Roger Hodgson - The Logical Song
+Roger Hodgson - Smelly Feat
+Roger Hodgson - Give Me Love, Give Me Life
+Simon Dupree And The Big Sound - Like the Sun Like the Fire
+Simon Dupree And The Big Sound - Sleep
+Simon Dupree And The Big Sound - For Whom the Bell Tolls
+Simon Dupree And The Big Sound - Broken Hearted Pirates
+Simon Dupree And The Big Sound - 60 Minutes of Your Love/A Lot of Love (Medley)
+Simon Dupree And The Big Sound - Love
+Simon Dupree And The Big Sound - There's a Little Picture Playhouse
+Simon Dupree And The Big Sound - Day Time, Night Time
+Simon Dupree And The Big Sound - I See the Light
+Simon Dupree And The Big Sound - What is Soul
+Simon Dupree And The Big Sound - Amen
+Simon Dupree And The Big Sound - Who Cares
+Simon Dupree And The Big Sound - She Gave Me the Sun
+Simon Dupree And The Big Sound - Thinking About My Life
+Simon Dupree And The Big Sound - It is Finished
+Simon Dupree And The Big Sound - I've Seen it All Before
+Simon Dupree And The Big Sound - You Need a Man
+Simon Dupree And The Big Sound - Reservations
+Sinead O'Connor - Mandinka
+Sinead O'Connor - Jerusalem
+Sinead O'Connor - Just Like U Said It Would B
+Sinead O'Connor - Never Get Old
+Sinead O'Connor - I Want Your (Hands On Me)
+Sinead O'Connor - Just Call Me Joe
+The Doors - Break on Through (To the Other Side)
+The Doors - Soul Kitchen
+The Doors - The Crystal Ship
+The Doors - Twentieth Century Fox
+The Doors - Alabama Song (Whisky Bar)
+The Doors - Back Door Man
+The Doors - I Looked at You
+The Icicle Works - Chop the Tree
+The Icicle Works - Love Is a Wonderful Colour
+The Icicle Works - Reaping the Rich Harvest
+The Icicle Works - As the Dragonfly Flies
+The Icicle Works - Lover's Day
+The Icicle Works - In the Cauldron of Love
+The Icicle Works - Out of Season
+The Icicle Works - A Factory in the Desert
+The Icicle Works - Bird's Fly (Whisper to a Scream)
+The Icicle Works - Nirvana
+The Moody Blues - Dr. Livinstone, I Pressume
+The Moody Blues - Are You Sitting Comfortably
+The Moody Blues - Have You Heard (Part 1)
+The Moody Blues - Have You Heard (Part 2)
+The Moody Blues - Gimme A Little Somethin'
+The Moody Blues - Please Think About It
+The Moody Blues - Long Summer Day
+The Moody Blues - What Am I Doing Here?
+The Moody Blues - The Day Begins
+The Moody Blues - Dawn: Dawn Is A Feeling
+The Moody Blues - Morning: Another Morning
+The Moody Blues - Lunch Break: Peak Hour
+The Moody Blues - Tuesday Afternoon (Forever Afternoon)
+The Moody Blues - Evening: The Sun Set: Twilight Time
+The Moody Blues - Night: Nights In White Satin
+The Moody Blues - Late Lament
+The Rolling Stones - She Said Yeah
+The Rolling Stones - Talkin' About You
+The Rolling Stones - You Better Move On
+The Rolling Stones - Look What You've Done
+The Rolling Stones - The Singer Not The Song
+The Rolling Stones - Route 66
+The Rolling Stones - Get Off of My Cloud
+The Rolling Stones - I'm Free
+The Rolling Stones - Gotta Get Away
+The Rolling Stones - Blue Turns To Grey
+The Rolling Stones - I'm Moving On
+The Sisters of Mercy - Mother Russia
+The Sisters of Mercy - Never Land
+The Stranglers - Sometimes
+The Stranglers - Goodbye Toulouse
+The Stranglers - Princess of the Streets
+The Stranglers - Ugly
+The Stranglers - Choosey Susie
+The Stranglers - Go Buddy Go
+The Stranglers - Peasant in the Big Shitty (Live)
+Renaissance - Running Hard
+Renaissance - I Think of You
+Renaissance - Things I Don't Understand
+Renaissance - Cold Is Being
+U.F.O. - Prince Kajuku
+U.F.O. - The Coming of Prince Kajuku
+Renaissance - Trip to the Fair
+Renaissance - The Vultures Fly High
+Renaissance - Ocean Gypsy
+Renaissance - Song of Scheherazade
+Renaissance - Kings and Queens
+Renaissance - Innocence
+Renaissance - Island
+Renaissance - Bullet
+Renaissance - The Sea
+Renaissance - Prologue
+Renaissance - Kiev
+Renaissance - Sounds of the Sea
+Renaissance - Spare Some Love
+Renaissance - Bound for Infinity
+Renaissance - Rajah Khan
+Renaissance - Can You Hear Me?
+Renaissance - Midas Man
+Renaissance - The Captive Heart
+Renaissance - Touching Once (Is So Hard to Keep)
+Renaissance - Love Goes On
+Renaissance - Golden Thread
+Renaissance - Love Is All
+Renaissance - Mr. Pine
+Renaissance - Past Orbits of Dust
+Renaissance - The Discovery
+Renaissance - Can You Understand?
+Renaissance - Let It Grow
+Renaissance - On the Frontier
+Renaissance - Opening Out
+Renaissance - Day of the Dreamer
+Renaissance - Closer than Yesterday
+Renaissance - Kindness (at the End)
+Renaissance - Back Home Once Again
+Renaissance - She Is Love
+Renaissance - Northern Lights
+Renaissance - A Song for All Seasons
+Psyche - Trouble in Mind
+Psyche - Searching
+Psyche - Silence was a Melody
+Psyche - Stay by me
+Psyche - Good-bye Horses
+Psyche - Teeth and Claws
+Procol Harum - Whisky Train
+Procol Harum - Dead Man's Dream
+Ozzy Osbourne - You're No Different
+Ozzy Osbourne - Now You See It (Now You Don't)
+Ozzy Osbourne - Rock'n'Roll Rebel
+Ozzy Osbourne - Centre Of Eternity
+Ozzy Osbourne - So Tired
+Ozzy Osbourne - Slow Down
+Ozzy Osbourne - Spiders In The Night
+Peter Gabriel - Moribund the Burgermeister
+Peter Gabriel - Modern Love
+Peter Gabriel - Excuse Me
+Peter Gabriel - Humdrum
+Peter Gabriel - Slowburn
+Peter Gabriel - Waiting for the Big One
+Peter Murphy - Deep Ocean Vast Sea
+Peter Murphy - Shy
+Peter Murphy - Crystal Wrists
+Peter Murphy - Marlene Dietrich's Favourite Poem
+Peter Murphy - Seven Veils
+Peter Murphy - The Line Between The Devil's Teeth
+Peter Murphy - Cuts You Up
+Peter Murphy - A Strange Kind Of Love (version one)
+Peter Murphy - Roll Call
+Peter Murphy - Roll Call (Reprise)
+Peter Murphy - A Strange Kind of Love (version two)
+Pink Floyd - Pigs on the Wing (Part 1)
+Pink Floyd - Pigs (Three different ones)
+Pink Floyd - Sheep
+Pink Floyd - Pigs on the Wing (Part 2)
+Nosferatu - Highway
+Nosferatu - Willie the Fox
+Nosferatu - Found My Home
+Nosferatu - No. 4
+Nosferatu - Work Day
+Nosferatu - Vanity Fair
+Nosferatu - Eye of the Watcher
+Nosferatu - Ravage
+Nosferatu - The Haunting (Main Mix)
+Nosferatu - Passing
+Nosferatu - Graveyard Shift
+Nosferatu - The Haunting (Swamp Mix)
+Marianne Faithfull - Come and Stay With Me
+Marianne Faithfull - If I Never Get To Love You
+Marianne Faithfull - Time Takes Time
+Marianne Faithfull - He'll Come Back to Me
+Marianne Faithfull - Downtown
+Marianne Faithfull - Plaisir D'Amour
+Marianne Faithfull - Can't You Hear My Heartbeat
+Marianne Faithfull - Paris Bells
+Marianne Faithfull - They Never Will Leave You
+Marianne Faithfull - What Have They Done to the Rain?
+Marianne Faithfull - In My Time of Sorrow
+Marianne Faithfull - What Have I Done Wrong?
+Marianne Faithfull - I'm a Loser
+Hawkwind - Reefer Madness
+Hawkwind - City of Lagoons
+Hawkwind - The Aubergine That Ate Rangoon
+Hawkwind - Kerb Crawler
+Hawkwind - Kadu Flyer
+Hawkwind - Chronoglide Skyway
+Hawkwind - Dream of Isis
+Hawkwind - Back on the Street
+Hawkwind - Honky Dorky
+Hawkwind - Quark Strangeness and Charm
+Gentle Giant - Prologue
+Gentle Giant - Schooldays
+Gentle Giant - Working All Day
+Gentle Giant - Peel the Paint
+Gentle Giant - Mister Class and Quality?
+Gentle Giant - Three Friends
+Hurdy Gurdy - Ride On
+Hurdy Gurdy - Giant
+Hurdy Gurdy - Peaceful Open Space
+Hurdy Gurdy - Babels Tower
+Hurdy Gurdy - Spaceman
+Hurdy Gurdy - Lost in the Jungle
+Icehouse - Electric Blue
+Icehouse - My Obsession
+Icehouse - Heartbreak Kid
+Icehouse - The Kingdom
+Icehouse - Nothing Too Serious
+Icehouse - Girl in the Moon
+Icehouse - Anybody's War
+Icehouse - Sunrise
+Icehouse - Crazy (12" Mix)
+Icehouse - Crazy (Midnight Mix)
+Inkubus Sukkubus - Wytches I
+Inkubus Sukkubus - Song to Pan
+Inkubus Sukkubus - Midnight Queen
+Inkubus Sukkubus - Trinity
+Inkubus Sukkubus - I Am the One
+Inkubus Sukkubus - Wampyre Kiss
+Inkubus Sukkubus - Wytches II
+Inkubus Sukkubus - The Leveller
+Inkubus Sukkubus - Wytches (Chant)
+Justin Hayward - Songwriter (Part 1)
+Justin Hayward - Songwriter (Part 2)
+Justin Hayward - Stage Door
+Justin Hayward - Marie
+Justin Hayward - Learning the Game
+The Legendary Pink Dots - Casting the Runes
+The Legendary Pink Dots - A Strychnine Kiss
+The Legendary Pink Dots - Laguna Beach
+The Legendary Pink Dots - The Gallery
+The Legendary Pink Dots - True Love
+The Legendary Pink Dots - The Peculiar Fun Fair
+The Legendary Pink Dots - Cloud Zero
+The Legendary Pink Dots - Under Glass
+The Legendary Pink Dots - The Light In My Little Girl's Eyes
+The Legendary Pink Dots - The Plasma Twins
+Marc Almond - Mother Fist
+Marc Almond - Saint Judy
+Marc Almond - The Room Below
+Marc Almond - Angel in Her Kiss
+Marc Almond - The Hustler
+Marc Almond - Melancholy Rose
+Marc Almond - The Sea Says
+Marc Almond - Ruby Red
+Marc Almond - The River
+Marianne Faithfull - The Blue Millionaire
+Marianne Faithfull - Ashes in My Hand
+Marianne Faithfull - Running for Our Lives
+Marianne Faithfull - Ireland
+Marianne Faithfull - She's Got a Problem
+Marianne Faithfull - Broken English
+Marianne Faithfull - Witches' Song
+Marianne Faithfull - Brain Drain
+Marianne Faithfull - What's the Hurry
+Marianne Faithfull - Stranger Intro
+Marianne Faithfull - Boulevard of Broken Dreams
+Marianne Faithfull - I Ain't Goin' Down to the Well No More
+Marianne Faithfull - Yesterday
+Marianne Faithfull - Sign of Judgement
+Marianne Faithfull - Love, Life and Money
+Marianne Faithfull - I'll Keep It With Mine
+Marianne Faithfull - Hello Stranger
+Marianne Faithfull - Penthouse Serenade
+Marianne Faithfull - A Stranger on Earth
+Moonlight - Strach
+Moonlight - Stadium wiary
+Moonlight - Cisza przed burzą
+Moonlight - Extaza milczenia
+Moonlight - Modlitwa o zmiłowanie
+Moonlight - Hexe
+Moonlight - Ananke
+Moonlight - Zmierzch
+Moonlight - Damaisa
+Moonlight - Jak ryby
+Moonlight - Msza
+Moonlight - Deformis
+Moonlight - Zbrodnia i kara
+Gentle Giant - Proclamation
+Gentle Giant - So Sincere
+Gentle Giant - Aspirations
+Gentle Giant - Playing the Game
+Gentle Giant - Cogs in Cogs
+Gentle Giant - No God's a Man
+Gentle Giant - The Face
+Gentle Giant - Valedictory
+Gentle Giant - The Power and the Glory
+Gentle Giant - The Advent of Panurge
+Gentle Giant - Raconteur, Troubadour
+Gentle Giant - A Cry for Everyone
+Gentle Giant - Knots
+Gentle Giant - The Boys in the Band
+Gentle Giant - Dog's Life
+Gentle Giant - Think of Me with Kindness
+Gentle Giant - River
+Gentle Giant - The Runaway
+Gentle Giant - An Inmates Lullaby
+Gentle Giant - Way of Life
+Gentle Giant - Experience
+Gentle Giant - A Reunion
+Gentle Giant - In a Glass House
+Gentle Giant - Isn't It Quiet and Cold?
+Gentle Giant - Nothing at All
+Gentle Giant - Why Not?
+Gentle Giant - The Queen
+Gentle Giant - Edge of Twilight
+Gentle Giant - The House, the Street, the Room
+Gentle Giant - Acquiring the Taste
+Gentle Giant - The Moon Is Down
+Gentle Giant - Black Cat
+Gentle Giant - Plain Truth
+Fuzzy Duck - Time Will Be Your Doctor
+Fuzzy Duck - Mrs. Prout
+Fuzzy Duck - Just Look Around You
+Fuzzy Duck - Afternoon Out
+Fuzzy Duck - More Than I Am
+Fuzzy Duck - Country Boy
+Fuzzy Duck - In Our Time
+Fuzzy Duck - A Word Erom Big D
+Fuzzy Duck - Double Time Woman
+Fuzzy Duck - Big Brass Band
+Fuzzy Duck - One More Hour
+Fuzzy Duck - No Name Face
+Frank Zappa - Peaches En Regalia
+Frank Zappa - Son of Mr. Green Genes
+Frank Zappa - Little Umbrellas
+Frank Zappa - The Gumbo Variations
+Frank Zappa - It Must Be a Camel
+Frumpy - Good Winds
+Frumpy - How the Gipsy Was Born
+Frumpy - Take Care of Illusion
+Frumpy - Duty
+Electric Light Orchestra - In Old England Town (Boogie No.2)
+Electric Light Orchestra - Momma
+Electric Light Orchestra - From the Sun to the World (Boogie No.1)
+Electric Light Orchestra - Kuiama
+Diamanda Galás - There Are No More Tickets to the Funeral
+Diamanda Galás - This Is the Law of the Plague
+Diamanda Galás - I Wake Up and I See the Face of the Devil
+Diamanda Galás - Confessional (Give Me Sodomy or Give Me Death)
+Diamanda Galás - How Shall Our Judgement Be Carried Out Upon the Wicked?
+Diamanda Galás - Let Us Praise the Masters of Slow Death
+Diamanda Galás - Consecration
+Diamanda Galás - Sono L'Antichristo
+Diamanda Galás - Cris D'Aveugle
+Diamanda Galás - Let My People Go
+Electric Sandwich - China
+Electric Sandwich - Nervous Creek
+Electric Sandwich - It's No Use To Run
+Electric Sandwich - Archie's Blues
+Electric Light Orchestra - Ocean Breakup / King of the Universe
+Electric Light Orchestra - New World Rising / Ocean Break up Reprise
+Electric Light Orchestra - Showdown
+Emerson, Lake & Palmer - The Enemy God (Dances With the Black Spirits)
+Ennio Morricone - La Resa Dei Conti
+Ennio Morricone - Osservatori Osservati
+Ennio Morricone - Il Vizio Di Uccidere
+Ennio Morricone - Il Colpo
+Ennio Morricone - Addio Colonnello
+Ennio Morricone - Per Qualche Dollaro In Piu
+Ennio Morricone - Poker D'Assi
+Ennio Morricone - Carillon
+Fading Colours - Time - Ocean Mix
+Fading Colours - Spring - Nosferatu Mix
+Fading Colours - Time - Freenternetry Mix
+Fading Colours - Spring - Gagarin 108 Mix
+Fading Colours - Lie - Selfdestruct Mix
+Fading Colours - Lie - Encomber Mix
+Fading Colours - Time - Radio Edit
+Fading Colours - Spring - Radio Edit
+Faith And The Muse - The Silver Circle
+Faith And The Muse - The Dream of Macsen
+Faith And The Muse - Hob Y Derri Dando
+Faith And The Muse - Cernunnos
+Faith And The Muse - The Hand of Man
+Faith And The Muse - Rise and Forget
+Faith And The Muse - Apparition
+Faith And The Muse - Sparks
+Faith And The Muse - All Lovers Lost
+Faith And The Muse - Iago's Demise
+Faith And The Muse - Interlude: Maleficio
+Faith And The Muse - When to Her Lute Corinna Sings
+Faith And The Muse - Caesura
+Faith And The Muse - The Trauma Coil
+Faith And The Muse - Mercyground
+Faith And The Muse - Heal
+Faith And The Muse - Epilogue: Twilight
+Frank Zappa - Plastic People
+Frank Zappa - The Duke Of Prunes
+Frank Zappa - Amnesia Vivace
+Frank Zappa - The Duke Regains His Chops
+Frank Zappa - Big Leg Emma
+Frank Zappa - Why Don'tcha Do Me Right?
+Frank Zappa - America Drinks
+Frank Zappa - Status Back Baby
+Frank Zappa - Uncle Bernie's Farm
+Frank Zappa - Son Of Suzy Creamcheese
+Frank Zappa - Brown Shoes Don't Make It
+Frank Zappa - America Drinks & Goes Home
+Czesław Niemen - Marionetki
+Czesław Niemen - Z pierwszych ważniejszych odkryć
+Czesław Niemen - Ptaszek
+Czesław Niemen - Com uczynił
+Catapilla - Tumbleweed
+Catapilla - Promises
+Catapilla - Embryonic Fusion
+Collage - Jeszcze jeden dzień
+Collage - Stare ścieżki
+Collage - Fragmenty
+Collage - Rozmowa
+Collage - Well Well Well
+Collage - The Winter Song
+Collage - This Time
+Collage - Cages Of The Mind I
+Collage - Cages Of The Mind II
+Collage - Stranded
+Collage - Eight Kisses
+Collage - One Of Their Kind
+Collage - Chanting
+Collage - Made Again
+Collage - Cages Of The Mind III
+Collage - I Will Be There
+Collage - Zmiany
+Collage - Kołysanka 87
+Collage - Nocy zamyślona
+Collage - Ja i Ty 88
+Collage - Just Like Heaven
+Collage - Just Like Heaven (Part 2)
+Collage - Rozmowa 86
+Collage - Lovely Day 92
+Collage - The Blues 92
+Cat Stevens - Where Do The Children Play
+Cat Stevens - Hard-Headed Woman
+Cat Stevens - Sad Lisa
+Cat Stevens - Miles From Nowhere
+Cat Stevens - But I Might Die Tonight
+Cat Stevens - Longer Boats
+Cat Stevens - Into White
+Cat Stevens - On The Road To Findout
+Cat Stevens - Father And Son
+Cat Stevens - Tea For The Tillerman
+Barclay James Harvest - Prisoner of Your Love
+Barclay James Harvest - He Said Love
+Barclay James Harvest - Turn the Key
+Barclay James Harvest - You Need Love
+Barclay James Harvest - Kiev
+Barclay James Harvest - African
+Barclay James Harvest - All My Life
+Barclay James Harvest - Panic
+Camel - Lunar Sea
+Camel - Skylines
+Camel - Ligging At Louis'
+Camel - Mother Road
+Camel - Needles
+Camel - Rose of Sharon
+Camel - Milk N' Honey
+Camel - Little Rivers and Little Rose
+Camel - Whisper in the Rain
+Camel - Aristillus
+Camel - Chord Change
+Camel - Spirit of the Water
+Camel - Drafted
+Camel - Captured
+Camel - Lies
+Camel - Wait
+Camel - Vopos
+Camel - Missing
+Camel - After Words
+A-Ha - Dark Is the Night for All
+A-Ha - Move to Memphis
+A-Ha - Locust
+A-Ha - Lie Down in Darkness
+A-Ha - How Sweet It Was
+A-Ha - Lamb to the Slaughter
+A-Ha - Between Your Mama and Yourself
+A-Ha - Memorial Beach
+Barclay James Harvest - Negative Earth
+Barclay James Harvest - Paper Wings
+Barclay James Harvest - The Great 1974 Mining Disaster
+Barclay James Harvest - Crazy City
+Barclay James Harvest - See Me See You
+Barclay James Harvest - Poor Boy Blues
+Barclay James Harvest - Mill Boys
+Barclay James Harvest - For No One
+Barclay James Harvest - Love on the Line
+Barclay James Harvest - Alright Down Get Boogie (Mu Ala Rusic)
+Barclay James Harvest - The Song (They Love to Sing)
+Barclay James Harvest - Skin Flicks
+Barclay James Harvest - Sperratus
+Barclay James Harvest - Capricorn
+Barclay James Harvest - Play to the World
+Barclay James Harvest - Love Is Like a Violin
+Barclay James Harvest - Friend of Mine
+Barclay James Harvest - Hard Hearted Woman
+Barclay James Harvest - Sea of Tranquility
+Barclay James Harvest - Leper's Song
+Barclay James Harvest - Taking Me Higher
+Barclay James Harvest - The World Goes On
+Barclay James Harvest - May Day
+Barclay James Harvest - Polk Street Rag
+Barclay James Harvest - Believe in Me
+Barclay James Harvest - Back in the Game
+Barclay James Harvest - River of Dreams
+Barclay James Harvest - Children of the Disappeared
+Barclay James Harvest - Pools of Tears
+Barclay James Harvest - Do You Believe in Dreams (Same Chance for Everyone)
+Barclay James Harvest - (Took Me) So Long
+Barclay James Harvest - Mr. E
+Barclay James Harvest - Three Weeks to Despair
+Barclay James Harvest - The Time of Our Lives
+Barclay James Harvest - Taking Some Time On
+Barclay James Harvest - When the World Was Woken
+Barclay James Harvest - Good Love Child
+Barclay James Harvest - The Iron Maiden
+Barclay James Harvest - Galadriel
+Barclay James Harvest - Vanessa Simmons
+Barclay James Harvest - Happy Old World (Quad mix)
+Barclay James Harvest - Ball and Chain (Quad mix)
+Barclay James Harvest - Ursula (The Swansea Song)
+Barclay James Harvest - Someone There You Know
+Barclay James Harvest - The Poet / After the Day
+Barclay James Harvest - Summer Soldier
+Barclay James Harvest - One Hundred Thousand Smiles Out
+Barclay James Harvest - Moonwater
+Barclay James Harvest - Fantasy: Loving Is Easy
+Barclay James Harvest - Berlin
+Barclay James Harvest - Classics: A Tale of Two Sixties
+Barclay James Harvest - Turning in Circles
+Barclay James Harvest - Fact: The Closed Shop
+Barclay James Harvest - In Search of England
+Barclay James Harvest - Sip of Wine
+Barclay James Harvest - Harbour
+Barclay James Harvest - Science Fiction: Nova Lepidoptera
+Barclay James Harvest - Giving It Up
+Barclay James Harvest - Fiction: The Streets of San Francisco
+Camel - Your Love Is Stranger Than Mine
+Camel - Who We Are
+Camel - Neon Magic
+Camel - Remote Romance
+Barclay James Harvest - In My Life
+Barclay James Harvest - Sweet Jesus
+Barclay James Harvest - Jonathan
+Barclay James Harvest - Song for You
+Barclay James Harvest - Hymn for the Children
+Barclay James Harvest - Moongirl
+Barclay James Harvest - One Night
+Cat Stevens - Music
+Cat Stevens - Sun C/79
+Cat Stevens - Ghost Town
+Cat Stevens - Jesus
+Cat Stevens - Ready
+Cat Stevens - A Bad Penny
+Cat Stevens - Sitting
+Cat Stevens - The Boy With The Moon And Star On His Head
+Cat Stevens - Angelsea
+Cat Stevens - Can't Keep It In
+Cat Stevens - 18th Avenue - (Kansas City Nightmare)
+Cat Stevens - Freezing Steel
+Cat Stevens - O Caritas
+Cat Stevens - The Foreigner Suite
+Cat Stevens - The Hurt
+Cat Stevens - How Many Times
+Cat Stevens - Later
+Cat Stevens - 100 I Dream
+Crystal Phoenix - Damned Warrior
+Crystal Phoenix - 474 Anno Domini
+Crystal Phoenix - Somewhere, Nowhere Battle
+Crystal Phoenix - Loth-er Siniell
+Crystal Phoenix - Heaven to a Flower (Part 1) / Violet Crystal Phoenix (Part 2)
+Depeche Mode - Painkiller (Original Mix)
+Depeche Mode - Barrel of a Gun (Underworld Soft Mix)
+Depeche Mode - Barrel of a Gun (One Inch Punch Mix)
+Dire Straits - Tunnel of Love
+Dire Straits - Skateaway
+Dire Straits - Expresso Love
+Dire Straits - Hand in Hand
+Dire Straits - Solid Rock
+Dire Straits - Les Boys
+Elton John - This Town
+Elton John - Cry to Heaven
+Elton John - Soul Glove
+Elton John - Nikita
+Elton John - Too Young
+Elton John - Wrap Her Up
+Elton John - Satellite
+Elton John - Tell Me What the Papers Say
+Elton John - Candy by the Pound
+Enya - Watermark
+Enya - On Your Shore
+Enya - Storms in Africa
+Enya - Exile
+Enya - Miss Clare Remembers
+Enya - Orinoco Flow (Sail Away)
+Enya - Evening Falls...
+Enya - River
+Enya - Long Ships
+Enya - Na Laetha Geal M'óige
+Enya - Storms in Africa II
+Ewa Demarczyk - Karuzela z madonnami
+Ewa Demarczyk - Garbus
+Ewa Demarczyk - Tomaszów
+Ewa Demarczyk - Grande Valse Brillante
+Ewa Demarczyk - Jaki śmieszny
+Ewa Demarczyk - Wiersze Baczyńskiego
+Ewa Demarczyk - Pocałunki
+Ewa Demarczyk - Czarne anioły
+Ewa Demarczyk - Groszki i róże
+Ewa Demarczyk - Deszcze
+Genesis - More Fool Me
+Genesis - The Battle of Epping Forest
+Genesis - After the Ordeal
+Genesis - Aisle of Plenty
+Hello! - Irish
+Hello! - (New Age) Shaman
+Hello! - Jordan (To Love Is to Give)
+Hello! - Egypt
+Hello! - Sex (It's a Gift)
+Hello! - Africa (Buddha Would You Listen to Me)
+Hello! - Kirtan
+Hello! - Little Flower (Ancient Mix)
+Inkubus Sukkubus - Vampyre Kiss
+Inkubus Sukkubus - Heartbeat of the Earth
+Inkubus Sukkubus - Young Lovers
+Inkubus Sukkubus - Underworld
+Inkubus Sukkubus - Prince of Shadows
+Inkubus Sukkubus - Craft of the Wise
+Inkubus Sukkubus - Corn King
+Inkubus Sukkubus - Witch Hunt
+Inkubus Sukkubus - Fire of Love
+Inkubus Sukkubus - Love Spell
+Inkubus Sukkubus - Song for Our Age
+Inkubus Sukkubus - Intercourse With the Vampyre
+Inkubus Sukkubus - Sabrina
+Inkubus Sukkubus - Catherine
+Joy Division - Failures
+Joy Division - Novelty
+Kasia Kowalska - Gemini
+Kasia Kowalska - Wyznanie
+Kasia Kowalska - Jak rzecz
+Kasia Kowalska - Heart Of Green
+Kasia Kowalska - Oto ja
+Kasia Kowalska - I Never Loved A Man
+Kasia Kowalska - Cukierek - mój dawca słodyczy
+Kasia Kowalska - This Time
+Kasia Kowalska - I Need You
+Kasia Kowalska - Dziwny jest ten świat
+Kasia Kowalska - Intro
+Kasia Kowalska - Black Dog
+Kasia Kowalska - Cukierek (mój dawca słodyczy)
+Kasia Kowalska - Cukierek
+Kasia Kowalska - Gdybyś kochał, hej
+Kasia Kowalska - Doodlin'
+Kasia Kowalska - New York State Of Mind
+Kasia Kowalska - My One And Only Love
+Kasia Kowalska - Don't Rain On My Parade
+Kasia Kowalska - It's Medley (I Got Plenty O'Nuttin' - My Man - Love For Sale - Cry Me A River - Night And Day - On A Clear Day - Somewhere)
+Kasia Kowalska - Ruchome piaski
+Kasia Kowalska - Małe zaćmienie
+Kasia Kowalska - Nocne Graffiti 1
+Kasia Kowalska - Nocne Graffiti 2
+Kasia Kowalska - Jesienne pożegnanie
+Kasia Kowalska - Nocne Graffiti 3
+Kasia Kowalska - Nieme ściany
+Kasia Kowalska - Nocne Graffiti 4
+Kasia Kowalska - Nocne Graffiti 5
+Kasia Kowalska - Nocne Graffiti 6
+Kasia Kowalska - Wszystkie chwile
+Kasia Kowalska - Nieme ściany (instr.)
+Kasia Kowalska - Najlepszy z dobrych
+Kasia Kowalska - Ruchome piaski (instr.)
+Kasia Kowalska - Nocne Graffiti 7
+Kate Bush - Rubberband Girl
+Kate Bush - Eat the Music
+Kate Bush - The Song of Solomon
+Kate Bush - Lily
+Kate Bush - Top of the City
+Kate Bush - Constellation of the Heart
+Kate Bush - Big Stripey Lie
+Kate Bush - Why Should I Love You?
+Kate Bush - You're the One
+Kate Bush - Running up That Hill (A Deal With God)
+Kate Bush - The Big Sky
+Kate Bush - Mother Stands for Comfort
+Krzysztof Komeda - Main Title
+Krzysztof Komeda - Snowman
+Krzysztof Komeda - Sarah In Bath
+Krzysztof Komeda - Koukol Laughs (This Is When Krolock Bites Sarah)
+Krzysztof Komeda - Alfred Behind Sledge
+Krzysztof Komeda - Krotock On Sledge
+Krzysztof Komeda - Sarah Asks For A Bath - Love Tune
+Krzysztof Komeda - Vampires To Crypt
+Krzysztof Komeda - Alfred Hears Singing
+Krzysztof Komeda - To The Cellar
+Krzysztof Komeda - Shagal Leaving
+Krzysztof Komeda - Portraits
+Krzysztof Komeda - Skiing
+Krzysztof Komeda - Herbert's Song
+Krzysztof Komeda - Both Over Rooftops
+Krzysztof Komeda - Alfred Over Rooftops
+Krzysztof Komeda - Alfred In The Crypt
+Krzysztof Komeda - Sarah's Song
+Krzysztof Komeda - Vampire Corners
+Krzysztof Komeda - The Coven
+Krzysztof Komeda - Lullaby - Part I
+Krzysztof Komeda - Moment Musical
+Krzysztof Komeda - Lullaby - Part II
+Krzysztof Komeda - Dream
+Krzysztof Komeda - Christmas
+Krzysztof Komeda - Expectancy - Part I
+Krzysztof Komeda - Lullaby
+Krzysztof Komeda - Panic
+Krzysztof Komeda - Rosemary's Party
+Krzysztof Komeda - Expectancy - Part II
+Krzysztof Komeda - Through The Closet
+Krzysztof Komeda - What Have You Done To Its Eyes
+Krzysztof Komeda - Happy News
+Lene Lovich - Angels
+Lene Lovich - Egghead
+Lene Lovich - Wonderful One
+Lene Lovich - Monkey Talk
+Lene Lovich - Joan
+Lorien - Intro
+Lorien - I Know, I Know
+Lorien - Włóczędzy stref
+Lorien - Fire
+Lorien - Kochanek nieba
+Lorien - Like On Wings
+Lorien - Szkarłat i czerń
+Lorien - Poison Water
+Lorien - Cichy szept
+Lorien - Światło
+Maanam - Nocny patrol
+Maanam - Jestem kobietą
+Maanam - To tylko tango
+Maanam - French is strange
+Maanam - Polskie ulice
+Maanam - Eksplozja
+Maanam - Zdrada
+Maanam - Raz - dwa - raz - dwa
+Maanam - Miłość jest jak opium
+Nick Cave - Nobody's Baby Now
+Nick Cave - Loverman
+Nick Cave - Red Right Hand
+Nick Cave - Thirsty Dog
+Nick Cave - Lay Me Low
+Nick Cave - Do You Love Me? (Part 2)
+Nick Cave - Stagger Lee
+Nick Cave - Henry Lee
+Nick Cave - Lovely Creature
+Nick Cave - The Curse of Millhaven
+Nick Cave - The Kindness of Strangers
+Nick Cave - Crow Jane
+Nick Cave - O'Malleys Bar
+Nick Cave - Into My Arms
+Nick Cave - Lime Tree Arbour
+Nick Cave - Brompton Oratory
+Nick Cave - There Is a Kingdom
+Nick Cave - Are You the One That I've Been Waiting For?
+Nick Cave - Where Do We Go Now But Nowhere?
+Nick Cave - West Country Girl
+Nick Cave - Black Hair
+Nick Cave - Green Eyes
+Nina Hagen Band - Tv Glotzer (White Punks on Dope)
+Nina Hagen Band - Rangehn
+Nina Hagen Band - Unbeschreiblich weiblich
+Nina Hagen Band - Auf'm Bahnhof Zoo
+Nina Hagen Band - Naturträne
+Nina Hagen Band - Superboy
+Nina Hagen Band - Heiss
+Nina Hagen Band - Fisch im Wasser
+Nina Hagen Band - Auf'm Friedhof
+Nina Hagen Band - Der Spinner
+Nina Hagen Band - Pank
+Patti Smith - Beneath The Southern Cross
+Patti Smith - About A Boy
+Patti Smith - Summer Cannibals
+Patti Smith - Dead To The World
+Patti Smith - Wing
+Patti Smith - Ravens
+Patti Smith - Fireflies
+Patti Smith - Farewell Reel
+PJ Harvey - To Bring You My Love
+PJ Harvey - Meet Ze Monsta
+PJ Harvey - Working For The Man
+PJ Harvey - C'mon Billy
+PJ Harvey - Teclo
+PJ Harvey - Long Snake Moan
+PJ Harvey - Down By The Water
+PJ Harvey - I Think I'm A Mother
+PJ Harvey - Send His Love To Me
+Pornografia - Barykada
+Pornografia - Elektrownie atomowe
+Pornografia - Oriental Changes
+Pornografia - Ambasady
+Pornografia - Mary Ann
+Pornografia - Biała farba
+Pornografia - 4 M
+Quidam - Głęboka rzeka
+Quidam - Choćbym
+Quidam - Płonę / Niespełnienie
+Quidam - Rhayader / Rhayader Goes To Town
+Quidam - Angels Of Mine
+Quidam - Child In Time
+Renata Przemyk - Nie Spaceruję Nago
+Renata Przemyk - Ile Krwi
+Renata Przemyk - Żeby Wierzyć
+Renata Przemyk - Hormon
+Renata Przemyk - Zapach - Germania Mix
+Rod Stewart - Hot Legs
+Rod Stewart - You're Insane
+Rod Stewart - You're In My Heart
+Rod Stewart - Born Loose
+Rod Stewart - (If Loving You Is Wrong) I Don't Want To Be Right
+Rod Stewart - You Got A Nerve
+Rod Stewart - I was Only Joking
+Savage Rose - Long Beofre I Was Born
+Savage Rose - I'm Walking Through the Door
+Savage Rose - His Own Happiness Gods Little Hand
+Savage Rose - Evening's Child
+Siouxsie & The Banshees - Poppy Day
+Siouxsie & The Banshees - Regal Zone
+Siouxsie & The Banshees - Placebo Effect
+Siouxsie & The Banshees - Mother - Oh Mein Papa
+Siouxsie & The Banshees - The Lord's Prayer
+Skaldowie - Medytacje wiejskiego listonosza (ros.)
+Skaldowie - Prześliczna wiolonczelistka (ros.)
+Skaldowie - Jeszcze kocham
+Skaldowie - Góral (Juhas zmarł)
+Skaldowie - Cała jesteś w skowronkach
+Skaldowie - Wszystko mi mówi że mnie ktoś pokochał
+Skaldowie - Krywaniu, Krywaniu
+The Cranberries - Hollywood
+The Cranberries - Salvation
+The Cranberries - When You're Gone
+The Cranberries - Free To Decide
+The Cranberries - War Child
+The Cranberries - Forever Yellow Skies
+The Cranberries - The Rebels
+The Cranberries - Intermission
+The Cranberries - I Just Shot John Lennon
+The Cranberries - Electric Blue
+The Cranberries - I'm Still Remembering
+The Cranberries - Will You Remember?
+The Cranberries - Joe
+The Cranberries - Cordell
+The Cranberries - Bosnia
+The Cure - One Hundred Years
+The Cure - A Short Term Effect
+The Cure - Siamese Twins
+The Cure - The Figurehead
+The Cure - A Strange Day
+The Cure - Pornography
+The Cure - High
+The Cure - From the Edge of the Deep Green Sea
+The Cure - Wendy Time
+The Cure - Doing the Unstuck
+The Cure - Friday I'm in Love
+The Cure - A Letter To Elise
+The Cure - Cut
+The Sisters of Mercy - Temple of Love (1992)
+The Sisters of Mercy - I Was Wrong (American Fade)
+The Sisters of Mercy - Vision Thing (Canadian Club Remix)
+The Sisters of Mercy - When You Don't See Me (German Release)
+Titus Groan - It Wasn't For You
+Umbra Et Imago - Es war einmal eine ' O '
+Umbra Et Imago - Kleine Schwester
+Umbra Et Imago - Der Trieb
+Umbra Et Imago - Hass
+Wilki - Eroll
+Wilki - Amiranda
+Wilki - Beniamin
+Wilki - Glorya
+Wilki - Aborygen
+Wilki - Eli lama sabachtani
+Wilki - Z ulicy Kamiennej
+Wilki - Uyao
+Wilki - Amiranda (Abbey Mix)
+Wilki - Glorya (Abbey Mix)
+Wilki - Beniamin (Abbey Mix)
+Wilki - Son Of The Blue Sky (Abbey Mix)
+Wojciech Kilar - The Beginning
+Wojciech Kilar - Lucy's Party
+Wojciech Kilar - The Brides
+Wojciech Kilar - The Storm
+Wojciech Kilar - The Hunt Builds
+Wojciech Kilar - The Hunters Prelude
+Wojciech Kilar - The Green Mist
+Wojciech Kilar - Mina-Dracula
+Wojciech Kilar - The Ring Of Fire
+Wojciech Kilar - Love Eternal
+Wojciech Kilar - Ascension
+Wojciech Kilar - End Credits
+Wojciech Kilar - Love Song For A Vampire
+Bryan Ferry - Sensation
+Bryan Ferry - Slave to Love
+Bryan Ferry - A Wasted Land
+Bryan Ferry - Windswept
+Bryan Ferry - The Chosen One
+Bryan Ferry - Valentine
+Bryan Ferry - Stone Woman
+Bryan Ferry - Boys and Girls
+Artrosis - Lisa
+Artrosis - Czarno-białe sny
+Artrosis - Taniec
+Artrosis - Nazgul
+Artrosis - Siódma pieczęć
+Artrosis - Rzeka istnień
+Artrosis - Żywiołom spętanym
+Artrosis - Epitafium
+Artrosis - Góra przeznaczenia
+Artrosis - Szmaragdowa noc
+Bryan Ferry - N.Y.C.
+Bryan Ferry - Mamouna
+Bryan Ferry - The Only Face
+Bryan Ferry - The 39 Steps
+Bryan Ferry - Which Way to Turn
+Bryan Ferry - Wildcat Days
+Bryan Ferry - Gemini Moon
+Bryan Ferry - Chain Reaction
+Bryan Ferry - Your Painted Smile
+Bryan Ferry - Sign of the Times
+Bryan Ferry - The Same Old Blues
+Bryan Ferry - When She Walks in the Room
+Bryan Ferry - Take Me to the River
+Bryan Ferry - What Goes On
+Bryan Ferry - Carrickfergus
+Bryan Ferry - This Island Earth
+David Cross - Tonk
+David Cross - Slippy Slide
+David Cross - Cakes
+David Cross - This Is Your Life
+David Cross - Fast
+David Cross - Troppo
+David Cross - Hero
+Decameron - Mammoth Special
+Decameron - Rock and Roll Woman
+Decameron - Just Enough Like Home
+Decameron - A Glimpse of Me
+Decameron - Late on Lady Day
+Decameron - Breakdown of the Song
+Decameron - The Cheetah
+Decameron - Jan
+Decameron - Stonehouse
+Decameron - The Empty Space (This Side of Innocence)
+Decameron - Twinset and Pearls
+Decameron - Wide as the Years
+Decameron - Road to the Sea
+Decameron - Fallen Over
+Decameron - Tomorrow's Pantomime
+Decameron - The Shadows on the Stairs
+Decameron - So This Is God's Country
+Decameron - So This Is God's Country / Peace With Honour
+Deine Lakaien - Reincarnation
+Deine Lakaien - Down, Down, Down
+Deine Lakaien - Made in Heaven
+Deine Lakaien - Days Gone By
+Deine Lakaien - The Night Of Love
+Deine Lakaien - Ulysses (Extended)
+Electric Light Orchestra - Shine a Little Love
+Electric Light Orchestra - Confusion
+Electric Light Orchestra - Need Her Love
+Electric Light Orchestra - The Diary of Horace Wimp
+Electric Light Orchestra - Last Train to London
+Electric Light Orchestra - On the Run
+Electric Light Orchestra - Wishing
+Electric Light Orchestra - Don't Bring Me Down
+Foreigner - Cold as Ice
+Foreigner - Starrider
+Foreigner - Headknocker
+Foreigner - The Damage Is Done
+Foreigner - Long, Long Way From Home
+Foreigner - Woman Oh Woman
+Foreigner - At War With the World
+Foreigner - Fool for You Anyway
+Foreigner - I Need You
+Genesis - Abacab
+Genesis - No Reply at All
+Genesis - Me And Sarah Jane
+Genesis - Keep It Dark
+Genesis - Dodo/Lurker
+Genesis - Who Dunnit?
+Genesis - Man on the Corner
+Genesis - Like It or Not
+Genesis - Another Record
+Genesis - Congo
+Genesis - Alien Afternoon
+Genesis - Not About Us
+Genesis - If That's What You Need
+Genesis - The Dividing Line
+Genesis - Uncertain Weather
+Genesis - Small Talk
+Genesis - One Man's Fool
+Japan - Quiet Life
+Japan - My New Career
+Japan - Other Side of Life
+Japan - Visions of China
+Japan - Life Without a Building
+Japan - Talking Drum
+Japan - Art of Parties
+Jethro Tull - Love Story
+Jethro Tull - Driving Song
+Jethro Tull - Singing All Day
+Jethro Tull - Witch's Promise
+Jethro Tull - Alive and Well and Living In
+Jethro Tull - By Kind Permission Of (Live)
+Jethro Tull - Dharma for One (Live)
+Jethro Tull - Wond'ring Again
+Jethro Tull - Hymn 43
+Jethro Tull - Life Is a Long Song
+Jethro Tull - Up the 'Pool
+Jethro Tull - For Later
+Leonard Cohen - Coming Back to You
+Leonard Cohen - The Law
+Leonard Cohen - Night Comes On
+Leonard Cohen - Hallelujah
+Leonard Cohen - The Captain
+Leonard Cohen - Hunter's Lullaby
+Leonard Cohen - Heart With No Companion
+Leonard Cohen - If It Be Your Will
+Nick Cave & the Bad Seeds - Song of Joy
+Nick Cave & the Bad Seeds - Stagger Lee
+Nick Cave & the Bad Seeds - Henry Lee
+Nick Cave & the Bad Seeds - Lovely Creature
+Nick Cave & the Bad Seeds - Where the Wild Roses Grow
+Nick Cave & the Bad Seeds - The Curse of Millhaven
+Nick Cave & the Bad Seeds - The Kindness of Strangers
+Nick Cave & the Bad Seeds - Crow Jane
+Nick Cave & the Bad Seeds - O'Malley's Bar
+Nick Cave & the Bad Seeds - Death Is Not the End
+Omega - Addig élj!
+Omega - Egyszemélyes ország
+Omega - A büvész
+Omega - Az égben lebegök csarnoka
+Omega - Huszadik századi városlakó
+Omega - Tüzvihar
+Omega - Hazug lány
+Omega - A Madár
+Omega - Én elmegyek
+Omega - A jövendőmondó
+Omega - Járt itt egy bolond ember
+Omega - Búcsúztató
+Omega - Szvit
+Peter Murphy - Deep Ocean, Vast Sea
+Peter Murphy - The Line Between the Devil's Teeth (And That Which Cannot Be Repeat)
+Peter Murphy - A Strange Kind of Love
+Peter Murphy - Kill The Hate
+Peter Murphy - You're So Close
+Peter Murphy - The Sweetest Drop
+Peter Murphy - Low Room
+Peter Murphy - Our Secret Garden
+Peter Murphy - Dream Gone By
+Peter Murphy - Hit Song
+Peter Murphy - His Circle and Hers Meet
+Peter Murphy - Dragnet Drag
+Peter Murphy - Canvas Beauty [Romance Version]
+Peter Murphy - Confessions
+Peter Murphy - Never Man
+Philip Glass - Satyagraha - Act I - Tolstoy - Scene 2: Tolstoy Farm (1910)
+Philip Glass - Satyagraha - Act I - Tolstoy - Scene 3: The Vow (1906)
+Philip Glass - Satyagraha - Act II - Tagore - Scene 1: Confrontation and Rescue (1896)
+Queen - Tie Your Mother Down
+Queen - Long Away
+Queen - The Millionaire Waltz
+Queen - You and I
+Queen - Somebody to Love
+Queen - White Man
+Queen - Good Old-Fashioned Lover Boy
+Queen - Drowse
+Queen - Teo Torriatte (Let Us Cling Together)
+Roxy Music - A Really Good Time
+Roxy Music - All I Want Is You
+Roxy Music - Bitter - Sweet
+Roxy Music - Casanova
+Roxy Music - If It Takes All Night
+Roxy Music - Out Of The Blue
+Roxy Music - Prairie Rose
+Roxy Music - The Thrill Of It All
+Roxy Music - Three And Nine
+Roxy Music - Triptych
+Roxy Music - Amazona
+Roxy Music - Just Like You
+Roxy Music - Mother Of Pearl
+Roxy Music - Serenade
+Roxy Music - Street Life
+Roxy Music - Sunset
+U2 - Zoo Station
+U2 - Even Better Than the Real Thing
+U2 - One
+U2 - Until the End of the World
+U2 - Who's Gonna Ride Your Wild Horses
+U2 - So Cruel
+U2 - The Fly
+U2 - Mysterious Ways
+U2 - Tryin' to Throw Your Arms Around the World
+U2 - Ultra Violet (Light My Way)
+U.F.O. - Natural Thing
+U.F.O. - I'm a Loser
+U.F.O. - Reasons Love
+U.F.O. - Highway Lady
+U.F.O. - On With the Action
+U.F.O. - A Fool in Love
+Umbra Et Imago - Kleine Schwester (remake '97)
+Umbra Et Imago - Kein Gott und keine Liebe (El Kracho Mix-O)
+David Sylvian - Pulling Punches
+David Sylvian - The Ink in the Well
+David Sylvian - Nostalgia
+David Sylvian - Red Guitar
+David Sylvian - Weathered Wall
+David Sylvian - Backwaters
+David Sylvian - Brilliant Trees
+Varius Manx - Shapes 1
+Varius Manx - Tightrope Walker
+Varius Manx - Distant Heartbeat
+Varius Manx - Way To Nowhere
+Varius Manx - Extravaganza
+Varius Manx - The Rose In The Spittoon
+Varius Manx - Emotion
+Varius Manx - Memphis
+Varius Manx - Don't
+Varius Manx - Dream Time Song
+Varius Manx - Shapes 2
+Varius Manx - Sympathy
+Varius Manx - Bitters Words
+Varius Manx - Carpe diem
+Strawbs - Hey, Little Man... Thursday's Child
+Strawbs - Queen of Dreams
+Strawbs - Heavy Disguise
+Strawbs - Hey, Little Man... Wednesday's Child
+Strawbs - On Growing Older
+Strawbs - Ah Me, Ah My
+Strawbs - Is It Today, Lord?
+Strawbs - The Journey's End
+Strawbs - Here It Comes
+Strawbs - I'm Going Home
+Strawbs - Thirty Days
+Strawbs - Flight
+Strawbs - Cannondale
+Strawbs - The Shepherd's Song
+Strawbs - In Amongst the Roses
+Strawbs - I'll Carry On Beside You
+Strawbs - Keep the Devil Outside
+Spring - Fool's Gold
+Spring - Hendre Mews
+Spring - A Word Full of Whispers
+Pink Floyd - Shine On You Crazy Diamond Parts 1-5
+Pink Floyd - Welcome To The Machine
+Pink Floyd - Have A Cigar
+Pink Floyd - Shine On You Crazy Diamond Parts 6-9
+Pink Floyd - Astronomy Domine (live)
+Pink Floyd - Careful With That Axe Eugene (live)
+Pink Floyd - A Saucerful Of Secrets (live)
+Pink Floyd - Sysyphus
+Pink Floyd - Grantchester Meadows
+Pink Floyd - Several Species Of Small Furry Animals Gathered Together In A Cave And Grooving With A Pict
+Pink Floyd - The Narrow Way Parts 1-3
+Pink Floyd - The Grand Vizier's Garden Party Parts 1-3
+Pink Floyd - The Thin Ice
+Pink Floyd - Another Brick In The Wall Part 1
+Pink Floyd - The Happiest Days Of Our Lives
+Pink Floyd - Another Brick In The Wall Part 2
+Pink Floyd - Mother
+Pink Floyd - Goodbye Blue Sky
+Pink Floyd - Empty Spaces
+Pink Floyd - Young Lust
+Pink Floyd - One Of My Turns
+Pink Floyd - Don't Leave Me Now
+Pink Floyd - Another Brick In The Wall Part 3
+Pink Floyd - Is There Anybody Out There?
+Pink Floyd - Nobody Home
+Pink Floyd - Vera
+Pink Floyd - Bring The Boys Back Home
+Pink Floyd - Comfortably Numb
+Pink Floyd - The Show Must Go On
+Pink Floyd - In The Flesh
+Pink Floyd - Run Like Hell
+Pink Floyd - Waiting For The Worms
+Pink Floyd - Stop
+Pink Floyd - The Trial
+Pink Floyd - Outside The Wall
+Pink Floyd - Flaming
+Pink Floyd - Take Up Thy Stethoscope And Walk
+Pink Floyd - Interstellar Overdrive
+Pink Floyd - The Gnome
+Pink Floyd - Chapter 24
+Pink Floyd - The Scarecrow
+Pink Floyd - Bike
+Pink Floyd - The Post War Dream
+Pink Floyd - One Of The Few
+Pink Floyd - The Hero's Return
+Pink Floyd - Paranoid Eyes
+Pink Floyd - Not Now John
+Pink Floyd - Two Suns In The Sunset
+Pink Floyd - Cluster One
+Pink Floyd - What Do You Want From Me
+Pink Floyd - Poles Apart
+Pink Floyd - Marooned
+Pink Floyd - Wearing The Inside Out
+Pink Floyd - Take It Back
+Pink Floyd - Coming Back To Life
+Pink Floyd - Lost For Words
+Pink Floyd - Paintbox
+Pink Floyd - Careful With That Axe Eugene (single version)
+Pink Floyd - The Nile Song
+Pink Floyd - Biding My Time
+Pink Floyd - Crying Song
+Pink Floyd - Up The Khyber
+Pink Floyd - Cymbaline
+Pink Floyd - Party Sequence
+Pink Floyd - Main Theme
+Pink Floyd - Ibiza Bar
+Pink Floyd - More Blues
+Pink Floyd - Quicksilver
+Pink Floyd - A Spanish Piece
+Pink Floyd - Dramatic Theme
+Pink Floyd - A Pillow Of Winds
+Pink Floyd - San Tropez
+Pink Floyd - Seamus
+Pink Floyd - Money
+Pink Floyd - Shine On You Crazy Diamond Parts 1-7
+Pink Floyd - Us And Them
+Pink Floyd - Learning to Fly
+Pink Floyd - Jugband Blues
+Pink Floyd - Speak To Me
+Pink Floyd - Breathe
+Pink Floyd - On The Run
+Pink Floyd - Any Colour You Like
+Pink Floyd - Brain Damage
+Pink Floyd - Eclipse
+Pink Floyd - Summer' 68
+Pink Floyd - Alan's Psychedelic Breakfast
+Pink Floyd - Corporal Clegg
+Pink Floyd - A Saucerful Of Secrets
+Pink Floyd - See Saw
+Pink Floyd - Signs of Life
+Pink Floyd - The Dogs of War
+Pink Floyd - On the Turning Away
+Pink Floyd - Round and Around
+Pink Floyd - A New Machine Part 1
+Pink Floyd - Terminal Frost
+Pink Floyd - A New Machine Part 2
+Pär Lindh Project - Dresden Lamentations
+Pär Lindh Project - The Iconoclast
+Pär Lindh Project - Green Meadow Lands
+Pär Lindh Project - Gunnlev's Round
+Pär Lindh Project - Night on Bare Mountain (incl. the Black Stone)
+Jefferson Airplane - She Has Funny Cars
+Jefferson Airplane - Somebody To Love
+Jefferson Airplane - My Best Friend
+Jefferson Airplane - Today
+Jefferson Airplane - Comin' Back to Me
+Jefferson Airplane - 3/5 of a Mile in 10 Seconds
+Jefferson Airplane - D.C.B.A. 25
+Jefferson Airplane - How Do You Feel
+Jefferson Airplane - Embryonic Journey
+Jefferson Airplane - Plastic Fantastic Lover
+Jefferson Airplane - When the Earth Moves Again
+Jefferson Airplane - Feel So Good
+Jefferson Airplane - Pretty as You Feel
+Jefferson Airplane - Wild Turkey
+Jefferson Airplane - Law Man
+Jefferson Airplane - Rock and Roll Island
+Jefferson Airplane - Third Week in the Chelsea
+Jefferson Airplane - Never Argue With a German if You're Tired or European Song
+Jefferson Airplane - Thunk
+Curved Air - Marie Antoinette
+Curved Air - Not Quite the Same
+Curved Air - Cheetah
+Curved Air - Ultra-Vivaldi
+Curved Air - Phantasmagoria
+Curved Air - Whose Shoulder Are You Looking Over Anyway
+Curved Air - Over and Above
+Curved Air - Once a Ghost, Always a Ghost
+Cocteau Twins - Lazy Calm
+Cocteau Twins - Fluffy Tufts
+Cocteau Twins - Throughout the Dark Months of April and May
+Cocteau Twins - Whales Tails
+Cocteau Twins - Oomingmak
+Cocteau Twins - Little Spacey
+Cocteau Twins - Feet-Like Fins
+Cocteau Twins - How to Bring a Blush to the Snow
+Cocteau Twins - The Thinner the Air
+Cocteau Twins - Ivo
+Cocteau Twins - Beatrix
+Cocteau Twins - Persephone
+Cocteau Twins - Pandora (For Cindy)
+Cocteau Twins - Amelia
+Cocteau Twins - Aloysius
+Cocteau Twins - Cicely
+Cocteau Twins - Otterley
+Cocteau Twins - Donimo
+Cocteau Twins - Pink Orange Red
+Cocteau Twins - Ribbed and Veined
+Cocteau Twins - Sultitan Itan
+Cocteau Twins - Plain Tiger
+Cocteau Twins - The Spangle Maker
+Cocteau Twins - Pearly Dewdrops' Drops (12'')
+Cocteau Twins - Pepper-Tree
+Cocteau Twins - Pearly Dewdrops' Drops (7'')
+Cocteau Twins - Millimillenary
+Cocteau Twins - Hitherto
+Cocteau Twins - Pearly Dewdrops' Drops
+Cocteau Twins - From the Flagstones
+Cocteau Twins - Aikea-Guinea
+Cocteau Twins - Musette and Drums
+Cocteau Twins - Sugar Hiccup
+Cocteau Twins - Because of Whirl-Jack
+Cocteau Twins - Love's Easy Tears
+Cocteau Twins - Those Eyes, That Mouth
+Cocteau Twins - Sigh's Smell of Farewell
+Cocteau Twins - Orange Appled
+Cocteau Twins - When Mama Was Moth
+Cocteau Twins - Five Ten Fiftyfold
+Cocteau Twins - In Our Angelhood
+Cocteau Twins - Glass Candle Grenades
+Cocteau Twins - In the Gold Dust Rush
+Cocteau Twins - The Tinderbox (Of a Heart)
+Cocteau Twins - Multifoiled
+Cocteau Twins - My Love Paramour
+Cocteau Twins - Great Spangled Fritillary
+Cocteau Twins - Melonella
+Cocteau Twins - Pale Clouded White
+Cocteau Twins - Eggs and Their Shells
+Cocteau Twins - Blue Bell Knoll
+Cocteau Twins - Athol-Brose
+Cocteau Twins - Carolyn's Fingers
+Cocteau Twins - For Phoebe Still a Baby
+Cocteau Twins - The Itchy Glowbo Blow
+Cocteau Twins - Cico Buff
+Cocteau Twins - Suckling the Mender
+Cocteau Twins - Spooning Good Singing Gum
+Cocteau Twins - A Kissed Out Red Floatboat
+Cocteau Twins - Ella Megalast Burls Forever
+Cocteau Twins - Kookaburra
+Cocteau Twins - Quisquose
+Cocteau Twins - Rococo
+Harold Budd, Simon Raymonde, Robin Guthrie, Elizabeth Fraser - Sea, Swallow Me
+Harold Budd, Simon Raymonde, Robin Guthrie, Elizabeth Fraser - Memory Gongs
+Harold Budd, Simon Raymonde, Robin Guthrie, Elizabeth Fraser - Why Do You Love Me?
+Harold Budd, Simon Raymonde, Robin Guthrie, Elizabeth Fraser - Eyes Are Mosaics
+Harold Budd, Simon Raymonde, Robin Guthrie, Elizabeth Fraser - She Will Destroy You
+Harold Budd, Simon Raymonde, Robin Guthrie, Elizabeth Fraser - The Ghost Has No Home
+Harold Budd, Simon Raymonde, Robin Guthrie, Elizabeth Fraser - Bloody and Blunt
+Harold Budd, Simon Raymonde, Robin Guthrie, Elizabeth Fraser - Ooze Out and Away, Onehow
+Closterkeller - Zegarmistrz światła
+Closterkeller - Chat, chat
+Closterkeller - I jeszcze jeden dzień
+Closterkeller - Czasu coraz mniej
+Closterkeller - Ucieczka
+Closterkeller - Blue Wolfgang (bonus)
+Closterkeller - Epitafium
+Closterkeller - Athe
+Closterkeller - Somewhere Inbetween
+Closterkeller - The Mermaid
+Closterkeller - The Pearl
+Closterkeller - The Secret Place
+Closterkeller - The Ego Game
+Closterkeller - Eve and Adam
+Closterkeller - Two Days
+Closterkeller - Marble-Enchanted
+Closterkeller - The Reign of the Comet
+Closterkeller - The Symbol Shatterer
+Closterkeller - Love for Money
+Closterkeller - The Piano
+Closterkeller - Watching as You Drown
+Closterkeller - Fight Club
+Closterkeller - As I Glide
+Closterkeller - Like Rain Against Stone
+Closterkeller - Queen
+Closterkeller - He Comes When the Night Falls
+Closterkeller - Nero
+Closterkeller - Mirage
+Closterkeller - No Matter What Will Be
+Closterkeller - Amber
+Closterkeller - Have You Seen
+Closterkeller - Patrząc jak toniesz
+Closterkeller - Podziemny krąg
+Closterkeller - Kiedy latam
+Closterkeller - Jak o kamień deszcz
+Closterkeller - Królowa
+Closterkeller - On przychodzi nocą
+Closterkeller - Miraż
+Closterkeller - Nieważne jak będzie
+Closterkeller - Poza granicą dotyku
+Closterkeller - Ktokolwiek widział
+Closterkeller - Nieuchwytny
+Closterkeller - Lunar
+Closterkeller - Neo
+Closterkeller - Minor Earth Major Sky (A-Ha cover)
+Closterkeller - Earth Song (Michael Jackson cover)
+Closterkeller - Mad World (Tears For Fears cover)
+Closterkeller - Reghina ("Królowa" - Hetane mix)
+Closterkeller - Reghina ("Królowa" - Closter Trance FP Formula mix)
+Closterkeller - Ktokolwiek widział (videoclip)
+Closterkeller - Królowa (videoclip)
+Closterkeller - Podziemny krąg (videoclip live)
+Abraxas - Zapowiedź (Piotr Stelmach)
+Abraxas - 36325
+Abraxas - Antahema
+Abraxas - Tomasz Fray Torquemada
+Abraxas - E'lamachiwae
+Devil Doll - Sacrilege of the Fatal Arms
+Lacrimosa - Alleine zu zweit (Torris Vita)
+Lacrimosa - Meine Welt
+Lacrimosa - Copycat (Remixed By Samael)
+Lacrimosa - Alles Lüge (Sanguis-Mix)
+Lacrimosa - Diener Eeines Geistes (Dirus-Mix)
+Lacrimosa - Ruin
+Lacrimosa - Lacrima Mosa
+Lacrimosa - Der Ketzer
+Lacrimosa - Der Letzte Hilfeschrei
+Lacrimosa - Einsamkeit
+Lacrimosa - Diener Eines Geistes
+Lacrimosa - Loblied auf die Zweisamkeit
+Lacrimosa - Bresso
+Lacrimosa - Intro
+Lacrimosa - Erinnerung
+Lacrimosa - Das Schweigen
+Lacrimosa - Schakal (Edit Version)
+Lacrimosa - Schakal (Piano Version)
+Lacrimosa - Vermächtnis der Sonne (Akustik Version)
+Lacrimosa - Seele in Not (Metus-Mix)
+Lacrimosa - Stolzes Herz (Edit Version)
+Lacrimosa - Mutatio Spiritus
+Lacrimosa - Stolzes Herz (Piano Version)
+New Model Army - Frightened
+New Model Army - Ambition
+New Model Army - Grandmothers Footsteps
+New Model Army - Better Than Them
+New Model Army - My Country
+New Model Army - No Greater Love
+New Model Army - Young Gifted and Skint
+New Model Army - Drag It Down
+New Model Army - Shot 18
+New Model Army - The Attack
+New Model Army - Fate
+New Model Army - Living In The Rose
+New Model Army - Believe It
+New Model Army - Understand U
+New Model Army - These Words
+New Model Army - Afternoon Song
+New Model Army - Bad Old World
+Journey - Lights
+Journey - Feeling That Way
+Journey - Anytime
+Journey - La Do Da
+Journey - Patiently
+Journey - Wheel In The Sky
+Journey - Somethin' To Hide
+Journey - Winds Of March
+Journey - Can Do
+Journey - Opened The Door
+The Rolling Stones - Undercover of the Night
+The Rolling Stones - She Was Hot
+The Rolling Stones - Tie You Up (The Pain of Love)
+The Rolling Stones - Wanna Hold You
+The Rolling Stones - Feel on Baby
+The Rolling Stones - Too Much Blood
+The Rolling Stones - Pretty Beat Up
+The Rolling Stones - Too Tough
+The Rolling Stones - All the Way Down
+The Rolling Stones - It Must Be Hell
+Alice Cooper - Spark in the Dark
+Alice Cooper - Why Trust You
+Alice Cooper - Only My Heart Talkin'
+Alice Cooper - Bed of Nails
+Alice Cooper - This Maniac's in Love With You
+Alice Cooper - Trash
+Alice Cooper - Hell Is Living Without You
+Alice Cooper - I'm Your Gun
+Anathema - Shroud of False
+Anathema - Fragile Dreams
+Anathema - Empty
+Anathema - Lost Control
+Anathema - Re-Connect
+Anathema - Inner Silence
+Anathema - Alternative 4
+Anathema - Regret
+Anathema - Feel
+Anathema - Destiny
+Anathema - Sentient
+Anathema - Angelica
+Anathema - The Beloved
+Anathema - Eternity Part I
+Anathema - Eternity Part II
+Anathema - Hope
+Anathema - Suicide Veil
+Anathema - Radiance
+Anathema - Far Away
+Anathema - Eternity Part III
+Anathema - Cries on the Wind
+Anathema - Ascension
+Anathema - Far Away (Acoustic)
+Anathema - Eternity Part III (Acoustic)
+Anathema - Don't Look Too Far
+Anathema - Emotional Winter
+Anathema - Wings of God
+Anathema - 2000 & Gone
+Anathema - Lovelorn Rhapsody
+Anathema - Sweet Tears
+Anathema - J'ai Fait Une Promesse
+Anathema - They (Will Always) Die
+Anathema - Sleepless
+Anathema - Sleep in Sanity
+Anathema - Scars of the Old Stream
+Anathema - Under a Veil (Of Black Lace)
+Anathema - Where Shadows Dance
+Anathema - Dreaming: The Romance
+Anathema - Restless Oblivion
+Anathema - Shroud of Frost
+Anathema - ... Alone
+Anathema - Sunset of the Age
+Anathema - Nocturnal Emission
+Anathema - Cerulean Twilight
+Anathema - The Silent Enigma
+Anathema - A Dying Wish
+Anathema - Black Orchid
+Arcadium - I'm on My Way
+Arcadium - Poor Lady
+Arcadium - Walk on the Bad Side
+Arcadium - Woman of a Thousand Years
+Arcadium - Change Me
+Arcadium - It Takes a Woman
+Arcadium - Sing My Song
+Arcadium - Riding Alone
+Blackwater Park - Mental Block
+Blackwater Park - Roundabout
+Blackwater Park - One's Life
+Blackwater Park - Dirty Face
+Blackwater Park - For Noone
+Camel - God of Light
+Camel - First Light
+Camel - One of These Days I'll Get an Early Night
+Camel - Elke
+Caravan - Place of My Own
+Caravan - Ride
+Caravan - Policeman
+Caravan - Love Song With Flute
+Caravan - Cecil Rons
+Caravan - Magic Man
+Caravan - Grandma's Lawn
+Caravan - Where but for Caravan Would I
+Caravan - Introduction
+Caravan - Mirror for the Day
+Caravan - The Love in Your Eye
+Caravan - Virgin on the Ridiculous
+Caravan - For Richard
+Circus - Norwegian Wood
+Circus - Pleasures of a Lifetime
+Circus - St. Thomas
+Circus - Goodnight John Morgan
+Circus - Father of My Daughter
+Circus - II B.S.
+Circus - Monday Monday
+Circus - Don't Make Promises
+Camel - Curiosity
+Camel - Arubaluba
+Collage - Changes
+Collage - Lullaby '87
+Collage - We Wizards
+Collage - The Night Falls
+Collage - You and Me '88
+Collage - Just Like Heaven #1
+Collage - Just Like Heaven #2
+Collage - Midnight Flyer
+Collage - Conversation '86
+Collage - Lovely Day '92
+Collage - The Blues '92
+Caravan - If I Could Do It All Over Again, I'd Do It All Over You
+Caravan - And I Wish I Were Stoned
+Caravan - Don't Worry
+Caravan - As I Feel I Die
+Caravan - With an Ear to the Ground You Can Make It
+Caravan - Martinian
+Caravan - Only Cox
+Caravan - Reprise
+Caravan - Hello Hello
+Caravan - Asforteri
+Caravan - Can't Be Long Now
+Caravan - Francoise
+Caravan - Warlock
+Caravan - Limits
+Caravan - A Day in the Life of Maurice Haylett
+Caravan - Why? (And I Wish I Were Stoned)
+Caravan - Clipping the 8th (Hello Hello)
+Deine Lakaien - My Decision
+Deine Lakaien - Your Decision
+Deine Lakaien - Ulysses
+Deine Lakaien - Down Down Down
+Deine Lakaien - Mindmachine
+Deine Lakaien - Nobody's Wounded
+Deine Lakaien - Mirror Men
+Deine Lakaien - Walk to the Moon
+Deine Lakaien - Wasted Years
+Deine Lakaien - 2nd Sun
+Deine Lakaien - Don't Wake Me Up
+Deine Lakaien - Madiel
+Deine Lakaien - Resurrection Machine
+Deine Lakaien - The Mirror Men
+Deine Lakaien - The Dive (Let Me)
+Deine Lakaien - Fashion, Pashion and Pigaches
+Deine Lakaien - Bells of Another Land
+Deine Lakaien - Nightmare
+Deine Lakaien - Contact
+Deine Lakaien - The Walk to the Moon
+Deine Lakaien - Brain Fic
+Deine Lakaien - Intro
+Deine Lakaien - Return
+Deine Lakaien - Lass Mich
+Eloy - Poseidon's Creation '93
+Eloy - The Apocalypse '93
+Eloy - Silhouette '93
+Eloy - Mysterious Monolith '93
+Eloy - Sphinx '93
+Eloy - Illuminations '93
+Eloy - End of an Odyssey '93
+Eloy - Time to Turn '93
+Eloy - Spirit in Chains
+Eloy - Say Is It Really True '93
+Eloy - Escape to the Heights '94
+Eloy - All Life Is One '94
+Eloy - Nightriders '94
+Eloy - Follow the Light '94
+Eloy - Rainbow
+Eloy - Voyager of the Future Race
+Eloy - Fire & Ice
+Eloy - Prisoner in Mind
+Eloy - Eclipse of Mankind
+Eloy - Awakening
+Eloy - Between the Times
+Eloy - The Dance in Doubt and Fear
+Eloy - Lost!?? (Introduction)
+Eloy - Memory-Flash
+Eloy - Appearance of the Voice
+Eloy - Return of the Voice
+Eloy - Lost?? (The Decision)
+Eloy - The Midnight-Fight / The Victory Of Mental Force
+Eloy - The Victory of Mental Force
+Eloy - Gliding into Light and Knowledge
+Eloy - Le Réveil Du Soleil / The Dawn
+Eloy - Today
+Eloy - Something Yellow
+Eloy - Eloy
+Eloy - Song of a Paranoid Soldier
+Eloy - Voice of Revolution
+Eloy - Isle of Sun
+Eloy - Dillus Roady
+Eloy - Floating
+Eloy - The Light from Deep Darkness
+Eloy - Castle in the Air
+Eloy - Plastic Girl
+Eloy - Madhouse
+Eloy - Land of No Body
+Eloy - Future City
+Eloy - Up and Down
+Eloy - Incarnation of Logos
+Eloy - Mutiny
+Eloy - Decay of Logos
+Eloy - Paralyzed Civilization
+Eloy - Serenity
+Eloy - Awakening of Consciousness
+Eloy - Reflections From the Spheres Beyond
+Eloy - Waves of Intuition
+Eloy - The Answer
+Eloy - Introduction
+Eloy - Journey into 1358
+Eloy - Love Over Six Centuries
+Eloy - Imprisonment
+Eloy - Daylight
+Eloy - Thoughts of Home
+Eloy - The Zany Magician
+Eloy - Back into the Present
+Eloy - Astral Entrance
+Eloy - Master of Sensation
+Eloy - The Apocalypse
+Eloy - Pilot to Paradise
+Eloy - De Labore Solis
+Eloy - Mighty Echoes
+Eloy - The Day of Crimson Skies
+Eloy - Fatal Illusions
+Eloy - Childhood Memories
+Eloy - Generation of Innocence
+Eloy - The Tides Return Forever
+Eloy - The Last in Line
+Eloy - Company of Angels
+Enya - The Celts
+Enya - Aldebaran (Dedicated to Ridley Scott)
+Enya - I Want Tomorrow
+Enya - March of the Celts
+Enya - Deireadh an Tuath
+Enya - The Sun in the Stream
+Enya - To Go Beyond (I)
+Enya - Fairytale
+Enya - Epona
+Enya - Triad
+Enya - Portrait (Out of the Blue)
+Enya - Boadicea
+Enya - Bard Dance
+Enya - Dan y D?r
+Enya - To Go Beyond (II)
+Fields of the Nephilim - Blue Water (Electrostatic)
+Fields of the Nephilim - Blue Water (Hot Wire)
+Fields of the Nephilim - Wail of Sumer
+Fields of the Nephilim - Power
+Fields of the Nephilim - The Tower
+Fields of the Nephilim - For Her Light (One)
+Fields of the Nephilim - Submission Two (The Dub Posture)
+Fields of the Nephilim - (Dead But Dreaming) For Her Light
+Fields of the Nephilim - Submission (Non-Resistance)
+Fields of the Nephilim - Slow Kill
+Fields of the Nephilim - Laura II
+Fields of the Nephilim - Volcane (Mr. Jealousy Has Returned)
+Fields of the Nephilim - Vet for the Insane
+Fields of the Nephilim - Dust
+Fields of the Nephilim - Reanimator
+Fields of the Nephilim - Dawnrazor
+Fields of the Nephilim - The Sequel
+Fields of the Nephilim - Preacher Man (Contaminated Mix)
+Fields of the Nephilim - Moonchild (Second Seal)
+Fields of the Nephilim - Shiva
+Fields of the Nephilim - Power (Live)
+Fields of the Nephilim - Vet for the Insane (Live)
+Fields of the Nephilim - Psychonaut (Lib. III)
+Fields of the Nephilim - Celebrate (Second Seal)
+Fields of the Nephilim - Psychonaut (Lib. II)
+Fields of the Nephilim - Returning to Gehenna
+Fields of the Nephilim - Blue Water (Live)
+Fields of the Nephilim - The Watchman (Live)
+Fields of the Nephilim - Phobia (Live)
+Fields of the Nephilim - Endemoniada
+Fields of the Nephilim - The Watchman
+Fields of the Nephilim - Phobia
+Fields of the Nephilim - Chord of Souls
+Focus - Hocus Pocus
+Focus - Le Clochard
+Focus - Janis
+Focus - Moving Waves
+Janis Joplin - Combination of the Two
+Janis Joplin - I Need a Man to Love
+Janis Joplin - Piece of My Heart
+Janis Joplin - Turtle Blues
+Janis Joplin - Oh, Sweet Mary
+Janis Joplin - Ball and Chain
+Hawkwind - Abduction
+Hawkwind - Are You Losing Your Mind
+Refugee - Papillon
+Refugee - Someday
+Refugee - Grand Canyon
+Refugee - Ritt Mickley
+Nick Cave - Right Now, I'm Roaming
+Tiamat - Trillion Zillion Centipedes
+Tiamat - The Desolate One
+Tiamat - Alteration X 10
+Tiamat - Four Leary Biscuits
+Tiamat - Only In My Tears It Lasts
+Tiamat - The Whores Of Babylon
+Tiamat - Kite
+The Trip - Two Brothers
+The Trip - Little Janie
+The Trip - L'Ultima ora e Ode a Jimi Hendrix
+Tiamat - Sumerian Cry (part I) - Intro
+Tiamat - In The Shrines Of The Kingly Dead
+Tiamat - The Malicious Paradise
+Tiamat - Necrophagous Shadows
+Tiamat - Apotheosis Of Morbidity
+Tiamat - Nocturnal Funeral
+Tiamat - Altar Flame
+Tiamat - Evilized
+Tiamat - Where The Serpents Ever Dwell
+Tiamat - Sumerian Cry (Part 2) - Outro
+Tiamat - The Sign Of The Pentagram
+Tiamat - In A Dream
+Tiamat - Clouds
+Tiamat - Smell Of Incense
+Tiamat - A Caress Of Stars
+Tiamat - The Sleeping Beauty
+Tiamat - Forever Burning Flames
+Tiamat - The Scapegoat
+Tiamat - Undressed
+Tiamat - Brighter Than The Sun
+Tiamat - Dust Is Our Fare
+Tiamat - To Have And Have Not
+Tiamat - For Her Pleasure
+Tiamat - Diyala
+Tiamat - Neo Aeon (intro)
+Tiamat - Lady Temptress
+Tiamat - Mountain Of Doom
+Tiamat - Dead Boys' Quire
+Tiamat - Sumerian Cry (part III)
+Tiamat - On Gloden Wings
+Tiamat - Ancient Entity
+Tiamat - The Southernmost Voyage
+Tiamat - Angels Far Beyond
+Tiamat - I am The King (...Of Dreams)
+Tiamat - A Winter Shadow
+Tiamat - The Seal (outro)
+Tiamat - Wildhoney
+Tiamat - Whatever That Hurts
+Tiamat - The Ar
+Tiamat - 25th Floor
+Tiamat - Gaia
+Tiamat - Do You Dream Of Me?
+Tiamat - A Pocket Size Sun
+Yes - Survival
+Yes - Astral Traveller
+Yes - Every Little Thing
+Yes - I've Seen All Good People
+Yes - America (edit)
+Yes - Vevey, part 1
+Yes - Vevey, part 2
+Yes - Owner of a Lonely Heart
+Yes - Hold On
+Yes - Shoot High Aim Low
+Yes - Rhythm of Love
+Yes - Love Will Find a Way
+Atomic Rooster - And So To Bed
+Atomic Rooster - Broken Wings
+Atomic Rooster - Before Tomorrow
+Atomic Rooster - Banstead
+Atomic Rooster - S.L.Y.
+Atomic Rooster - Decline and Fall
+Atomic Rooster - Play the Game
+Kate Bush - Them Heavy People
+Kate Bush - L'Amour Looks Something Like You
+The Legendary Pink Dots - Softly Softly
+The Legendary Pink Dots - Crumbs On The Carpet
+The Legendary Pink Dots - Oasis Malade
+The Legendary Pink Dots - A Crack In Melancholy Time
+The Legendary Pink Dots - The Angel Trail
+The Legendary Pink Dots - Nine Shades To The Circle
+The Legendary Pink Dots - A Terra Firma Welcome
+The Legendary Pink Dots - Wall Purges Night
+The Legendary Pink Dots - Lisa's Party
+The Legendary Pink Dots - Arzhklahh Olgevezh!
+The Legendary Pink Dots - Pruumptje Kurss
+The Legendary Pink Dots - Waving At The Aeroplanes
+The Legendary Pink Dots - Hiding
+The Legendary Pink Dots - Dolls' House
+The Legendary Pink Dots - The Palace Of Love
+King Crimson - 21st. Century Schizoid Man
+King Crimson - Get Thy Bearings
+King Crimson - A Man, A City
+King Crimson - Drop In
+King Crimson - Improv including By the Sleeping Lagoon
+King Crimson - Improv
+The Legendary Pink Dots - Blasto
+The Legendary Pink Dots - Love In A Plain Brown Envelope
+The Legendary Pink Dots - Sleeso
+The Legendary Pink Dots - Neon Gladiators
+The Legendary Pink Dots - Kitto
+The Legendary Pink Dots - Third Secret
+The Legendary Pink Dots - The Grain Kings
+The Legendary Pink Dots - The Ocean Cried 'Blue Murder'
+The Legendary Pink Dots - Expresso Noir
+Manfred Mann's Earth Band - Buddah
+Manfred Mann's Earth Band - Cloudy Eyes
+Manfred Mann's Earth Band - Get Your Rocks Off
+Manfred Mann's Earth Band - Sadjoy
+Manfred Mann's Earth Band - Black and Blue
+Manfred Mann's Earth Band - Mardi Gras Day
+Manfred Mann's Earth Band - In The Beginning, Darkness
+Manfred Mann's Earth Band - Pluto The Dog
+Manfred Mann's Earth Band - Solar Fire
+Manfred Mann's Earth Band - Saturn, Lord of the Ring
+Manfred Mann's Earth Band - Saturn, Lord of the Ring/Mercury, The Winged Messenger
+Manfred Mann's Earth Band - Earth, The Circle Part 2
+Manfred Mann's Earth Band - Earth, The Circle Part 1
+Manfred Mann's Earth Band - Joybringer
+Manfred Mann's Earth Band - Father Of Day, Father Of Night (Edited Version)
+Manfred Mann's Earth Band - Waiter, There's a Yawn in My Ear
+Manfred Mann's Earth Band - Blinded By The Light (Single Edit)
+Marillion - Hotel Hobbies
+Marillion - Warm Wet Circles
+Marillion - Just For The Record
+Marillion - Incommunicado
+Marillion - The Last Straw: Happy Ending
+The Master's Apprentices - Rio de Camero
+The Master's Apprentices - Michael
+The Master's Apprentices - Easy to Lie
+The Master's Apprentices - Because I Love You
+The Master's Apprentices - Catty
+The Master's Apprentices - Our Friend Owsley Stanley III
+The Master's Apprentices - Death of a King
+The Master's Apprentices - Song for a Lost Gypsy
+The Master's Apprentices - I'm Your Satisfier
+The Master's Apprentices - Song for Joey Part II
+The Alan Parsons Project - The Cask of Amontillado
+The Alan Parsons Project - (The System Of) Doctor Tarr and Professor Fether
+Mike Scott - Bring 'Em All In
+Mike Scott - Iona Song
+Mike Scott - Edinburgh Castle
+Mike Scott - What Do You Want Me To Do ?
+Mike Scott - I Know She's In The Building
+Mike Scott - City Full Of Ghosts (Dublin)
+Mike Scott - Wonderful Disguise
+Mike Scott - Sensitive Children
+Mike Scott - Learning To Love Him
+Mike Scott - She Is So Beautiful
+Mike Scott - Wonderful Disguise (Reprise)
+Mike Scott - Long Way To The Light
+Mike Scott - Building The City Of Light
+The Waterboys - A Girl Called Johnny
+The Waterboys - The Three Day Man
+The Waterboys - Gala
+The Waterboys - I Will Not Follow
+The Waterboys - It Should Have Been You
+The Waterboys - The Girl In The Swing
+The Waterboys - Savage Earth Heart
+Sting - Lazarus Heart
+Sting - Be Still My Beating Heart
+Sting - Englishman In New York
+Sting - History Will Teach Us Nothing
+Sting - They Dance Alone (Cueca Solo)
+Sting - We'll Be Together
+Sting - Straight To My Heart
+Sting - Rock Steady
+Sting - Sister Moon
+Sting - Little Wing
+Sting - Sacred Marriage
+The Alan Parsons Project - I Wouldn't Want To Be Like You
+The Alan Parsons Project - Breakdown
+The Alan Parsons Project - Don't Let It Show
+The Alan Parsons Project - The Voice
+The Alan Parsons Project - Day After Day (The Show Must Go On)
+Wishbone Ash - Time Was
+Wishbone Ash - Sometime World
+Wishbone Ash - No Easy Road
+Wishbone Ash - Vas Dis
+Wishbone Ash - The Pilgrim
+Wishbone Ash - Lullabye
+Wishbone Ash - Where Were You Tomorrow
+XIII. Století - Nosferatu is dead
+XIII. Století - Legenda o krysaři
+XIII. Století - Torquemado
+XIII. Století - Černý měsíc
+XIII. Století - Květy zla
+Agitation Free - You Play for Us Today
+Agitation Free - Sahara City
+Agitation Free - Ala Tul
+Agitation Free - Pulse
+Emerson, Lake & Powell - The Score
+Emerson, Lake & Powell - Learning to Fly
+Emerson, Lake & Powell - The Miracle
+Emerson, Lake & Powell - Touch and Go
+Emerson, Lake & Powell - Love Blind
+Emerson, Lake & Powell - Step Aside
+Emerson, Lake & Powell - Lay Down Your Guns
+Emerson, Lake & Powell - Mars, the Bringer of War
+Emerson, Lake & Palmer - Welcome Back [Karn Evil 9 - 1st Impression pt. 2]
+Emerson, Lake & Palmer - Piano Solo
+Emerson, Lake & Palmer - Tarkus / Pictures at an Exhibition
+Emerson, Lake & Palmer - Fanfare for the Common Man / Rondo
+Emerson, Lake & Palmer - Piano Improvisations
+Emerson, Lake & Palmer - Take a Pebble (Conclusion)
+Emerson, Lake & Palmer - Jeremy Bender/The Sheriff (Medley)
+Gary Moore - Run For Cover
+Gary Moore - Reach For The Sky
+Gary Moore - Military Man
+Gary Moore - Out Of My System
+Gary Moore - Nothing To Lose
+Gary Moore - Once In A Lifetime
+Gary Moore - All Messed Up
+Gary Moore - Listen To Your Heartbeat
+Kate Bush - Blow Away (For Bill)
+Kate Bush - All We Ever Look For
+Kate Bush - Egypt
+Kate Bush - Violin
+Kate Bush - The Infant Kiss
+Kate Bush - Night Scented Stock
+Bel Canto - Summer
+Bel Canto - Shimmering, Warm & Bright
+Aardvark - Once Upon a Hill
+Aardvark - Put That in Your Pipe and Smoke It
+Nektar - Burn out of my Eyes
+Nektar - Void Of Vision
+Nektar - Pupil Of The Eye
+Nektar - Look Inside Yourself
+Nektar - Death Of The Mind
+Second Hand - Sic Transit Gloria Mundi
+Second Hand - Revelations Ch. 16, Vs. 9-12
+Second Hand - Take to the Skies
+Virus - Revelation
+James Horner - Mornay's Dream
+Tindersticks - (Tonight) Are You Trying to Fall in Love Again
+T. Rex - Ballrooms of Mars
+Jethro Tull - One Brown Mouse
+Philip Glass - Akhnaten - Act I - Scene 2: The Coronation of Akhnaten
+Strawbs - The Battle
+Strawbs - Grace Darling
+Strawbs - Blue Angel
+Camel - City Life
+Camel - Nude
+Camel - Docks
+Camel - Beached
+Camel - Landscapes
+Camel - Reflections
+Camel - The Last Farewell
+AC/DC - Hell's Bells
+Deep Purple - Mistreated
+Dire Straits - Brothers in Arms
+The Beatles - Rain
+The Adventures - Feel the Raindrops
+Arvo Pärt - Litany
+Curved Air - Young Mother
+AC/DC - She's Got Balls
+Blackmore's Night - Shadow of the Moon
+Tindersticks - ???
+Blackmore's Night - Writing on the Wall
+Michael Nyman - Memorial
+Blackmore's Night - Mond Tanz
+Blackmore's Night - The Clock Ticks On
+Blackmore's Night - Be Mine Tonight
+Blackmore's Night - Play Minstrel Play
+Blackmore's Night - Ocean Gypsy
+Blackmore's Night - Minstrel Hall
+Blackmore's Night - Magical World
+Blackmore's Night - Renaissance Fair
+Blackmore's Night - Memmingen
+Blackmore's Night - No Second Chance
+Blackmore's Night - Spirit Of The Sea
+Blackmore's Night - Greensleeves
+Blackmore's Night - Wish You Were Here
+Tindersticks - Another Night In
+Tindersticks - Don't Look Down
+Tindersticks - Dick's Slow Song
+Tindersticks - Fast One
+Tindersticks - Ballad Of Tindersticks
+Tindersticks - Dancing
+Tindersticks - Let's Pretend
+Tindersticks - Desperate Man
+Tindersticks - Buried Bones
+Tindersticks - Bearsuit
+Tindersticks - I Was Your Man
+Tindersticks - Bathtime
+Tindersticks - Walking
+Tindersticks - A Marriage Made In Heaven
+Wojciech Kilar - ???
+Big Day - W dzień gorącego lata
+Al Stewart - On The Border
+John Lodge - Summer Breez
+Emerson, Lake & Palmer - ???
+Brian Hyland - Sealed With A Kiss
+Simon & Garfunkel - The Sounds of Silence
+The Moody Blues - It's Cold Outside of Your Heart
+SBB - I Need You Baby
+SBB - Odlot (Odlecieć z Wami)
+SBB - Wizje (Erotyk)
+SBB - Zostało we mnie
+The Nefilim - Shine
+The Nefilim - Penetration
+The Nefilim - Melt
+The Nefilim - Venus
+The Nefilim - Pazuzu
+The Nefilim - Zoon
+The Nefilim - Coma
+London After Midnight - Revenge
+London After Midnight - Nightmare
+London After Midnight - Spider and the Fly
+London After Midnight - Claire's Horrors
+London After Midnight - Sacrifice
+London After Midnight - This Paradise
+London After Midnight - The Black Cat
+London After Midnight - Your Best Nightmare
+Hawkwind - Night of the Hawks
+Hawkwind - Motorhead
+Hawkwind - Angels of Death
+Hawkwind - Watching the Grass Grow
+Hawkwind - Over the Top
+Hawkwind - Hurry on Sundown
+Hawkwind - Kiss of the Velvet Whip
+Hawkwind - Kings of Speed
+Hawkwind - Social Alliance
+Hawkwind - Dream Dancers
+Hawkwind - Dragons and Fables
+Hawkwind - Come On
+Hawkwind - My Baby's Gone
+Hawkwind - Dealing With the Devil
+Hawkwind - Roll 'Em Pete
+Hawkwind - Bring It on Home
+Hawkwind - Illusions
+Hawkwind - Get Yourself Together
+Hawkwind - What's the Matter
+Hawkwind - Bottle Up
+Hawkwind - Diamond Ring
+Hawkwind - Cymballine
+Hawkwind - You Shouldn't Do That
+Hawkwind - You Know You're Only Dreaming
+Hawkwind - Born To Go
+Earth & Fire - To the World of the Future
+Earth & Fire - How Time Flies
+Earth & Fire - The Last Seagull
+Earth & Fire - Only Time Will Tell
+Earth & Fire - Vote From Yonder
+Earth & Fire - Love of Life
+Earth & Fire - Circus
+Flash & The Pan - Hey, St. Peter
+Flash & The Pan - Yesterday's Gone
+Flash & The Pan - Waiting for a Train
+Flash & The Pan - Walking in the Rain
+Flash & The Pan - Something About You
+Flash & The Pan - Media Man
+Flash & The Pan - Hey Jimmy
+Flash & The Pan - Money Don't Lie
+Flash & The Pan - Down Among the Dead Men
+Flash & The Pan - Early Morning Wake Up Call
+Flash & The Pan - Restless
+Flash & The Pan - Ayla
+Flash & The Pan - Where Were You
+Flash & The Pan - Midnight Man
+David Sylvian - Taking the Veil
+David Sylvian - Laughter
+David Sylvian - Before the Bullfight
+David Sylvian - Gone to Earth
+David Sylvian - Wave
+David Sylvian - River Man
+David Sylvian - Silver Moon
+David Sylvian - The Healing Place
+David Sylvian - Answered Prayers
+David Sylvian - Where the Railroad Meets the Sea
+David Sylvian - The Wooden Cross
+David Sylvian - Home
+David Sylvian - Upon This Earth
+Buffalo - Sunrise (Come My Way)
+Buffalo - Freedom
+Buffalo - Till My Death
+Buffalo - The Prophet
+Buffalo - Pound of Flesh
+Buffalo - Shylock
+Art - I Think I'm Going Weird
+Art - What's That Sound
+Art - African Thing
+Art - Room With a View
+Art - Flying Anchors
+Art - Supernatural Fairy Tale
+Art - Love Is Real
+Art - Come On Up
+Art - Brothers, Dads and Mothers
+Art - Talkin' to Myself
+Art - Alive Not Dead
+Art - Rome Take Away Three
+Edgar Broughton Band - Death of an Electric Citizen
+Edgar Broughton Band - American Boy Soldier
+Edgar Broughton Band - Why Can't Somebody Love Me
+Edgar Broughton Band - Neptune
+Edgar Broughton Band - Evil
+Edgar Broughton Band - Crying
+Edgar Broughton Band - Love in the Rain
+Edgar Broughton Band - Dawn Crept Away
+Quicksilver Messenger Service - Pride of Man
+Quicksilver Messenger Service - Light Your Windows
+Quicksilver Messenger Service - Dino's Song
+Quicksilver Messenger Service - Gold and Silver
+Quicksilver Messenger Service - It's Been Too Long
+Quicksilver Messenger Service - The Fool
+If - Waterfall
+If - The Light Still Shines
+If - Sector 17
+If - Paint Your Pictures
+If - Cast No Shadows
+If - Throw Myself to the Wind
+If - You in Your Small Corner
+Nucleus - Song for the Bearded Lady
+Nucleus - Sun Child
+Nucleus - Lullaby for a Lonely Child
+Nucleus - We'll Talk About It Later
+Nucleus - Oasis
+Nucleus - Ballad of Joe Pimp
+Nucleus - Easter 1916
+Gila - Aggression
+Gila - Kollaps
+Gila - Kontakt
+Gila - Kollektivität
+Gila - Individualität
+Ginhouse - Tyne God
+Ginhouse - Portrait Picture
+Ginhouse - Fair Stood the Wind
+Ginhouse - And I Love Her
+Ginhouse - Life
+Ginhouse - The Morning After
+Ginhouse - The House
+Ginhouse - Sun in the Bottle
+Out of Focus - See How a White Negro Flies
+Out of Focus - God Save the Queen, Cried Jesus
+Out of Focus - Hey John
+Out of Focus - No Name
+Out of Focus - World's End
+Out of Focus - Dark, Darker
+The Cure - Want
+The Cure - Club America
+The Cure - This Is a Lie
+The Cure - The 13th
+The Cure - Strange Attraction
+The Cure - Mint Car
+The Cure - Jupiter Crash
+The Cure - Round and Round and Round
+The Cure - Gone!
+The Cure - Numb
+The Cure - Return
+The Cure - Trap
+The Cure - Treasure
+The Cure - Bare
+Midge Ure - Breathe
+Midge Ure - Fields of Fire
+Midge Ure - Fallen Angel
+Midge Ure - Free
+Midge Ure - Guns and Arrows
+Midge Ure - Lay My Body Down
+Midge Ure - Sinner Man
+Midge Ure - Live Forever
+Midge Ure - Trail of Tears
+Midge Ure - May Your Good Lord
+Midge Ure - The Maker
+Out of Focus - Breathe
+Out of Focus - L.S.B
+Out of Focus - When I'm Sleeping
+Out of Focus - Tsajama
+Out of Focus - Black Cards
+Out of Focus - Where Have You Been
+Out of Focus - Huchen 55, A
+Out of Focus - Huchen 55, B
+Out of Focus - Huchen 55, C
+Out of Focus - What Can a Poor Boy Do (But To Be a Streetfighting Man)
+Out of Focus - It's Your Life
+Out of Focus - Whispering
+Out of Focus - Blue Sunday Morning
+Out of Focus - Fly Bird Fly
+Out of Focus - Television Program
+Sonja Kristina - Tropical Birth
+Sonja Kristina - Angel
+Sonja Kristina - Sounds Of Sea
+Sonja Kristina - Heart Of Glass
+Sonja Kristina - Marimbas / Lullaby
+Sonja Kristina - Baby Song
+Sonja Kristina - Woman's Heart
+Sonja Kristina - Divine Cloud Space
+Sonja Kristina - Birdsong
+Sonja Kristina - Elfin Boy
+Sonja Kristina - Glastonbury Dawn
+Sonja Kristina - Blindman
+Sonja Kristina - Dreamers
+Sonja Kristina - Chant / Voices
+Sonja Kristina - Remember Yourself
+Curved Air - Woman on a One Night Stand
+Curved Air - The Fool
+Curved Air - Pipe of Dreams
+Curved Air - Orange Street Blues
+Curved Air - Dance of Love
+Curved Air - Midight Wire
+Curved Air - Stark Naked
+Curved Air - Kids To Blame
+Curved Air - Hot and Bothered
+A Split Second - Backlash
+A Split Second - Crimewave
+A Split Second - Cold War in the Brainbox
+A Split Second - The Parallax View
+A Split Second - Crash Course In Seduction
+A Split Second - Into the Burning Hole
+A Split Second - Kiss of Fury
+A Split Second - Fire Walker
+A Split Second - Fire
+Procol Harum - She Wandered Through the Garden Fence
+Procol Harum - Somethin Following Me
+Procol Harum - Mabel
+Procol Harum - Cerdes (Outside the Gates of)
+Procol Harum - A Christmas Camel
+Procol Harum - Kaleidoscope
+Procol Harum - Salad Days (Are Here Again)
+Procol Harum - Good Captain Clack
+Procol Harum - Quite Rightly So
+Procol Harum - Skip Softly (My Moonbeams)
+Procol Harum - Wish Me Well
+Procol Harum - Rambling On
+Procol Harum - Magdalene (My Regal Zonophone)
+Procol Harum - Too Much Between Us
+Procol Harum - Boredom
+Procol Harum - Crucifixion Lane
+Procol Harum - The Milk of Human Kindness
+Procol Harum - Juicy John Pink
+Procol Harum - Pilgrim's Progress
+Procol Harum - Simple Sister
+Procol Harum - Memorial Drive
+Procol Harum - Power Failure
+Procol Harum - Playmate of the Mouth
+Procol Harum - Broken Barricades
+Procol Harum - Luskus Delph
+Procol Harum - Song for a Dreamer
+Procol Harum - Poor Mohammed
+Procol Harum - Toujours L'Amour
+Procol Harum - A Rum Tale
+Procol Harum - TV Ceasar
+Procol Harum - A Souvenir of London
+Procol Harum - Bringing Home The Bacon
+Procol Harum - For Liquorice John
+Procol Harum - Robert's Box
+Procol Harum - Nothing But The Truth
+Procol Harum - Beyond the Pale
+Procol Harum - As Strong As Samson
+Procol Harum - The Idol
+Procol Harum - The Thin Edge of the Wedge
+Procol Harum - Monsieur R.Monde
+Procol Harum - Fresh Fruit
+Procol Harum - Butterfly Boys
+Procol Harum - New Lamps for Old
+Procol Harum - Pandora's Box
+Procol Harum - Fool's Gold
+Procol Harum - Taking The Time
+Procol Harum - The Unquiet Zone
+Procol Harum - The Final Thrust
+Procol Harum - I Keep Forgetting
+Procol Harum - Without a Doubt
+Procol Harum - The Piper's Tune
+Procol Harum - Typewriter Torment
+Procol Harum - Eight Days a Week
+Procol Harum - Something Magic
+Procol Harum - Skating on the Thin Ice
+Procol Harum - The Wizzard
+Procol Harum - The Mark of the Claw
+Procol Harum - Strangers in Space
+Procol Harum - The Worm and the Tree
+Procol Harum - Holding On
+Procol Harum - Man With A Mission
+Procol Harum - One More Time
+Procol Harum - A Dream In Ev'ry Home
+Procol Harum - The Hand That Rocks The Cradle
+Procol Harum - The King of Hearts
+Procol Harum - All Our Dreams Are Sold
+Procol Harum - Perpetual Motion
+Procol Harum - Learn To Fly
+Procol Harum - The Pursuit Of Hapiness
+Procol Harum - (You Can't) Turn The Page
+Procol Harum - Bytterfly Boys
+Procol Harum - The Long Goodbye
+Omega - Hutlen barátok
+Omega - Blues
+Omega - Egy nehéz év után
+Omega - Törékeny lendület
+Omega - Omegautó
+Omega - Régvárt kedvesem
+Omega - Emlékek
+Omega - Eltakart világ
+Omega - Varázslatos,fehér ko
+U.F.O. - Blinded By a Lie
+U.F.O. - Diesel in the Dust
+U.F.O. - A Fool for Love
+U.F.O. - You and Me
+U.F.O. - When It's Time to Rock
+U.F.O. - The Way the Wild Wind Blows
+U.F.O. - Call My Name
+U.F.O. - All Over You
+U.F.O. - No Getaway
+U.F.O. - Push, It's Love
+U.F.O. - Everybody Knows
+Gentle Giant - Two Weeks in Spain
+Gentle Giant - I'm Turning Around
+Gentle Giant - Betcha Thought We Couldn't Do It
+Gentle Giant - Who Do You Think You Are?
+Gentle Giant - Mountain Time
+Gentle Giant - As Old as You're Young
+Gentle Giant - Memories of Old Days
+Gentle Giant - Winning
+Gentle Giant - For Nobody
+Deep Purple - Bad Attitude
+Deep Purple - The Unwritten Law
+Deep Purple - Call of the Wild
+Deep Purple - Mad Dog
+Deep Purple - Black & White
+Deep Purple - Hard Lovin' Woman
+Deep Purple - The Spanish Archer
+Deep Purple - Strangeways
+Deep Purple - Mitzi Dupree
+Deep Purple - Dead or Alive
+The Alan Parsons Project - You Lie Down With Dogs
+The Alan Parsons Project - I'd Rather Be a Man
+The Alan Parsons Project - You Won't Be There
+The Alan Parsons Project - Winding Me Up
+The Alan Parsons Project - Don't Hold Back
+The Alan Parsons Project - Secret Garden
+The Alan Parsons Project - If I Could Change Your Mind
+The Alan Parsons Project - Sirius (Instrumental)
+The Alan Parsons Project - Children of the Moon
+The Alan Parsons Project - Gemini
+The Alan Parsons Project - You're Gonna Get Your Fingers Burned
+The Alan Parsons Project - Psychobabble
+The Alan Parsons Project - Mammagamma (Instrumental)
+The Alan Parsons Project - Step by Step
+The Alan Parsons Project - What Goes Up...
+The Alan Parsons Project - One More River
+The Alan Parsons Project - Can't Take It With You
+The Alan Parsons Project - Pyromania
+The Alan Parsons Project - Hyper-Gamma-Spaces
+The Alan Parsons Project - Stereotomy
+The Alan Parsons Project - Beaujolais
+The Alan Parsons Project - Urbania (Instrumental)
+The Alan Parsons Project - Limelight
+The Alan Parsons Project - In the Real World
+The Alan Parsons Project - Where's the Walrus? (Instrumental)
+The Alan Parsons Project - Light of the World
+The Alan Parsons Project - Chinese Whispers (Instrumental)
+The Alan Parsons Project - Stereotomy Two
+The Alan Parsons Project - May Be a Price To Pay
+The Alan Parsons Project - I Don't Wanna Go Home
+The Alan Parsons Project - The Turn of a Friendly Card
+The Alan Parsons Project - Let's Talk About Me
+The Alan Parsons Project - Days Are Numbers
+Barclay James Harvest - Hold On
+Big Country - Flame of the West
+Big Country - East of Eden
+Big Country - Steeltown
+Big Country - Where the Rose Is Sown
+Big Country - Come Back to Me
+Big Country - Tall Ships Go
+Big Country - Girl With Grey Eyes
+Big Country - Rain Dance
+Big Country - The Great Divide
+Big Country - Just a Shadow
+Big Country - Bass Dance
+Big Country - Belief in the Small Man
+Big Country - Prairie Rose
+Big Country - Wonderland
+Big Country - Winter Sky
+Big Country - In a Big Country
+Big Country - Inwards
+Big Country - Chance
+Big Country - 1,000 Stars
+Big Country - Storm
+Big Country - Harvest Home
+Big Country - Lost Patrol
+Big Country - Close Action
+Big Country - Fields of Fire
+Big Country - Porrohman
+Big Country - All Fall Together
+Big Country - Angle Park
+Big Country - Crossing
+Blue Öyster Cult - Dominance and Submission
+Blue Öyster Cult - Cities on Flame With Rock & Roll
+Blue Öyster Cult - Dr. Music
+Blue Öyster Cult - Red and the Black
+Blue Öyster Cult - Burnin' for You
+Blue Öyster Cult - Roadhouse Blues
+Blue Öyster Cult - Black Blade
+Blue Öyster Cult - Hot Rails to Hell
+Blue Öyster Cult - E.T.I. (Extra Terrestrial Intelligence)
+Blue Öyster Cult - Death Valley Nights
+Blue Öyster Cult - Searchin' for Celine
+Blue Öyster Cult - Fireworks
+Blue Öyster Cult - R.U. Ready 2 Rock
+Blue Öyster Cult - Celestial the Queen
+Blue Öyster Cult - Goin' Through the Motions
+Love Like Blood - Walking in Demimondes
+Love Like Blood - Sibirian Pandemonuim
+Love Like Blood - More Than Salvation?
+The Alan Parsons Project - A Dream Within a Dream
+The Alan Parsons Project - The Fall of the House of Usher: Prelude
+The Cure - Love Song
+The Cure - Last Dance
+The Cure - Lullaby
+The Cure - Fascination Street
+The Cure - The Same Deep Water as You
+The Cure - Disintegration
+Eloy - Racing Shadows
+Eloy - Destination
+Eloy - Silent Revolution
+Eloy - Fire and Ice
+The Sisters of Mercy - Phantom
+The Sisters of Mercy - Kiss the Carpet (Reprise)
+The Sisters of Mercy - Damage Done
+The Sisters of Mercy - Home of the Hit-Men
+Bel Canto - Temps Dégagé
+Bel Canto - Geschichte einer Mutter
+Deep Purple - Highway Star
+Deep Purple - Smoke on the Water
+Deep Purple - Mule (Drum Solo)
+Deep Purple - Strange Kind of Woman
+Deep Purple - Lazy
+Inkubus Sukkubus - Leveller
+Inkubus Sukkubus - The Rape of Maude Bowen
+The Legendary Pink Dots - I Love You in Your Tragic Beauty
+The Legendary Pink Dots - Green Gang
+The Legendary Pink Dots - Hellowe'en
+The Legendary Pink Dots - The Safe Way
+The Legendary Pink Dots - Just A Lifetime
+The Legendary Pink Dots - Princess Coldheart
+The Legendary Pink Dots - The Pleasure Palace
+The Legendary Pink Dots - The Collector
+The Legendary Pink Dots - C.V.A.
+The Rolling Stones - No Expectations
+The Rolling Stones - Dear Doctor
+The Rolling Stones - Parachute Woman
+The Rolling Stones - Jigsaw Puzzle
+The Rolling Stones - Street Fighting Man
+The Rolling Stones - Prodigal Son
+The Rolling Stones - Stray Cat Blues
+The Rolling Stones - Factory Girl
+The Rolling Stones - Salt of the Earth
+String Driven Thing - To See You
+String Driven Thing - Night Club
+String Driven Thing - Sold Down the River
+String Driven Thing - Two Timin' Mama
+String Driven Thing - Travelling
+String Driven Thing - People on the Street
+String Driven Thing - The House
+String Driven Thing - The Machine That Cried
+String Driven Thing - River of Sleep: The Sowee/Search in Time/Going Down
+Genesis - Entangled
+Genesis - Squonk
+Genesis - Robbery, Assault and Battery
+Genesis - Ripples
+Genesis - That's All
+Genesis - Illegal Alien
+Genesis - Taking It All Too Hard
+Genesis - Just a Job To Do
+Genesis - Silver Rainbow
+Genesis - It's Gonna Get Better
+Van Der Graaf Generator - Orthenthian
+Van Der Graaf Generator - Ferret & Featherbird
+Van Der Graaf Generator - Aerosol Grey Machine
+Van Der Graaf Generator - Black Smoke Yen
+Van Der Graaf Generator - Aquarian
+Van Der Graaf Generator - Giant Squid
+Alice Cooper - School's Out
+Alice Cooper - I'm Eighteen
+Alice Cooper - Desperado
+Alice Cooper - Lost in America
+Alice Cooper - Teenage Lament '74
+Alice Cooper - Billion Dollar Babies
+Tindersticks - Dicks Slow Song
+Tindersticks - Ballad Of The Tindersticks
+Tindersticks - Are You Trying to Fall In Love Again (Tonight)
+Tear Garden - Ascension Day
+Tear Garden - We the People
+Tear Garden - Crying from Outside
+Tear Garden - Psycho 9
+Tear Garden - With Wings
+Tear Garden - Judgement Hour
+Tear Garden - New Eden
+Tear Garden - Tasteless
+Tear Garden - Cyberspider
+Tear Garden - Malice Through the Looking Glass
+Tear Garden - Phoenix
+Tear Garden - Habit
+The Legendary Pink Dots - Lucifer Landed
+The Legendary Pink Dots - The Hanged Man
+The Legendary Pink Dots - The Saucers Are Coming
+Alice Cooper - Die For You
+Barclay James Harvest - Fifties Child
+Barclay James Harvest - Teenage Heart
+Barclay James Harvest - High Wire
+Barclay James Harvest - Midnight Drug
+Barclay James Harvest - Waiting for the Right Time
+Barclay James Harvest - Just a Day Away (Forever Tomorrow)
+Barclay James Harvest - Paraiso Dos Cavalos
+Barclay James Harvest - Ring of Changes
+Barclay James Harvest - Sideshow
+Barclay James Harvest - Rebel Woman
+Barclay James Harvest - Say You'll Stay
+Barclay James Harvest - For Your Love
+Barclay James Harvest - Victims of Circumstance
+Barclay James Harvest - Inside My Nightmare
+Barclay James Harvest - Watching You
+Barclay James Harvest - I've Got a Feeling
+Supertramp - Surely
+Supertramp - It's a Long Road
+Supertramp - Aubade and I am Not Like The Other Birds Of Prey
+Supertramp - Maybe I'm a Beggar
+Supertramp - Home Again
+Supertramp - Nothing to Show
+Supertramp - Shadow Song
+Supertramp - Try Again
+Supertramp - Ain't Nobody but Me
+Supertramp - The Logical Song
+Supertramp - Bloody Well Right
+Supertramp - You Started Laughing
+Supertramp - Hide in Your Shell
+Supertramp - From Now On
+Supertramp - Dreamer
+Supertramp - Rudy
+Supertramp - A Soapbox Opera
+Supertramp - Asylum
+Supertramp - Fool's Overture
+Supertramp - Two of Us
+Supertramp - Crime of the Century
+Supertramp - Your Poppa Don't Mind
+Supertramp - Travelled
+Supertramp - Rosie Had Everything Planned
+Supertramp - Remember
+Supertramp - Forever
+Supertramp - Potter
+Supertramp - Coming Home to See You
+Supertramp - Times Have Changed
+Supertramp - Friend in Need
+Supertramp - Aries
+Supertramp - Crazy
+Supertramp - Put On Your Old Brown Shoes
+Supertramp - It's Raining Again
+Supertramp - Bonnie
+Supertramp - Know Who You Are
+Supertramp - My Kind of Lady
+Supertramp - C'Est le Bon
+Supertramp - Waiting So Long
+Supertramp - Give a Little Bit
+Supertramp - Lover Boy
+Supertramp - Even in the Quietest Moments
+Supertramp - Downstream
+Supertramp - Babaji
+Supertramp - Easy Does It
+Supertramp - Sister Moonshine
+Supertramp - Another Man's Woman
+Supertramp - Poor Boy
+Supertramp - Just a Normal Day
+Supertramp - The Meaning
+Supertramp - If Everyone Was Listening
+Genesis - Burning Rope
+Genesis - The Musical Box - Closing Section
+Genesis - Say It's Alright, Joe
+Genesis - ...In That Quiet Earth (outro only)
+Genesis - Drum Duet
+Robert Łuczak Group - Pieśń Barda
+Robert Łuczak Group - Hymnus de Spiritu Sancto
+Robert Łuczak Group - Le Porte
+Robert Łuczak Group - The Dwarf
+Robert Łuczak Group - Crazy Prince
+Robert Łuczak Group - Box of Magic
+Robert Łuczak Group - Bonne Nuit
+Robert Łuczak Group - Dies Irae
+Robert Łuczak Group - Grace
+Robert Łuczak Group - Ali Baba
+Robert Łuczak Group - En Ten Tino
+Robert Łuczak Group - The Kingdom of Wind
+Patricia Morrison - Love Never Dies
+Cyan - Solitary Angel
+Cyan - Nosferatu (Requiem for a Vampire)
+Closterkeller - It Must Be You
+Fish - Forgotten Sons (live)
+Fish - Fugazi (live)
+Curved Air - Lovechild
+Curved Air - Seasons
+Curved Air - Jumbo
+? - ?
+Deine Lakaien - The Forest
+Edward Ka-Spel - O from the Great Sea
+Edward Ka-Spel - Tanith and the Lion Tree
+Edward Ka-Spel - Interference
+Edward Ka-Spel - Four of Ten
+Edward Ka-Spel - Loop 1
+Edward Ka-Spel - Loop 2
+Edward Ka-Spel - The Bakersman
+Edward Ka-Spel - Prithee
+Edward Ka-Spel - Prisoners of War
+Edward Ka-Spel - Three Times Daily
+Edward Ka-Spel - Hotel X
+Edward Ka-Spel - Epilogue
+Edward Ka-Spel - Phoney War
+Edward Ka-Spel - Old Man Trouble
+Edward Ka-Spel - Diary 11th
+Edward Ka-Spel - Diary 12th
+Edward Ka-Spel - Diary 13th
+Premiata Forneria Marconi - Four Holes In The Ground
+Premiata Forneria Marconi - Dove... Quando... (Parte I)
+Premiata Forneria Marconi - Just Look Away
+Premiata Forneria Marconi - Celebration
+Premiata Forneria Marconi - Mr. 9'till 5
+Premiata Forneria Marconi - Alta Loma 5 Till 9
+Jeff Wayne - The Reed Weed (Part 1)
+Jeff Wayne - The Spirit Of Man
+Jeff Wayne - The Reed Weed (Part 2)
+Jeff Wayne - Epilogue (Part 2)
+Emerson, Lake & Palmer - Introductory Fanfare
+Iron Butterfly - Most Anything You Want
+Iron Butterfly - Flowers and Beads
+Iron Butterfly - My Mirage
+Iron Butterfly - Termination
+Iron Butterfly - Are You Happy
+Nektar - Prelude
+Nektar - Astronaut's Nightmare
+Nektar - Countenance
+Nektar - Nine Lifeless Daughter's Of The Sun
+Nektar - Warp Oversight
+Nektar - Dream Nebula, Part One
+Nektar - Dream Nebula, Part Two
+Nektar - It's All In The Mind
+Nektar - Burn Out My Eyes
+Type O Negative - Skip It
+Type O Negative - Sinus
+Type O Negative - Who Will Save the Sane?
+Type O Negative - Liver
+Type O Negative - Machine Screw
+Type O Negative - Fay Wray Come Out And Play
+Type O Negative - Kill All the White People
+Type O Negative - Summer Breeze
+Type O Negative - Set Me on Fire
+Type O Negative - Dark Side Of The Womb
+Type O Negative - We Hate Everyone
+Type O Negative - Bloody Kisses (A Death in the Family)
+Type O Negative - 3.0.I.F
+Type O Negative - Too Late: Frozen
+Type O Negative - Blood & Fire
+Type O Negative - Can't Lose You
+Type O Negative - Unsuccessfully Coping With the Natural Beauty of Infidelity
+Type O Negative - Der Untermench
+Type O Negative - Xero Tolerance
+Type O Negative - Prelude To Agony
+Type O Negative - Glass Wall Of Limbo
+Type O Negative - The Misinterpretation of Silence and Its Disastrous Consequences
+Type O Negative - Gravitational Constant: G = 6.67 x 10^-8 cm^-3 gm^-1 sec^-2
+Type O Negative - I Know You're Fucking Someone Else
+Type O Negative - Are You Afraid
+Type O Negative - Gravity
+Type O Negative - Pain
+Type O Negative - Kill You Tonight
+Type O Negative - Hey Pete
+Type O Negative - Kill You Tonight (Reprise)
+Batalion D'Amour - Synowie Buntu
+Batalion D'Amour - Ostatni raz
+Batalion D'Amour - Love me to death
+Batalion D'Amour - I tylko
+Batalion D'Amour - Try to save soul
+Batalion D'Amour - Nowy dzień
+Batalion D'Amour - Znów kolejny dzień
+Batalion D'Amour - Dlaczego nie moge Cię dotknąć
+Batalion D'Amour - Samotność
+Batalion D'Amour - Kolejny raz
+Batalion D'Amour - Forever
+New Model Army - Lovesongs
+A Flock Of Seagulls - Wishing (If I Had a Photograph of You)
+A Flock Of Seagulls - Nightmares
+A Flock Of Seagulls - Transfer Affection
+A Flock Of Seagulls - What Am I Supposed to Do?
+A Flock Of Seagulls - Electrics
+A Flock Of Seagulls - The Traveller
+A Flock Of Seagulls - 2:30
+A Flock Of Seagulls - Over the Border
+A Flock Of Seagulls - (It's Not Me) Talking
+Bruce Springsteen - Point Blank
+The Beatles - Strawberry Fields Forever
+Nick Cave & the Bad Seeds - Plain Gold Ring
+Nick Cave & the Bad Seeds - The Weeping Song
+Nick Cave & the Bad Seeds - Jack the Ripper
+Nick Cave & the Bad Seeds - The Good Son
+Strawbs - Hero & Heroine
+Strawbs - Tell Me What You See in Me
+Men Of Lake - Walking along the Rhine - ?
+The Eagles - The Last Resort
+Nick Cave & the Bad Seeds - Deanna
+Nick Cave & the Bad Seeds - The Ship Song
+Nick Cave - Papa Won't Leave You, Henry
+Nick Cave & the Bad Seeds - New Morning
+Marianne Faithfull - Vagabond Ways
+Ultravox - We Stand Alone
+Incubus Sukkubus - Heartbeath of the Earth
+Rick Wakeman - Guinevere
+Rick Wakeman - The Last Battle
+Ultravox - Dream On
+John Wetton - Voice of America
+John Wetton - Hold Me Now
+John Wetton - 30 Years
+John Wetton - Only Time Will Tell
+John Wetton - The Smile Has Left Your Eyes
+John Wetton - You're Not The Only One
+Ultravox - All In One Day
+Siouxsie & The Banshees - Rhapsody
+Porcupine Tree - Every Home is Wired
+Procol Harum - Il Tuo Diamante
+Philip Glass - Akhnaten - Act I - Scene 3: The Window of Appearances
+U.K. - Nevermore
+Procol Harum - The whiter Shade of Pale
+John Wetton - Rendez-vous 6:02
+John Wetton - Christina
+Rick Wakeman - The Lady of The Lake
+Rick Wakeman - Ginevere
+Rick Wakeman - Merlin The Magician
+Rick Wakeman - Sir Galahad
+Ultravox - Mr X
+Nick Cave & the Bad Seeds - Papa Won't Leave You Henry
+Nick Cave & the Bad Seeds - Brother My Cup Is Empty
+Flied Egg - Dr. Siegel's Fried Egg Shooting Machine
+Flied Egg - I Love You
+Flied Egg - Burning Fever
+Flied Egg - Plastic Fantasy
+Flied Egg - 15 seconds of Schizophrenic Sabbath
+Flied Egg - I'm Gonna See My Baby Tonight
+Flied Egg - Oke-Kus
+Flied Egg - Someday
+Flied Egg - Guide to the Quietness
+Os Mundi - A Question Of Decision
+Os Mundi - It's All Time
+Os Mundi - Isn't It Beautiful
+Os Mundi - Children's Games
+Os Mundi - Erstickubungen
+Os Mundi - Fortsentsung Folgt
+Suck - 21st Century Schizoid Man
+Suck - Season Of The Witch
+Suck - Sin's A Good Man's Brother
+Suck - I'll Be Creeping
+Suck - Into The Fire
+Suck - Elegy
+Deep Purple - Bloodsucker
+Deep Purple - Living Wreck
+Eloy - Horizons
+Eloy - Illuminations
+Eloy - Impressions
+Eloy - Giant
+Eloy - Child Migration
+Eloy - Gallery
+Eloy - Silhouette
+Eloy - Sunset
+Genesis - For Absent Friends
+Genesis - Harold the Barrel
+Genesis - Harlequin
+Genesis - The Fountain of Salmacis
+Genesis - Great Expectations
+Talk Talk - Such a Shame
+Talk Talk - Tomorrow Started
+Greg Lake - It Hurts
+Genesis - The Return of the Giant Hogweed
+Carlos Santana - Toussaint L'Overture
+AC/DC - Live Wire
+Wishbone Ash - Mother of Pearl
+Wishbone Ash - (In All of My Dreams) You Rescue Me
+Wishbone Ash - Runaway
+Wishbone Ash - Outward Bound
+Wishbone Ash - Prelude
+Wishbone Ash - When You Know Love
+Wishbone Ash - Lonely Island
+Wishbone Ash - Candle-Light
+Lacrimosa - Sapphire
+Lacrimosa - Kelch Der Liebe
+Lacrimosa - Lichtgestalt
+Lacrimosa - Nachtchatten
+Lacrimosa - My Last Goodbye
+Lacrimosa - The Party Is Over
+Lacrimosa - Letzte Ausfahrt:Leben
+Lacrimosa - Hohelied Der Liebe
+Porcupine Tree - The Moon Touches Your Shoulder
+Slade - Hear Me Calling
+Slade - In Like a Shot From My Gun
+Slade - Darling Be Home Soon
+Slade - Know Who You Are
+Slade - Keep on Rocking
+Slade - Get Down With It
+Slade - Born to Be Wild
+Genesis - Dusk
+Chris De Burgh - Revolution
+Chris De Burgh - Light a Fire
+Chris De Burgh - Liberty
+Geniesis - Uncertain Weather
+Porcupine Tree - The Joke's On You
+Stray - All In your Mind
+Stray - Time Machine
+Stray - Only What You Make It
+Stray - Some Day
+Gomorrha - Dance on a Volcano
+Gomorrha - I Try To Change This World
+Hairy Chapter - It Must Be an Officer's Daughter
+My Solid Ground - Dirty Yellow Mist
+My Solid Ground - That's You
+My Solid Ground - The Executioner (Different Mix)
+Diamond Head - Helpless
+Pink Floyd - Lucy Leave
+Pink Floyd - King Bee
+Pink Floyd - Vegetable Man
+Pink Floyd - Scream Thy Last Scream
+Flower Travellin' Band - Twenty-First Century Schizoid Man
+Stray - Taking All The Good Things
+Stray - Around The World In 80 Days
+Stray - Yesterday's Promises
+Stray - Move On
+Stray - In Reverse
+Stray - Some Say
+Stray - Son Of The Father
+Stray - Nature's Way
+Stray - Where Do Our Children Belong
+Stray - Jericho
+Stray - Run Mister Run
+Stray - Dearest Eloise
+Stray - Do You Miss Me
+Stray - Suicide
+Gomorrha - Opening of the Sealed Book
+Gomorrha - Dead Life
+Gomorrha - I Turned To See Whose Voice It Was
+Gomorrha - Tititsh Child
+Hairy Chapter - There's a Kind of Nothing
+Hairy Chapter - Can't Get Through
+Hairy Chapter - As We Crossed Over
+Hairy Chapter - You've Got To Follow This Masquerade
+Hairy Chapter - Bad Dreams
+Hairy Chapter - Pretty Talking Girl
+Hairy Chapter - Pauline
+Hairy Chapter - Illusions
+Hairy Chapter - Looking for a Decent Freedom
+Hairy Chapter - Cry for Relief
+Hairy Chapter - Thought After
+Hairy Chapter - Life 69
+Hairy Chapter - Big Fat Woman Blues
+My Solid Ground - Dirty Yellow Mix (Different Vocals)
+My Solid Ground - Flash Part IV
+My Solid Ground - The Executioner
+My Solid Ground - Melancholie
+My Solid Ground - Handful of Grass
+My Solid Ground - Devonshire Street W1
+My Solid Ground - "x"
+My Solid Ground - "y"
+My Solid Ground - "z"
+My Solid Ground - Flash (Original Full Length Version)
+Diamond Head - Lightning to the Nations
+Diamond Head - The Prince
+Diamond Head - Sucking My Love
+Diamond Head - Am I Evil?
+Diamond Head - Sweet and Innocent
+Diamond Head - It's Electric
+Porcupine Tree - The Sleep of No Dreaming
+Jerry Goldsmith - Night Battle
+Loreena McKennitt - Prologue
+Loreena McKennitt - Skellig
+Loreena McKennitt - The Highwayman
+Steve Harley & Cockney Rebel - Star for a Week (live)
+Steve Harley & Cockney Rebel - Riding the Waves (For Virginia Woolf) (live)
+Steve Harley & Cockney Rebel - Lighthouse (live)
+Steve Harley & Cockney Rebel - The Best Years of Our Life (live)
+Steve Harley & Cockney Rebel - Sweet Dreams (live)
+Steve Harley & Cockney Rebel - Psychomodo (live)
+Steve Harley & Cockney Rebel - Sling It! (live)
+Steve Harley & Cockney Rebel - Sebastian (live)
+Fleetwood Mac - All Well
+Fish - Cliche
+Budgie - Stranded
+Budgie - Just Rolling Home Again
+Budgie - Drugstore Woman
+Uriah Heep - Keep On Ridin'
+Uriah Heep - Flyin' High
+Uriah Heep - Roller
+Uriah Heep - Free 'N' Easy
+Uriah Heep - Illusion
+Uriah Heep - Free Me
+Uriah Heep - Cheat 'N' Lie
+Uriah Heep - Dance
+Uriah Heep - Choices
+Styx - The Grand Illusion
+Styx - Fooling Yourself (The Angry Young Man)
+Styx - Superstars
+Styx - Come Sail Away
+Styx - The Grand Finale
+Paul McCartney & Wings - Live and Let Die
+Fish - Punch and Judy
+Porcupine Tree - The Sky Moves Sideways Phase 1
+Philip Glass - Itaipu - I. Mato Grosso
+Philip Glass - Itaipu - II. The Lake
+Mott The Hoople - I'm a Cadillac/El Camino Dolo Roso
+Cream - White Room
+Free - Come Together in the Morning
+Queen - Bohemian Rhapsody
+Cream - Sitting On Top Of The World
+Cream - Passing The Time
+Cream - As You Said
+Cream - Pressed Rat And Warthog
+Cream - Politician
+Cream - Those Were The Days
+Cream - Born Under A Bad Sign
+Cream - Deserted Cities Of The Heart
+Cream - Crossroads
+Cream - Spoonful
+Cream - Traintime
+Cream - Toad
+Robin Trower - Day Of The Eagle
+Robin Trower - The Fool And Me
+Robin Trower - Too Rolling Stoned
+Robin Trower - About to Begin
+Robin Trower - Lady Love
+Robin Trower - Little Bit Of Sympathy
+Robin Trower - Day Of The Eagle - Live
+Robin Trower - Bridge Of Sighs - Live
+Robin Trower - Too Rolling Stoned - Live
+Robin Trower - Lady Love - Live
+Robin Trower - Little Bit Of Sympahy - Live
+Free - Travelling in Style
+Free - Heartbreaker
+Free - Muddy Water
+Free - Common Mortal Man
+Free - Easy on My Soul
+Bachman-Turner Overdrive - Free Wheelin'
+Bachman-Turner Overdrive - Sledgehammer
+Bachman-Turner Overdrive - Blue Moanin'
+Bachman-Turner Overdrive - Second Hand
+Bachman-Turner Overdrive - Givin' It All Away
+Bachman-Turner Overdrive - Gimme Your Money Please
+Bachman-Turner Overdrive - Hold Back the Water
+Bachman-Turner Overdrive - Blue Collar
+Bachman-Turner Overdrive - Little Gandy Dancer
+Bachman-Turner Overdrive - Stayed Awake All Night
+Bachman-Turner Overdrive - Down and Out Man
+Bachman-Turner Overdrive - Don't Get Yourself in Trouble
+Bachman-Turner Overdrive - Thank You for the Feelin'
+Bachman-Turner Overdrive - Blown
+Bachman-Turner Overdrive - Welcome Home
+Bachman-Turner Overdrive - Stonegates
+Bachman-Turner Overdrive - Let It Ride
+Bachman-Turner Overdrive - Give It Time
+Bachman-Turner Overdrive - Tramp
+Bachman-Turner Overdrive - I Don't Have To Hide
+Bachman-Turner Overdrive - Takin' Care of Business
+Elton John - Long Way From Happiness
+Elton John - Live Like Horses
+Elton John - The End Will Come
+Elton John - Love's Got a Lot to Answer For
+Elton John - Something About the Way You Look Tonight
+Elton John - Recover Your Soul
+Elton John - January
+Elton John - I Can't Steer My Heart Clear of You
+Paul Rodgers - Soul Of Love
+Paul Rodgers - Overloaded
+Paul Rodgers - Heart Of Fire
+Paul Rodgers - Saving Grace
+Paul Rodgers - Chasing Shadows
+Paul Rodgers - Love Is All I Need
+Paul Rodgers - Nights Like This
+Paul Rodgers - Shadows Of The Sun
+Paul Rodgers - I Lost It All
+Paul Rodgers - Holding Back The Storm
+Paul Rodgers - Little Bit Of Love
+Paul Rodgers - Be My Friend
+Paul Rodgers - Feel Like Makin' Love
+Paul Rodgers - Louisiana Blues
+Paul Rodgers - Muddy Water Blues
+Paul Rodgers - Rolling Stone
+Paul Rodgers - I'm Ready
+Paul Rodgers - Mr. Big
+Paul Rodgers - Fire And Water
+Paul Rodgers - The Hunter
+Paul Rodgers - Can't Get Enough
+Paul Rodgers - All Right Now
+The Rolling Stones - Low Down
+The Rolling Stones - Already Over Me
+The Rolling Stones - Gunface
+The Rolling Stones - You Don't Have To Mean It
+The Rolling Stones - Might As Well Get Juiced
+The Rolling Stones - Always Suffering
+The Rolling Stones - Too Tight
+The Rolling Stones - How Can I Stop
+John Barry - Main Title - "The Man With The Golden Gun" - Lulu
+John Barry - Scaramanga's Fun House
+John Barry - Chew Me in Grisly Land
+John Barry - The Man With the Golden Gun (Jazz Instrumental)
+John Barry - Getting the Bullet
+John Barry - Goodnight Goodnight
+John Barry - Let's Go Get 'Em
+John Barry - Hip's Trip
+John Barry - Kung Fu Fight
+John Barry - In Search of Scaramanga's Island
+John Barry - Return to Scaramanga's Fun House
+John Barry - End Title - "The Man With The Golden Gun" - Lulu
+Propaganda - Dream Within A Dream
+Propaganda - The Murder Of Love
+Propaganda - Jewel
+Propaganda - Duel
+Propaganda - Frozen Faces
+Propaganda - P-Machinery
+Propaganda - Sorry For Laughing
+Propaganda - Dr. Mabuse
+Propaganda - The Chase
+Inkubus Sukkubus - Woman to Hare
+Inkubus Sukkubus - Hail the Holly King
+Inkubus Sukkubus - Wake of the Christian Knights
+Inkubus Sukkubus - All Along the Crooked Way
+Inkubus Sukkubus - Witch of Berkeley
+Inkubus Sukkubus - Danse Vampyr
+Inkubus Sukkubus - Vampyre Erotica
+Inkubus Sukkubus - Wild Hunt
+Inkubus Sukkubus - Sweet Morpheus
+Inkubus Sukkubus - Whore of Babylon
+Dreams of Sanity - Komödia I (The Beginning)
+Dreams of Sanity - Beatrice
+Dreams of Sanity - Komödia II (The Dream)
+Dreams of Sanity - Komödia III (The Meeting)
+Dreams of Sanity - Komödia IV (The Ending)
+Dreams of Sanity - The Prophet
+Dreams of Sanity - Treesitter
+Dreams of Sanity - Blade of Doom
+Dreams of Sanity - Dead
+Dreams of Sanity - Ein Liebeslied
+Freedoms Children - Aileen
+Freedoms Children - The Homecoming
+Freedoms Children - The Kid He Came From Hazareth
+Freedoms Children - Medals of Bravery
+Freedoms Children - Tribal Fence
+Freedoms Children - Gentle Beasts (Parts 1 & 2)
+Freedoms Children - Slowly Towards the North (Parts 1 & 2)
+Freedoms Children - Afterward
+Captain Beyond - Thousand Days of Yesterdays (Intro)
+Captain Beyond - Frozen Over
+Captain Beyond - I Can't Feel Nothin' (Part 1)
+Captain Beyond - As the Moon Speaks (To the Waves of the Sea)
+Captain Beyond - Astral Lady
+Captain Beyond - As the Moon Speaks (Return)
+Captain Beyond - I Can't Feel Nothin' (Part 2)
+The Rolling Stones - Let It Bleed
+The Rolling Stones - Love in Vain
+The Rolling Stones - Midnight Rambler
+The Rolling Stones - Monkey Man
+The Rolling Stones - Country Honk
+The Rolling Stones - You Got the Silver
+Premiata Forneria Marconi - The Mountain
+Premiata Forneria Marconi - The World Became The World
+Premiata Forneria Marconi - Is My Face On Straight
+Premiata Forneria Marconi - Have Your Cake And Beat It
+Premiata Forneria Marconi - Dove... quando...
+Premiata Forneria Marconi - Celebration (included The world became the world)
+Premiata Forneria Marconi - Mr. 9 till 5
+Premiata Forneria Marconi - River Of Life
+Premiata Forneria Marconi - Photos Of Ghosts
+Premiata Forneria Marconi - Old Rain
+Premiata Forneria Marconi - Il Banchetto
+Premiata Forneria Marconi - Promenade The Puzzle
+Alice Cooper - Some Folks
+Alice Cooper - Cold Ethyl
+Alice Cooper - Escape
+Patti Smith - Whirl Away
+Patti Smith - Don't Say Nothing
+Patti Smith - Death Singing
+Patti Smith - Memento Mori
+Patti Smith - Last Call
+Birth Control - Just Before the Sun Will Rise
+Birth Control - The Work Is Done
+Birth Control - Flesh and Blood
+Birth Control - Let Us Do It Now
+Birth Control - Hope (Single Version)
+Birth Control - Rollin (Single Version)
+Birth Control - What's Your Name (Single Version)
+Birth Control - Believe in the Pill (Single Version)
+Lucifer's Friend - Ride in the Sky
+Lucifer's Friend - Everybody's Clown
+Lucifer's Friend - Keep Goin'
+Lucifer's Friend - Toxic Shadows
+Lucifer's Friend - Free Baby
+Lucifer's Friend - Baby You're a Liar
+Lucifer's Friend - In the Time of Job When Mammon Was a Yippie
+Lucifer's Friend - Lucifer's Friend
+Lucifer's Friend - Rock 'N' Roll Singer
+Lucifer's Friend - Satyr's Dance
+Lucifer's Friend - Horla
+Lucifer's Friend - Our World Is a Rock 'N' Roll Band
+Lucifer's Friend - Alpenrosen
+Bakerloo - Big Bear Ffolly
+Bakerloo - Bring It on Home
+Bakerloo - Drivin' Bachwards
+Bakerloo - Last Blues
+Bakerloo - Gang Bang
+Bakerloo - This Worried Feeling
+Bakerloo - Son of Moonshine
+Mahavishnu Orchestra - Birds of Fire
+Mahavishnu Orchestra - Miles Beyond
+Mahavishnu Orchestra - Celestial Terrestrial Commuters
+Mahavishnu Orchestra - Sapphire Bullets of Pure Love
+Mahavishnu Orchestra - Thousand Island Park
+Mahavishnu Orchestra - Hope
+Mahavishnu Orchestra - One Word
+Mahavishnu Orchestra - Open Country Joy
+Mahavishnu Orchestra - Resolution
+Mahavishnu Orchestra - Meeting of the Spirits
+Mahavishnu Orchestra - Dawn
+Mahavishnu Orchestra - The Noonward Race
+Mahavishnu Orchestra - A Lotus on Irish Streams
+Mahavishnu Orchestra - Vital Transformation
+Mahavishnu Orchestra - The Dance of Maya
+Mahavishnu Orchestra - You Know You Know
+Mahavishnu Orchestra - Awakening
+Black Widow - The Battle: The Onslaught/If a Man Should Die/Survival
+Black Widow - Accident
+Black Widow - Lonely Man
+Black Widow - The Sun
+Black Widow - King of Hearts
+Black Widow - Old Man
+Le Orme - Sopesi Nell 'Incredible
+Le Orme - Felona
+Le Orme - La Solitudine Di Chi Protegge Il Mondo
+Le Orme - L' Equilibrio
+Le Orme - Sorona
+Le Orme - Attesa Inerte
+Le Orme - Ritratto un Mattino
+Le Orme - All 'Infuori del Tempo
+Le Orme - Ritorno Al Nulla
+Ozzy Osbourne - Perry Mason
+Ozzy Osbourne - I Just Want You
+Ozzy Osbourne - Ghost Behind My Eyes
+Ozzy Osbourne - Thunder Underground
+Ozzy Osbourne - See You on the Other Side
+Ozzy Osbourne - Tomorrow
+Ozzy Osbourne - Denial
+Ozzy Osbourne - My Little Man
+Ozzy Osbourne - Old L.A. Tonight
+Jon Anderson - The Book Opens
+Jon Anderson - Quick Words (Talk-Talk)
+Jon Anderson - Shall We Play the Game
+Jon Anderson - Semati Siyonpine
+Jon Anderson - Good Day Morning
+Jon Anderson - Leap Into the Inconceivable
+Jon Anderson - Song of Home
+Jon Anderson - Building Bridges
+Jon Anderson - Sound and Color
+Jon Anderson - Longwalker Speaks
+Jon Anderson - Maazo Maazo
+Anne Clark - Dream Made Real
+Anne Clark - Mundesley Beach
+Anne Clark - Letter of Thanks to a Friend
+Anne Clark - The Healing
+Anne Clark - Acropolis
+Anne Clark - The Key
+Anne Clark - Painting
+Anne Clark - Athens
+Anne Clark - Virtuality
+Anne Clark - Elegy for a Lost Summer
+Camel - Generations
+Camel - Eyes of Ireland
+Camel - Running From Paradise
+Camel - End of the Day
+Camel - Coming of Age
+Camel - The Hour Candle (A Song for My Father)
+Leaf Hound - Freelance Fiend
+Leaf Hound - Sad Road to the Sea
+Leaf Hound - Drowned My Life in Fear
+Leaf Hound - Work My Body
+Leaf Hound - Stray
+Leaf Hound - With a Minute to Go
+Leaf Hound - Growers of Mushroom
+Leaf Hound - Stagnant Pool
+Leaf Hound - Sawdust Ceasar
+Leaf Hound - It's Going to Get Better (Single B-Side)
+Leaf Hound - Hip Shaker [#/*]
+Wishbone Ash - Blind Eye
+Wishbone Ash - Goodbye Baby, Hello Friend
+Wishbone Ash - Baby Come in From the Rain
+Peter Banks - Visions of the King
+Peter Banks - The White House Vale: On the Hill/Lord of the Dragon
+Peter Banks - Knights: The Falcon/The Bear
+Peter Banks - Battles
+Peter Banks - Knights (Reprise)
+Peter Banks - Last Eclipse
+Peter Banks - Stop That!
+Peter Banks - Get Out of My Fridge
+Gravy Train - Alone in Georgia
+Gravy Train - (A Ballad Of) A Peaceful Man
+Gravy Train - Jules Delight
+Gravy Train - Can Anybody Hear Me?
+Gravy Train - Old Tin Box
+Gravy Train - Won't Talk About It
+Gravy Train - Home Again
+Khan - Space Shanty
+Khan - Stranded (Incl. Effervescent Psycho Novelty No. 5)
+Khan - Mixed Up Man of the Mountains Greenwood,
+Khan - Driving to Amsterdam
+Khan - Stargazers
+Khan - Hollow Stone (Incl. "Escape of the Space Pilots")
+Khan - Won't Talk about It
+Khan - Home Again
+Gong - I've Bin Stone Before/Mister Long Shanks/O Mother
+Gong - Mister Long Shanks: O Mother I Am Your Fantasy
+Gong - Dynamite/I Am Your Animal
+Gong - Tropical Fish: Selene
+Bel Canto - The Magic Box I
+Bel Canto - In Zenith
+Bel Canto - Freelunch in the Jungle
+Bel Canto - Rumour
+Bel Canto - Sleepwalker
+Bel Canto - Bombay
+Bel Canto - Paradise
+Bel Canto - Didn't You Know It?
+Bel Canto - Big Belly Butterflies
+Bel Canto - Kiss of Spring
+Bel Canto - The Magic Box II
+Bruce Springsteen - The Ghost of Tom Joad
+Bruce Springsteen - Straight Time
+Bruce Springsteen - Highway 29
+Bruce Springsteen - Youngstown
+Bruce Springsteen - Sinaloa Cowboys
+Bruce Springsteen - The Line
+Bruce Springsteen - Balboa Park
+Bruce Springsteen - Dry Lightning
+Bruce Springsteen - The New Timer
+Bruce Springsteen - Across the Border
+Bruce Springsteen - Galveston Bay
+Bruce Springsteen - My Best Was Never Good Enough
+Spooky Tooth - Society's Child (Baby I've Been Thinking)
+Spooky Tooth - Love Really Changed Me
+Spooky Tooth - Here I Lived So Well
+Spooky Tooth - Too Much of Nothing
+Spooky Tooth - Sunshine Help Me
+Spooky Tooth - It's All About a Roundabout
+Spooky Tooth - Tobacco Road
+Spooky Tooth - It Hurts You So
+Spooky Tooth - Forget It, I Got It
+Spooky Tooth - Bubbles
+Spooky Tooth - Waitin' for the Wind
+Spooky Tooth - Feelin' Bad
+Spooky Tooth - I've Got Enough Heartaches
+Spooky Tooth - Lost in My Dreams
+Spooky Tooth - That Was Only Yesterday
+Spooky Tooth - Hangman Hang My Shell on a Tree
+Anekdoten - Nucleus
+Anekdoten - Harvest
+Anekdoten - Book of Hours
+Anekdoten - Raft
+Anekdoten - Rubankh
+Anekdoten - Here
+Anekdoten - This Far From the Sky
+Anekdoten - In Freedom
+Anekdoten - Luna Surface
+Galahad - Julie Anne
+Galahad - Exorcising Demons
+Galahad - Middleground
+Galahad - Amaranth
+Galahad - Aquaba
+Galahad - Live and Learn
+Galahad - Richelieus Prayer
+Trace - Galliarde
+Trace - Gare le Corbeau
+Trace - Gaillarde
+Trace - The Death of Ace [From the Peer Gynt Suite]
+Trace - The Escape of the Piper
+Trace - Once
+Trace - Progression
+Trace - A Memory
+Trace - The Lost Past
+Trace - Final Trace
+Man - And in the Beginning
+Man - Sudden Life
+Man - Empty Room
+Man - Puella! Puella! (Woman! Woman!)
+Man - Love
+Man - Erotica
+Man - Blind Man
+Man - And Castles Rise in Children's Eyes
+Man - Don't Just Stand There (Come in Out of the Rain)
+Man - The Missing Pieces
+Man - The Future Hides Its Face
+Cressida - Asylum
+Cressida - Munich
+Cressida - Goodbye Post Office Tower Goodbye
+Cressida - Survivor
+Cressida - Reprieved
+Cressida - Lisa
+Cressida - Summer Weekend of a Lifetime
+Cressida - Let Them Come When They Will
+Inkubus Sukkubus - Belladonna and Aconite
+Inkubus Sukkubus - Soul Inside
+Inkubus Sukkubus - Song of the Siren
+Inkubus Sukkubus - Incubus
+Inkubus Sukkubus - Old Hornie
+Inkubus Sukkubus - Vlad
+Inkubus Sukkubus - Samhain
+Lucifer's Friend - Hobo
+Lucifer's Friend - Rose on the Vine
+Lucifer's Friend - Mother
+Lucifer's Friend - Where the Groupies Killed the Blues
+Lucifer's Friend - Summerdream-Delirium-No Reason or Rhyme
+Lucifer's Friend - Burning Ships
+Dead Can Dance - Nierika
+Dead Can Dance - Song of the Stars
+Dead Can Dance - Indus
+Dead Can Dance - Song of the Dispossessed
+Dead Can Dance - Dedicace Outo
+Dead Can Dance - The Snake and the Moon
+Dead Can Dance - Song of the Nile
+Dead Can Dance - Devorzhum
+Family - The Chase
+Family - Mellowing Grey
+Family - Never Like This
+Family - Me My Friend
+Family - Variation on a Theme of Hey Mr. Policeman
+Family - Winter
+Family - Old Songs for New Songs
+Family - Variation on a Theme of the Breeze
+Family - Hey Mr. Policeman
+Family - See Through Windows
+Family - Variation on a Theme of Me My Friend
+Family - Peace of Mind
+Family - Voyage
+Family - The Breeze
+Family - 3 x Time
+Family - The Weaver's Answer
+Family - Observations From a Hill
+Family - Hung Up Down
+Family - Summer '67
+Family - How-Hi-the-Li
+Family - Second Generation Woman
+Family - From Past Archives
+Family - Dim
+Family - Processions
+Family - Face in the Cloud
+Family - Emotions
+Landberk - Humanize
+Landberk - All Around Me
+Landberk - 1st of May
+Landberk - I Wish I Had a Boat
+Landberk - Dustgod
+Landberk - Dreamdance
+Landberk - Why Do I Still Sleep
+Landberk - Indian Summer
+The Mission - Amelia
+The Mission - Belief
+The Mission - Butterfly On A Wheel
+The Mission - Kingdom Come
+The Mission - Deliverance
+The Mission - Crystal Ocean
+The Blue Effect - Fénix
+The Blue Effect - Stroj na nic
+The Blue Effect - Sluneční hrob
+The Blue Effect - Blues About Stone (Kamenné blues)
+Formula Tre - Non è Francesca
+Formula Tre - Perché... perché ti amo
+Formula Tre - Questo folle sentimento (Intro)
+Formula Tre - Questo folle sentimento
+Formula Tre - Walk away Renee
+Formula Tre - Se non è amore cos'è
+Formula Tre - Sole giallo, sole nero
+Murphy Blend - Speed is Coming Back
+Murphy Blend - Past Has Gone
+Murphy Blend - Prädudium/Use Your Feet
+Murphy Blend - First Loss
+Murphy Blend - Funny Guys
+Murphy Blend - Happiness
+Murphy Blend - Journey to the Inside of the Sun
+Murphy Blend - Sweet Leaf
+Murphy Blend - The Rocket Ride
+Murphy Blend - I'm Comin' Home
+Murphy Blend - You Mystify
+Murphy Blend - Tool of My Frade
+Murphy Blend - My Heaven
+Murphy Blend - Birdcatcher
+Scorpions - I'm Going Mad
+Scorpions - It All Depends
+Scorpions - Leave Me
+Scorpions - In Search of a Peace of Mind
+Gentle Giant - Excerpts from Octopus: Knots
+Gentle Giant - Excerpts from Octopus: The Boys in the Band
+Gentle Giant - Excerpts from Octopus: Organ Bridge
+Gentle Giant - Excerpts from Octopus: The Advent of Panurge
+Gentle Giant - Just the Same
+Gentle Giant - Free Hand
+Gentle Giant - On Reflection
+Murphy Blend - Praludium / Use Your Feet
+Fruupp - Future Legends
+Fruupp - As Day Breaks With Dawn
+Fruupp - Olde Tyme Future
+Climax Blues Band - Hey Baby, Everything's Gonna Be Alright, Yeh Yeh Yeh
+Climax Blues Band - Cubano Chant
+Climax Blues Band - Little Girl
+Climax Blues Band - Mum's the Word
+Climax Blues Band - Twenty Past Two/Temptation Rag
+Climax Blues Band - City Ways
+Climax Blues Band - Crazy 'Bout My Baby
+Clear Blue Sky - Journey to the Inside of the Sun: a) Sweet Leaf
+Clear Blue Sky - Journey to the Inside of the Sun: b) The Rocket Ride
+Clear Blue Sky - Journey to the Inside of the Sun: c) I'm Comin' Home
+Clear Blue Sky - Tool of My Trade
+Clear Blue Sky - My Heaven
+Clear Blue Sky - Birdcatcher
+Tonton Macoute - Just Like Stone
+Tonton Macoute - Dreams
+Tonton Macoute - You Make My Jelly Roll
+Tonton Macoute - Natural High (part 1)
+Tonton Macoute - Natural High (part 2)
+Yes - That, That Is
+Barclay James Harvest - Loving Is Easy
+Barclay James Harvest - Maestoso (A Hymn in the Roof of the World) (Previous Unreleased)
+Barclay James Harvest - John Lennon's Guitar
+Barclay James Harvest - Medicine Man Pt. 1 & 2 (Live EP Version)
+Richard Wright - Runaway
+Richard Wright - Unfair Ground
+Richard Wright - Satellite
+Richard Wright - Interlude
+Richard Wright - Woman Of Custom
+Richard Wright - Blue Room In Venice
+Richard Wright - Sweet July
+Richard Wright - Along The Shoreline
+Richard Wright - Breakthough
+Free - Over the Green Hills (Part I)
+Free - Worry
+Free - Walk in My Shadow
+Free - Wild Indian Woman
+Free - Goin' Down Slow
+Free - I'm a Mover
+Free - The Hunter
+Free - Sweet Tooth
+Judas Priest - Dreamer Deceiver
+Judas Priest - Deceiver
+Judas Priest - Prelude
+Judas Priest - Tyrant
+Judas Priest - Genocide
+Judas Priest - Epitaph
+Judas Priest - Island of Domination
+Judas Priest - Sinner
+Judas Priest - Diamonds And Rust
+Judas Priest - Starbreaker
+Judas Priest - Last Rose Of Summer
+Judas Priest - Let Us Prey/Call For The Priest
+Judas Priest - Raw Deal
+Judas Priest - Here Come the Tears
+Judas Priest - Dissident Aggressor
+Judas Priest - Race with The Devil
+Judas Priest - Jawbreaker
+Judas Priest - Exciter
+Judas Priest - White Heat, Red Hot
+Judas Priest - Better by You, Better Than Me
+Judas Priest - Stained Class
+Judas Priest - Invader
+Judas Priest - Saints In Hell
+Judas Priest - Savage
+Judas Priest - Heroes End
+Judas Priest - Fire Burns Below
+Toots Thielemans - Comecar De Novo
+The City of Prague Philharmonic Orchestra & The Crouch End Festival Chorus - The Haunting - The History Of Hill House
+John Debney - Setting Sail
+The City of Prague Philharmonic Orchestra - The Outlaw Josey Wales (The War Is Over)
+Bernard Herrmann, Elmer Bernstein - The End
+Popol Vuh (norweski) - For Eternity
+Hawkwind - Seeing It as You Really Are
+Gun - The Sad Saga of the Boy and the Bee
+Justin Hayward & John Lodge - Blue Guitar
+Angelo Badalamenti - Twin Peaks Theme
+Deep Purple - Burn
+Marianne Faithfull - Alabama Song
+Marianne Faithfull - Bilbao Song
+Marianne Faithfull - Pirate Jenny
+Marianne Faithfull - The Ballad of Sexual Dependency
+Gregorio Allegri - Miserere Mei Deus
+Free - Be My Friend
+The Sisters of Mercy - Afterhours
+Pet Shop Boys - Paninaro
+Pet Shop Boys - You Know You Were Wrong
+Pet Shop Boys - A New Life
+Pet Shop Boys - I Want aDog
+Pet Shop Boys - I Get Excited (You Got Excited Too)
+Alphaville - Big in Japan
+Alphaville - Seeds
+Alphaville - Sound's Like a Melody
+Alphaville - The Nelson Highrise (Sector One: The Elevator)
+Alphaville - Welcome to the Sun
+Alphaville - Jet Set
+Alphaville - Golden Feeling
+Alphaville - Forever Young
+Alphaville - Big in Japan (Extended Remix)
+Alphaville - Sounds Like a Melody (Special Long Version)
+Alphaville - The Nelson Highrise (Sector One: The Elevator) (Special Long Version)
+Alphaville - Forever Young (Special Dance Mix)
+Lubomir Brabec - Concierto de Aranjuez
+Alice Cooper - Killer
+Alice Cooper - Second Coming
+Alice Cooper - Ballad of Dwight Fry
+Whispering Colours - Hold Me
+Whispering Colours - City of Lights
+Whispering Colours - Ashes to Ashes
+Dead Can Dance - In Power We Entrust the Love Advocated
+Dead Can Dance - The Fatal Impact
+Dead Can Dance - The Trial
+Dead Can Dance - Frontier
+Dead Can Dance - Fortune
+Dead Can Dance - Ocean
+Dead Can Dance - East of Eden
+Dead Can Dance - Threshold
+Dead Can Dance - A Passage in Time
+Dead Can Dance - Wild in the Woods
+Dead Can Dance - Carnival of Light
+Dead Can Dance - The Arcane
+Dead Can Dance - Flowers of the Sea
+The Legendary Pink Dots - Kingdom of the Flies
+Psyche - Crucible
+The Legendary Pink Dots - Where No Man
+The Westminster Philharmonic Orchestra - The Tomb
+The Westminster Philharmonic Orchestra - The Tomb / The Desert
+The Westminster Philharmonic Orchestra - Quatermass Suite: Death of The Monster
+Tones On Tail - Burning Skies
+Tones On Tail - When You're Smiling
+Tones On Tail - You, The Night And The Music
+Tones On Tail - A Bigger Splash
+Tones On Tail - Means Of Escape
+Tones On Tail - There's Only One
+Tones On Tail - OK, This Is The Pops
+Tones On Tail - Instrumental
+Tones On Tail - Copper
+Tones On Tail - Now We Lustre
+Tones On Tail - Christian Says
+Tones On Tail - War
+Tones On Tail - Performance
+Tones On Tail - GO!
+Tones On Tail - Lions
+Tones On Tail - Movement of Fear
+Tones On Tail - Real Life
+Tones On Tail - Happiness
+Tones On Tail - Slender Fungus
+Tones On Tail - Twist
+Tones On Tail - The Never Never (Is Forever)
+Bauhaus - Paranoia, Paranoia
+Icehouse - Great Southern Land
+Icehouse - Uniform
+Icehouse - Street Café
+Icehouse - Hey, Little Girl
+Icehouse - Glam
+Icehouse - One by One
+Icehouse - Break These Chains
+Icehouse - Mysterious Thing
+Icehouse - Goodnight, Mr. Matthews
+Simple Minds - Theme For Great Cities
+Simple Minds - The American
+Simple Minds - 20th Century Promised Land
+Simple Minds - Wonderful In Young Life
+Simple Minds - League Of Nations
+Simple Minds - Careful In Career
+Simple Minds - Sound In 70 Cities
+Simple Minds - In Trance As Mission
+Simple Minds - Sweat In Bullet
+Simple Minds - Love Song
+Simple Minds - This Earth That You Walk Upon
+Simple Minds - Sons And Fascination
+Simple Minds - Seeing Out The Angel
+Depeche Mode - Route 66 (Beatmasters Mix)
+Depeche Mode - Photographic (Photogenic Remix)
+Depeche Mode - But Not Tonight (Extended Mix)
+Depeche Mode - Never Let Me Down Again (Tsangarides Mix)
+Depeche Mode - Behind the Wheel (Beatmasters Mix)
+Depeche Mode - Route 66 (Casualty Mix)
+Psyche - The Dark Pool
+Psyche - Illusion
+Psyche - Twilight
+Psyche - The Influence
+Psyche - Misery's Return
+Bauhaus - Party Of The First Part
+Bauhaus - Watch That Grandad Go
+Icehouse - Taking the Town
+Icehouse - This Time
+Icehouse - Sidewalk
+Icehouse - Dusty Pages
+Icehouse - On My Mind
+Icehouse - Shot Down
+Icehouse - Mountain
+Uriah Heep - Wonderworld
+Uriah Heep - The Shadows And The Wind
+Uriah Heep - So Tired
+Uriah Heep - The Easy Road
+Uriah Heep - Something Or Nothing
+Uriah Heep - I Won't Mind
+Uriah Heep - We Got We
+Manfred Mann's Earth Band - Circles
+Manfred Mann's Earth Band - Davy's On The Road Again
+Manfred Mann's Earth Band - Martha's Madman
+Dead Can Dance - The Arrival and the Reunion
+Dead Can Dance - Mephisto
+Dead Can Dance - The Song of the Sybil
+Dead Can Dance - Fortune Presents Gifts Not According to the Book
+Dead Can Dance - As the Bell Rings the Maypole Spins
+Dead Can Dance - The End of Words
+Dead Can Dance - Black Sun
+Dead Can Dance - Wilderness
+Dead Can Dance - The Promised Womb
+Dead Can Dance - The Garden of Zephirus
+Dead Can Dance - Radharc
+Peter Hammill - Rock and Rôle
+Peter Hammill - In the End
+Peter Hammill - Dropping the Torch
+Mike Oldfield - Amarok
+Uriah Heep - Sunrise
+Uriah Heep - Spider Woman
+Uriah Heep - Echoes In The Dark
+Uriah Heep - Sweet Lorraine
+Uriah Heep - Tales
+Uriah Heep - Stealin'
+Uriah Heep - One Day
+Uriah Heep - Sweet Freedom
+Uriah Heep - If I Had The Time
+Uriah Heep - Circus
+Fields of the Nephilim - Celebrate
+The Church - Pharaoh
+The Church - Metropolis
+The Church - Terra Nova Cain
+The Church - City
+The Church - Russian Autumn Heart
+The Church - Essence
+The Church - You're Still Beautiful
+The Church - Transient
+The Church - Fading Away
+The Church - Grind
+The Moody Blues - Talking Out Of Turn
+The Moody Blues - Gemini Dream
+The Moody Blues - In My World
+The Moody Blues - Meanwhile
+The Moody Blues - 22,000 Days
+The Moody Blues - Nervous
+The Moody Blues - Painted Smile
+The Moody Blues - Reflective Smile
+The Moody Blues - Veteran Cosmic Rocker
+Ian McCullouch - I Know You Well
+Ian McCullouch - In Bloom
+Ian McCullouch - Start Again
+The Stranglers - Sweet Smell of Success
+The Stranglers - Someone Like You
+The Stranglers - 96 Tears
+The Stranglers - In This Place
+The Stranglers - Let's Celebrate
+The Stranglers - Man of the Earth
+The Stranglers - Too Many Teardrops
+The Stranglers - Where I Live
+The Stranglers - Out of My Mind
+The Stranglers - Never To Look Back
+Free - Travellin in Style
+The Moody Blues - Steppin' In A Slide Zone
+The Moody Blues - Under Moonshine
+The Moody Blues - Had To Fall In Love
+The Moody Blues - I'll Be Level With You
+The Moody Blues - Driftwood
+The Moody Blues - Top Rank Suite
+The Moody Blues - I'm Your Man
+The Moody Blues - Survival
+The Moody Blues - One Step Into The Light
+The Moody Blues - The Day We Meet Again
+Ian McCullouch - The Flickering Wall
+Ian McCullouch - The White Hotel
+Ian McCullouch - Proud To Fall
+Ian McCullouch - The Cape
+Ian McCullouch - Candleland
+Ian McCullouch - Horse's Head
+Ian McCullouch - Faith And Healing
+The Moody Blues - For My Lady
+The Moody Blues - You And Me
+The Moody Blues - When You're A Free Man
+The Moody Blues - I'm Just A Singer (In A Rock And Roll Band)
+Flash & The Pan - Headhunter
+Flash & The Pan - Welcome to the Universe
+Flash & The Pan - Make Your Own Cross
+Flash & The Pan - Lights in the Night
+The Mission - Into The Blue
+The Mission - Sea Of Love
+The Mission - Grapes Of Wrath
+The Mission - Paradise (Will Shine Like The Moon)
+The Mission - Hungry As The Hunter
+The Mission - Lovely
+The Moody Blues - Emily's Song
+The Moody Blues - Nice To Be Here
+Nick Cave & the Bad Seeds - The Mercy Seat
+Nick Cave & the Bad Seeds - Up Jumped the Devil
+Nick Cave & the Bad Seeds - Watching Alice
+Nick Cave & the Bad Seeds - Mercy
+Nick Cave & the Bad Seeds - City of Refuge
+Nick Cave & the Bad Seeds - Slowly Goes the Night
+Nick Cave & the Bad Seeds - Sunday's Slave
+Nick Cave & the Bad Seeds - Sugar Sugar Sugar
+Fish - Big Wedge
+Fish - State of Mind
+Fish - The Voyeur (I Like To Watch)
+Fish - Family Business
+Fish - View From the Hill
+Frank Tovey - '31 Depression Blues
+Frank Tovey - Hard Times In The Cotton Mill
+Frank Tovey - John Henry / Let Your Hammer Ring
+Frank Tovey - The Blantyre Explosion
+Frank Tovey - Money Cravin' Folks
+Frank Tovey - Frank Tovey - All I Got's Gone
+Frank Tovey - Midwife Song
+Frank Tovey - Sam Hall
+Frank Tovey - Dark As A Dungeon
+Frank Tovey - Men Of Good Fortune
+Frank Tovey - Sixteen Tons
+Frank Tovey - North Country Blues
+Frank Tovey - Buffalo Skinners
+Frank Tovey - Black Lung Song
+Frank Tovey - Pastures Of Plenty
+Frank Tovey - Joe Hill
+The Moody Blues - How Is It (We Are Here)
+The Moody Blues - And The Tide Rushes In
+The Moody Blues - Don't You Feel Small
+The Moody Blues - Tortoise And The Hare
+The Moody Blues - It's Up To You
+The Moody Blues - Minstrel's Song
+The Moody Blues - Dawning Is The Day
+The Moody Blues - The Balance
+The Moody Blues - ?
+The Creatures - Morriña
+The Moody Blues - Higher And Higher
+The Moody Blues - Eyes Of A Child, Part 1
+The Moody Blues - Eyes Of A Child, Part 2
+Kate Bush - Love and Anger
+Kate Bush - Reaching Out
+Kate Bush - Heads We're Dancing
+Kate Bush - Deeper Understanding
+Kate Bush - Between a Man and a Woman
+Kate Bush - Never Be Mine
+Kate Bush - Rocket's Tail (For Rocket)
+Kate Bush - This Woman's Work
+The Moody Blues - Fly Me High
+The Moody Blues - I Really Haven't Got The Time
+The Moody Blues - Leave This Man Alone
+The Moody Blues - Love And Beauty
+The Moody Blues - A Simple Game
+The Moody Blues - Gimme' A Little Somethin'
+The Moody Blues - Long Summer Days
+The Moody Blues - Nights In White Satin (wersja singlowa)
+Yes - Circus Of Heaven
+Ultravox - Passionate Reply
+Ultravox - Alles Klar
+Genesis - Looking For Someone
+Genesis - Visions of Angels
+Genesis - Stagnation
+Curved Air - Back Street Luv
+Curved Air - Everdance
+Barclay James Harvest - Waiting on the Border Line
+Barclay James Harvest - How Do You Feel Now
+Barclay James Harvest - Highway for Fools
+Barclay James Harvest - Death of a City
+Barclay James Harvest - I'm Like a Train
+Barclay James Harvest - In Memory of the Martyrs
+Manfred Mann's Earth Band - This Side Of Paradise
+The Breath Of Life - Nightfall
+The Breath Of Life - Hazy Wish
+Bleak - Cold, Black Room
+Love Like Blood - Colours Of Perversity
+Love Like Blood - Life
+Soul Whirling Somewhere - Unhittable
+Ordo Equitum Solis - Message to Pan
+Diary of Dreams - Cold Deceit
+Killing Joke - Millenium
+Killing Joke - Communion
+The Breath Of Life - The Soul
+Czesław Niemen - Bema pamięci rapsod żałobny
+Grand Funk Railroad - Gimme Shelter
+Quicksilver Messenger Service - Long Haired Lady
+Willie Nelson - Bird On A Wire
+Sting, The Chieftains - Sisters Of Mercy
+King Crimson - Larks' Tongues In Aspic Part II
+King Crimson - The Talking Drum
+Elliot Goldenthal - Born to Darkness Part I
+Iron Maiden - Lord of the Flies
+Love Like Blood - Shed Your Skin
+Love Like Blood - Hide
+The Breath Of Life - Noamina
+The Breath Of Life - Into the Flames
+Iron Maiden - 2 A.M.
+Unicorn - Afterglow
+Algebra - Dusk
+Galahad - The Chamber of 32 Doors
+Nostalgia - Am I Very Wrong? A Place To Call My Own
+Mysia - Hairless Heart
+Men Of Lake - Twilight Alehouse
+Legend - The Day The Light Went Out
+Paul Ward - Wot Gorilla?
+Art And Illusion - Lillywhite Lilith
+Clan Of Xymox - Stranger
+Gary Moore - Still Got The Blues
+Fuse - Across The Skies
+Elton John - Someone Saved My Life Tonight
+Galahad - Aries
+Tucky Buzzard - Mistreatin' Woman
+Fish - Incubus
+Fish - Assassing
+Fish - Script for a Jesters Tear
+Fish - Tongues
+Beggar's Opera - MacArthur Park
+Kate Bush - The Handsome Cabin Boy
+Kate Bush - Burning Bridge
+Peter Baumann - Meadow of Infinity (Part 1)
+Peter Baumann - Meadow of Infinity (Part 2)
+The Cassandra Complex - Sophia
+Peter Baumann - The Glass Bridge
+Thomas Dolby - Part One
+James Bernard - The Dracula Suite: Main Theme
+Ed Tomney - Chase
+Iron Maiden - Transylvania
+Trevor Jones - Main Title
+Greg Lake - Parisienne Walkways
+U2 - October
+Vangelis - Riff Thing
+Vangelis - Falcons
+Vangelis - Needles
+Vangelis - Friday Night
+Vangelis - J.F.
+Vangelis - Heavy - Aries - Heaven
+This Mortal Coil - Kangaroo
+This Mortal Coil - Holocaust
+This Mortal Coil - Fyt
+This Mortal Coil - Fond Affections
+This Mortal Coil - The Last Ray
+This Mortal Coil - Another Day
+This Mortal Coil - Waves Become Wings
+This Mortal Coil - Barramundi
+This Mortal Coil - Dreams Made Flesh
+This Mortal Coil - Not Me
+This Mortal Coil - A Single Wish
+Tangerine Dream - Tyger
+Tangerine Dream - London
+Tangerine Dream - Alchemy Of The Heart
+Tangerine Dream - Smile
+Tangerine Dream - 21st Century Common Man (Parts 1 & 2)
+Fancyfluid - The Start
+Fancyfluid - Sitting on the Edge of the River
+Fancyfluid - Lady of the Lake
+Fancyfluid - The Maze
+Fancyfluid - Winter, You've Finally Come
+Fancyfluid - Alchemic
+Fancyfluid - The End
+Chandelier - Start It
+Chandelier - Cuckoo
+Chandelier - Itai
+Visage - She's A Machine
+Ultravox - Man Of Two Worlds
+Patti Smith - Space Monkey
+Patti Smith - Babelogue
+Patti Smith - Rock N Roll Nigger
+Patti Smith - We Three
+Patti Smith - 25th Floor
+Patti Smith - High On Rebellion
+Steve Hackett - Bay of Kings
+Steve Hackett - The Journey
+Steve Hackett - Kim (Re-Arranged Version)
+Steve Hackett - Marigold
+Steve Hackett - St Elmo's Fire
+Peter Gabriel - Floating Dogs
+Peter Gabriel - Quiet and Alone
+Peter Gabriel - Close Up (From Family Snapshot)
+Peter Gabriel - Slow Water
+Peter Gabriel - Dressing the Wound
+Peter Gabriel - Birdy's Flight (From Not One of Us)
+Peter Gabriel - Slow Marimbas
+Peter Gabriel - The Heat (From Rhythm of the Heat)
+Peter Gabriel - Sketch Pad With Trumpet and Voice
+Peter Gabriel - Under Lock and Key (From Wallflower)
+Peter Gabriel - Powerhouse at the Foot of the Mountain (From San Jacinto)
+Peter Gabriel - Big Time (Extended Version)
+Peter Gabriel - Curtains
+Peter Gabriel - Across the River
+Robert Fripp - Preface
+Robert Fripp - You Burn Me Up I'm A Cigarette
+Robert Fripp - Breathless
+Robert Fripp - Disengage
+Robert Fripp - North Star
+Robert Fripp - Chicago
+Robert Fripp - NY3
+Robert Fripp - Mary
+Robert Fripp - Exposure
+Robert Fripp - Häaden Two
+Robert Fripp - Urban Landscape
+Robert Fripp - I May Not Have Had Enough Of Me But I've Had Enough Of You
+Robert Fripp - First Inaugural Address To The I.A.C.E. Sherborne House
+Robert Fripp - Water Music I
+Robert Fripp - Here Comes The Flood
+Robert Fripp - Water Music II
+Robert Fripp - Postscript
+Pendragon - Saved by You
+Pendragon - The Mask
+Pendragon - Time for a Change
+Pendragon - I Walk the Rope
+Pendragon - 2 AM
+Pendragon - Total Recall
+Pendragon - Solid Heart
+Pendragon - Kowtow
+The Moody Blues - The Morning: Another Morning
+The Moody Blues - The Afternoon: Forever Afternoon (Tuesday?)/Time To Get Away
+The Moody Blues - The Night: Nights In White Satin
+Steve Hackett - Petropolis
+Steve Hackett - Second Chance
+Steve Hackett - Cast Adrift
+Steve Hackett - Horizons
+Steve Hackett - Black Light
+Steve Hackett - The Barren Land
+Steve Hackett - Calmaria
+Enya - Aldebaran
+Enya - Triad (St. Patrick/Cú Chulainn/Oisin)
+Enya - Portrait
+Enya - Dan Y Dwr
+IQ - War Heroes
+IQ - Drive On
+IQ - Nostalgia
+IQ - Falling Apart at the Seams
+IQ - Sold on You
+IQ - Through My Fingers
+IQ - Wurensh
+IQ - Nothing at All
+Nick Cave & the Bad Seeds - Foi Na Cruz
+Nick Cave & the Bad Seeds - Sorrow's Child
+Nick Cave & the Bad Seeds - The Hammer Song
+Nick Cave & the Bad Seeds - Lament
+Nick Cave & the Bad Seeds - The Witness Song
+Nick Cave & the Bad Seeds - Lucy
+Justin Hayward - Tight Rope
+John Foxx - When I Was a Man and You Were a Woman
+John Foxx - Pater Noster
+John Foxx - Night Suit
+John Foxx - You Were There
+John Foxx - Fusion/Fission
+John Foxx - Walk Away
+The Cure - The Holy Hour
+The Cure - Primary
+The Cure - The Funeral Party
+The Cure - Doubt
+The Cure - The Drowning Man
+The Cure - Boys Don't Cry
+The Cure - Babble
+Depeche Mode - Just Can't Get Enough (Schizo Mix)
+Depeche Mode - I Sometimes Wish I Was Dead
+Depeche Mode - Boys Say Go!
+Depeche Mode - Dreaming Of Me
+Depeche Mode - Ice Machine
+Depeche Mode - Shout
+Bauhaus - Passion Of Lovers
+Bauhaus - Ear Wax
+Bauhaus - God In An Alcove
+Bauhaus - 1.David Jay 2.Peter Murphy 3.Kevin Haskins 4.Daniel Ash
+Bauhaus - Spy In The Cab
+The Cure - Shake Dog Shake
+The Cure - Give Me It
+The Cure - The Walk
+The Cure - A Forest
+The Cure - 10:15 Saturday Night
+The Cure - Killing an Arab
+Red Box - Amen
+The Cure - Catch
+The Cure - Torture
+The Cure - Why Can't I Be You?
+The Cure - How Beautiful You Are...
+The Cure - The Snakepit
+The Cure - Hey You!!!
+The Cure - Just Like Heaven
+The Cure - All I Want
+The Cure - Like Cockatoos
+Xmal Deutschland - Mondlicht
+Xmal Deutschland - Eiland
+Xmal Deutschland - Reigen
+Xmal Deutschland - Tag Fur Tag
+Xmal Deutschland - Augen Blick
+Xmal Deutschland - Begrab Mein Herz
+Xmal Deutschland - Nachtschatten
+Xmal Deutschland - Xmass In Australia
+Xmal Deutschland - Derwisch
+Xmal Deutschland - Incubus Succubus II
+Xmal Deutschland - Vito
+Xmal Deutschland - Qual
+Xmal Deutschland - Geheimnis
+Xmal Deutschland - Young Man
+Xmal Deutschland - In Der Nacht
+Xmal Deutschland - Orient
+Xmal Deutschland - Hand In Hand
+Xmal Deutschland - Kaempfen
+Xmal Deutschland - Danthem
+Xmal Deutschland - Boomerang
+Xmal Deutschland - Stummes Kind
+Xmal Deutschland - Qual (12" Remix)
+Xmal Deutschland - Zeit
+Xmal Deutschland - Sehnsucht
+Visage - We Move
+The Sisters of Mercy - Black Planet
+The Sisters of Mercy - A Rock And A Hard Place
+The Sisters of Mercy - Marian (Version)
+The Sisters of Mercy - Possession
+The Sisters of Mercy - Logic
+The Sisters of Mercy - Some Kind Of Stranger
+New Model Army - 125 MPH
+Genesis - ‘Unquiet Slumbers for the Sleepers...
+Genesis - ...In That Quiet Earth'
+Laurie Anderson - Sharkey's Day
+Laurie Anderson - Langue D'Amour
+Laurie Anderson - Kokoku
+Laurie Anderson - Excellent Birds
+Laurie Anderson - Blue Lagoon
+Laurie Anderson - Sharkey's Night
+Tony Banks - Short Cut to Somewhere
+Tony Banks - Smilin' Jack Casey
+Tony Banks - Rebirth
+Tony Banks - Gypsy
+Tony Banks - Final Chase
+Tony Banks - You Call This Victory
+Tony Banks - Lion of Symmetry
+Tony Banks - Redwing Suite
+Tony Banks - Redwing
+Tony Banks - Lorca
+Tony Banks - Kid and Detective Droid
+Tony Banks - Lift Off
+Tony Banks - Death of Abby
+Genesis - Land of Confusion (Extended Version)
+Genesis - Feeding the Fire
+Genesis - Do the Neurotic
+Pet Shop Boys - Left to My Own Devices
+Pet Shop Boys - Domino Dancing
+Pet Shop Boys - I'm Not Scared
+Pet Shop Boys - Always on My Mind/In My House
+Pet Shop Boys - It's Alright
+King Crimson - 21st Century Schizoid Man (Including Mirrors)
+King Crimson - Epitaph (Including March for No Reason & Tomorrow and Tomorrow)
+King Crimson - Moonchild (Including the Dream & the Illusion)
+King Crimson - The Court of the Crimson King (Including the Return of the Fire Witch & the Dance of the Puppets)
+King Crimson - Pictures Of A City (Including 42nd At Treadmill)
+King Crimson - Cadence And Cascade
+King Crimson - In The Wake Of Poseidon (Including Libra's Theme)
+King Crimson - Cirkus (Including Entry Of The Chameleons)
+King Crimson - Indoor Games
+King Crimson - Happy Family
+King Crimson - Lady Of The Dancing Water
+Dead Can Dance - Orbis de Ignis
+Dead Can Dance - Severance
+Dead Can Dance - The Writing on My Father's Hand
+Dead Can Dance - In the Kingdom of the Blind the One-eyed Are Kings
+Dead Can Dance - Chant of the Paladin
+Dead Can Dance - Song of Sophia
+Dead Can Dance - Echolalia
+Dead Can Dance - Mother Tongue
+Dead Can Dance - Ullyses
+Yello - Tied Up
+Yello - Of Course I'm Lying
+Yello - 3rd Of June
+Yello - Blazing Saddles
+Yello - The Race
+Yello - Alhambra
+Yello - Otto Di Catania
+Yello - Tied Up In Red
+Yello - Tied Up In Gear
+King Crimson - Formentera Lady
+King Crimson - Sailor's Tale
+King Crimson - The Letters
+King Crimson - Ladies Of The Road
+King Crimson - Prelude: Song Of The Gulls
+New Order - Ceremony
+New Order - Everything's Gone Green
+New Order - Temptation
+New Order - Blue Monday
+New Order - Confusion
+New Order - Thieves Like Us
+New Order - Perfect Kiss
+New Order - Subculture
+Fad Gadget - Pedestrian
+Fad Gadget - State of the Nation
+Fad Gadget - Salt Lake City Sunday
+Fad Gadget - Coitus Interruptus
+Fad Gadget - Fireside Favourite
+Fad Gadget - Newsreel
+Fad Gadget - Insecticide
+Fad Gadget - The Box
+Fad Gadget - Arch of the Aorta
+The Moody Blues - River Of Endless Love
+Bryan Ferry - Limbo
+Bryan Ferry - Kiss & Tell
+Bryan Ferry - New Town
+Bryan Ferry - Day for Night
+Bryan Ferry - Zamba
+Bryan Ferry - The Right Stuff
+Bryan Ferry - Seven Deadly Sins
+Bryan Ferry - The Name of the Game
+Bryan Ferry - Bête Noire
+Genesis - Get 'Em Out by Friday
+The Bolshoi - Auntie Jean
+The Bolshoi - Please
+The Bolshoi - Crack in Smile
+The Bolshoi - Swings and Roundabouts
+The Bolshoi - She Don't Know
+The Bolshoi - T.V. Man
+The Bolshoi - Can You Believe It
+The Bolshoi - Rainy Day
+The Bolshoi - Lindy's Party
+Genesis - Back in N.Y.C.
+Genesis - Carpet Crawl
+Genesis - The Arrival
+Genesis - A Visit to the Doktor
+Genesis - The Raven
+Fad Gadget - Under the Flag I
+Fad Gadget - Scapegoat
+Fad Gadget - Love Parasite
+Fad Gadget - Plainsong
+Fad Gadget - Wheels of Fortune
+Fad Gadget - Life on the Line IV
+Fad Gadget - The Sheep Look Up
+Fad Gadget - Cipher
+Fad Gadget - Under the Flag II
+Fad Gadget - 4M
+The Cure - In Between Days
+The Cure - The Perfect Girl
+U2 - Helter Skelter (Live)
+U2 - Van Diemen's Land
+U2 - Desire
+U2 - Hawkmoon 269
+U2 - All Along The Watchtower (Live)
+U2 - I Still Haven't Found What I'm Looking For (Live)
+Sterling Magee - Freedom For My People
+U2 - Silver And Gold (Live)
+U2 - Pride (In The Name Of Love) (Live)
+U2 - Angel Of Harlem
+U2 - Love Rescue Me
+U2 - When Love Comes To Town
+U2 - Heartland
+U2 - God Part II
+Jimi Hendrix - The Star Spangled Banner
+U2 - Bullet the Blue Sky (Live)
+U2 - All I Want Is You
+U2 - Hallelujah Here She Comes
+U2 - Luminous Times (Hold On To Love)
+U2 - Walk To The Water
+U2 - Spanish Eyes
+U2 - Deep In The Heart
+U2 - Race Against Time
+U2 - Silver And Gold
+U2 - Sweetest Thing
+Peter Gabriel - Sketchpad With Trumpet and Voice
+King Crimson - Peace - The Begining
+King Crimson - Peace - The End
+Talk Talk - Another Word
+Tears For Fears - The Working Hour
+Tears For Fears - Everybody Wants To Rule The World
+Tears For Fears - Mothers Talk
+Tears For Fears - I Believe
+Tears For Fears - Broken
+Tears For Fears - Head Over Heels
+Tears For Fears - Broken (Live)
+Tears For Fears - Listen
+Talk Talk - The Rainbow
+Talk Talk - Eden
+Talk Talk - Desire
+Talk Talk - Inheritance
+Talk Talk - Wealth
+Kate Bush - Delius
+Kate Bush - Blow Away
+Phil Collins - Against All Odds (Take a Look at Me Now)
+Peter Gabriel - Walk Through the Fire
+Roger Waters - Radio Waves
+Roger Waters - Who Needs Information
+Roger Waters - Me Or Him
+Roger Waters - The Powers That Be
+Roger Waters - Sunset Strip
+Roger Waters - Home
+Roger Waters - Four Minutes
+Roger Waters - The Tide Is Turning (After Live Aid)
+Pink Floyd - Painbox
+Pink Floyd - Heart Beat, Pig Meat
+Pink Floyd - Crumbling Land
+Pink Floyd - Come In Number 51, Your Time Is Up
+Genesis - In the Beginning
+Genesis - Fireside Song
+Genesis - In the Wilderness
+Genesis - The Conqueror
+Genesis - In Hiding
+Genesis - One Day
+Genesis - Window
+Genesis - In Limbo
+Genesis - Silent Sun
+Genesis - A Place To Call My Own
+Genesis - The Silent Sun
+Genesis - That's Me
+Genesis - One-Eyed Hound
+Marillion - The Web
+Marillion - Garden Party
+Marillion - Punch & Judy
+Marillion - Pseudo Silk Kimono
+Marillion - Heart of Lothian
+Marillion - Waterhole (Expresso Bongo)
+Marillion - Lords Of The Backstage
+Marillion - Blind Curve
+Marillion - Childhoods End?
+Marillion - White Feather
+Marillion - That Time Of The Night (The Short Straw)
+Peter Gabriel - On the Air
+Peter Gabriel - D.I.Y.
+Peter Gabriel - Mother of Violence
+Peter Gabriel - A Wonderful Day in a One-way World
+Peter Gabriel - White Shadow
+Peter Gabriel - Indigo
+Peter Gabriel - Animal Magic
+Peter Gabriel - Exposure
+Peter Gabriel - Flotsam and Jetsam
+Peter Gabriel - Perspective
+Peter Gabriel - Home Sweet Home
+Peter Gabriel - I Have the Touch
+Peter Gabriel - Sledgehammer
+Peter Gabriel - That Voice Again
+Peter Gabriel - Mercy Street
+Peter Gabriel - Big Time
+Peter Gabriel - We Do What We're Told (Milgram's 37)
+Peter Gabriel - This Is the Picture (Excellent Birds)
+Peter Gabriel - San Jacinto
+Peter Gabriel - The Family and the Fishing Net
+Peter Gabriel - Shock the Monkey
+Peter Gabriel - Lay Your Hands on Me
+Peter Gabriel - Kiss of Life
+Peter Gabriel - Intruder
+Peter Gabriel - No Self Control
+Peter Gabriel - Family Snapshot
+Peter Gabriel - And Through The Wire
+Peter Gabriel - Games Without Frontiers
+Peter Gabriel - Not One of Us
+Peter Gabriel - Lead a Normal Life
+Peter Gabriel - Biko
+Peter Sinfield - Envelopes Of Yesterday
+Peter Sinfield - Still
+Greg Lake - Closer To Believing
+Peter Sinfield - Can You Forgive A Fool
+Peter Sinfield - The Song Of The Sea Goat
+Peter Sinfield - A House Of Hopes And Dreams
+Depeche Mode - Love, In Itself
+Depeche Mode - More Than a Party
+Depeche Mode - Pipeline
+Depeche Mode - Everything Counts
+Depeche Mode - Two Minute Warning
+Depeche Mode - Shame
+Depeche Mode - The Landscape Is Changing
+Depeche Mode - Told You So
+Depeche Mode - And Then...
+Depeche Mode - Everything Counts (Reprise)
+White Door - Love Breakdown
+White Door - Where Do We Go (From Here)
+White Door - School Days
+White Door - Behind The White Door
+White Door - Jerusalem
+White Door - Americana
+White Door - Windows
+White Door - In Heaven
+Dif Juz - Crosswinds
+Dif Juz - A Starting Point
+Dif Juz - Silver Passage
+Dif Juz - The Last Day
+Dif Juz - Love Insane
+Dif Juz - Marooned
+Dif Juz - Two Fine Days (And a Thunderstorm)
+Dif Juz - Echo Wreck
+Dif Juz - Twin and Earth
+Joy Division - Means To An End
+Joy Division - Twenty Four Hours
+The Cure - Heroin Face
+The Cure - Subway Song
+The Cure - At Night
+The Cure - In Your House
+The Cure - All Mine
+The Cure - Forever
+Van Der Graaf Generator - Last Frame
+Depeche Mode - A Photograph of You
+Pet Shop Boys - Two Divided By Zero
+Pet Shop Boys - West End Girls
+Pet Shop Boys - Opportunities (Let's Make Lots Of Money)
+Pet Shop Boys - Love Comes Quickly
+Pet Shop Boys - Suburbia
+Pet Shop Boys - Opportunities (Reprise)
+Pet Shop Boys - Tonight Is Forever
+Pet Shop Boys - Violence
+Pet Shop Boys - I Want A Lover
+Pet Shop Boys - Later Tonight
+Pet Shop Boys - Why Don't We Live Together
+Depeche Mode - Black Celebration
+Depeche Mode - A Question of Lust
+Depeche Mode - Sometimes
+Depeche Mode - It Doesn't Matter Two
+Depeche Mode - A Question of Time
+Depeche Mode - Stripped
+Depeche Mode - Here Is the House
+Depeche Mode - World Full of Nothing
+Depeche Mode - Dressed in Black
+Depeche Mode - New Dress
+Depeche Mode - Breathing in Fumes
+Depeche Mode - But Not Tonight (Extended Remix)
+Depeche Mode - Black Day
+Kate Bush - ???
+Laurie Anderson - From the Air
+Laurie Anderson - Sweaters
+Laurie Anderson - Walking & Falling
+Laurie Anderson - Born, Never Asked
+Laurie Anderson - O Superman (For Massenet)
+Laurie Anderson - Example #22
+Laurie Anderson - Let X=X
+Laurie Anderson - It Tango
+Kate Bush - Lord of the Reedy River
+Kate Bush - Dreamtime (Instrumental Version)
+The Cure - A Reflection
+The Cure - Play for Today
+The Cure - Secrets
+The Cure - Three
+The Cure - The Final Sound
+The Cure - M
+The Cure - Seventeen Seconds
+Richard Wright - Mediterranean C
+Richard Wright - Cat Cruise
+Richard Wright - Summer Elegy
+Richard Wright - Waves
+Richard Wright - Holiday
+Richard Wright - Mad Yannis Dance
+Richard Wright - Drop In From The Top
+Richard Wright - Pink's Song
+Richard Wright - Funky Deux
+Pink Floyd - Pigs On The Wing (Part One)
+Pink Floyd - Pigs On The Wing (Part Two)
+Ultravox - Monument
+Ultravox - The Voice
+Ultravox - Man Of Two Worlds (Instrumental)
+Ultravox - The Prize (Live)
+Ultravox - Stateless
+Visage - Fade To Gray
+The Icicle Works - High Time
+Howard Jones - Hide and Seek
+The Expression - Glasshouse
+Fad Gadget - Blind Eyes
+Fad Gadget - Swallow It
+Fad Gadget - Saturday Night Special
+Fad Gadget - Incontinent
+Fad Gadget - Manual Dexterity
+Fad Gadget - Innocent Bystander
+Fad Gadget - King of the Flies
+Fad Gadget - Diminished Responsibility
+Fad Gadget - Plain Clothes
+Big Country - The Teacher
+Nick Cave & the Bad Seeds - Muddy Water
+Nick Cave & the Bad Seeds - Something's Gotten Hold of My Heart
+Ultravox - The Thin Wall
+Marillion - The Party
+Marillion - Waiting To Happen
+Rise And Fall Of A Decade - The Man Who Wanted To Catch the Wind
+Tony Banks - Another Murder of a Day
+OMD - The Romance Of The Telescope
+Moev - The Sentencing
+Camouflage - Dad
+Depeche Mode - Somebody (Live)
+Depeche Mode - Two Minute Warning (Live)
+Depeche Mode - Ice Machine (Live)
+Depeche Mode - Everything Counts (Live)
+Depeche Mode - Shake the Disease (Edit The Shake)
+Depeche Mode - Master and Servant (Live)
+Depeche Mode - Flexible (Pre-deportation Mix)
+Depeche Mode - Something To Do (Metalmix)
+The Legendary Pink Dots - Hotel Noir
+The Legendary Pink Dots - The Wedding
+Bazooka Joe - Soldiers' Song (Parts 1 & 2)
+Julee Cruise - Mysteries of Love
+Ritchie Blackmore's Rainbow - Ariel
+David Bowie - Leon Takes Us Outside
+David Bowie - Outside
+David Bowie - The Motel
+The Breath Of Life - Impromptu
+David Bowie - This Is Not America
+David Bowie - Future Legend
+David Bowie - Diamond Dogs
+David Bowie - Sweet Thing
+David Bowie - Candidate
+Dawid Bowie - Sweet Thing (Reprise)
+David Bowie - Rebel Rebel
+David Bowie - Rock 'n Roll With Me
+David Bowie - We Are the Dead
+David Bowie - Big Brother
+David Bowie - Chant of the Ever Circling Skeletal Family
+Marillion - Seasons End
+Love Like Blood - Night Is Young
+Beggars Opera - Raymond's Road
+Omega - Tízezer Lépés
+Queen - In The Lap Of The Gods
+Queen - Stone Cold Crazy
+Queen - She Makes Me (Stormtrooper In Stilettoes)
+Queen - In The Lap Of The Gods... Revisited
+Peter Murphy - The Scarlet Thing In You
+The Who - I Am The Sea
+The Who - The Real Me
+The Who - Quadrophenia
+The Who - Cut My Hair
+The Who - I'm One
+The Who - I've Had Enough
+The Who - Doctor Jimmy
+The Who - The Rock
+The Beatles - Free As A Bird
+Albion - Shadow
+Albion - Jeszcze śmierć chowam w kieszeń
+The Gathering - Mandylion
+The Gathering - Sand And Mercury (urwany)
+Tindersticks - Tiny Tears
+The Moody Blues - Rock 'N' Roll Over You
+The Moody Blues - The Other Side Of Live
+John Lennon - One Day (At A Time)
+John Lennon - Bring On The Lucie (Freda Peeple)
+The Gathering - Eleanor
+The Gathering - In Motion # 2
+Tindersticks - Talk To Me
+The Moody Blues - I'm Just A Singer (In A Rock N'Roll Band)
+Omega - Syn marnotrawny (Tékozló fiúk)
+Omega - ???
+Omega - Noc na drodze
+Omega - Na placu lub na ulicy
+Rick Wakeman - ???
+Rick Wakeman - Anne Boleyn 'The Day Thou Gavest Lord Hath Ended'
+Donovan - Catch The Wind
+Donovan - The Little Tin Soldier
+Donovan - Hampstead Incident
+Donovan - Jennifer Juniper
+Donovan - Young Girl Blues
+Donovan - Sleep
+Donovan - The Music Makers
+Donovan - I Like You
+Donovan - Celeste
+Siglo XX - Answer
+Donovan - Wild Witch Lady
+Porcupine Tree - The Sky Moves Sideways (Phase One)
+Porcupine Tree - The Sky Moves Sideways (Phase Two)
+Greg Lake - Fanfare For the Common Man
+Greg Lake - Karn Evil 9/Nuclear Attack
+Greg Lake - The Lie
+Greg Lake - Retribution Drive
+Greg Lake - Lucky Man
+Greg Lake - 21st Century Schizoid man
+Greg Lake - In the Court of the Crimson King
+Donovan - Donna Donna
+Donovan - Hurdy Gurdy Man
+Donovan - Season Of The Witch
+Donovan - Lalena
+Donovan - Three King Fishers
+Donovan - Guinevere
+Donovan - Tangier
+Donovan - Epistle To Derroll
+Donovan - Gold Watch Blues
+Donovan - Superlungs My Supergirl
+Procol Harum - Conquistador (brak)
+Deyss - Untouchable Ghost (brak)
+Kasia Kowalska - A to co mam...
+Love Like Blood - Lost
+Love Like Blood - Lethal Radiation
+The Breath Of Life - Echo
+Diary of Dreams - The Stranger Remains
+Diary of Dreams - False Affection, False Creation
+Children Of No Return and The Beakerman - Man In The Moon (Unreleased Version)
+Queen - Procession
+Queen - Father To Son
+Queen - Ogre Battle
+Queen - The Fairy Feller's Master-Stroke
+Queen - Nevermore
+Queen - The March Of The Black Queen
+Queen - Funny How Love Is
+Iron Butterfly - Iron Butterfly Theme
+Iron Butterfly - Possession
+Iron Butterfly - Stone Believer
+Peter Murphy - Subway
+Tom Jones - Thunderball
+Dionne Warwick - Kiss Kiss Bang Bang
+Nancy Sinatra - You Only Live Twice - You Only Live Twice (James Bond) (1967)
+John Barry - The Wedding - You Only Live Twice (James Bond) (1967)
+John Barry - Bond Averts World War Three - You Only Live Twice (James Bond) (1967)
+Louis Armstrong- We Have All The Time In The World - On Her Majesty's Secret Service (James Bond) (1969)
+The Garden Of Delight - Transcendental
+The Garden Of Delight - Black Magic Circle (Ordo Templi Orientis) - Parts 1-3
+The Garden Of Delight - Symbol And Vision
+Colosseum - Theme for an Imaginary Western
+Depeche Mode - See You
+Depeche Mode - Leave in Silence
+Depeche Mode - Get the Balance Right
+John Foxx - Stars on Fire
+John Foxx - City of Light
+John Foxx - What Kind of Girl
+Ultravox - One Small Day
+Ultravox - Lament
+Ultravox - White China (Special Mix)
+Ultravox - One Small Day (Extended Mix)
+Ultravox - Heart Of The Country
+Ultravox - When The Time Comes
+Ultravox - A Friend I Call Desire
+Midge Ure - Answers To Nothing
+Midge Ure - Take Me Home
+Midge Ure - Sister And Brother
+Midge Ure - Dear God
+Midge Ure - The Leaving (So Long)
+Midge Ure - Hell To Heaven
+Midge Ure - Lied
+Midge Ure - Homeland
+Midge Ure - Remembrance Day
+Joy Division - Autosugestion
+Roger Waters - 4:33 AM (Running Shoes)
+Roger Waters - 4:37 AM (Arabs With Knives and West German Skies)
+Roger Waters - 4:41 AM (Sexual Revolution)
+Roger Waters - 4:47 AM (The Remains Of Our Love)
+Roger Waters - 4:50 AM (Go Fishing)
+Roger Waters - 4:58 AM (Dunroamin, Duncarin, Dunlivin)
+Roger Waters - 5:01 AM (The Pros And Cons Of Hitch Hiking Part 10)
+Roger Waters - 5:06 AM (Every Strangers Eyes)
+Roger Waters - 5:11 AM (The Moment Of Clarity)
+IQ - No Love Lost
+IQ - Nomzamo
+IQ - Still Life
+IQ - Passing Strangers
+IQ - Human Nature
+IQ - Screaming
+U2 - A Sort Of Homecoming
+U2 - Pride (In The Name Of Love)
+U2 - Wire
+U2 - The Unforgettable Fire
+U2 - Promenade
+U2 - 4th Of July
+U2 - Bad
+U2 - Indian Summer Sky
+U2 - Elvis Presley And America
+U2 - MLK
+Yazoo - Nobody's Diary
+Yazoo - Softly Over
+Yazoo - Sweet Thing
+Yazoo - Mr. Blue
+Yazoo - Good Times
+Yazoo - Walk Away From Love
+Yazoo - Ode To Boy
+Yazoo - Unmarked
+Yazoo - Anyone
+Yazoo - Happy People
+Yazoo - And On
+Simon & Garfunkel - Seven O'Clock News / Silent Night
+Pet Shop Boys - It's A Sin (Remix)
+Pet Shop Boys with Dusty Springfield - What Have I Done To Deserve This? (Extended Mix)
+Pet Shop Boys - You Know Where You Went Wrong (Rough Mix)
+Pet Shop Boys - Rent (Extended Mix)
+Kim Wilde - You Keep Me Hangin' On
+Kim Wilde - Hit Him
+Kim Wilde - Another Step (Closer To You)
+Kim Wilde - The Thrill Of It
+Kim Wilde - I've Got So Much Love
+Kim Wilde - Victim
+Kim Wilde - Schoolgirl
+Kim Wilde - Say You Really Want Me
+Kim Wilde - She Hasn't Got Time For You
+Kim Wilde - Brothers
+Kim Wilde - Missing
+Kim Wilde - How Do You Want My Love
+Kim Wilde - Don't Say Nothing's Changed
+Pet Shop Boys - In The Night (Extended Mix)
+Pet Shop Boys - Suburbia (The Full Horror)
+Pet Shop Boys - Opportunities (Version Latina)
+Pet Shop Boys - Paninaro (Italian Remix)
+Pet Shop Boys - Love Comes Quickly (Shep Pettibone Mastermix)
+Pet Shop Boys - West End Girls (Disco Mix)
+Marc Almond - The Stars We Are
+Marc Almond - These My Dreams Are Yours
+Marc Almond - Bitter Sweet
+Marc Almond - Only the Moment
+Marc Almond - The Very Last Pearl
+Marc Almond - Tears Run Rings
+Marc Almond - Something's Gotten Hold of My Heart
+Marc Almond - The Sensualist
+Marc Almond - She Took My Soul in Istanbul
+Marc Almond - The Frost Comes Tomorrow
+Marc Almond - Kept Boy
+Marc Almond - Shining Sinners
+Marc Almond - Hell Was a City
+Marc Almond - You Have
+Marc Almond - Crime Sublime
+Marc Almond - Gutter Hearts
+Marc Almond - Ugly Head
+Marc Almond - The Boy Who Came Back
+Marc Almond - Solo Adultos
+Marc Almond - Love for Sale
+Marc Almond - Traumas Traumas Traumas
+Marc Almond - The Flesh Is Willing
+Marc Almond - Stories of Johnny (With The Westminster City School Choir)
+Marc Almond - Love Letter (With The Westminster City School Choir)
+Little Nemo - Fear in Colour
+Don Henley - Everybody Knows
+Pendragon - Excalibur
+Chandelier - Jericha
+IQ - Promises (As the Years Go By)
+Pendragon - Please (For Louise)
+Sting And Gil Evans - Introduction Of The Band
+Sting And Gil Evans - Consider Me Gone
+Sting And Gil Evans - Murder By Numbers
+Sting And Gil Evans - Roxanne
+Sting And Gil Evans - Tea In The Sahara
+James Taylor - Sun on the Moon
+James Taylor - Up on the Roof
+James Taylor - Don't Let Me Be Lonely Tonight
+The Chieftains with Van Morrison - Have I Told You Lately That I Love You?
+The Moody Blues - The Story In Your Eyes (Live)
+The Moody Blues - Voices In The Sky (Live)
+The Moody Blues - New Horizons (Live)
+The Moody Blues - Emily's Song (Live)
+The Moody Blues - Bless The Wings (That Bring You Back) (Live)
+The Moody Blues - Say It With Love (Live)
+The Moody Blues - Legend Of A Mind (Live)
+The Moody Blues - Gemini Dream (Live)
+The Pasadenas - Moving in the Right Direction
+The Pasadenas - Tribute (Right On)
+Candy Dulfer - 2025
+Sergio Mendes & Brasil '66 - Fool on the Hill
+Marek Grechuta - Ocalić od zapomnienia
+Casablanca (1942) - Casablanca Theme
+Casablanca (1942) - Komentarz Tomasza/Casablanca Theme
+Prince - Lovesexy
+Kylie Minogue - Je Ne Sais Pas Pourquoi
+Sinéad O'Connor - Drink Before The War
+Kim Wilde - You Came
+Psyche - Speak Tex Program
+Breathless - ?
+King Crimson - Improv - Bartley Butsford
+King Crimson - Improv - Daniel Dust
+King Crimson - Improv - A Voyage To The Centre Of The Cosmos
+King Crimson - Fracture (niekompletny)
+Eloy - nagranie z pierwszej płyty
+Roger Waters - What God Wants, Part I
+Roger Waters - Perfect Sense, Part I
+Roger Waters - Perfect Sense, Part II
+Roger Waters - The Bravery of Being Out of Range
+Roger Waters - Too Much Rope
+Roger Waters - What God Wants, Part II
+Roger Waters - What God Wants, Part III
+Roger Waters - Three Wishes
+Simple Minds - 70 Cities As Love Brings The Fall
+The Creatures - Standing There
+The Creatures - Manchild
+The Creatures - You!
+The Creatures - Pity
+The Creatures - Killing Time
+The Creatures - Willow
+The Creatures - Pluto Drive
+The Creatures - Fury Eyes
+The Creatures - Fruitman
+The Creatures - Untiedundone
+The Creatures - Simoom
+The Creatures - Strolling Wolf
+The Creatures - Venus Sands
+Arcadia - Election Day
+Arcadia - Keep Me in the Dark
+Arcadia - Goodbye Is Forever
+Arcadia - The Flame
+Arcadia - Missing
+Arcadia - Rose Arcana
+Arcadia - The Promise
+Kim Wilde - Water On Glass
+Kim Wilde - Our Town
+Kim Wilde - Everything We Know
+Kim Wilde - Young Heroes
+Kim Wilde - Kids In America
+Kim Wilde - Chequered Love
+Kim Wilde - 2-6-5-8-0
+Kim Wilde - You'll Never Be So Wrong
+Kim Wilde - Falling Out
+Kim Wilde - Tuning In Tuning On
+Depeche Mode - Excerpt From: My Secret Garden
+Ulravox - Astradyne
+John Foxx - Glimmer
+John Foxx - Mr. No
+Midge Ure - The Gift (Instrumental)
+John Foxx - Swimmer II
+Visage - The Damned Don't Cry
+Visage - Anvil (Night Club School)
+Visage - Move Up
+Visage - Night Train
+Visage - The Horseman
+Visage - Look What They've Done
+Visage - Again We Love
+Visage - Wild Life
+Visage - Whispers
+Duran Duran - Rio
+Duran Duran - Last Chance on the Stairway
+Duran Duran - The Chauffeur
+Duran Duran - Is There Something I Should Know
+Duran Duran - To the Shore
+Marillion - Garden Party (Full Version)
+Marillion - Charting The Single (Live)
+Marillion - Margaret (Live) (Full Version)
+Kate Bush - A Dream of Sheep
+The Alan Parsons Project - Genesis Ch.1, V.32
+Duran Duran - Notorious
+Duran Duran - American Science
+Duran Duran - Skin Trade
+Duran Duran - A Matter of Feeling
+Duran Duran - Hold Me
+Duran Duran - Vertigo (Do the Demolition)
+Duran Duran - So Misled
+Duran Duran - Winter Marches On
+Duran Duran - Proposition
+Kate Bush - Moving
+Kate Bush - The Saxophone Song
+Kate Bush - Strange Phenomena
+Kate Bush - Kite
+Kate Bush - Feel It
+Kate Bush - Oh To Be in Love
+Kate Bush - Room for the Life
+Kate Bush - The Kick Inside
+Marillion - Lady Nina (Extended Version)
+Gary Numan - Berserker
+Gary Numan - This Is New Love
+Gary Numan - The Secret
+Gary Numan - My Dying Machine
+Gary Numan - Pump It Up
+Gary Numan - The God Film
+Gary Numan - A Child With The Ghost
+Gary Numan - The Hunter
+The Twins - Love System
+The Twins - Ballet Dancer
+The Twins - A Wild Romance
+The Twins - Private Eye
+The Twins - Facts Of Love
+The Twins - Criminal Love
+The Twins - Not The Loving Kind
+The Twins - Must Have Her Back
+The Twins - Why Don't You
+The Twins - Men Of Destiny
+The Twins - Between The Woman And You
+John Foxx - My Wild Love
+John Foxx - Someone
+John Foxx - Your Dress
+John Foxx - Running Across Thin Ice With Tigers
+John Foxx - Sitting at the Edge of the World
+John Foxx - Endlessly
+John Foxx - Ghosts on Water
+John Foxx - Like a Miracle
+John Foxx - The Hidden Man
+Barclay James Harvest - Spirit on the Water
+The Sisters of Mercy - Lucretia My Reflection
+The Sisters of Mercy - Never Land (A Fragment)
+Pink Floyd - The Gunners Dream
+Pink Floyd - Shine On You Crazy Diamond (Part One)
+Pink Floyd - Shine On You Crazy Diamond (Part Two)
+Mike Rutherford - Time and Time Again
+Jon & Vangelis - Each And Everyday
+Jon & Vangelis - Bird Song
+Joy Division - The Eternal
+Grace Slick - El Diablo
+Anthony Phillips - April
+Eyeless in Gaza - Lights of April
+Elton John - Don't Let the Sun Go Down on Me (Live) (brak)
+Van Der Graaf Generator - Masks
+Anthony Phillips - March
+Rush - Tai Shan
+Mike Oldfield - Pran's Theme
+Camel - Stationary Traveller i komentarz Tomasza
+Mike Oldfield - Pran's Departure i komentarz Tomasza
+Propaganda - ???
+The Alan Parsons Project - The Fall of the House of Usher: Arrival
+The Alan Parsons Project - The Fall of the House of Usher: Intermezzo
+The Alan Parsons Project - The Fall of the House of Usher: Pavane
+The Alan Parsons Project - The Fall of the House of Usher: Fall
+Propaganda - A Dream Within A Dream
+Peter Hammill - (On Tuesdays She Used To Do) Yoga
+David Gilmour - Mihalis
+David Gilmour - There's No Way Out Of Here
+David Gilmour - Cry From The Street
+David Gilmour - So Far Away
+David Gilmour - Short And Sweet
+David Gilmour - Raise My Rent
+David Gilmour - No Way
+David Gilmour - Deafinitely
+David Gilmour - I Can't Breathe Anymore
+Roger Waters - Apparently They Were Traveling Abroad
+Roger Waters - Running Shoes
+Roger Waters - Arabs With Knives And West German Skies
+Roger Waters - Sexual Revolution
+Roger Waters - The Remains Of Our Love
+Roger Waters - Go Fishing
+Roger Waters - Dunroamin, Duncarin, Dunlivin
+Roger Waters - Every Strangers Eyes
+Roger Waters - The Moment Of Clarity
+Midge Ure - Edo
+This Mortal Coil - It'll End in Tears
+Roxy Music - Strictly Confidential
+The Sisters of Mercy - Lucretia My Reflection (Extended Version)
+The Sisters of Mercy - Long Train (1984)
+Marillion - The King Of Sunset Town
+Marillion - Easter
+Marillion - The Uninvited Guest
+Marillion - Berlin
+Marillion - After Me
+Marillion - Hooks In You
+Marillion - The Space
+OMD - So In Love
+OMD - Secret
+OMD - Bloc Bloc Bloc
+OMD - Women III
+OMD - 88 Seconds In Greensboro
+OMD - The Native Daughters Of The Golden West
+OMD - La Femme Accident
+OMD - Hold You
+OMD - The Lights Are Going Out
+Kate Bush - Running up That Hill (Extended Version)
+Kate Bush - Under the Ivy
+Kate Bush - Running up That Hill (Instrumental)
+Clannad - Caislean Õir
+Clannad - The Wild Cry
+Clannad - Closer To Your Heart
+Clannad - In A Lifetime
+Clannad - Almost Seems (Too Late To Turn)
+Clannad - Indoor
+Clannad - Buachaill On Eirne
+Clannad - Blackstairs
+Clannad - Journey's End
+Clannad - Northern Skyline
+New Model Army - Sleepwalking (Instrumental)
+Barclay James Harvest - Knoydart
+Hawkwind - Opa-Loka
+Hawkwind - Tides
+Al Stewart - Lord Grenville
+Al Stewart - Midas Shadow
+Al Stewart - Sand In Your Shoes
+Al Stewart - If It Doesn't Come Naturally, Leave It
+Al Stewart - Flying Sorcery
+Al Stewart - Broadway Hotel
+Al Stewart - One Stage Before
+Roger Waters - 4:30 AM (Apparently They Were Travelling Abroad)
+Ultravox - Someone Elses Clothes
+The Cure - Untitled
+The Cure - Out of Mind
+The Cure - Lullaby (Ext Remix)
+Depeche Mode - My Secret Garden
+Depeche Mode - Monument
+Depeche Mode - Nothing to Fear
+Depeche Mode - Satellite
+Depeche Mode - The Meaning of Love
+The Merry Thoughts - Success (Demoversion)
+Brian May - Vampire Ceremony
+Brian May - Initiation Ritual
+Yello - Koladi-ola
+Clannad - Robin (The Hooded Man)
+Clannad - Now Is Here
+Clannad - Herne
+Clannad - Together We
+Clannad - Darkmere
+Clannad - Strange Land
+Clannad - Scarlet Inside
+Clannad - Lady Marian
+Clannad - Battles
+Clannad - Ancient Forest
+Pet Shop Boys with Dusty Springfield - What Have I Done To Deserve This? (Disco Mix)
+David Bowie - I'm Deranged (Reprise)
+David Bowie - I'm Deranged (Edit)
+Howard Jones - Conditioning
+Howard Jones - What Is Love?
+Howard Jones - Pearl in the Shell
+Howard Jones - Hunt the Self
+Howard Jones - New Song
+Howard Jones - Don't Always Look at the Rain
+Howard Jones - Equality
+Howard Jones - Natural
+Howard Jones - Human's Lib.
+Skaldowie - Krywaniu, Krywaniu mój ty wysoki (Krywań You High Mountain)
+Skaldowie - Góral (The Highlander)
+Skaldowie - Jeśli kochasz (If You Love)
+Skaldowie - Gdzie mam ciebie szukać (Where Am I To Look For You)
+Skaldowie - Juhas zmarł (A Young Shepherd Has Died)
+Skaldowie - Krywań, Krywań (Krywań Mountain)
+Skaldowie - Heidelbeeren (Bilberries)
+Mike Rutherford - Between the Tick & the Tock
+Mike Rutherford - Working in Line
+Mike Rutherford - After Hours
+Mike Rutherford - Cats and Rats (In This Neighbourhood)
+Mike Rutherford - Smallcreep Alone
+Mike Rutherford - Out Into the Daylight
+Mike Rutherford - At the End of the Day
+Mike Rutherford - Romani
+Mike Rutherford - Every Road
+Mike Rutherford - Overnight Job
+Mike Rutherford - Moonshine
+Grace Slick - Face to the Wind
+Grace Slick - Angel of Night
+Grace Slick - Do It the Hard Way
+Grace Slick - Full Moon Man
+Grace Slick - Let It Go
+Grace Slick - Garden of Man
+Grace Slick - Dreams
+Grace Slick - Seasons
+Eyeless in Gaza - Transience Blues
+Eyeless in Gaza - Ill-Wind Blows
+Eyeless in Gaza - Picture the Day
+Eyeless in Gaza - Dreaming at Rain
+Eyeless in Gaza - Two
+Eyeless in Gaza - Veil Like Calm
+Eyeless in Gaza - Throw a Shadow
+Eyeless in Gaza - Pencil Sketch
+Eyeless in Gaza - At Arms Length
+Eyeless in Gaza - Before You Go
+Eyeless in Gaza - One by One
+Atomic Rooster - Decision/Indecision
+Atomic Rooster - A Spoonful of Bromide Helps the Pulse Rate Go Down
+Atomic Rooster - Black Snake
+Atomic Rooster - Head in the Sky
+Atomic Rooster - The Price
+Atomic Rooster - The Rock
+Alice Cooper - Big Apple Dreamin' (Hippo)
+Alice Cooper - Never Been Sold Before
+Alice Cooper - Hard Hearted Alice
+Alice Cooper - Crazy Little Child
+Alice Cooper - Working up a Sweat
+Alice Cooper - Muscle of Love
+Alice Cooper - Woman Machine
+Justin Hayward & Mike Batt - The Tracks of My Tears
+Justin Hayward & Mike Batt - Bright Eyes
+Justin Hayward & Mike Batt - Man of the World
+Justin Hayward & Mike Batt - As Long as the Moon Can Shine
+Justin Hayward & Mike Batt - Blackbird
+Justin Hayward & Mike Batt - God Only Knows
+Justin Hayward & Mike Batt - Scarborough Fair
+Justin Hayward & Mike Batt - Forever Autumn
+Justin Hayward & Mike Batt - Stairway to Heaven
+Peter Baumann - Bicentennial Present
+Peter Baumann - Romance
+Peter Baumann - Phase by Phase
+Beggar's Opera - Hobo
+Beggar's Opera - From Shark to Haggis
+Beggar's Opera - Stretcher
+Beggar's Opera - Madame Doubtfire
+Anderson Bruford Wakeman Howe - Benjamin Brittens Young Persons Guide to the Orchestra
+Anderson Bruford Wakeman Howe - Time and a Word / Teakbois / Owner of a Lonely Heart
+Anderson Bruford Wakeman Howe - The Clap / Mood for a Day
+Anderson Bruford Wakeman Howe - Gone But Not Forgotten / Catherine Parr / Merlin The Magician
+Anderson Bruford Wakeman Howe - Long Distance Runaround
+Anderson Bruford Wakeman Howe - Birthright
+Anderson Bruford Wakeman Howe - Close to the Edge
+Anderson Bruford Wakeman Howe - Themes
+Anderson Bruford Wakeman Howe - Brother of Mine
+Anderson Bruford Wakeman Howe - Heart of the Sunrise
+Anderson Bruford Wakeman Howe - Order of the Universe
+Anderson Bruford Wakeman Howe - Roundabout
+Änglagård - Kung Bore
+Änglagård - Vandringar i vilsenhet
+Änglagård - Ifrån klarhet till klarhet
+Änglagård - Prolog
+Änglagård - Rösten
+Änglagård - Sista somrar
+Änglagård - Saknadens fullhet
+Aphrodite's Child - Don't Try To Catch a River
+Aphrodite's Child - Mister Thomas
+Aphrodite's Child - Rain and Tears
+Aphrodite's Child - The Grass Is No Green
+Aphrodite's Child - Valley of Sadness
+Aphrodite's Child - You Always Stand in My Way
+Aphrodite's Child - The Shepherd and the Moon
+Aphrodite's Child - Day of the Fool
+Aragon - The Chant
+Aragon - Tugging at Heartstrings
+Aragon - Midsummer's Night Dream
+Aragon - On the Edge
+Aragon - Ghosts (Studio)
+Aragon - Secrets
+Aragon - Touch
+Aragon - Changes
+Aragon - Ghost (Live)
+Arvo Pärt - Psalom
+Arvo Pärt - Trisagion
+Asgard - Wulfstan
+Asgard - Olaf Stonehand
+Asgard - The Squirrel
+Asgard - The Lords of the Mountain
+Asgard - Justice - Land of the Silver Drakkar
+Asgard - Violence 1- Land of Brutality
+Asgard - Violence 2 - Land of Ulfhedwar and Berserkir
+Asgard - Virtue - Land of the Eternal Snows
+Asgard - Fortitude - Land of the Waves
+Asgard - Serenity - Land of the Green and Flowers
+Asgard - Disharmony - Land of the Chasms
+Asgard - Courage - Land of the Dark Wood
+Asgard - Nobility - Land of the Borealis Auroras
+Arena - Crying for Help I
+Arena - Crying for Help II
+Arena - Crying for Help III
+Arena - Midas Vision
+Arena - Crying for Help V
+Arena - Crying for Help VI
+Arena - Crying for Help VII
+Arena - Medusa
+Aunt Mary - Joinin' the Crowd
+Aunt Mary - Delight
+Aunt Mary - Upside Down
+Aunt Mary - Farewell My Friend Pt. 1
+Aunt Mary - Farewell My Friend Pt. 2
+Aunt Mary - Fire of My Lifetime
+AC/DC - Let There Be Rock
+AC/DC - Whole Lotta Rosie
+AC/DC - Girls Got Rhythm
+AC/DC - Highway to Hell
+Kevin Ayers - Day by Day
+Kevin Ayers - See You Later / Didn't Feel Lonely Till I Thought of You
+Kevin Ayers - Everybody's Sometime and Some People's All the Time Blues
+Kevin Ayers - It Begins With a Blessing
+Kevin Ayers - Once I Awakened / But It Ends With a Curse
+Kevin Ayers - Ballbearing Blues
+Kevin Ayers - Two Goes Into Four
+Kevin Ayers - The Confession of Doctor Dream: a. Irreversible Neural Damage
+Kevin Ayers - The Confession of Doctor Dream: b. Invitation
+Kevin Ayers - The Confession of Doctor Dream: c. The One Chance Dance
+Kevin Ayers - The Confession of Doctor Dream: d. Doctor Dream Theme
+Asia - Don't Cry
+Asia - The Smile Has Left Your Eyes
+Asia - My Own Time (I'll Do What I Want)
+Asia - The Heat Goes On
+Asia - Eye To Eye
+Asia - The Last To Know
+Asia - True Colors
+Asia - Midnight Sun
+Asia - Open Your Eyes
+Asia - Aqua Part 1
+Asia - Who Will Stop the Rain?
+Asia - Back in Town
+Asia - Love Under Fire
+Asia - Little Rich Boy
+Asia - The Voice of Reason
+Asia - Lay Down Your Arms
+Asia - Crime of the Heart
+Asia - A Far Cry
+Asia - Don't Call Me
+Asia - Heaven on Earth
+Asia - Aqua Part 2
+Asia - Someday
+Babel 17 - Angels of T.V
+Babel 17 - Darkest Years
+Babel 17 - A Journey Inside
+Babel 17 - New Age
+Babel 17 - All Saint's Day
+Babel 17 - Sordid Waste
+Babel 17 - Le Mondexterieur
+Babel 17 - Wizards & Ghosts
+Babel 17 - Broceliande
+Babel 17 - Dá-Ye
+Babel 17 - Mehaddah
+Babel 17 - Querhell
+Babel 17 - Watch
+Babel 17 - Millenium
+Bachman-Turner Overdrive - Four Wheel Drive
+Bachman-Turner Overdrive - Flat Broke Love
+Bachman-Turner Overdrive - She's Keepin' Time
+Bachman-Turner Overdrive - Quick Change Artist
+Bachman-Turner Overdrive - Lowland Fling
+Bachman-Turner Overdrive - Don't Let the Blues Get You Down
+Bachman-Turner Overdrive - Hey You
+Bachman-Turner Overdrive - It's Over
+Bachman-Turner Overdrive - Average Man
+Bachman-Turner Overdrive - Woncha Take Me for a While
+Bachman-Turner Overdrive - Wild Spirit
+Bachman-Turner Overdrive - Take It Like a Man
+Bachman-Turner Overdrive - Lookin' Out For # 1
+Bachman-Turner Overdrive - Stay Alive
+Bad Company - Live for the Music
+Bad Company - Simple Man
+Bad Company - Honey Child
+Bad Company - Love Me Somebody
+Bad Company - Run With the Pack
+Bad Company - Young Blood
+Bad Company - Sweet Lil' Sister
+Bad Company - Good Lovin' Gone Bad
+Bad Company - Weep No More
+Bad Company - Deal With the Preacher
+Bad Company - Wild Fire Women
+Bad Company - Call On Me
+Bad Company - Burnin' Sky
+Bad Company - Morning Sun
+Bad Company - Everything I Need
+Bad Company - Passing Time
+Bad Company - Too Bad
+Bad Company - Man Needs Woman
+Bad Company - Master of Ceremony
+Bad Company - Heartbeat
+Bad Company - Peace of Mind
+Bad Company - Knapsack
+Bad Company - Crazy Circles
+Bad Company - Gone, Gone, Gone
+Bad Company - Evil Wind
+Bad Company - Lonely for Your Love
+Bad Company - Oh, Atlanta
+Bad Company - Take the Time
+Bad Company - Rhythm Machine
+Bad Company - She Brings Me Love
+Badger - Wind of Change
+Badger - The Preacher
+Badger - On the Way Home
+Badger - River
+Barclay James Harvest - Silver Wings
+Barclay James Harvest - Spud-U-Like
+Barclay James Harvest - Mockingbird
+Shirley Bassey - Moonraker - End Title
+John Barry - Miss Goodhead Meets Bond
+John Barry - Cable Car and Snake Fight
+John Barry - Bond Lured to Pyramid
+John Barry - Bond Arrives in Rio and Boat Chase
+John Barry - Bond Smells a Rat
+Nancy Sinatra - You Only Live Twice - End Title
+John Barry - Capsule In Space
+John Barry - Fight at Kobe Dock - Helga
+John Barry - Tanaka's World
+John Barry - A Drop in the Ocean
+John Barry - The Death of Aki
+John Barry - Mountains and Sunsets
+John Barry - James Bond - Astronaut?
+John Barry - Countdown for Blofeld
+John Barry - Bond Averts World War Three
+John Barry - The Wedding
+Duran Duran - Main Title Song (A View to a Kill)
+Duran Duran - End Title Song (A View to a Kill)
+John Barry - Snow Job
+John Barry - Tibbett Gets Washed Out
+John Barry - He's Dangerous
+John Barry - Bond Underwater
+John Barry - Wine With Stacey (A View To A Kill)
+John Barry - Bond Escapes Roller
+John Barry - Destroy Silicon Valley
+John Barry - May Day Bombs Out
+John Barry - 009 Gets The Knife and Gobinda Attacks
+John Barry - That's My Little Octopussy
+John Barry - Bond Meets Octopussy
+John Barry - Yo-Yo Fight and Death of Vijay
+John Barry - The Chase BombTheme
+John Barry - Bond Meets Bambi and Thumper
+John Barry - Moon Buggy Ride
+John Barry - Circus, Circus
+John Barry - Death at the Whyte House
+John Barry - Diamonds Are Forever
+John Barry - Tiffany Case
+John Barry - 007 and Counting
+John Barry - Q's Trick
+John Barry - To Hell With Blofeld
+John Barry - Opening Titles: James Bond Is Back / From Russia With Love / James Bond Theme
+John Barry - Tania Meets Klebb
+John Barry - Meeting in St. Sophia
+John Barry - The Golden Horn
+John Barry - Girl Trouble
+John Barry - Bond Meets Tania
+John Barry - Gypsy Camp
+John Barry - Death of Grant
+John Barry - Spectre Island
+John Barry - Guitar Lament
+John Barry - Man Overboard - SMERSH in Action
+John Barry - James Bond With Bongos
+John Barry - Stalking
+John Barry - Leila Dances
+John Barry - Death of Kerin
+John Barry - 007 Takes the Lektor
+Shirley Bassey - Goldfinger
+John Barry - Alpine Drive - Auric's Factory
+John Barry - Oddjob's Pressing Engagement
+John Barry - Bond Back in Action Again
+John Barry - Teasing the Korean
+John Barry - Gassing the Gangsters
+John Barry - Goldfinger (Instrumental Version)
+John Barry - Dawn Raid on Fort Knox
+John Barry - The Arrival of the Bomb and Count Down
+John Barry - The Death of Goldfinger - End Titles
+John Barry - This Never Happened To The Other Feller
+John Barry - Try
+John Barry - Ski Chase
+John Barry - Journey to Blofeld's Hideaway
+John Barry - Over & Out
+John Barry - Battle at Piz Gloria
+John Barry - We Have All The Time In The World - James Bond Theme
+Monty Norman - Love at Last
+Monty Norman - The James Bond Theme
+Monty Norman - Dr. No's Theme
+Monty Norman - The Boy's Chase
+Monty Norman - Under the Mango Tree
+Monty Norman - The Island Speaks
+Monty Norman - Kingston Calypso
+Monty Norman - Dr. No's Fantasy
+Monty Norman - Jump Up
+Monty Norman - Jamaica Jazz
+Monty Norman - Twisting With James
+Monty Norman - Audio Bongo
+Monty Norman - Jamaican Rock
+Eric Serra - The Goldeneye Overture
+Eric Serra - Ladies First
+Eric Serra - We Share the Same Passions
+Eric Serra - A Little Surprise for You
+Eric Serra - The Severnaya Suite
+Eric Serra - Our Lady of Smolensk
+Eric Serra - Whispering Statues
+Eric Serra - A Pleasant Drive in St. Petersburg
+Eric Serra - Fatal Weakness
+Eric Serra - Dish out of Water
+Eric Serra - The Scale to Hell
+Eric Serra - For Ever, James
+Eric Serra - The Experience of Love
+Tina Turner - Goldeneye
+Big Day - Jestem za wysoko
+Big Day - Oszuści
+Big Day - Liverpool
+Big Day - Inni
+Big Day - Kiedy rozum śpi
+Big Day - Bez wyjścia?
+Big Day - Połykacz 67
+Big Day - Właśnie tak jest
+Big Day - Shiz
+Big Day - Uspokojenie
+Big Day - W twoich rękach
+Big Day - Małe grzechy
+Big Day - Fenomen
+Big Day - Oscid
+Big Day - Jak to jest
+Big Day - A ty tylko...
+Big Day - Dzień w którym przyszła miłość
+Big Day - Iluminacja
+Big Day - W jego stroju
+Big Day - Zapach ognia
+Big Day - Królowie dnia
+Big Day - Pożegnanie
+Biglietto Per l'Inferno - Ansia
+Biglietto Per l'Inferno - Una strana regina
+Biglietto Per l'Inferno - Il nevare
+Biglietto Per l'Inferno - Confessione (Strumentale)
+Bijelo Dugme - Blues za moju bivšu dragu
+Bijelo Dugme - Ne spavaj mala moja muzika dok svira
+Bijelo Dugme - Selma
+Bijelo Dugme - Sve ću da ti dam samo da zaigram
+Bijelo Dugme - Patim evo deset dana
+Birth Control - The Work Is Done (Single Version)
+Black Cat Bones - Feelin' Good
+Black Cat Bones - Please Tell Me Baby
+Black Cat Bones - Coming Back
+Black Cat Bones - Four Women
+Black Cat Bones - Sylvester's Blues
+Black Cat Bones - Good Lookin' Woman
+Black Jester - The Wayfarer
+Black Jester - Glance Towards the Sky
+Black Jester - Consciousness Hymn
+Black Jester - Symphony of Immortal Winds
+Black Jester - Welcome to the Moonlight Circus
+Black Sabbath - Evil Woman
+Black Sabbath - Sleeping Village
+Black Sabbath - The Warning
+Black Sabbath - Wicked World
+Black Sabbath - The Wizard
+Black Sabbath - Johnny Blade
+Black Sabbath - Junior's Eyes
+Black Sabbath - Hard Road
+Black Sabbath - Shock Wave
+Black Sabbath - Air Dance
+Black Sabbath - Over to You
+Black Sabbath - Breakout
+Black Sabbath - Swinging the Chain
+Black Sabbath - Neon Knights
+Black Sabbath - Children of the Sea
+Black Sabbath - Lady Evil
+Black Sabbath - Die Young
+Black Sabbath - Lonely Is the Word
+Black Sabbath - Wishing Well
+Black Sabbath - Walk Away
+Black Tape For a Blue Girl - Redefine Pure Faith
+Black Tape For a Blue Girl - Fin de Siécle
+Black Tape For a Blue Girl - With My Sorrows
+Black Tape For a Blue Girl - For You Will Burn Your Wings Upon the Sun
+Black Tape For a Blue Girl - Wings Tattered, Fallen
+Black Tape For a Blue Girl - Fitful
+Black Tape For a Blue Girl - Again, to Drift (For Veronika)
+Black Tape For a Blue Girl - I Have No More Answers
+Blodwyn Pig - It's Only Love
+Blodwyn Pig - Dear Jill
+Blodwyn Pig - Sing Me a Song That I Know
+Blodwyn Pig - Up and Coming
+Blodwyn Pig - Leave It With Me
+Blodwyn Pig - Change Song
+Blodwyn Pig - Backwash
+Bloodrock - Song for a Brother
+Bloodrock - You Gotta Roll
+Bloodrock - Kool-Aid-Kids
+Bloodrock - America, America
+Bloodrock - It's a Sad World
+Bloodrock - Don't Eat the Children
+Bloodrock - Promises
+Bloodrock - Crazy Bout You Babe
+Bloodrock - American Burn
+Bloodrock - Rock & Roll Candy Man
+Bloodrock - Abracadaver
+Bloodrock - Erosion
+Ray Thomas - From Mighty Oaks
+Ray Thomas - Rock-A-Bye Baby Blues
+Ray Thomas - High Above My Head
+Ray Thomas - Love Is the Key
+Ray Thomas - You Make Me Feel Alright
+Ray Thomas - Adam and I
+Ray Thomas - I Wish We Could Fly
+Mike Pinder - Free as a Dove
+Mike Pinder - You'll Make It Through
+Mike Pinder - I Only Want To Love You
+Mike Pinder - Someone To Believe In
+Mike Pinder - Carry On
+Mike Pinder - Air (Instrumental)
+John Lodge - Intro to Children of Rock 'n' Roll
+John Lodge - Broken Dreams, Hard Road
+John Lodge - Piece of My Heart
+John Lodge - Children of Rock 'n' Roll
+John Lodge - Street Cafe (Bonus Track)
+John Lodge - Natural Avenue
+Blue Öyster Cult - Sole Survivor
+Blue Öyster Cult - Heavy Metal: The Black and Silver
+Blue Öyster Cult - Vengeance (The Pact)
+Blue Öyster Cult - After Dark
+Blue Öyster Cult - Don't Turn Your Back
+Blue Öyster Cult - Career of Evil
+Blue Öyster Cult - Subhuman
+Blue Öyster Cult - ME 262
+Blue Öyster Cult - Cagey Cretins
+Blue Öyster Cult - Harvester of Eyes
+Blue Öyster Cult - Flaming Telepaths
+Blue Öyster Cult - The Great Sun Jester
+Blue Öyster Cult - In Thee
+Blue Öyster Cult - Mirrors
+Blue Öyster Cult - Moon Crazy
+Blue Öyster Cult - I Am the Storm
+Blue Öyster Cult - You're Not the One (I Was Looking For)
+Blue Öyster Cult - Take Me Away
+Blue Öyster Cult - Eyes on Fire
+Blue Öyster Cult - Veins
+Blue Öyster Cult - Shadow of California
+Blue Öyster Cult - Feel the Thunder
+Blue Öyster Cult - Let Go
+Blue Öyster Cult - Dragon Lady
+Blue Öyster Cult - Light Years of Love
+Blue Öyster Cult - I Am the One You Warned Me Of
+Blue Öyster Cult - Les Invisibles
+Blue Öyster Cult - In the Presence of Another World
+Blue Öyster Cult - Del Rio's Song
+Blue Öyster Cult - Magna of Illusion
+Blue Öyster Cult - Blue Oyster Cult
+Blue Öyster Cult - Imaginos
+Blue Öyster Cult - Divine Wind
+Blue Öyster Cult - Deadline
+Blue Öyster Cult - The Marshall Plan
+Blue Öyster Cult - Hungry Boys
+Blue Öyster Cult - Fallen Angel
+Blue Öyster Cult - Lips in the Hills
+Blue Öyster Cult - Unknown Tongue
+The Bollock Brothers - Spooky
+The Bollock Brothers - Beats of Love
+The Bollock Brothers - My Fair Daughter
+The Bollock Brothers - Monster Mash
+The Bollock Brothers - Wiped Out
+The Bollock Brothers - For Your Blood
+The Bollock Brothers - Legend Piano Mix
+David Bowie - Changes
+David Bowie - Oh! You Pretty Things
+David Bowie - Eight Line Poem
+David Bowie - Kooks
+David Bowie - Quicksand
+David Bowie - Fill Your Heart
+David Bowie - Andy Warhol
+David Bowie - Song for Bob Dylan
+David Bowie - Queen Bitch
+David Bowie - The Bewlay Brothers
+David Bowie - Sweet Thing (Reprise)
+David Bowie - The Hearts Filthy Lesson
+David Bowie - I Have Not Been to Oxford Town
+David Bowie - Segue - Algeria Touchshriek
+David Bowie - The Voyeur of Utter Destruction (As Beauty)
+David Bowie - Segue - Ramona A. Stone / I Am With Name
+David Bowie - We Prick You
+David Bowie - Segue - Nathan Adler
+David Bowie - Thru' These Architects Eyes
+David Bowie - Speed of Life
+David Bowie - Breaking Glass
+David Bowie - What in the World
+David Bowie - Sound and Vision
+David Bowie - Be My Wife
+David Bowie - A New Career in a New Town
+David Bowie - Art Decade
+David Bowie - Weeping Wall
+The Breath Of Life - Reason
+The Breath Of Life - The Last Four Days
+The Breath Of Life - Thoughts
+The Breath Of Life - Μαγκας
+The Breath Of Life - Idyll
+Breathless - Don't Just Disappear (Long Version)
+Breathless - Clearer Than Daylight
+Breathless - Flowers Die
+Breathless - Help Me Get Over It
+Bruno The Questionable - Czarny koń (Black Horse)
+Bruno The Questionable - Siostra nocy (Sister of the Night)
+Bruno The Questionable - Chwytaj swój czas (Catch Your Time)
+Bruno The Questionable - Jak wiele strachu (Shadows)
+Bruno The Questionable - Żołnierze (Soldiers)
+Bruno The Questionable - Nie wiem (I Don't Know)
+Bruno The Questionable - Czasami (Sometimes)
+Bruno The Questionable - Kochajmy się sto razy (Let's Make A Love)
+Budgie - Sky High Percentage
+Budgie - You're a Superstar
+Budgie - She Used Me Up
+Budgie - The Author
+Budgie - You're the Biggest Thing Since Powdered Milk
+Budgie - Love for You and Me
+Budgie - Crime Againts the World
+Budgie - Napoleon Bona Part One and Part Two
+Budgie - Forearm Smash
+Budgie - Panzer Division Destroyed!
+Budgie - Wildfire
+Budgie - Breadfan (Lost Edit, Not Transmitted!)
+Budgie - Superstar
+Budgie - Zoom Club
+Budgie - Hammer and Tongs
+Budgie - Running From My Soul
+Budgie - Living on Your Own
+Blues Creation - Sorrow
+Blues Creation - Atomic Bombs Away
+Blues Creation - Mississippi Mountain Blues
+Blues Creation - Just I Was Born
+Blues Creation - One Summer Day
+Blues Creation - Brane Baster
+Blues Creation - Sooner or Later
+Blues Creation - Demon & Eleven Children
+Barclay James Harvest Through the Eyes of John Lees - Sitting Upon a Shelf
+Barclay James Harvest Through the Eyes of John Lees - The Devils That I Keep
+Barclay James Harvest Through the Eyes of John Lees - Float
+Barclay James Harvest Through the Eyes of John Lees - Star Bright
+The Garden Of Delight - Black Magic Circle (Ordo Templi Orientis) - Parts 1-3
+Justin Hayward & John Lodge - This Morning
+Justin Hayward & John Lodge - Remember Me, My Friend
+Justin Hayward & John Lodge - Saved by the Music
+Justin Hayward & John Lodge - I Dreamed Last Night
+Justin Hayward & John Lodge - Who Are You Now
+Justin Hayward & John Lodge - Maybe
+Justin Hayward & John Lodge - When You Wake Up
+Justin Hayward & John Lodge - My Brother
+Justin Hayward & John Lodge - You
+Justin Hayward & John Lodge - Nights, Winters, Years
+Andromeda - Garden of Happiness
+Andromeda - Journey's End
+Aragon - The Dark
+Aragon - A Private Matter
+Aragon - The Sweet Unknown
+Aragon - The Gate
+Aragon - End of the Line (Part 1)
+Aragon - End of the Line (Part 2)
+Aragon - Next Please
+Aragon - Untying the Knot (Part 1)
+Aragon - Untying the Knot (Part 2)
+Aragon - Untying the Knot (Part 3)
+Aragon - Cold in a Warm Place
+Aragon - The Gathering
+Aragon - Under the Eye
+Aragon - In Deepest Sympathy
+Aragon - Burning Off
+Aragon - A Room and One Door
+Aragon - Shocked
+Aragon - The Gauntlet
+Aragon - The Sheer Joy of Creation
+Aragon - The Waiting Room
+Aragon - At the Mercy of Lions
+Aragon - Waiting for the Big One (Part 1)
+Aragon - Waiting for the Big One (Part 2)
+Aragon - At Heaven's Gate
+Aragon - Hello God
+Aragon - Brave New World
+Aragon - The Stage Door
+Aragon - The Switch
+Aragon - The Cross
+Aragon - Auld Lang Syne
+My Solid Ground - Handful of Grass (Different Mix)
+My Solid Ground - That's You (Different Mix)
+Elliot Goldenthal - Libera Me
+Elliot Goldenthal - Lestat's Tarantella
+Elliot Goldenthal - Madeleine's Lament
+Elliot Goldenthal - Claudia's Allegro Agitato
+Elliot Goldenthal - Escape to Paris
+Elliot Goldenthal - Marche Funêbre
+Elliot Goldenthal - Lestat's Recitative
+Elliot Goldenthal - Santiago's Waltz
+Elliot Goldenthal - Théâtre Des Vampires
+Elliot Goldenthal - Armand's Seduction
+Elliot Goldenthal - Plantation Pyre
+Elliot Goldenthal - Forgotten Lore
+Elliot Goldenthal - Scent of Death
+Elliot Goldenthal - Abduction & Absolution
+Elliot Goldenthal - Armand Rescues Louis
+Elliot Goldenthal - Louis' Revenge
+Elliot Goldenthal - Born to Darkness Part II
+Michael Kamen - Opening Titles
+Michael Kamen - Coma
+Michael Kamen - Hospital Visit
+Michael Kamen - 1st Vision - 2nd Sight
+Michael Kamen - Lost Love
+Michael Kamen - Drowning Vision - Through the Ice
+Michael Kamen - School Days
+Michael Kamen - In the Snow - Hope
+Michael Kamen - Alone
+Michael Kamen - Political Death
+Michael Kamen - Rally - Meet Your Local Candidate
+Michael Kamen - Death of a Visionary
+Michael Kamen - Realisation - Destiny
+Michael Kamen - Civic Duty and Sacrifice
+Michael Kamen - The Dead Zone
+Michael Kamen - Coda to a Coma - The Balcony
+Budgie - Everything in My Heart
+Budgie - All Night Petrol
+Budgie - Rollin Home Again
+Budgie - Bottled
+Budgie - Baby Please Don't Go
+Budgie - You Know I'll Always Love You
+Budgie - Riding My Nightmare
+Budgie - Keeping a Rendezvous
+Budgie - Reaper of the Glory
+Budgie - Don't Lay Down and Die
+Budgie - Apparatus
+Budgie - Change Your Ways
+Budgie - Untitled Lullaby
+Budgie - Don't Cry
+Budgie - Young Girl
+Budgie - N.O.R.A.D. (Doomsday City)
+Budgie - Give Me the Truth
+Budgie - Alison
+Budgie - Finger on the Button
+Steve Hackett - Take These Pearls
+Steve Hackett - Paint Your Picture
+Steve Hackett - There Are Many Sides to the Night
+Steve Hackett - Like an Arrow
+Steve Hackett - Lost In Your Eyes
+Steve Hackett - Walking Away From Rainbows
+Steve Hackett - Little America
+Steve Hackett - Tristesse
+Marc Almond - Out There (Album Version)
+Marc Almond - We Need Jealousy
+Marc Almond - The Idol (Parts 1 & 2 All Gods Fall)
+Marc Almond - Baby Night Eyes
+Marc Almond - Adored and Explored (Andy Meecham's Slow Fat Dub)
+Marc Almond - Looking for Love (In All the Wrong Places)
+Marc Almond - On the Prowl
+Marc Almond - Brilliant Creatures (LP Version)
+Marc Almond - Shining Brightly
+Marc Almond - City of Nights
+Marc Almond - Waifs and Strays (The Grid Mix)
+Marc Almond - King of the Fools
+Marc Almond - The Libertine's Dream
+Marc Almond - Only the Moment (All the Time in the World Mix)
+Marc Almond - Tears Run Rings (The la Magia Dance Mix)
+Marc Almond - Everything I Wanted Love To Be
+Marc Almond - Bitter Sweet (The Big Beat Mix)
+Marc Almond - She Took My Soul in Instanbul (The Blue Mosque Mix)
+Marc Almond - The Stars We Are (Full Length Mix)
+Marc Almond - A Lover Spurned (12" Version)
+Marc Almond - Real Evil
+Marc Almond - Exotica Rose
+Marc Almond - These My Dreams Are Yours (Through the Night Mix)
+Marc Almond - The Sea Still Sings (Demo Version)
+Marc Almond - Madame de la Luna (Demo Version)
+Marc Almond - Death's Diary (Demo Version)
+Marc Almond - Toreador in the Rain (Demo Version)
+Marc Almond - Orpheus in Red Velvet (Demo Version)
+Marc Almond - The Sensualist (Ultimate Ecstacy Mix)
+Marc Almond - Stories of Johnny (Special Remix)
+Marc Almond - The House Is Haunted (Ectoplasmix)
+Marc Almond - Love Letter (Featuring Westminster City Choir)
+Marc Almond - Blond Boy
+Marc Almond - Broken Bracelets
+Marc Almond - Cara a Cara
+Marc Almond - The User
+Barclay James Harvest Through the Eyes of John Lees - Festival!
+Barclay James Harvest Through the Eyes of John Lees - The Iron Maiden
+Barclay James Harvest Through the Eyes of John Lees - Brave New World
+Barclay James Harvest Through the Eyes of John Lees - Mocking Bird
+Barclay James Harvest Through the Eyes of John Lees - Hymn
+Barclay James Harvest Through the Eyes of John Lees - Titles
+Barclay James Harvest Through the Eyes of John Lees - Loving Is Easy
+Barclay James Harvest Through the Eyes of John Lees - Hors D'Oeuvre
+Big Country - We're Not in Kansas
+Big Country - Republican Party Reptile
+Big Country - Keep On Dreaming
+Big Country - Beautiful People
+Big Country - The Hostage Speaks
+Big Country - Beat the Devil
+Big Country - Leap of Faith
+Big Country - You, Me and the Truth
+Big Country - Comes a Time
+Big Country - Ships
+Big Country - Into the Fire
+Xymox - Going Round
+Xymox - Moscovite Musquito
+Xymox - Strange 9 To 9
+Xymox - Call It Weird
+Xymox - Abysmal Thoughts
+Clan Of Xymox - A Day (Where Are You)
+Big Day - Zostawić ślad (Psycho Mix)
+Black Tape For a Blue Girl - Scream, My Shallow
+Love Spirals Downwards - This Endris Night
+Lycia - The Facade Fades
+Blackfoot Sue - Messiah
+Blackfoot Sue - Country Home
+Blackfoot Sue - Cry
+Blackfoot Sue - My Oh My
+Blackfoot Sue - Now We're Three
+Blackfoot Sue - The Spring of '69
+Blackfoot Sue - Glittery Obituary
+Blackfoot Sue - On His Own
+Blackfoot Sue - Too Soon
+Blackfoot Sue - Gypsy Jam
+Blackfoot Sue - Celestial Plain
+Blackfoot Sue - Sing Don't Speak
+Blackfoot Sue - 2 B Free
+Blackfoot Sue - Summer (From the Seasons Suite)
+Buffalo - Leader
+Buffalo - Suzie Sunshine
+Buffalo - Pay My Dues
+Buffalo - I'm a Mover
+Buffalo - Ballad of Irving Fink
+Buffalo - Forest Rain
+Kate Bush - Wuthering Heights (New Vocal)
+Shiva Burlesque - Who Is the Mona Lisa?
+Shiva Burlesque - Nez Percé
+Shiva Burlesque - Sick Friend
+Shiva Burlesque - Cherry Orchard
+Shiva Burlesque - Chester the Chimp
+Shiva Burlesque - Mercury Blues
+Shiva Burlesque - Do the Pony
+Shiva Burlesque - Sparrow's Song
+Shiva Burlesque - At Last Our Flag Has Fallen
+Shiva Burlesque - Meet Jack Ruby
+Shiva Burlesque - Chrome Halo
+Chris De Burgh - Where We Will Be Going
+Chris De Burgh - By My Side
+Chris De Burgh - In Your Eyes
+Chris De Burgh - Separate Tables
+Chris De Burgh - Talk to Me
+Chris De Burgh - The Connemara Coast
+Chris De Burgh - Shine On
+Chris De Burgh - A Celebration
+Chris De Burgh - She Means Everything to Me
+Chris De Burgh - Making the Perfect Man
+Chris De Burgh - Carry On
+Chris De Burgh - I Had the Love in My Eyes
+Chris De Burgh - Something Else Again
+Chris De Burgh - The Girl With April In Her Eyes
+Chris De Burgh - Just in Time
+Chris De Burgh - Carry On (Reprise)
+Chris De Burgh - The Devil's Eye
+Chris De Burgh - It's Such a Long Way Home
+Chris De Burgh - Old-fashioned People
+Chris De Burgh - Quiet Moments
+Chris De Burgh - You and Me
+Chris De Burgh - Don't Pay the Ferryman
+Chris De Burgh - Living on the Island
+Chris De Burgh - Crying and Laughing
+Chris De Burgh - I'm Counting On You
+Chris De Burgh - The Getaway
+Chris De Burgh - Ship to Shore
+Chris De Burgh - All the Love I Have Inside
+Chris De Burgh - Borderline
+Chris De Burgh - Where Peaceful Waters Flow
+Chris De Burgh - Lonely Sky
+Chris De Burgh - This Song for You
+Chris De Burgh - Patricia the Stripper
+Chris De Burgh - A Spaceman Came Travelling
+Chris De Burgh - I'm Going Home
+Chris De Burgh - The Painter
+Chris De Burgh - Old Friend
+Chris De Burgh - The Tower
+Chris De Burgh - Just Another Poor Boy
+Chris De Burgh - The Record Company Bash
+Chris De Burgh - Tonight
+Chris De Burgh - Wall Of Silence
+Chris De Burgh - Flying Home
+Chris De Burgh - Shadows and Lights
+Chris De Burgh - Sailor
+Chris De Burgh - Some Things Never Change
+Chris De Burgh - Tourist Attraction
+Chris De Burgh - Eastern Wind
+Cairo - Conception
+Cairo - Season of the Heart
+Cairo - Between the Lines
+Cairo - World Divided
+John Cale - Dead or Alive
+John Cale - Fighter Pilot
+John Cale - Strange Times in Casablanca
+John Cale - Wilson Joliet
+John Cale - Honi Soit (La Première Leçon De Français)
+John Cale - Riverbank
+John Cale - Russian Roulette
+John Cale - Magic & Lies
+Camel - Freefall
+Camel - Earthrise
+Camel - Irish Air (Reprise)
+Camel - Wing and a Prayer
+Camel - Down on the Farm
+Camel - Starlight Ride
+Camel - You Make Me Smile
+Camel - The Sleeper
+Camel - Rainbow's End
+Captain Beyond - Thousand Days of Yesterdays (Time Since Come and Gone)
+Can - Cascade Waltz
+Can - Laugh Till You Cry - Live Till You Die (O.R.N.)
+Can - ...And More
+Can - Babylonian Pearl
+Can - Smoke (E.F.S. Nr. 59)
+Can - Flow Motion
+Tristram Cary - Blood From the Mummy's Tomb
+Camel - A Hearts Desire / End Peace
+Casino - Stranger
+Catweazle - Age of Quicksand
+Catweazle - Just Like Anyone
+Catweazle - Quicksand Revisted
+Catweazle - Underwater Web
+Nick Cave & the Bad Seeds - Scum
+Nick Cave & the Bad Seeds - Long Time Man
+Nick Cave & the Bad Seeds - Sad Waters
+Nick Cave & the Bad Seeds - Hard on for Love
+Nick Cave & the Bad Seeds - She Fell Away
+Nick Cave & the Bad Seeds - The Carny
+Nick Cave & the Bad Seeds - Jacks Shadow
+Nick Cave & the Bad Seeds - Your Funeral My Trial
+Nick Cave & the Bad Seeds - I Had a Dream, Joe
+Nick Cave & the Bad Seeds - Straight to You
+Nick Cave & the Bad Seeds - Christina the Astonishing
+Nick Cave & the Bad Seeds - Brother, My Cup Is Empty
+Nick Cave & the Bad Seeds - Papa Won't Leave You, Henry
+Nick Cave & the Bad Seeds - When I First Came to Town
+Nick Cave & the Bad Seeds - Loom of the Land
+Christie - Yellow River
+Christie - Gotta Be Free
+Christie - I've Got a Feeling
+Christie - New York City
+Christie - Inside Looking Out
+Christie - Put Your Money Down
+Christie - Down the Mississippi Line
+Christie - Country Boy
+Christie - Johnny One Time
+Christie - Coming Home Tonight
+Christie - Here I Am
+Christie - Until the Dawn
+The Church - Paradox
+The Church - Lustre
+The Church - Swan Lake
+The Church - Feel
+The Church - Mistress
+The Church - Kings
+The Church - Dome
+The Church - Witch Hunt
+The Church - Old Flame
+The Church - No Explanation
+The Church - 10,000 Miles
+The Church - Maybe These Boys
+The Church - Into My Hands
+The Church - A Month of Sundays
+The Church - Volumes
+The Church - Shadow Cabinet
+The Church - Remote Luxury
+The Church - One Day
+The Church - Fly
+The Church - It's No Reason
+The Church - Travel By Thought
+The Church - Disappear?
+The Church - Electric Lash
+The Church - Now I Wonder Why
+The Church - Dropping Names
+The Church - The Great Machine
+The Church - No Certainty Attached
+The Church - Tranquility
+The Church - Buffalo
+The Church - This Is It
+Cirque du Soleil - Dôme
+Cirque du Soleil - Kalimando
+Cirque du Soleil - Kunya Sobé
+Cirque du Soleil - En Ville/Frisco
+Cirque du Soleil - Gambade
+Cirque du Soleil - High Bar
+Cirque du Soleil - Taiko
+Cirque du Soleil - Finale
+Anne Clark - Introduction: Flight Through Sunlit Clouds
+Anne Clark - At Midnight
+Anne Clark - Lost to the World
+Anne Clark - Come In
+Anne Clark - That We Have Been Here (Version)
+Anne Clark - Longing Stilled
+Anne Clark - Nightship
+Anne Clark - Seize the Vivid Sky
+Anne Clark - The Haunted Road
+Anne Clark - I of the Storm
+Anne Clark - So Quiet Here
+Anne Clark - Poem Without Words I - The Third Meeting
+Anne Clark - Poem Without Words II - Journey By Night
+Anne Clark - Homecoming
+Anne Clark - This Be the Verse
+Anne Clark - Hope Road
+Anne Clark - Armchair Theatre
+Anne Clark - Leaving
+Collegium Musicum - Hommage à J. S. Bach
+Collegium Musicum - If You Want To Fall
+Collegium Musicum - Strange Theme
+Collegium Musicum - PF 1972
+Collegium Musicum - Suita po tisíc a jednej noci - After Thousand and One Night Suite
+Collegium Musicum - Piesne z kolovrátku - The Spinning-Wheel Songs
+Collegium Musicum - Eufónia - Euphony
+Collegium Musicum - Ulica plná plášťov do dažďa
+Phil Collins - Dance Into the Light
+Phil Collins - Wear My Hat
+Phil Collins - It's in Your Eyes
+Phil Collins - Oughta Know by Now
+Phil Collins - The Times They Are A-changin'
+Phil Collins - Take Me Down
+Phil Collins - No Matter Who
+Phil Collins - Both Sides of the Story
+Phil Collins - Can't Turn Back the Years
+Phil Collins - Everyday
+Phil Collins - We're Sons of Our Fathers
+Phil Collins - Survivors
+Phil Collins - There's a Place for Us
+Phil Collins - We Wait and We Wonder
+Phil Collins - Please Come Out Tonight
+The Cranberries - Dying in the Sun
+The Cranberries - Sorry Son
+The Cranberries - What's on My Mind
+The Cranberries - Copycat
+The Cranberries - Saving Grace
+The Cranberries - Desperate Andy
+The Cranberries - Just My Imagination
+The Cranberries - You and Me
+The Cranberries - Loud and Clear
+Hugh Cornwell & Robert Williams - Losers in a Lost Land
+Hugh Cornwell & Robert Williams - White Room
+Hugh Cornwell & Robert Williams - Irate Caterpillar
+Hugh Cornwell & Robert Williams - Rhythmic Itch
+Hugh Cornwell & Robert Williams - Wired
+Hugh Cornwell & Robert Williams - Mothra
+Hugh Cornwell & Robert Williams - Big Bug
+Hugh Cornwell & Robert Williams - Wrong Way Round
+Hugh Cornwell & Robert Williams - Puppets
+Cyan - The Guardians
+Cyan - Pictures From the Other Side
+Cyan - Broken Man
+Cyan - Tomorrow's Here Today
+Cyan - Follow the Flow
+Curved Air - Propositions/What Happens When You Blow Yourself Up?
+Curved Air - Thinking on the Floor
+Curved Air - Young Mother in Style
+Curved Air - Desiree
+Curved Air - Juno
+Curved Air - Touch of Tequila
+Curved Air - Heaven (Never Seemed So Far Away)
+Curved Air - Dazed
+Curved Air - Baby Please Don't Go
+Curved Air - You Know
+Curved Air - Puppets
+Curved Air - Bright Summer's Day '68
+Curved Air - Piece of Mind
+Curved Air - Exsultate Jubilate
+Curved Air - The Flasher
+Curved Air - Joan
+Curved Air - The Dancer
+Curved Air - The Widow
+Curved Air - Paris by Night
+The Cure - High (Single Mix)
+The Cure - High (Higher Mix)
+The Cure - Tape
+The Cure - Never Enough
+The Cure - Halo
+The Cure - Lullaby (Remix)
+Colosseum - Take Me Back to Doomsday
+Colosseum - The Daughter of Time
+Colosseum - The Time Machine
+Colosseum - Downhill and Shadows
+Colosseum - Solo Colonia
+Colosseum - Stormy Monday Blues
+Angelo Badalamenti - Laura Palmer's Theme
+Angelo Badalamenti - Audrey's Dance
+Angelo Badalamenti - The Nightingale
+Angelo Badalamenti - Freshly Squeezed
+Angelo Badalamenti - The Bookhouse Boys
+Angelo Badalamenti - Into the Night
+Angelo Badalamenti - Night Life in Twin Peaks
+Angelo Badalamenti - Dance of the Dream Man
+Angelo Badalamenti - Love Theme From Twin Peaks
+Angelo Badalamenti - Falling
+Angelo Badalamenti - Theme From Twin Peaks - Fire Walk With Me
+Angelo Badalamenti - The Pine Float
+Angelo Badalamenti - Sycamore Trees
+Angelo Badalamenti - Don't Do Anything (I Wouldn't Do)
+Angelo Badalamenti - A Real Indication
+Angelo Badalamenti - Questions in a World of Blue
+Angelo Badalamenti - The Pink Room
+Angelo Badalamenti - The Black Dog Runs at Night
+Angelo Badalamenti - Best Friends
+Angelo Badalamenti - Moving Through Time
+Angelo Badalamenti - Montage From Twin Peaks - Girl Talk / Birds in Hell / Laura Palmer's Theme / Falling
+Angelo Badalamenti - The Voice of Love
+Angelo Badalamenti - Main Title
+Angelo Badalamenti - Night Streets / Sandy and Jeffrey
+Angelo Badalamenti - Frank
+Angelo Badalamenti - Mysteries of Love (French Horn Solo)
+Angelo Badalamenti - Frank Returns
+Angelo Badalamenti - Mysteries of Love (Instrumental)
+Angelo Badalamenti - Blue Velvet / Blue Star
+Angelo Badalamenti - Lumberton U.S.A. / Going Down to Lincoln
+Angelo Badalamenti - Akron Meets the Blues
+Angelo Badalamenti - Honky Tonk Part I
+Angelo Badalamenti - In Dreams
+Angelo Badalamenti - Love Letters
+Angelo Badalamenti - Mysteries of Love
+The Creatures - Disconnected
+The Creatures - Turn It On
+The Creatures - I Was Me
+The Creatures - Prettiest Thing
+The Creatures - Say
+Cockney Rebel - Mr. Soft
+Cockney Rebel - Singular Band
+Cockney Rebel - Ritz
+Cockney Rebel - Cavaliers
+Cockney Rebel - Bed in the Corner
+Cockney Rebel - Sling It!
+Cockney Rebel - Big Big Deal
+Cockney Rebel - Such a Dream
+Cockney Rebel - Judy Teen
+Cockney Rebel - Rock and Roll Parade
+Julee Cruise - The Space for Love
+Julee Cruise - Movin' in on You
+Julee Cruise - Friends for Life
+Julee Cruise - Up in Flames
+Julee Cruise - Kool Kat Walk
+Julee Cruise - Until the End of the World
+Julee Cruise - In My Other World
+Julee Cruise - The Voice of Love
+The Crazy World Of Arthur Brown - Prelude - Nightmare (Mono Version)
+The Crazy World Of Arthur Brown - Fanfare - Fire Poem (Mono Version)
+The Crazy World Of Arthur Brown - Prelude - Nightmare
+The Crazy World Of Arthur Brown - Fanfare - Fire Poem
+The Crazy World Of Arthur Brown - Fire (Mono Version)
+The Crazy World Of Arthur Brown - Come and Buy (Mono Version)
+The Crazy World Of Arthur Brown - Come and Buy
+The Crazy World Of Arthur Brown - Time/Confusion (Mono Version)
+The Crazy World Of Arthur Brown - Time/Confusion
+The Crazy World Of Arthur Brown - I Put a Spell on You
+The Crazy World Of Arthur Brown - Spontaneous Apple Creation
+The Crazy World Of Arthur Brown - Rest Cure
+The Crazy World Of Arthur Brown - I've Got Money
+The Crazy World Of Arthur Brown - Child of My Kingdom
+Closterkeller - Lady Makbet
+Closterkeller - Grzech (Maxi)
+Closterkeller - Modesty Blaise (Live)
+Closterkeller - Tutaj nie ma Boga (Live)
+Closterkeller - Władza (analog mix)
+Closterkeller - Władza (symphonic mix)
+Soft Cell - Memorabilia '91
+Soft Cell - Say Hello Wave Goodbye ‘91
+Black Sabbath - Orchid / Lord Of This World
+Closterkeller - Życzenia świąteczne od zespołu Closterkeller
+Kasia Kowalska - Gounod's Ave Maria
+Jethro Tull - First Post
+Jethro Tull - Animelée
+Jethro Tull - Tiger Toon
+Jethro Tull - Look at the Animals
+Jethro Tull - Law of the Bungle Part II
+Jethro Tull - Law of the Bungle Part
+Jethro Tull - Left Right
+Jethro Tull - Solitaire
+Jethro Tull - Post Last
+Jethro Tull - Critique Oblique
+Jethro Tull - Scenario
+Jethro Tull - Audition
+Jethro Tull - No Rehearsal
+Jethro Tull - Paradise Steakhouse
+Jethro Tull - Sealion II
+Jethro Tull - Piece of Cake
+Jethro Tull - Quartet
+Jethro Tull - Crew Nights
+Jethro Tull - Rosa on the Factory Floor
+Jethro Tull - A Small Cigar
+Jethro Tull - Man of Principle
+Jethro Tull - Commons Brawl
+Jethro Tull - No Step
+Jethro Tull - Drive on the Young Side of Life
+Jethro Tull - I Don't Want To Be Me
+Jethro Tull - Broadford Bazaar
+Jethro Tull - Truck Stop Runner
+Jethro Tull - The Curse
+Jethro Tull - Lights Out
+Deep Purple - Lick It Up
+Deep Purple - Talk About Love
+Deep Purple - Time To Kill
+Deep Purple - Ramshackle Man
+Deep Purple - A Twist in the Tale
+Deep Purple - Nasty Piece of Work
+Deep Purple - One Man's Meat
+Marc Almond - A Lover Spurned (Full Length Version)
+Marc Almond - Waifs & Strays (Grid Twilight Mix)
+Soft Cell - Say Hello Wave Goodbye 12" (The Long Goodbye - Extended Mendelsohn Remix)
+Marc Almond - I Feel Love
+Dalton - Cara Emily
+Dalton - Riflessioni
+Dalton - Un Bambino, Un Uomo, Un Vecchio
+Dalton - Dimensione Lavoro
+darXtar - Eternal War
+darXtar - Valley of Time
+darXtar - Into the Unknown
+darXtar - Visitor?
+darXtar - The Time Has Come
+darXtar - Through the Terrascope
+darXtar - Darker
+Decameron - Dancing
+Decameron - Single-Handed
+John Debney - Carriage Chase
+John Debney - The Language of Romance
+John Debney - Morgan Takes the Ship
+John Debney - The Funeral
+John Debney - The Rescue
+John Debney - Discovery of the Treasure
+John Debney - The Big Jump
+John Debney - The Storm Begins
+John Debney - Morgan Captured/Sword Fight
+John Debney - Shaw Steals the Map
+John Debney - Escape From Mordechai's
+John Debney - Charting the Course
+John Debney - First Kiss
+John Debney - Dawg's Demise/The Triumph
+Stephen Warbeck - The de Lesseps' Dance
+Stephen Warbeck - The Beginning of the Partnership
+Stephen Warbeck - Viola's Audition
+Stephen Warbeck - A Plague of Both Your Houses
+Stephen Warbeck - A Daughter's Duty
+Stephen Warbeck - In Viola's Room
+Stephen Warbeck - A New World
+Stephen Warbeck - Love & the Rehearsal
+Stephen Warbeck - The Arrival of Wessex
+Stephen Warbeck - Greenwich
+Stephen Warbeck - The Brawl
+Stephen Warbeck - News of Marlowe's Death
+Stephen Warbeck - Love & the End of the Tragedy
+Stephen Warbeck - The Missing Scene
+Stephen Warbeck - The Fight
+Stephen Warbeck - The Play & the Marriage
+Stephen Warbeck - Wessex Loses a Bride
+Stephen Warbeck - The Prologue
+Stephen Warbeck - The Play (Part I)
+Stephen Warbeck - The Play (Part II)
+Stephen Warbeck - Curtain Fall
+Stephen Warbeck - Farewell
+Stephen Warbeck - The End
+Cast - White Lies? / Brief Story Of The Freewill
+Nick Cave & the Bad Seeds - Ain't Gonna Rain Anymore
+Bryan Ferry - Don't Want To Know
+Dead Can Dance - The Wind That Shakes the Barley
+Dead Can Dance - Towards the Within
+Dead Can Dance - Emmeleia
+Dead Can Dance - Rakim
+Dead Can Dance - Persian Love Song
+Dead Can Dance - Piece for Solo Flute
+Dead Can Dance - Desert Song
+Dead Can Dance - I Am Stretched on Your Grave
+Dead Can Dance - I Can See Now
+Dead Can Dance - American Dreaming
+Dead Can Dance - Oman
+Dead Can Dance - Song of the Sibyl
+Dead Can Dance - Tristan
+Dead Can Dance - Don't Fade Away
+Depeche Mode - Pleasure, Little Treasure
+Depeche Mode - I Feel You
+Depeche Mode - Condemnation
+Depeche Mode - Mercy in You
+Depeche Mode - Get Right With Me
+Depeche Mode - Judas
+Depeche Mode - Rush
+Depeche Mode - One Caress
+Depeche Mode - The Love Thieves
+Depeche Mode - Home
+Depeche Mode - Uselink
+Depeche Mode - Useless
+Depeche Mode - Jazz Thieves
+Depeche Mode - The Bottom Line
+Depeche Mode - Insight
+Depeche Mode - Junior Painkiller
+Moonspell - Soulsick
+Moonspell - Butterfly FX
+Moonspell - Can't Bee
+Moonspell - Lustmord
+Moonspell - Selfabuse
+Moonspell - I Am the Eternal Spectator
+Moonspell - Soulitary Vice
+Moonspell - Angelizer
+Moonspell - Tired
+Moonspell - K / O Mal de Cristo
+Moonspell - Slow Down!
+Moonspell - HandmadeGod
+Moonspell - 2econd Skin
+Moonspell - Abysmo
+Moonspell - Dekadance
+Moonspell - Let the Children Cum to Me ...
+Deyss - Untouchable Ghost / The Crazy Life of Mister Tale
+Deyss - Turning Night Into Day
+Deyss - Chinese Dawn
+Deyss - March of Destiny
+Deyss - At King
+Diabolus - Lonely Days
+Diabolus - 1002 Nights
+Diabolus - Lady of the Moon
+Diabolus - Laura Sleeping
+Diabolus - Spontenuity
+Diamanda Galás - You Must Be Certain of the Devil
+Diamanda Galás - Swing Low Sweet Chariot
+Diamanda Galás - Let's Not Chat About Despair
+Diamanda Galás - Birds of Death
+Diamanda Galás - Malediction
+Diamanda Galás - The Lord Is My Shepherd
+The Garden Of Delight - Sartyricon (The Whole Epic of Martyrium)
+The Cassandra Complex - Dion Fortune
+The Garden Of Delight - Necromanteion (S.O.C.R)
+Die Puhdys - Vorn ist das Licht
+Die Puhdys - Von der Liebe ein Lied
+Die Puhdys - Mann im Mond
+Die Puhdys - Sommernacht
+Die Puhdys - Ikarus
+Die Puhdys - Geh zur Ihr
+Die Puhdys - Wenn ein Mensch lebt
+Die Puhdys - Zeiten und Weiten
+Die Puhdys - Langsstreckenlauf
+Die Puhdys - Lied für Generationen
+Die Puhdys - Kinder
+Die Puhdys - Steine
+Die Puhdys - Scheidung
+Die Puhdys - Jodelkuh - Lotte
+Die Puhdys - Spiel zu zweit
+Die Puhdys - Sonntagsfahrer
+Die Puhdys - Manchmal im Schlaf
+Die Puhdys - Die Sonne kennt ihren Weg
+James Horner - Never an Absolution
+James Horner - Distant Memories
+James Horner - Southampton
+James Horner - Rose
+James Horner - "Take Her to Sea, Mr. Murdoch"
+James Horner - "Hard to Starboard"
+James Horner - Unable To Stay, Unwilling To Leave
+James Horner - Falkirk
+James Horner - Death of Titanic
+James Horner - A Promise Kept
+James Horner - A Life So Changed
+James Horner - An Ocean of Memories
+James Horner - Hymn to the Sea
+James Horner - Main Title
+James Horner - A Gift of a Thistle
+James Horner - Wallace Courts Murron
+James Horner - The Secret Wedding
+James Horner - Attack on Murron
+James Horner - Revenge
+James Horner - Murron's Burial
+James Horner - Making Plans / Gathering the Clans
+James Horner - 'Sons of Scotland'
+James Horner - The Battle of Stirling
+James Horner - For the Love of a Princess
+James Horner - Betrayal & Desolation
+James Horner - The Legend Spreads
+James Horner - The Princess Pleads for Wallace's Life
+James Horner - 'Freedom' / The Execution Bannockburn
+James Horner - End Credits
+Dire Straits - So Far Away
+Dire Straits - Money for Nothing
+Dire Straits - Walk of Life
+Dire Straits - Your Latest Trick
+Dire Straits - Why Worry
+Dire Straits - Ride Across the River
+Dire Straits - The Man's Too Strong
+Dire Straits - One World
+Dire Straits - Calling Elvis
+Dire Straits - When It Comes to You
+Dire Straits - Fade to Black
+Dire Straits - The Bug
+Dire Straits - You and Your Friend
+Dire Straits - Heavy Fuel
+Dire Straits - Ticket to Heaven
+Dire Straits - My Parties
+Dire Straits - Planet of New Orleans
+Dire Straits - How Long
+The Doors - Hello, I Love You
+The Doors - Love Street
+The Doors - My Wild Love
+The Doors - We Could Be So Good Together
+The Doors - Yes, The River Knows
+The Doors - Five to One
+The Doors - The Celebration of the Lizard
+The Doors - Queen of the Highway
+The Doors - My Eyes Have Seen You
+The Doors - Who Scared You
+The Doors - Whiskey, Mystics And Men
+The Doors - I Will Never Be Untrue
+The Doors - Moonlight Drive (Demo)
+The Doors - Moonlight Drive (Sunset Sound)
+The Doors - Rock Is Dead
+The Doors - The Wasp (Texas Radio and the Big Beat)
+The Doors - Been Down So Long
+The Doors - Cars Hiss by My Window
+The Doors - L.A. Woman
+The Doors - You're Lost Little Girl
+The Doors - Love Me Two Times
+The Doors - Unhappy Girl
+The Doors - Horse Latitudes
+The Doors - Moonlight Drive
+The Doors - When the Music's Over
+The Doors - You Make Me Real
+The Doors - Land Ho!
+The Doors - The Spy
+The Doors - Indian Summer
+The Doors - Maggie M'Gill
+Patrick Doyle - Final Request
+Patrick Doyle - A Walk Down Death Row
+Patrick Doyle - The Woman With No Name
+Patrick Doyle - Winter 1948
+Patrick Doyle - Two Halves of the Same Person
+Patrick Doyle - It Never Rains in La
+Patrick Doyle - I'm Not Roman
+Patrick Doyle - Inga's Secrets
+Patrick Doyle - Hightower House
+Patrick Doyle - Fate Happens / Death of a Mad Son
+Patrick Doyle - The Door Is Closed
+Patrick Doyle - Dead Again
+Patrick Doyle - The Headlines
+Dreadful Shadows - Dead Can Wait (Live)
+Dreadful Shadows - Dirge (Live)
+Dreadful Shadows - A Sea of Tears (Pianoversion)
+Dreadful Shadows - True Faith
+Dreadful Shadows - Homeless (Cyber Edit)
+The Breath Of Life - Leaving In A Dream ('96)
+Bob Dylan - Girl From the North Country
+Bob Dylan - Masters of War
+Bob Dylan - Down the Highway
+Bob Dylan - Bob Dylan's Blues
+Bob Dylan - Oxford Town
+Bob Dylan - Talkin' World War III Blues
+Bob Dylan - Corrina, Corrina
+Bob Dylan - Honey, Just Allow Me One More Chance
+Bob Dylan - I Shall Be Free
+Bob Dylan - A Hard Rain's A-gonna Fall
+Bob Dylan - Don't Think Twice, It's All Right
+Bob Dylan - Changing of the Guards
+Bob Dylan - New Pony
+Bob Dylan - No Time To Think
+Bob Dylan - Baby Stop Crying
+Bob Dylan - Is Your Love In Vain?
+Bob Dylan - True Love Tends To Forget
+Bob Dylan - We Better Talk This Over
+Bob Dylan - Where Are You Tonight? (Journey Through Dark Heat)
+The Dylans - She Drops Bombs
+The Dylans - I Hope the Weather Stays Fine
+The Dylans - Sad Rush on Sunday
+The Dylans - No Coming Down
+The Dylans - Mine
+The Dylans - Particle Ride
+The Dylans - Ocean Wide
+The Dylans - Godlike
+The Dylans - Mary Quant in Blue
+The Dylans - Love To
+The Dylans - Indian Sun
+The Eagles - New Kid in Town
+The Eagles - Life in the Fast Lane
+The Eagles - Wasted Time
+The Eagles - Wasted Time (Reprise)
+The Eagles - Victim of Love
+The Eagles - Try and Love Again
+The Eagles - Pretty Maids All in a Row
+Earth & Fire - Carnaval of the Animals
+Earth & Fire - Ebbtide
+Earth & Fire - In the Mountains
+Earth & Fire - Memories
+Earth & Fire - Theme From Atlantis
+Earth & Fire - Love, Please Close the Door
+Earth & Fire - From the End Till the Beginning
+East Of Eden - Jig-A-Jig (7" Version)
+Echo & The Bunnymen - Silver
+Echo & The Bunnymen - Nocturnal Me
+Echo & The Bunnymen - Crystal Days
+Echo & The Bunnymen - The Yo Yo Man
+Echo & The Bunnymen - Thorn of Crowns
+Echo & The Bunnymen - The Killing Moon
+Echo & The Bunnymen - Seven Seas
+Echo & The Bunnymen - My Kingdom
+Edgar Winter Group - Hangin' Around
+Edgar Winter Group - When It Comes
+Edgar Winter Group - Alta Mira
+Edgar Winter Group - Free Ride
+Edgar Winter Group - Undercover Man
+Edgar Winter Group - Round & Round
+Edgar Winter Group - Rock 'n' Roll Boogie Woogie Blues
+Edgar Winter Group - We All Had a Real Good Time
+Edgar Winter Group - Autumn
+Egg - Seven Is a Jolly Good Time
+Egg - You Are All Princes
+Eire Apparent - Yes I Need Someone
+Eire Apparent - Got To Get Away
+Eire Apparent - Someone Is Sure to (Want You)
+Eire Apparent - Magic Carpet
+Eire Apparent - Let Me Stay
+Eire Apparent - 1026
+Eire Apparent - Rock 'n' Roll Band
+Electric Light Orchestra - Turn to Stone
+Electric Light Orchestra - It's Over
+Electric Light Orchestra - Sweet Talkin' Woman
+Electric Light Orchestra - Across the Border
+Electric Light Orchestra - Night in the City
+Electric Light Orchestra - Starlight
+Electric Light Orchestra - Jungle
+Electric Light Orchestra - Believe Me Now
+Electric Light Orchestra - Steppin' Out
+Electric Light Orchestra - Standin' in the Rain
+Electric Light Orchestra - Big Wheels
+Electric Light Orchestra - Summer and Lightning
+Electric Light Orchestra - Mr. Blue Sky
+Electric Light Orchestra - Sweet Is the Night
+Electric Light Orchestra - The Whale
+Electric Light Orchestra - Birmingham Blues
+Electric Light Orchestra - Prologue
+Electric Light Orchestra - Twilight
+Electric Light Orchestra - Yours Truly, 2095
+Electric Light Orchestra - The Way Life's Meant To Be
+Electric Light Orchestra - Another Heart Breaks
+Electric Light Orchestra - Rain Is Falling
+Electric Light Orchestra - From the End of the World
+Electric Light Orchestra - The Lights Go Down
+Electric Light Orchestra - Here Is the News
+Electric Light Orchestra - 21st Century Man
+Electric Light Orchestra - Hold On Tight
+Electric Light Orchestra - Epilogue
+Eloy - Gliding Into Light and Knowledge / Inside
+Emerson, Lake & Palmer - The Endless Enigma (Part 1)
+Emerson, Lake & Palmer - The Endless Enigma (Part 2)
+Emerson, Lake & Palmer - One by One
+Emerson, Lake & Palmer - Thin Line
+Emerson, Lake & Palmer - Change
+Emerson, Lake & Palmer - Give Me a Reason To Stay
+Emerson, Lake & Palmer - Gone Too Soon
+Emerson, Lake & Palmer - Street War
+Emerson, Lake & Palmer - Pictures at an Exhibition
+Emerson, Lake & Palmer - Karn Evil No. 9 (1st Impression, Part 2)
+Emerson, Lake & Palmer - Love Beach
+Emerson, Lake & Palmer - Taste of My Love
+Emerson, Lake & Palmer - The Gambler
+Emerson, Lake & Palmer - For You
+Emerson, Lake & Palmer - Canario (From Fantasía Para Un Gentilhombre)
+Emerson, Lake & Palmer - Memoirs of an Officer and a Gentleman
+Emerson, Lake & Palmer - Affairs of the Heart
+Emerson, Lake & Palmer - Romeo and Juliet
+Emerson, Lake & Palmer - Changing States
+Emerson, Lake & Palmer - Burning Bridges
+Emerson, Lake & Palmer - Close to Home
+Emerson, Lake & Palmer - Footprints in the Snow
+Emerson, Lake & Palmer - Hoedown
+Emerson, Lake & Palmer - Karn Evil 9: First Impression Pt. 2/Third Impression
+Emerson, Lake & Palmer - Karn Evil 9: First Impression Pt. 2
+Greg Lake - Nuclear Attack
+Greg Lake - Black and Blue
+Greg Lake - Long Goodbye
+Greg Lake - Someone
+Greg Lake - Let Me Love You Once
+Greg Lake - For Those Who Dare
+Greg Lake - You Really Got a Hold on Me
+Greg Lake - Love You Too Much
+Greg Lake - Let Me Love You Once Before You Go
+Emerson, Lake & Palmer - Karn Evil 9: 1st Impression/2nd Impression/3rd Impression
+Emerson, Lake & Palmer - Fire
+Emerson, Lake & Palmer - Hang On to a Dream
+Emerson, Lake & Palmer - Introductory Fanfare / Peter Gunn
+Emerson, Lake & Palmer - Peter Gunn
+Emerson, Lake & Palmer - Knife Edge (Adapted From " Sinfonietta ")
+Emerson, Lake & Palmer - Piano Concerto No.1 (Third Movement: Toccata Con Fuoco)
+Emerson, Lake & Palmer - Promenade
+Emerson, Lake & Palmer - The Gnome
+Emerson, Lake & Palmer - The Sage
+Emerson, Lake & Palmer - The Old Castle
+Emerson, Lake & Palmer - Blues Variation
+Emerson, Lake & Palmer - The Hut of Baba Yaga
+Emerson, Lake & Palmer - The Curse of Baba Yaga
+Emerson, Lake & Palmer - The Great Gates of Kiev
+Emerson, Lake & Palmer - The End
+Emerson, Lake & Palmer - Nutrocker
+Emerson, Lake & Palmer - Jeremy Bender
+Emerson, Lake & Palmer - The Only Way (Hymn)
+Emerson, Lake & Palmer - Infinite Space (Conclusion)
+Brian Eno - Needles in the Camel's Eye
+Brian Eno - Cindy Tells Me
+Brian Eno - Driving Me Backwards
+Brian Eno - On Some Faraway Beach
+Brian Eno - Blank Frank
+Brian Eno - Dead Finks Don't Talk
+Brian Eno - Some of Them Are Old
+Brian Eno - Here Come the Warm Jets
+Brian Eno - No One Receiving
+Brian Eno - Kurt's Rejoinder
+Brian Eno - Energy Fools the Magician
+Brian Eno - King's Lead Hat
+Brian Eno - Julie With...
+Brian Eno - Through Hollow Lands (For Harold Budd)
+Brian Eno - Spider And I
+Brian Eno - Backwater
+Brian Eno - Burning Airlines Give You So Much More
+Brian Eno - Back in Judy's Jungle
+Brian Eno - Third Uncle
+Brian Eno - Put a Straw Under Baby
+Brian Eno - The True Wheel
+Brian Eno - China My China
+Brian Eno - Taking Tiger Mountain
+Epitaph - Hopelessly
+Epitaph - Little Maggie
+Eternal Triangle - Touch and Let Go
+Eternal Triangle - I Need You
+Eternal Triangle - Small Town
+Eternal Triangle - Nothing but a Friend
+Eternal Triangle - Can't Blame Me
+Eternal Triangle - Stay With You
+Eternal Triangle - Same Mistakes
+Eternal Triangle - Won't Work
+Eternal Triangle - It's a Story
+The Icicle Works - The Kiss Off
+The Icicle Works - Sure Thing
+The Icicle Works - Whipping Boy
+Evidence - Act I - Have Waited Worlds To See...
+Evidence - Act II - This Sound Remaining Free...
+Evidence - Act III - A Pagan Celebration/Is This My Voice?
+Evidence - Act IV - One More Introduction...
+Evidence - Act V - Here Is Forever...
+Evidence - Act VI - Slowly He Returns To Me...
+Evidence - Act VII - I Look Around And Ask Myself...
+Evidence - Act VIII - I'll Stay With You.../This Is The Only Name...
+Evidence - Act IX - Who's Been Converted To Whom?
+Evidence - Act X - Resurrect This Trembling Voice...
+Evidence - Act XI - I'll Still Be Standing...
+Evidence - Act XII - Clutching At All These Frightful Plinths...
+Eyes of the Nightmare Jungle - Pressure (Extended Version)
+Eyes of the Nightmare Jungle - The Game
+Eyes of the Nightmare Jungle - Pressure (Radio Version)
+Fairport Convention - Fotheringay
+Fairport Convention - Mr. Lacey
+Fairport Convention - Book Song
+Fairport Convention - Sailor's Life
+Fairport Convention - Si tu dois partir
+Fairport Convention - Who Knows Where the Time Goes
+Fairport Convention - Now Be Thankful
+Fairport Convention - Walk Awhile
+Fairport Convention - Sloth
+Fairport Convention - Bonny Black Hare
+Fairport Convention - Angel Delight
+Fairport Convention - Bridge Over the River Ash
+Fairport Convention - John Lee
+Fairport Convention - Breakfast in Mayfair
+Fairport Convention - Hanging Song
+Fairport Convention - The Hen's March / The Four Poster Bed
+Faith No More - Epic
+Faith No More - Falling to Pieces
+Faith No More - Surprise! You're Dead!
+Faith No More - The Real Thing
+Faith No More - Underwater Love
+Faith No More - The Morning After
+Faith No More - War Pigs
+Faith No More - Edge of the World
+Fancyfluid - The Kingdom
+Fancyfluid - The King Doesn't Sleep
+Fancyfluid - The White Winged Deer
+Fancyfluid - The Fool's House
+Fancyfluid - Jester's Jest
+Fancyfluid - The Legend of Cefalus
+Fancyfluid - The Coming
+Fancyfluid - Carnac
+Fancyfluid - March of Gods
+Fuse - Permanent Resident
+Fuse - In a Window
+Fuse - 4/4 3/4
+Fuse - Mystery Ship
+Fuse - Sad Day
+Fruupp - Faced With Shekinah
+Fruupp - White Eyes
+Fruupp - Garden Lady
+Fruupp - Three Spires
+Fruupp - Elizabeth
+Fruupp - The Seventh Secret
+Bryan Ferry - Can't Let Go
+Bryan Ferry - Hold On (I'm Comin')
+Bryan Ferry - That's How Strong My Love Is
+Final Conflict - Old Lady
+Final Conflict - Mirror of Lies
+Final Conflict - A Look at Life
+Final Conflict - Waiting for a Chance
+Final Conflict - Betrial
+Final Conflict - Changing Fate
+Final Conflict - Outside In
+Final Conflict - Pangaea's Child
+Final Conflict - Full Circle
+Final Conflict - Rebellion
+Final Conflict - Wind of Change
+Fish - Fugazi
+Fish - Faithhealer
+Fish - Brother 52
+Fish - Chasing Miss Pretty
+Fish - Lucky
+Fish - Tumbledown
+Fish - Mission Statement
+Fish - Tilted Cross
+Fish - Jack and Jill (Single wersion)
+Fish - Big Wedge (Album Version)
+Fish - Incommunicado (1995 Re-recording)
+Fish - Family Business (1990 Original Recording)
+Fish - Just Good Friends (1995 Re-recording)
+Fish - Pipeline (1994 Original Recording)
+Fish - Institution Waltz (1995 Recording)
+Fish - Tongues (1991 Original Recording)
+Fish - Time and a Word (1993 Original Recording)
+Fish - Company (1990 Original Recording)
+Fish - Incubus (1995 Re-recording)
+Fish - Solo (1993 Original Recording)
+Fish - Favourite Stranger (1995 Re-recording)
+Fish - Boston Tea Party (1995 Re-recording)
+Fish - Raw Meat (1994 Original Recording)
+Fish - Lucky (1995 Re-recording)
+Fish - Big Wedge (1995 Re-mix of 1990 Original)
+Fish - Lady Let It Lie (1995 Re-mix Of 1994 Original)
+Fish - Lavender (1995 Re-recording)
+Fish - Credo (1995 Re-recording)
+Fish - A Gentleman's Excuse Me (1990 Original)
+Fish - Kayleigh (1995 Re-recording)
+Fish - State of Mind (1995 Re-recording)
+Fish - Somebody Special (1995 Re-recording)
+Fish - Sugar Mice (1995 Re-recording)
+Fish - Punch & Judy (1995 Re-recording)
+Fish - Fortunes of War (1994 Original)
+Fish - Internal Exile (1989 Recording Not Previously Released)
+Fish - Dear Friend
+Fish - Favourite Stranger
+Fish - Something in the Air
+Fish - Worm in a Bottle
+Fish - Just Good Friends (Close)
+Fish - Voyeur
+Fish - Gentleman's Excuse Me
+Fish - Band Intro's, Pigpens Birthday Song
+Fish - Heart of Lothian
+Fish - Market Square Heroes
+Fish - Fearless
+Fish - White Russian
+Fish - Jeepster
+Fish - Hold Your Head Up
+Fish - Five Years
+Fish - Forgotten Sons
+Fleetwood Mac - Morning Rain
+Fleetwood Mac - What a Shame
+Fleetwood Mac - Sometimes
+Fleetwood Mac - Lay It All Down
+Fleetwood Mac - Show Me a Smile
+Fleetwood Mac - Oh Well - Part 1
+Fleetwood Mac - Oh Well - Part 2
+Fleetwood Mac - Monday Morning
+Fleetwood Mac - Say You Love Me
+Fleetwood Mac - Dreams
+Fleetwood Mac - Over & Over
+Fleetwood Mac - Sara
+Fleetwood Mac - Not That Funny
+Fleetwood Mac - Never Going Back Again
+Fleetwood Mac - Landslide
+Fleetwood Mac - Fireflies
+Fleetwood Mac - Over My Head
+Fleetwood Mac - Rhiannon
+Fleetwood Mac - Don't Let Me Down Again
+Fleetwood Mac - One More Night
+Fleetwood Mac - Go Your Own Way
+Fleetwood Mac - Don't Stop
+Fleetwood Mac - The Farmer's Daughter
+Fleetwood Mac - Thoughts on a Grey Day
+Fleetwood Mac - Closing My Eyes
+Fleetwood Mac - Show-Biz Blues
+Fleetwood Mac - My Dream
+Fleetwood Mac - Underway
+Fleetwood Mac - Although the Sun Is Shining
+Fleetwood Mac - Searching for Madge
+Fleetwood Mac - Fighting for Madge
+Fleetwood Mac - When You Say
+Fleetwood Mac - Like Crying
+Fleetwood Mac - Before the Beginning
+Flower Travellin' Band - House of the Rising Sun
+Flower Travellin' Band - Black Sabbath
+Flower Travellin' Band - Louisiana Blues
+Flower Travellin' Band - Anywhere
+Marianne Faithfull - Epilogue
+Fleetwood Mac - Heroes Are Hard To Find
+Fleetwood Mac - Coming Home
+Fleetwood Mac - Angel
+Fleetwood Mac - Bermuda Triangle
+Fleetwood Mac - Come a Little Bit Closer
+Fleetwood Mac - She's Changing Me
+Fleetwood Mac - Bad Loser
+Fleetwood Mac - Silver Heels
+Fleetwood Mac - Prove Your Love
+Fleetwood Mac - Born Enchanter
+Leonard Cohen - Bird on the Wire
+Leonard Cohen - Story of Isaac
+Leonard Cohen - A Bunch of Lonesome Heros
+Leonard Cohen - The Partisan
+Leonard Cohen - Seems So Long Ago, Nancy
+Leonard Cohen - The Old Revolution
+Leonard Cohen - The Butcher
+Leonard Cohen - Tonight Will Be Fine
+Leonard Cohen - Is This What You Wanted
+Leonard Cohen - Chelsea Hotel No. 2
+Leonard Cohen - Lover Lover Lover
+Leonard Cohen - Field Commander Cohen
+Leonard Cohen - Why Don't You Try
+Leonard Cohen - There Is a War
+Leonard Cohen - A Singer Must Die
+Leonard Cohen - I Tried To Leave You
+Leonard Cohen - Who by Fire
+Leonard Cohen - Take This Longing
+Leonard Cohen - The Future
+Leonard Cohen - Closing Time
+Leonard Cohen - Democracy
+Leonard Cohen - Light as the Breeze
+Leonard Cohen - Always
+Leonard Cohen - Tacoma Trailer
+Leonard Cohen - Everybody Knows
+Leonard Cohen - I'm Your Man
+Barclay James Harvest - Child of the Universe (Previously Unreleased Version)
+Barclay James Harvest - Friend of Mine (Single Remix)
+Barclay James Harvest - Loving Is Easy (Single Version)
+Barclay James Harvest - Ring of Changes (German Single Mix)
+Barclay James Harvest - Life Is for Living (Single Version)
+Barclay James Harvest - Victims of Circumstance (Instrumental Version)
+Barclay James Harvest - I've Got a Feeling (7" Single Version)
+Barclay James Harvest - Panic (Extended German Remix)
+Barclay James Harvest - John Lennon's Guitar (Live Version)
+Barclay James Harvest - Play to the World (Live Version)
+Barclay James Harvest - Forever Yesterday (Full Length Version)
+Frame - Frame of Mind
+Frame - Crusical Scene
+Frame - Penny for an Old Guy
+Frame - Childrens Freedom
+Frame - Truebsal
+Frame - If
+Frame - Winter
+Frijid Pink - Sing a Song for Freedom
+Frijid Pink - Sloony
+Frijid Pink - I'm Movin'
+Frijid Pink - I Haven't Got the Time
+Frijid Pink - Lost Son
+Frijid Pink - I Love Her
+Frijid Pink - Shorty Kline
+Frijid Pink - God Gave Me You
+Frijid Pink - Crying Shame
+Frijid Pink - I'm on My Way
+Frijid Pink - Drivin' Blues
+Frijid Pink - Tell Me Why
+Frijid Pink - End of the Line
+Frijid Pink - I Want To Be Your Lover
+Frijid Pink - Boozin' Blues
+Frijid Pink - Heartbreak Hotel
+Frijid Pink - Music for the People
+Giles, Giles And Fripp - North Meadow
+Giles, Giles And Fripp - Newly-weds
+Giles, Giles And Fripp - One in a Million
+Giles, Giles And Fripp - Call Tomorrow
+Giles, Giles And Fripp - Digging My Lawn
+Giles, Giles And Fripp - Little Children
+Giles, Giles And Fripp - How Do They Know
+Giles, Giles And Fripp - Elephant Song
+Giles, Giles And Fripp - The Sun Is Shining
+Giles, Giles And Fripp - Suite No. 1
+Giles, Giles And Fripp - Erudite Eyes
+David Sylvian & Robert Fripp - God's Monkey
+David Sylvian & Robert Fripp - Brightness Falls
+David Sylvian & Robert Fripp - Gone To Earth
+David Sylvian & Robert Fripp - 20th Century Dreaming (A Shaman's Song)
+David Sylvian & Robert Fripp - Riverman
+David Sylvian & Robert Fripp - Darshan (The Road To Graceland)
+David Sylvian & Robert Fripp - Blinding Light Of Heaven
+David Sylvian & Robert Fripp - The First Day
+David Sylvian & Robert Fripp - Every Colour You Are
+David Sylvian & Robert Fripp - Firepower
+David Sylvian & Robert Fripp - Wave
+Free - Oh I Wept
+Free - Remember
+Free - Don't Say You Love Me
+Free - I'll Be Creepin'
+Free - Songs of Yesterday
+Free - Lying in the Sunshine
+Free - Trouble on Double Time
+Free - Mouthful of Grass
+Free - Free Me
+Free - Broad Daylight
+Free - Moonshine (Live)
+U2 - Bullet the Blue Sky
+U2 - Running to Stand Still
+U2 - Red Hill Mining Town
+U2 - Trip Through Your Wires
+U2 - One Tree Hill
+U2 - Exit
+U2 - Mothers of the Disappeared
+Peter Gabriel - Steam
+Peter Gabriel - Love To Be Loved
+Peter Gabriel - Only Us
+Peter Gabriel - Washing of the Water
+Peter Gabriel - Digging in the Dirt
+Peter Gabriel - Secret World
+Peter Gabriel - Kiss That Frog
+Galahad - Don't Lose Control
+Galahad - Bark in D Minor
+Galahad - Chamber of Horrors
+Galahad - Evaporation
+Galahad - Motherland
+Galahad - Aqaba (A Matter Of Going!)
+Galahad - One for the Record
+Galahad - Second Life
+Galahad - Earth Rhythm
+Galahad - Welcome to Paradise
+Galahad - Sir Galahad (Scene Two)
+Galahad - Mother Mercy
+Galahad - Club 18-30
+Galahad - Melt
+Galahad - White Lily
+Galahad - Through the Looking Glass
+Galahad - Shrine
+Galahad - Legless in Gaza
+Galahad - Iceberg
+Galahad - Where There's All of Nothing
+Galahad - Reach in to the Flames
+Galahad - Dreams of Tomorrow
+Galahad - GSX
+Galahad - Truth of You
+Galahad - Aqua Nimue
+Galahad - Pretty in the Sun
+Galahad - Rollercoaster
+Galahad - Suffering in Silence
+Fields of the Nephilim - Laura (Again)
+Fields of the Nephilim - Power (New Version)
+John Foxx - Burning Car
+John Foxx - This Jungle
+The Undead - Somebody Super Like You (Beef Construction Song)
+Nick Cave & the Bad Seeds - Jangling Jack
+Marillion - Alone Again in the Lap of Luxury
+Nick Cave & the Bad Seeds - Do You Love Me? (Part 2)
+Nick Cave & the Bad Seeds - Avalanche
+Nick Cave & the Bad Seeds - In the Ghetto
+Nick Cave & the Bad Seeds - A Box for Black Paul
+Nick Cave & the Bad Seeds - Knockin' on Joe
+Nick Cave & the Bad Seeds - Wanted Man
+Marillion - Assasing
+Marillion - Forgotten Songs
+Marillion - Market Square Heroes/She Loves You
+Marillion - Let's Twist Again (Medley)
+Pink Floyd - A New Machine (Part 1)
+Pink Floyd - A New Machine (Part 2)
+Frank Marino - The Wall Came Down
+Genesis - Ripples (live)
+Genesis - Deep In The Motherlode (live)
+Genesis - Say It's Alright Joe (live)
+Marillion - Waterhole
+Genesis - In that Quiet Earth
+Genesis - Say It's Alright Joe
+Frank Marino - Babylon Revisited
+Frank Marino - I'm Ready
+Frank Marino - How Long
+Frank Marino - Mine All Mine
+Frank Marino - Ride My Own Wave
+Frank Marino - Stand
+Nick Cave & the Bad Seeds - Right Now I'm A-Roaming
+Nick Cave & the Bad Seeds - Say Goodbye to the Little Girl Tree
+Nick Cave & the Bad Seeds - Train Long-Suffering
+Nick Cave & the Bad Seeds - Black Crow King
+Nick Cave & the Bad Seeds - Blind Lemon Jefferson
+Nick Cave & the Bad Seeds - The Six Strings That Drew Blood
+Nick Cave & the Bad Seeds - Tupelo (Single Version)
+Nick Cave & the Bad Seeds - Cabin Fever!
+Nick Cave & the Bad Seeds - Well of Misery
+Nick Cave & the Bad Seeds - The Moon Is in the Gutter
+Nick Cave & the Bad Seeds - Saint Huck
+Nick Cave & the Bad Seeds - Wings off Flies
+Nick Cave & the Bad Seeds - From Her to Eternity (1987)
+Nick Cave & the Bad Seeds - Nobody's Baby Now
+Nick Cave & the Bad Seeds - Loverman
+Nick Cave & the Bad Seeds - Red Right Hand
+Nick Cave & the Bad Seeds - Thirsty Dog
+Nick Cave & the Bad Seeds - Lay Me Low
+Nick Cave & the Bad Seeds - Brompton Oratory
+Nick Cave & the Bad Seeds - There Is a Kingdom
+Nick Cave & the Bad Seeds - Green Eyes
+Goblin - Opening to the Sighs
+Goblin - Sighs
+Goblin - Markos
+Goblin - Black Forest
+Goblin - Blind Concert
+Goblin - Death Valzer
+Goblin - Suspiria (Celesta and Bells)
+Goblin - Suspiria (Narration)
+Goblin - Suspiria (Intro)
+Goblin - Markos (Alternate Version)
+Philip Glass - The Canyon
+Philip Glass - Akhnaten - Act I - Prelude: Refrain, Verse 1, Verse 2
+Philip Glass - Akhnaten - Act I - Prelude: Verse 3
+Philip Glass - Akhnaten - Act II - Scene 3: The City - Dance (Beginning)
+Philip Glass - Akhnaten - Act II - Scene 3: The City - Dance (Conclusion)
+Philip Glass - Akhnaten - Act II - Scene 4: Hymn
+Philip Glass - Akhnaten - Act III - Scene 1: The Family
+Philip Glass - Satyagraha - Act II - Tagore - Scene 2: Indian Opinion (1906)
+Philip Glass - Satyagraha - Act II - Tagore - Scene 3: Protest (1908)
+Philip Glass - Satyagraha - Act III - King: Newcastle March (1913) - Part 1
+Philip Glass - Satyagraha - Act III - King: Newcastle March (1913) - Part 2
+Philip Glass - Satyagraha - Act III - King: Newcastle March (1913) - Part 3 - Evening Song
+Grand Funk Railroad - Are You Ready
+Grand Funk Railroad - Time Machine
+Grand Funk Railroad - High on a Horse
+Grand Funk Railroad - T.N.U.C.
+Grand Funk Railroad - Into the Sun
+Grand Funk Railroad - Call Yourself a Man
+Grand Funk Railroad - Can’t Be Too Long
+Grand Funk Railroad - Ups and Downs
+Grand Funk Railroad - Got This Thing on the Move
+Grand Funk Railroad - Please Don't Worry
+Grand Funk Railroad - High Falootin' Woman
+Grand Funk Railroad - Mr. Limousine Driver
+Grand Funk Railroad - In Need
+Grand Funk Railroad - Winter and My Soul
+Grand Funk Railroad - Paranoid
+Grand Funk Railroad - No Lies
+Grand Funk Railroad - Save the Land
+Grand Funk Railroad - I Come Tumblin'
+Grand Funk Railroad - Upsetter
+Grand Funk Railroad - People, Let's Stop the War
+Grand Funk Railroad - Footstompin' Music
+Grand Funk Railroad - 2001: A Space Odyssey (Intro)
+Grand Funk Railroad - Rock’n Roll Soul
+Grand Funk Railroad - Medley: Paranoid/Sin's a Good Mans Brother/Mr. Limosine Driver
+Grand Funk Railroad - Aimless Lady
+Grand Funk Railroad - The Loco-motion
+Grand Funk Railroad - Overture
+Grand Funk Railroad - Mean Mistreater
+Grand Funk Railroad - Some Kind of Wonderful
+Grand Funk Railroad - To Get Back In
+Grand Funk Railroad - Shinin' On
+Gun - Rupert's Travels
+Gun - Yellow Cab Man
+Gun - It Won't Be Long (Heartbeat)
+Gun - Sunshine
+Gun - Take Off
+Gun - Drives You Mad
+James Bernard - Dracula
+Genesis - Down and Out
+Genesis - Undertow
+Genesis - Many Too Many
+Genesis - Dodo
+Genesis - Me & Sarah Jane
+Genesis - In the Cage (Medley - Cinema Show/Slippermen)
+Genesis - It / Watcher of the Skies
+Genesis - I Can't Dance
+Genesis - Never a Time
+Genesis - Living Forever
+Genesis - Way of the World
+Genesis - Since I Lost You
+Genesis - Home by the Sea / Second Home by the Sea
+Genesis - Old Medley
+Genesis - In the Wilderness (Rough Mix Without Strings 1968)
+Genesis - Going Out To Get You (Demo 1969)
+Genesis - Dusk (Demo 1969)
+Genesis - Build Me a Mountain (Rough Mix 1968)
+Genesis - Image Blown Out (Rough Mix 1968)
+Genesis - One Day (Rough Mix 1968)
+Genesis - Where the Sour Turns to Sweet (Demo 1968)
+Genesis - In the Beginning (Demo 1968)
+Genesis - The Magic of Time (Demo 1968)
+Genesis - Hey! (Demo 1968)
+Genesis - Hidden in the World of Dawn (Demo 1968)
+Genesis - Sea Bee (Demo 1968)
+Genesis - The Mystery of the Flannan Isle Lighthouse (Demo 1968)
+Genesis - Hair on the Arms and Legs (Demo 1968)
+Genesis - She Is Beautiful (Demo 1967)
+Genesis - Try a Little Sadness (Demo 1967)
+Genesis - Patricia (Demo 1967)
+Lisa Gerrard - Persian Love Song: The Silver Gun
+Lisa Gerrard - The Rite
+Lisa Gerrard - Ajhon
+Lisa Gerrard - Majhnavea's Music Box
+Lisa Gerrard - Largo
+Lisa Gerrard - Celon
+Lisa Gerrard - Werd
+Lisa Gerrard - Venteles
+The Garden Of Delight - Downwards to a Sea
+The Garden Of Delight - Arcana
+The Garden Of Delight - Watchers Out of Time
+The Garden Of Delight - Dreams of God (Where Do They Come From?)
+The Garden Of Delight - The Colours Out of Space
+The Garden Of Delight - Temple of Wisdom (Wicca)
+The Garden Of Delight - Scheoul II
+The Garden Of Delight - Leviathan (Sungod)
+The Garden Of Delight - Exodus (Reveiled)
+The Garden Of Delight - Oversoul (Hermethic 12" Mix)
+The Garden Of Delight - Empire of the Sun
+The Garden Of Delight - Spirit Invocation (Black Book Version)
+The Garden Of Delight - Transcendental
+The Garden Of Delight - Death Chant (Are You Still There?)
+The Garden Of Delight - Black Magic Circle (Ordo Templi Orientis) - Parts 1-3
+The Garden Of Delight - Symbol and Vision
+The Garden Of Delight - Ancient God (Dead but Never Gone)
+The Garden Of Delight - Inanna
+The Garden Of Delight - The Watchtower
+The Garden Of Delight - Behind the False God
+The Garden Of Delight - Sumerian Haze
+The Garden Of Delight - ENKI's Temple and the Gates of UR
+The Garden Of Delight - The Seal
+The Garden Of Delight - The Lost Gods - Version
+The Garden Of Delight - Confessions of a Captured Cultist
+The Garden Of Delight - Shallow Ground
+The Garden Of Delight - Christendom
+The Garden Of Delight - Insight
+The Garden Of Delight - The Epic of the Sumer Ziusudra
+The Garden Of Delight - Epitaph
+The Garden Of Delight - And Into Earth Shall We Return
+Steve Hackett - Hammer in the Sand
+Steve Hackett - The Toast
+Steve Hackett - The Show
+Steve Hackett - Sentimental Institution
+Steve Hackett - Slogans
+Steve Hackett - Rise Again
+Steve Hackett - Darktown Riot
+Steve Hackett - Dreaming With Open Eyes
+Steve Hackett - Omega Metallicus
+Steve Hackett - Everyday
+Steve Hackett - If You Break It
+Steve Hackett - A Tower Struck Down
+Steve Hackett - Tigermoth
+Steve Hackett - Octagon
+H.I.M. (His Infernal Majesty) - Untitled
+Hannibal - Winds of Change
+Hannibal - Bend for a Friend
+Hannibal - 1066
+Hannibal - Wet Legs
+The Hair And The Skin Trading Company - Elevenate
+The Hair And The Skin Trading Company - Flat Truck
+The Hair And The Skin Trading Company - Torque
+The Hair And The Skin Trading Company - Monkies
+The Hair And The Skin Trading Company - Kak
+The Hair And The Skin Trading Company - Where's Gala
+The Hair And The Skin Trading Company - Ground Zero
+The Hair And The Skin Trading Company - $1000 Pledge
+The Hair And The Skin Trading Company - The Final Nail
+Peter Hammill - The Sphinx in the Face
+Peter Hammill - A Headlong Stretch: Up Ahead
+Peter Hammill - A Headlong Stretch: Continental Drift
+Peter Hammill - A Headlong Stretch: The Twelve
+Peter Hammill - A Headlong Stretch: Long Light
+Peter Hammill - A Headlong Stretch: Backwards Man
+Peter Hammill - A Headlong Stretch: As You Were
+Peter Hammill - A Headlong Stretch: Or So I Said
+Peter Hammill - Mr. X (Gets Tense)
+Peter Hammill - The Gift of Fire (Talk Turkey)
+Peter Hammill - Cat's Eyes / Yellow Fever (Running)
+Peter Hammill - The Habit of a Broken Heart
+Roy Harper - Forbidden Fruit
+Roy Harper - Male Chauvinist Pig Blues
+Roy Harper - Acapulco Gold
+Roy Harper - Commune
+Roy Harper - Magic Woman (Liberation Reshuffle)
+Roy Harper - Che
+Roy Harper - North Country
+Roy Harper - Forever
+Roy Harper - Hors D'Oeuvres
+Roy Harper - The Same Old Rock
+Roy Harper - One Man Rock and Roll Band
+George Harrison - I'd Have You Anytime
+George Harrison - My Sweet Lord
+George Harrison - Wah-Wah
+George Harrison - Isn't It a Pity (Version One)
+George Harrison - What Is Life
+George Harrison - If Not for You
+George Harrison - Behind That Locked Door
+George Harrison - Let It Down
+George Harrison - Run of the Mill
+George Harrison - Apple Scruffs
+George Harrison - Awaiting on You All
+George Harrison - I Dig Love
+George Harrison - Art of Dying
+George Harrison - Isn't It a Pity (Version Two)
+George Harrison - Hear Me Lord
+George Harrison - It's Johnny's Birthday
+George Harrison - Plug Me In
+George Harrison - I Remember Jeep
+George Harrison - Thanks for the Pepperoni
+George Harrison - Out of the Blue
+Steve Harley & Cockney Rebel - Dancing on the Telephone (live)
+Steve Harley & Cockney Rebel - Mr Soft (live)
+Steve Harley & Cockney Rebel - Mr Raffles (Man It Was Mean) (live)
+Steve Harley & Cockney Rebel - When I'm With You (live)
+Steve Harley & Cockney Rebel - Make Me Smile (Come Up And See Me) (live)
+Steve Harley & Cockney Rebel - Love's a Prima Donna (live)
+Justin Hayward - Something To Believe In
+Justin Hayward - The Way of the World
+Justin Hayward - Troubadour
+Justin Hayward - Shame
+Justin Hayward - Take Your Chance
+Justin Hayward - Is It Just a Game
+Justin Hayward - Goodbye
+Justin Hayward - Who Knows
+Justin Hayward - The Best Is Yet To Come
+Justin Hayward - The Lights Are Low
+Justin Hayward - Thunder Child
+Justin Hayward - Brave New World
+Hawkwind - The Secret Agent
+Hawkwind - Garden Pests
+Hawkwind - Space Dust
+Hawkwind - Snake Dance
+Hawkwind - Going To Hawaii
+Hawkwind - Electric Tepee
+Hawkwind - Kauai/Taxi For Max
+Hawkwind - Wheels
+Hawkwind - Alchemy
+Hawkwind - Waimea Canyon Drive
+Hawkwind - Phetamine Street
+Hawkwind - Distant Horizons
+Hawkwind - The Reason Is?
+Hawkwind - Be Yourself
+Hawkwind - Paranoia (Part 1)
+Hawkwind - Paranoia (Part 2)
+Hawkwind - Uncle Sam's on Mars
+Hawkwind - Infinity
+Hawkwind - Life Form
+Hawkwind - P.X.R.5
+Hawkwind - Back in the Box
+Hawkwind - Time We Left
+Hawkwind - Heads
+Hawkwind - Acid Test
+Hawkwind - Hassan I Sahba
+Hawkwind - The Forge of Vulcan
+Hawkwind - Days of the Underground
+Hawkwind - The Iron Dream
+Hawkwind - PSI Power
+Hawkwind - 25 Years
+Hawkwind - Flying Doctor
+Hawkwind - Intro / Standing on the Edge
+Hawkwind - Brainbox Pollution
+Hawkwind - Brainstorm
+Hawkwind - It's So Easy
+Hawkwind - Veterans of a Thousand Psychic Wars
+Hawkwind - Silver Machine (Featuring Special Guest)
+Hawkwind - Dream Worker
+Hawkwind - The War I Survived
+Hawkwind - Wastelands of Sleep
+Hawkwind - Mutation Zone
+Hawkwind - E.M.C
+Hawkwind - Good Evening
+Hawkwind - Psy Power
+Hawkwind - Stonehenge
+Hawkwind - Circles
+Hawkwind - Assault and Battery Part I
+Hawkwind - The Golden Void Part II
+Hawkwind - The Wizard Blew His Horn
+Hawkwind - The Demented Man
+Hawkwind - Standing at the Edge
+Hawkwind - Spiral Galaxy 28948
+Hawkwind - Warriors
+Hawkwind - Dying Seas
+Hawkwind - Zones
+Hawkwind - Dangerous Vision
+Hawkwind - Running Through the Back Brain
+Hawkwind - The Island
+Hawkwind - Seven By Seven (Original Single Version)
+Hawkwind - Silver Machine (Original Single Version)
+Hawkwind - Born To Go (Live Single Version Edit)
+Hawkwind - Images
+Hawkwind - Black Elk Speaks
+Hawkwind - Out of the Shadows
+Hawkwind - Realms
+Hawkwind - Ship of Dreams
+Hawkwind - T.V. Suicide
+Tracy Hitchings - Beauty and the Beast
+Tracy Hitchings - Escape
+Tracy Hitchings - Everything I Am
+Tracy Hitchings - Hide and Seek
+Tracy Hitchings - Behind the Scenes
+Egdon Heath - On a Bench
+Egdon Heath - Witness
+Egdon Heath - Satellite
+Egdon Heath - Thousand Stories
+Egdon Heath - Tell Me
+Egdon Heath - T.T.C.
+Egdon Heath - The Killing Silence
+Egdon Heath - Message
+Egdon Heath - Stand Straight
+Egdon Heath - The Tide Is Out
+Egdon Heath - Echoes of Celandine
+Egdon Heath - Coming Out of the Mist
+Egdon Heath - When All Is Said
+Egdon Heath - Run for Life
+Egdon Heath - Losing a Friend
+Egdon Heath - In the City
+Egdon Heath - Pyromania
+Horse - See the People Creeping Round
+Horse - And I Have Loved You
+Horse - Freedom Rider
+Horse - Lost Control
+Horse - To Greet the Sun
+Horse - Heat of the Summer
+Horse - Gypsy Queen
+Horse - Step Out of Line
+James Rays Gangwar - Fuel (Short)
+James Rays Gangwar - Fuel (Long)
+Alice Cooper - Sideshow
+Alice Cooper - Bad Place Alone
+Alice Cooper - Stolen Prayer
+Alice Cooper - Unholy War
+Alice Cooper - Lullaby
+Alice Cooper - It's Me
+Hawkwind Zoo - Kiss of the Velvet Whip
+Hawkwind Zoo - Cymballine
+Hawkwind Zoo - Hurry on Sundown
+Nino Rota - Prologue and Fanfare for the Prince
+Nino Rota - Romeo
+Nino Rota - Juliet
+Nino Rota - The Feast at the House of Capulet
+Nino Rota - Their First Meeting
+Nino Rota - What Light Through Yonder Window Breaks? (The Balcony Scene Part I)
+Nino Rota - Parting Is Such Sweet Sorrow (The Balcony Scene Part II)
+Nino Rota - But This I Pray... Consent To Marry Us Today
+Nino Rota - Romeo Are Juliet Are Wed
+Nino Rota - The Death of Mercutio and Tybalt
+Nino Rota - Night's Candles Are Burnt Out
+Nino Rota - Adieu (Farewell Love Scene)
+Nino Rota - The Likeness of Death
+Nino Rota - The Ride From Mantua
+Nino Rota - Death...hath Sucked the Honey of Thy Breath (The Death of Romeo)
+Nino Rota - Love Theme From Romeo & Juliet (In Capuletis Tomb)
+Nino Rota - O Happy Dagger! (The Death of Juliet)
+Nino Rota - Epilogue
+Asgard - Esoteric Poem 1
+Asgard - Esoteric Poem 2
+Asgard - Esoteric Poem 3
+Asgard - Esoteric Poem 4
+Asgard - Esoteric Poem 5
+Asgard - Antiquum
+Asgard - Warriors of the Ideal
+Asgard - Last Flight of the Silver Drakkar
+Asgard - Mystérion-Sophia
+Asgard - Alone, With My Spiritual Induction
+Asgard - Laud (To The God Of High Places)
+Asgard - New Myths (part 1)
+Asgard - New Myths (part 2)
+Asgard - ... Voices
+Ulysses - Days Gone By
+Ulysses - Lost to This World / Forever Lost
+Love Like Blood - Feedback
+Love Like Blood - Fallacious World
+Love Like Blood - Don't Leave Me
+Love Like Blood - Lures
+Love Like Blood - Sedative Shots
+Love Like Blood - Paralysis
+Love Like Blood - Blood Trails
+Horslips - The March
+Horslips - You Can't Fool the Beast
+Horslips - Dearg Doom
+Horslips - Ferdia's Song
+Horslips - Gae Bolga
+Horslips - Cu Chulainn's Lament
+Horslips - Faster Than the Hound
+Horslips - Silver Spear
+Horslips - More Than You Can Chew
+Horslips - The Morrigan's Dream
+Horslips - Time To Kill!
+Steve Howe - Doors of Sleep
+Steve Howe - Australia
+Steve Howe - The Nature of the Sea
+Steve Howe - Lost Symphony
+Steve Howe - Will 'O' the Wisp
+Steve Howe - Ram
+Steve Howe - Pleasure Stole the Night
+Steve Howe - Break Away From It All
+Jon Anderson - Surrender
+Joel Goldsmith - Kull the Conqueror
+Joel Goldsmith - Kull's Initiation
+Joel Goldsmith - Askalante on Ice
+Joel Goldsmith - Deep Freeze
+Joel Goldsmith - Rebirth of Aki
+Ken Hensley - A King Without a Throne
+Ken Hensley - Proud Words
+Ken Hensley - Black Hearted Lady
+Ken Hensley - Go Down
+Ken Hensley - Cold Autumn Sunday
+Ken Hensley - Rain
+Ken Hensley - The Last Time
+Ken Hensley - Fortune
+IQ - Further Away
+IQ - Came Down
+IQ - Leap of Faith
+Illusion - Roads to Freedom
+Illusion - Beautiful Country
+Illusion - Solo Flight
+Illusion - Everywhere You Go
+Illusion - Louis' Theme
+Illusion - Cruising Nowhere
+Inside - Labyrinth
+Inside - Child in Time
+Inside - Nowhereland
+Inside - Playground
+Inside - Hallowed Ground
+Inside - Last Embrace: Song
+Inside - Unwanted World: Invention
+Inside - Unwanted World: Crime
+Inside - Unwanted World: Epilogue
+Iron Butterfly - Free Flight
+Iron Butterfly - New Day
+Iron Butterfly - Best Years of Your Life
+Iron Butterfly - Slower Than Guns
+Iron Butterfly - Soldier in Our Town
+Iron Butterfly - Easy Rider (Let the Wind Pay the Way)
+Iron Butterfly - Butterfly Bleu
+Iron Butterfly - Shady Lady
+Iron Butterfly - Unconscious Power
+Iron Butterfly - Get Out Of My Life, Woman
+Iron Butterfly - Gentle As It May Seem
+Iron Butterfly - You Can't Win
+Iron Butterfly - So-Lo
+Iron Butterfly - Look For The Sun
+Iron Butterfly - Fields Of Sun
+Iron Butterfly - Stamped Ideas
+Iron Maiden - Prowler
+Iron Maiden - Remember Tomorrow
+Iron Maiden - Running Free
+Iron Maiden - Charlotte the Harlot
+Iron Maiden - Iron Maiden
+Iron Maiden - Aces High
+Iron Maiden - 2 Minutes to Midnight
+Iron Maiden - Losfer Words (Big 'Orra)
+Iron Maiden - Flash of the Blade
+Iron Maiden - The Duellists
+Iron Maiden - Back in the Village
+Iron Maiden - Rime of the Ancient Mariner
+Iron Maiden - Futureal
+Iron Maiden - The Angel and the Gambler
+Iron Maiden - Lightning Strikes Twice
+Iron Maiden - The Educated Fool
+Iron Maiden - When Two Worlds Collide
+Iron Maiden - Be Quick or Be Dead
+Iron Maiden - From Here to Eternity
+Iron Maiden - Afraid To Shoot Strangers
+Iron Maiden - Fear Is the Key
+Iron Maiden - Wasting Love
+Iron Maiden - Chains of Misery
+Iron Maiden - The Apparition
+Iron Maiden - Judas Be My Guide
+Iron Maiden - Weekend Warrior
+Iron Maiden - Childhood's End
+Don McLean - American Pie
+Don McLean - Winterwood
+Don McLean - Empty Chairs
+Don McLean - Everybody Loves Me, Baby
+Don McLean - Sister Fatima
+Don McLean - Babylon
+Don McLean - Crossroads
+Python Lee Jackson - Second Time Around the Wheel
+Python Lee Jackson - Your Wily Ways
+Python Lee Jackson - Doing Fine(Cloud Nine)
+Python Lee Jackson - Turn the Music Down
+Python Lee Jackson - If It's Meant To Be a Party
+Python Lee Jackson - If the World Stopped Still Tonight
+Python Lee Jackson - Sweet Consolation
+Python Lee Jackson - Boogie Woogie Joe
+Python Lee Jackson - The Blues
+Jadis - Hiding in the Corner
+Jadis - G.13
+Jadis - Sleepwalk
+Jadis - In Isolation
+Jadis - Daylight Fades
+Jadis - Everywhere I Turn
+Jadis - The World on Your Side
+Jadis - No Sacrifice
+Jadis - Touch
+James Rays Gangwar - Rev Rev Lowrider
+James Rays Gangwar - 35 Thousand Times
+James Rays Gangwar - Badlands
+James Rays Gangwar - Bad Gin
+James Rays Gangwar - Coo Ca Choo
+James Rays Gangwar - Cobalt Blue
+James Rays Gangwar - Take It
+James Rays Gangwar - Strange
+James Rays Gangwar - Luxury
+James Rays Gangwar - Ridge
+Jane - All My Friends
+Jane - Lady
+Jane - Rest of My Life
+Jane - Expectation
+Jane - River
+Jane - Fire, Water, Earth & Air
+Jane - Another Way
+Jane - Hightime for Crusaders
+Jane - Fire (You Give Me Some Sweet Lovin')
+Jane - Water (Keep on Rollin')
+Jane - Earth (Angel)
+Jane - The End
+Jefferson Airplane - High Flyin' Bird
+Jefferson Airplane - Runnin' 'Round This World
+Jefferson Airplane - That's Alright
+Jefferson Airplane - In the Morning
+Jefferson Airplane - J.P.P. Mc Step B. Blues
+Jefferson Airplane - Go to Her
+Jefferson Airplane - Up or Down
+Jericho Jones - Yellow and Blue
+Jericho Jones - Triangulum
+Jericho Jones - No School To-day
+Jericho Jones - Junkies, Monkeys and Donkeys
+Jericho Jones - Time Is Now
+Jericho Jones - What Have We Got To Lose
+Jethro Tull - Awol
+Jethro Tull - Nothing @ All
+Jethro Tull - Wicked Windows
+Jethro Tull - Hunt by Numbers
+Jethro Tull - Hot Mango Flush
+Jethro Tull - El Niño
+Jethro Tull - Mango Surprise
+Jethro Tull - Bends Like a Willow
+Jethro Tull - Far Alaska
+Jethro Tull - The Dog-Ear Years
+Jethro Tull - A New Day Yesterday
+Jethro Tull - Jeffrey Goes to Leicester Square
+Jethro Tull - Fat Man
+Jethro Tull - Inside
+Jethro Tull - Dharma for One
+Jethro Tull - By Kind Permission Of
+Now - 170191
+Now - Children of a Dying World
+Now - Source
+Now - Paradox
+Now - Converging Universes - 1st Movement: Light Waves
+Now - Converging Universes - 2nd Movement: The Light of the Reason
+Now - Converging Universes - 3rd Movement (a): Trait D'Union
+Now - Converging Universes - 3rd Movement (b): Hymn to the Light
+Now - Converging Universes - 3rd Movement (c): Reprise
+Magazine - Recoil
+Magazine - Burst
+Magazine - The Light Pours Out of Me
+Magazine - Parade
+The Charlatans - Me. In Time
+The Charlatans - Occupation H. Monster
+Harry Robinson - Countess Dracula
+Keith Emerson - Piano Concerto No. 1
+Greg Lake - Hallowed Be Thy Name
+Greg Lake - Nobody Loves You Like I Do
+Carl Palmer - The Enemy God Dances with The Black Spirits (Excerpt from “The Scythian Suite” 2nd Movement)
+Carl Palmer - L.A. Nights
+Carl Palmer - New Orleans
+Carl Palmer - Two Part Invention in D Minor
+Carl Palmer - Food for Your Soul
+Carl Palmer - Tank
+Elton John - Teacher I Need You
+Elton John - Elderberry Wine
+Elton John - Blues for My Baby and Me
+Elton John - Midnight Creeper
+Elton John - I'm Going To Be a Teenage Idol
+Elton John - Texan Love Song
+Elton John - High Flying Bird
+James Bernard - Hutter and Ellen
+James Bernard - Ellen's Disquiet
+James Bernard - In the Castle
+James Bernard - Hutters Discovery
+James Bernard - Loading The Coffins
+James Bernard - Orlok's Lair
+James Bernard - The Plague
+James Bernard - The Pursuit of Knock
+Eric Burdon & The Animals - When I Was Young
+Raw Material - I'd Be Delighted
+Raw Material - Fighting Cock
+Raw Material - Pear on an Apple Tree
+Raw Material - Traveller Man
+Raw Material - Destruction of America
+Raw Material - Time and Illusion (Different Version)
+Raw Material - Hi There Hallelujah
+Raw Material - Bobo's Party
+Raw Material - Days of the Fighting Cocks (Different Version)
+Wishbone Ash - Ships in the Sky
+Wishbone Ash - Anger in Harmony
+Wishbone Ash - Like a Child
+Wishbone Ash - The Way of the World (Part 1)
+Wishbone Ash - The Way of the World (Part 2)
+Popol Vuh - Mantra I
+Popol Vuh - Morning Sun
+Popol Vuh - Venus Principle
+Popol Vuh - Mantra II - Choir
+Popol Vuh - Die Nacht der Himmel
+Popol Vuh - Der Ruf der Rorhrfloete
+Popol Vuh - To a Little Way
+Popol Vuh - Through Pains to Heaven II
+Popol Vuh - On the Way
+Popol Vuh - Zwiesprache der Rohrflöte mit der Saengerin
+Popol Vuh - Brüder des Schattens - Söhne des Lichts
+Popol Vuh - Höre, der Du wagst
+Popol Vuh - Das Schloss des Irrtums
+Popol Vuh - Die Umkehr
+Gerald Fried - Overture
+Franz Reisenstein - The Mummy
+James Bernard - The Curse of Frankenstein
+Harry Robinson - The Vampire Lovers
+Harry Robinson - Lust for a Vampire
+Harry Robinson - Twins of Evil
+Jerry Goldsmith - Imhotep
+Jerry Goldsmith - Tuarek Attack
+Jerry Goldsmith - Night Boarders
+Jerry Goldsmith - The Caravan
+Jerry Goldsmith - Camel Race
+Jerry Goldsmith - The Crypt
+Jerry Goldsmith - Mumia Attack
+Jerry Goldsmith - Discoveries
+Jerry Goldsmith - My Favorite Plague
+Jerry Goldsmith - Crowd Control
+Jerry Goldsmith - Rebirth
+Edward Ka-Spel - Scarlett Cross
+Edward Ka-Spel - Supper at J's
+Edward Ka-Spel - Hotel Y
+Edward Ka-Spel - Cause and Fx
+Edward Ka-Spel - Mosquito Munch Fandango
+Edward Ka-Spel - Shall We Share Water, Brother?
+The Legendary Pink Dots - Inside
+The Legendary Pink Dots - Colour Wheel
+The Legendary Pink Dots - The Disaster Area
+The Legendary Pink Dots - Nouveaux Modes Exotiques
+The Legendary Pink Dots - Glasshouse (Part 1)
+The Legendary Pink Dots - Glasshouse (Part 2)
+The Legendary Pink Dots - Little Romeo
+The Legendary Pink Dots - Kleine Juliet
+The Legendary Pink Dots - Saucers #1
+The Legendary Pink Dots - Premonition 19
+The Legendary Pink Dots - Wonderdome
+The Legendary Pink Dots - Hellsville '98
+The Legendary Pink Dots - Needles (Version Sirius)
+The Legendary Pink Dots - Abracadabra Zzzz
+The Legendary Pink Dots - Andromeda
+The Legendary Pink Dots - Green Gang 98
+The Legendary Pink Dots - Saucers Over Chicago
+The Legendary Pink Dots - Hallway Monologue
+Peter Murphy - Rollcall - Recall
+Peter Murphy - Indigo Eyes 98
+Anthony Phillips - Master of Time (Demo)
+Anthony Phillips - Henry: Portraits From Tudor Times - (I) Fanfare
+Anthony Phillips - Henry: Portraits From Tudor Times - (II) Lutes' Chorus
+Anthony Phillips - Henry: Portraits From Tudor Times - (III) Misty Battlements
+Anthony Phillips - Henry: Portraits From Tudor Times - (IV) Henry Goes to War
+Anthony Phillips - Henry: Portraits From Tudor Times - (V) Death of a Knight
+Anthony Phillips - Henry: Portraits From Tudor Times - (VI) Triumphant Return
+Anthony Phillips - The Geese and the Ghost Part 1
+Anthony Phillips - The Geese and the Ghost Part 2
+Strawbs - Lemon Pie
+Strawbs - Starshine / Angel Wine
+Strawbs - Where Do You Go (When You Need a Hole To Crawl In)
+Strawbs - Rememberring
+Strawbs - Don't Try To Change Me
+Strawbs - You and I (When We Were Young)
+Strawbs - Changes Arrange Us
+Suicide - Rocket U.S.A.
+Suicide - Che
+Suicide - Cheree
+Suicide - Frankie Teardrop
+Suicide - Girl
+Suicide - Johnny
+Toots Thielemans - Obi
+Toots Thielemans - Felicia and Bianca
+Toots Thielemans - O Cantador
+Toots Thielemans - Joana Francesa
+Toots Thielemans - Coisa Feita
+Toots Thielemans - Preciso Aprender A Só Ser
+Toots Thielemans - Fruta Boa
+Toots Thielemans - Coração Vagabundo
+Toots Thielemans - Manhã De Carnaval
+Toots Thielemans - Casa Forte
+Toots Thielemans - Moments
+Toots Thielemans - Bluesette
+Strawbs - Martin Luther King's Dream
+Strawbs - Song of a Sad Little Girl
+Strawbs - The Vision of the Lady of the Lake
+Strawbs - We'll Meet Again Sometime
+Strawbs - The Man Who Called Himself Jesus
+Strawbs - Stormy Down
+Strawbs - I Turned My Face Into the Wind
+Strawbs - Golden Salamander
+Strawbs - Tokyo Rosie
+Strawbs - Lay Down (45 Version)
+Strawbs - Ciggy Barlust (Backside)
+Strawbs - Oh How She Changed
+Strawbs - Martin Luther King's Dream (Live)
+Strawbs - Burn Baby Burn
+Strawbs - Absent Friend
+Strawbs - Will Ye Go
+Strawbs - Floating in the Wind
+Strawbs - Why and Wherefore
+Strawbs - Pick up the Pieces
+Fish - Incomplete (Album Version)
+Fish - Wake Up Call (Acoustic Version)
+Fish - Incomplete (Demo Version)
+The Stranglers - Non Stop
+The Stranglers - Tramp
+The Stranglers - Let Me Introduce You to the Family
+The Stranglers - Ain't Nothin' to It
+The Stranglers - The Man They Love To Hate
+The Stranglers - Pin Up
+The Stranglers - It Only Takes Two to Tango
+The Stranglers - How To Find True Love and Happiness in the Present Day
+The Stranglers - La Folie
+The Stranglers - Cruel Garden
+XIII. Století - Royale Carpathia (Intro)
+XIII. Století - Angels of Carpathia (Outro)
+XIII. Století - Pokoj 26. (Cover Version)
+XIII. Století - Julie umírá každou noc (Nová Verze – Vampires Mix)
+XIII. Století - Nosferatu Is Dead (Live Verze – Archiv)
+The Stranglers - I Feel Like a Wog
+The Stranglers - Bitching
+The Stranglers - Dead Ringer
+The Stranglers - Dagenham Dave
+The Stranglers - Peasant in the Big Shitty
+The Stranglers - Burning up Time
+The Stranglers - English Towns
+The Stranglers - 5 Minutes
+The Stranglers - School Mam
+Basil Poledouris - Hymn To Red October (Main Title)
+Basil Poledouris - Nuclear Scam
+Basil Poledouris - Putin's Demise
+Basil Poledouris - Course Two-Five-Zero
+Basil Poledouris - Ancestral Aid
+Basil Poledouris - Chopper
+Basil Poledouris - Two Wives
+Basil Poledouris - Red Route I
+Basil Poledouris - Plane Crash
+Basil Poledouris - Kaboom!!!
+Strawbs - Flying
+Strawbs - Lady Fuchsia
+Strawbs - Thank You
+Strawbs - The Winter and the Summer
+Strawbs - Turn Me Round
+Strawbs - (Wasting My Time) Thinking of You
+Strawbs - My Friend Peter
+The Stranglers - Sewer
+The Stranglers - Get a Grip
+The Stranglers - Toiler
+Pete Sinfield - Can You Forgive A Fool'''.split("\n")
+"""
+	open("music.py","w").write(w)
+
+def mymusic():
+	w=r"""*** Settings ***
+Variables   music.py
+
+*** Test Cases ***
+Play it again Sam
+	${s}=   Evaluate   "+".join(random.choice($music).split())   random
+	log to console   \nhttps://www.youtube.com/results?search_query=${s}\n
+"""
+	open("mymusic.robot","w").write(w)
 
 if __name__=='__main__':
 	main()
