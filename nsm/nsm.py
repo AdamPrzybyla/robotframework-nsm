@@ -487,6 +487,33 @@ Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
 """
 	open("hebrew.robot","w").write(t)
 
+def ukrainian():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla
+
+*** Test Cases ***
+тест 1
+	Зараз є так: я бачу webpage
+	Я не бачу слів logged на webpage
+	Потім я використаю слова credentials на webpage
+	З цього приводу я бачу слова logged на webpage
+	Після цього я не бачу webpage
+
+тест 2
+	Зараз є так: я бачу webpage
+	Я не бачу слів logged на webpage
+	Потім я використаю слова bad credentials на webpage
+	З цього приводу я не бачу слова logged на webpage
+	Після цього я не бачу webpage
+
+тест 3
+	Зараз є так: я бачу webpage
+	Я не бачу слів logged на webpage
+	Після цього я не бачу webpage
+"""
+	open("ukrainian.robot","w").write(t)
+
 def nsmlib():
 	t="""*** Settings ***
 Resource  mykeywords.robot
@@ -1117,6 +1144,44 @@ ${page:[^ ]+} האור ינניא
 
 #I see the ${page:[^ ]+}
 ${page:[^ ]+} האור ינא
+	Run keyword  ${page} setup
+
+#ukrainian
+Зараз є так: ${state}
+#It is like this now: ${state}
+	Run keyword  ${state}
+
+Я не бачу слів ${logged} на ${page}
+#I not see words ${logged} on the ${page:[^ ]+}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+Потім я використаю слова ${cred} на ${page:[^ ]+}
+#i use the words ${cred} on ${page:[^ ]+}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+З цього приводу ${state}
+#because of this: ${state}
+	Run keyword  ${state}
+
+я бачу слова ${logged} на ${page:[^ ]+}
+#I see words ${logged} on the ${page:[^ ]+}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+Після цього ${state}
+#after this ${state}
+	Run keyword  ${state}
+
+я не бачу ${page}
+#i see the ${page:[^ ]+} no more
+	Run keyword  ${page} teardown
+
+я бачу ${page:[^ ]+}
+#I see the ${page:[^ ]+}
 	Run keyword  ${page} setup
 """
 	open("NSM.robot","w").write(t)
