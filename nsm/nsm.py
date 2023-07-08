@@ -459,6 +459,34 @@ Prova 3
 """
 	open("italian.robot","w").write(t)
 
+def hebrew():
+	t="""*** Settings ***
+Resource  NSM.robot
+Metadata  Author  Adam Przybyla  <adam.przybyla@gmail.com>
+
+*** Test Cases ***
+1 ןחבמ
+	webpage האור ינא :ךכ הז וישכע
+	webpage ה לע logged םילמה תא האור אל ינא
+	webpage לע credentials םילימב שמתשא זא
+	webpage לע logged םילימה תא האור ינא :הז ללגב
+	webpage האור ינניא טעמ דועבו
+
+
+2 ןחבמ
+	webpage האור ינא :ךכ הז וישכע
+	webpage ה לע logged םילמה תא האור אל ינא
+	webpage לע bad credentials םילימב שמתשא זא
+	webpage ה לע logged םילמה תא האור אל ינא :הז ללגב
+	webpage האור ינניא טעמ דועבו
+
+3 ןחבמ
+	webpage האור ינא :ךכ הז וישכע
+	webpage ה לע logged םילמה תא האור אל ינא
+	webpage האור ינניא טעמ דועבו
+"""
+	open("hebrew.robot","w").write(t)
+
 def nsmlib():
 	t="""*** Settings ***
 Resource  mykeywords.robot
@@ -1052,6 +1080,44 @@ Dopo questo ${state}
 
 non si vede più ${page}
 	Run keyword  ${page} teardown
+
+# hebrew
+${state} :ךכ הז וישכע
+#It is like this now: ${state}
+	Run keyword  ${state}
+
+${page:[^ ]+} ה לע ${logged:[^ ]+} םילמה תא האור אל ינא
+#I not see words ${logged} on the ${page:[^ ]+}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should not be equal   OK   ${result}
+
+${page:[^ ]+} לע ${cred} םילימב שמתשא זא
+#i use the words ${cred} on ${page:[^ ]+}
+	${user}   ${pass}=   Run Keyword  ${cred}
+	Enter Credentials    ${user}  ${pass}
+
+${state} :הז ללגב
+#because of this: ${state}
+	Run keyword  ${state}
+
+${page:[^ ]+} לע ${logged:[^ ]+} םילימה תא האור ינא
+#I see words ${logged} on the ${page:[^ ]+}
+	${words}=   Run keyword  ${logged}
+	${result}=  Run keyword  ${page} check  ${words}
+	Should be equal   OK   ${result}
+
+${state} טעמ דועבו
+#after this ${state}
+	Run keyword  ${state}
+
+${page:[^ ]+} האור ינניא
+#i see the ${page:[^ ]+} no more
+	Run keyword  ${page} teardown
+
+#I see the ${page:[^ ]+}
+${page:[^ ]+} האור ינא
+	Run keyword  ${page} setup
 """
 	open("NSM.robot","w").write(t)
 
@@ -1608,7 +1674,7 @@ Lemat 5 - The Chromedriver should be installed if needed
 """
 	open("selenium.robot","w").write(t)
 
-la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv","emulator","sonar","italian","data","music","mymusic"]
+la=["polish","english","german","russian","czech","french","spanish","japan","china","mykeywords","mykeywords0","romanian","urdu","bengali","silesian","tamil","bielorusian","portugese","nsmlib","requirements","appium","selenium","mygames","gameslist","game","mymysql","lemat","jenkins","mymycsv","emulator","sonar","italian","data","music","mymusic","hebrew","ukrainian"]
 
 def NSMfu(data,la1="polish"):
 	if la1=="polish":
@@ -1686,6 +1752,8 @@ def main():
 		urdu()
 		bengali()
 		bielorusian()
+		hebrew()
+		ukrainian()
 		tamil()
 		silesian()
 		selenium()
